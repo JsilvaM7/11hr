@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>11hr Jornal da Zona Norte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF1F6;--surface:#FFFFFF;--ink:#14213D;--muted:#5B6579;--line:#D9DEE8;
+  --mast:#14213D;--accent:#FFC20E;--alert:#D7263D;--link:#1F3FBF;--ph1:#E3E8F2;--ph2:#D3DAE9;
+  --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"Source Serif 4",Georgia,serif;
+  color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0A0F1E;--surface:#131A2E;--ink:#EEF1F8;--muted:#9AA5BC;--line:#26304A;--mast:#1B2A55;--link:#9DB2FF;--ph1:#1A2340;--ph2:#222D50;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A0F1E;--surface:#131A2E;--ink:#EEF1F8;--muted:#9AA5BC;--line:#26304A;--mast:#1B2A55;--link:#9DB2FF;--ph1:#1A2340;--ph2:#222D50;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--mast);z-index:30}
+.app{max-width:430px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 0 0 1px var(--line)}
+.mast{background:var(--mast);color:#fff;padding:18px 18px 14px}
+.logo{display:flex;align-items:center;gap:12px}
+.mark{font-family:var(--head);font-weight:800;font-size:54px;line-height:.8;letter-spacing:-.04em;background:var(--accent);color:#14213D;padding:10px 10px 8px;border-radius:6px;display:flex;align-items:baseline}
+.mark small{font-size:22px;letter-spacing:0;margin-left:1px}
+.name{font-family:var(--head);font-weight:700;font-size:22px;line-height:1.05}
+.name span{display:block;font-weight:500;font-size:15px;opacity:.85;margin-top:3px}
+.edition{display:flex;justify-content:space-between;gap:8px;margin-top:14px;font:500 13px var(--head);opacity:.9}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line);display:flex;overflow-x:auto;gap:4px;padding:8px 12px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:0;background:transparent;color:var(--muted);font:600 15px var(--head);padding:9px 13px;border-radius:999px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--mast);color:#fff}
+.tab:focus-visible,.item:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+main{padding:18px 18px 40px}
+h2{font:800 28px/1.1 var(--head);letter-spacing:-.02em;margin:0 0 16px}
+.ph{aspect-ratio:16/9;border-radius:8px;background:repeating-linear-gradient(135deg,var(--ph1) 0 14px,var(--ph2) 14px 28px);display:flex;align-items:flex-end;padding:10px;font:500 12px var(--head);color:var(--muted)}
+.lead h3{font:700 25px/1.15 var(--head);letter-spacing:-.01em;margin:14px 0 8px}
+.lead p{font-size:18px;line-height:1.5;margin:0 0 8px}
+.meta{font:500 13px var(--head);color:var(--muted)}
+.tag{color:var(--alert);font-weight:700}
+.list{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.item{display:block;padding:16px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.item h4{font:700 19px/1.25 var(--head);margin:0 0 6px}
+.item p{font-size:16.5px;line-height:1.45;margin:0 0 6px;color:var(--ink)}
+.sec{font:700 13px var(--head);color:var(--link)}
+.home-grid h3.sub{font:700 17px var(--head);margin:26px 0 0;color:var(--muted)}
+.foot{padding:18px;text-align:center;font:500 13px var(--head);color:var(--muted);border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:no-preference){.tab{transition:background .15s,color .15s}}
+
+a.lead,a.item{color:inherit;text-decoration:none;display:block}
+a.lead:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+img.ph{width:100%;object-fit:cover;display:block;padding:0}
+.item{display:flex!important;gap:14px;align-items:flex-start}
+.item .tx{flex:1;min-width:0}.item .th{flex:none;width:92px;height:92px;aspect-ratio:1;border-radius:8px;font-size:0;padding:0}
+.back{border:0;background:none;color:var(--link);font:700 15px var(--head);padding:0 0 14px;cursor:pointer}
+.art h1{font:800 29px/1.12 var(--head);letter-spacing:-.02em;margin:14px 0 10px}
+.art .body p{font-size:19px;line-height:1.6;margin:0 0 16px}
+.art .sum{font-size:20px;line-height:1.45;color:var(--muted);margin:0 0 14px}
+.edbtn{display:block;margin:0 auto 6px;border:1px solid var(--line);background:var(--surface);color:var(--link);font:700 14px var(--head);padding:9px 16px;border-radius:999px;cursor:pointer}
+.ed{position:fixed;inset:0;z-index:50;background:var(--bg);overflow:auto;padding:calc(14px + env(safe-area-inset-top,0px)) 14px calc(30px + env(safe-area-inset-bottom,0px))}
+.ed[hidden]{display:none}
+.ed h2{font-size:24px;margin:0 0 6px}.ed .hint{font:500 14px var(--head);color:var(--muted);margin:0 0 12px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px var(--head);padding:10px 14px;border-radius:8px;cursor:pointer}
+.btn.pri{background:var(--mast);color:#fff;border-color:var(--mast)}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;min-width:1180px;width:100%}
+th{font:700 13px var(--head);text-align:left;padding:8px;background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:0}
+td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:0;vertical-align:top}
+td input,td textarea,td select{width:100%;border:0;background:transparent;color:var(--ink);font:15px var(--body);padding:8px;display:block;resize:vertical}
+td input:focus,td textarea:focus,td select:focus{outline:2px solid var(--link);outline-offset:-2px;background:var(--bg)}
+td.n{width:36px;text-align:center;font:600 13px var(--head);color:var(--muted);padding:8px 0}
+.paste{width:100%;min-height:90px;margin:0 0 8px;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:14px var(--body)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--surface);font:600 14px var(--head);padding:10px 16px;border-radius:8px;z-index:60}
+.toast[hidden]{display:none}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="mast">
+    <div class="logo">
+      <div class="mark">11<small>hr</small></div>
+      <div class="name">Jornal<span>da Zona Norte</span></div>
+    </div>
+    <div class="edition"><span id="date"></span><span>Edição das 11h</span></div>
+  </header>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Editorias"></nav>
+  <main id="view" role="tabpanel"></main>
+  <footer class="foot"><button class="edbtn" id="edbtn">Editar notícias</button>11hr Jornal da Zona Norte</footer>
+</div>
+<section class="ed" id="ed" hidden aria-label="Planilha de notícias">
+<h2>Planilha de notícias</h2>
+<p class="hint">Cada linha é uma notícia. A primeira de cada editoria vira o destaque. A primeira linha da planilha é o destaque da página inicial.</p>
+<div class="bar"><button class="btn pri" id="save">Salvar e publicar</button><button class="btn" id="add">+ Nova linha</button><button class="btn" id="pastebtn">Colar do Excel ou Google Planilhas</button><button class="btn" id="close">Fechar</button></div>
+<div id="pastebox" hidden><p class="hint">Cole as linhas copiadas da sua planilha, nesta ordem de colunas: Editoria, Título, Resumo, Texto completo, Link da foto, Autor, Data e hora.</p><textarea class="paste" id="pastetx"></textarea><button class="btn" id="doimport">Importar linhas</button></div>
+<div class="wrap"><table><thead><tr><th></th><th style="width:150px">Editoria</th><th style="width:240px">Título</th><th style="width:240px">Resumo</th><th style="width:300px">Texto completo</th><th style="width:230px">Foto</th><th style="width:120px">Autor</th><th style="width:130px">Data e hora</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
+<input type="file" id="file" accept="image/*" hidden>
+</section>
+<div class="toast" id="toast" hidden></div>
+<script>
+var EDS=[["locais","Notícias locais"],["politica","Política"],["dinheiro","Dinheiro"],["negocios","Negócios"],["esportes","Esportes"],["turismo","Turismo"],["entretenimento","Entretenimento"],["cultura","Cultura"]];
+function R(e,t,r){return{ed:e,t:t,r:r,x:"",f:"",a:"Redação 11hr",h:"Hoje, 10h"}}
+var rows=[
+R("locais","Obras na Avenida Cruzeiro do Sul mudam o trânsito em Santana neste fim de semana","Equipes fazem interdições parciais entre sábado e domingo. Veja os desvios indicados."),
+R("locais","Feira livre do Tucuruvi ganha novos horários aos domingos","Barracas passam a abrir mais cedo, e moradores aprovam a mudança."),
+R("politica","Câmara da cidade debate orçamento para os bairros da Zona Norte","Vereadores discutem verbas para saúde, transporte e zeladoria."),
+R("politica","Audiência pública reúne moradores sobre o plano de mobilidade","Proposta prevê novas faixas de ônibus em avenidas da região."),
+R("dinheiro","Como organizar o orçamento da família antes das compras de fim de ano","Separe gastos fixos, defina um teto para presentes e evite parcelamentos longos."),
+R("dinheiro","Seis passos para sair do cheque especial","Renegociar e trocar de dívida pode reduzir o custo total."),
+R("negocios","Comércio de rua da Zona Norte aposta em entregas locais","Lojistas montam redes de entrega por bairro e relatam mais vendas."),
+R("negocios","Microempreendedores ganham curso gratuito de gestão","Aulas são presenciais e acontecem à noite."),
+R("esportes","Final do campeonato de várzea do Jaçanã reúne torcida no domingo","Os dois finalistas chegam invictos. Entrada gratuita."),
+R("esportes","Corrida de rua passa pelo Parque da Cantareira em novembro","Inscrições abertas para percursos de 5 e 10 quilômetros."),
+R("turismo","Roteiro de um dia pela Zona Norte: parque, mirante e boa comida","Do verde da Cantareira aos bares tradicionais de Santana."),
+R("turismo","Trilhas fáceis na Serra da Cantareira para a família","Horários, acesso e o que levar."),
+R("entretenimento","Cinema de rua volta a exibir sessões a preço popular","Programação mistura filmes nacionais e clássicos."),
+R("entretenimento","Shows ao vivo animam bares da Casa Verde no fim de semana","Veja a agenda de música ao vivo por casa."),
+R("cultura","Centro cultural abre exposição sobre a memória dos bairros","Fotografias antigas e relatos de moradores contam como a região cresceu."),
+R("cultura","Sarau mensal reúne poetas e músicos na Freguesia do Ó","Entrada gratuita e microfone aberto.")
+];
+var $=function(i){return document.getElementById(i)},tabs=$("tabs"),view=$("view"),db=null,user=null,assets=null,draft=[],upIdx=-1;
+function esc(x){return String(x==null?"":x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
+function edName(id){for(var i=0;i<EDS.length;i++)if(EDS[i][0]===id)return EDS[i][1];return id}
+function okUrl(u){return /^(https?:\/\/|\/_blob\/|data:image\/)/i.test(u||"")}
+function pic(r,c){return okUrl(r.f)?'<img class="ph '+(c||"")+'" src="'+esc(r.f)+'" alt="">':'<div class="ph '+(c||"")+'">Foto da matéria</div>'}
+function lead(r,i,tag){return '<a class="lead" href="#/n/'+i+'">'+pic(r)+'<h3>'+esc(r.t)+'</h3><span class="meta">'+(tag?'<span class="tag">'+tag+'</span> · ':'')+esc(edName(r.ed))+'</span><p>'+esc(r.r)+'</p><span class="meta">'+esc(r.a)+' · '+esc(r.h)+'</span></a>'}
+function item(r,i,sec){return '<li><a class="item" href="#/n/'+i+'"><div class="tx">'+(sec?'<span class="sec">'+esc(edName(r.ed))+'</span>':'')+'<h4>'+esc(r.t)+'</h4>'+(sec?'':'<p>'+esc(r.r)+'</p>')+'<span class="meta">'+esc(r.h)+'</span></div>'+pic(r,"th")+'</a></li>'}
+function route(){
+  var h=location.hash,m,sel="inicio",out="";
+  if(m=h.match(/^#\/n\/(\d+)/)){
+    var r=rows[+m[1]];
+    if(r){sel=r.ed;var ps=(r.x||r.r).split(/\n+/).map(function(p){return"<p>"+esc(p)+"</p>"}).join("");
+      out='<article class="art"><button class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">‹ Voltar</button>'+pic(r)+'<h1>'+esc(r.t)+'</h1><span class="meta"><span class="tag">'+esc(edName(r.ed))+'</span> · '+esc(r.a)+' · '+esc(r.h)+'</span>'+(r.x?'<p class="sum" style="margin-top:14px">'+esc(r.r)+'</p>':'')+'<div class="body" style="margin-top:16px">'+ps+'</div></article>'}
+  }else if(m=h.match(/^#\/e\/(\w+)/)){
+    sel=m[1];var ix=[];rows.forEach(function(r,i){if(r.ed===sel)ix.push(i)});
+    out='<h2>'+esc(edName(sel))+'</h2>';
+    if(!ix.length)out+='<p class="meta">Ainda não há notícias nesta editoria.</p>';
+    else{out+=lead(rows[ix[0]],ix[0]);if(ix.length>1){out+='<ul class="list">';ix.slice(1).forEach(function(i){out+=item(rows[i],i)});out+='</ul>'}}
+  }else if(rows.length){
+    out=lead(rows[0],0,"Destaque")+'<h3 class="sub" style="font:700 17px var(--head);margin:26px 0 0;color:var(--muted)">Nas editorias</h3><ul class="list">';
+    var seen={};seen[rows[0].ed]=1;
+    rows.forEach(function(r,i){if(i&&!seen[r.ed]){seen[r.ed]=1;out+=item(r,i,1)}});out+='</ul>';
+  }else out='<p class="meta">Nenhuma notícia ainda. Use “Editar notícias” no rodapé.</p>';
+  view.innerHTML=out;window.scrollTo(0,0);
+  [].forEach.call(tabs.children,function(b){var on=b.dataset.id===sel;b.setAttribute("aria-selected",on);if(on)b.scrollIntoView({inline:"center",block:"nearest"})});
+}
+[["inicio","Início"]].concat(EDS).forEach(function(s){var b=document.createElement("button");b.className="tab";b.setAttribute("role","tab");b.dataset.id=s[0];b.textContent=s[1];
+  b.onclick=function(){location.hash=s[0]==="inicio"?"#/":"#/e/"+s[0]};tabs.appendChild(b)});
+window.addEventListener("hashchange",route);
+function toast(t){var e=$("toast");e.textContent=t;e.hidden=false;setTimeout(function(){e.hidden=true},2800)}
+/* ---------- planilha ---------- */
+var K=["ed","t","r","x","f","a","h"];
+function buildTable(){
+  var h="";
+  draft.forEach(function(r,i){
+    h+='<tr><td class="n">'+(i+1)+'</td><td><select data-i="'+i+'" data-k="ed">'+EDS.map(function(e){return'<option value="'+e[0]+'"'+(e[0]===r.ed?" selected":"")+'>'+e[1]+'</option>'}).join("")+'</select></td>'
+    +'<td><textarea rows="3" data-i="'+i+'" data-k="t">'+esc(r.t)+'</textarea></td><td><textarea rows="3" data-i="'+i+'" data-k="r">'+esc(r.r)+'</textarea></td><td><textarea rows="3" data-i="'+i+'" data-k="x">'+esc(r.x)+'</textarea></td>'
+    +'<td><input data-i="'+i+'" data-k="f" value="'+esc(r.f)+'" placeholder="Link da foto">'+(assets?'<button class="btn" style="margin:0 6px 6px;padding:6px 10px" data-up="'+i+'">Enviar foto</button>':'')+'</td>'
+    +'<td><input data-i="'+i+'" data-k="a" value="'+esc(r.a)+'"></td><td><input data-i="'+i+'" data-k="h" value="'+esc(r.h)+'"></td><td><button class="btn" style="margin:6px" data-del="'+i+'" aria-label="Apagar linha">✕</button></td></tr>';
+  });
+  $("tb").innerHTML=h;
+}
+$("tb").addEventListener("input",function(e){var t=e.target;if(t.dataset.k)draft[+t.dataset.i][t.dataset.k]=t.value});
+$("tb").addEventListener("change",function(e){var t=e.target;if(t.dataset.k)draft[+t.dataset.i][t.dataset.k]=t.value});
+$("tb").addEventListener("click",function(e){var t=e.target;
+  if(t.dataset.del!=null){draft.splice(+t.dataset.del,1);buildTable()}
+  if(t.dataset.up!=null){upIdx=+t.dataset.up;$("file").value="";$("file").click()}});
+$("file").onchange=function(){var f=this.files[0];if(!f||!assets)return;toast("Enviando foto…");
+  assets.upload(f).then(function(r){draft[upIdx].f=r.url;buildTable();toast("Foto enviada")}).catch(function(){toast("Não foi possível enviar a foto")})};
+$("add").onclick=function(){draft.push({ed:"locais",t:"",r:"",x:"",f:"",a:"Redação 11hr",h:"Hoje"});buildTable();var w=document.querySelector(".wrap");w.scrollTop=w.scrollHeight;var t=$("tb").lastChild.querySelector("textarea");t&&t.focus()};
+$("pastebtn").onclick=function(){$("pastebox").hidden=!$("pastebox").hidden};
+$("doimport").onclick=function(){
+  var n=0;$("pastetx").value.split(/\r?\n/).forEach(function(l,li){if(!l.trim())return;var c=l.split("\t");
+    if(li===0&&/^editoria$/i.test(c[0].trim()))return;
+    var key=c[0].trim().toLowerCase(),id="locais";EDS.forEach(function(e){if(e[0]===key||e[1].toLowerCase()===key)id=e[0]});
+    draft.push({ed:id,t:c[1]||"",r:c[2]||"",x:c[3]||"",f:c[4]||"",a:c[5]||"Redação 11hr",h:c[6]||"Hoje"});n++});
+  $("pastetx").value="";$("pastebox").hidden=true;buildTable();toast(n+" linhas importadas")};
+$("edbtn").onclick=function(){draft=JSON.parse(JSON.stringify(rows));buildTable();$("ed").hidden=false};
+$("close").onclick=function(){$("ed").hidden=true};
+$("save").onclick=function(){
+  var out=draft.filter(function(r){return r.t.trim()}).map(function(r){var o={};K.forEach(function(k){o[k]=String(r[k]||"").trim()});return o});
+  rows=out;try{localStorage.setItem("11hr",JSON.stringify(rows))}catch(e){}
+  $("ed").hidden=true;route();
+  if(db&&user){db.doc("news/all").set({json:JSON.stringify(rows)}).then(function(){toast("Notícias publicadas")}).catch(function(){toast("Salvo só neste aparelho: sem permissão para publicar")})}
+  else toast("Salvo neste aparelho");
+};
+/* ---------- carga ---------- */
+try{var ls=localStorage.getItem("11hr");if(ls){var p=JSON.parse(ls);if(p&&p.length)rows=p}}catch(e){}
+var d=new Date().toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long"});
+$("date").textContent=d.charAt(0).toUpperCase()+d.slice(1);
+route();
+(async function(){
+  try{
+    if(!window.claude||!claude.use)return;
+    db=await claude.use("db");user=await claude.use("user");assets=await claude.use("assets");
+    if(db)db.doc("news/all").onSnapshot(function(s){if(s.exists){try{var p=JSON.parse(s.data().json);if(Array.isArray(p)){rows=p;if($("ed").hidden)route()}}catch(e){}}},function(){});
+    var can=user?await user.canEdit():false;
+    if(db&&!can)$("edbtn").hidden=true;
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
