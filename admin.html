@@ -381,7 +381,9 @@ function renderAnuncios(){
   $("empty-anu").style.display="none";
   tb.innerHTML=anuncios.map(function(a,i){
     var alvoOpts=['<option value="todas"'+(a.alvo==="todas"?" selected":"")+'>Todas as páginas</option>']
-      .concat(EDS.map(function(e){return'<option value="'+e[0]+'"'+(a.alvo===e[0]?" selected":"")+'>'+e[1]+'</option>'})).join("");
+      .concat(['<optgroup label="── Notícias específicas ──">'])
+      .concat(noticias.map(function(n,ni){var title=n.titulo||("Notícia "+(ni+1));var short=title.length>50?title.slice(0,50)+"…":title;return'<option value="'+esc(title)+'"'+(a.alvo===title?" selected":"")+'>📰 '+esc(short)+'</option>'}))
+      .concat(['</optgroup>']).join("");
     return '<tr>'+
       '<td class="td-ord"><div class="ord-btns"><button class="ord-btn" onclick="moveA('+i+',-1)">▲</button><button class="ord-btn" onclick="moveA('+i+',1)">▼</button></div></td>'+
       '<td class="td-num">'+(i+1)+'</td>'+
