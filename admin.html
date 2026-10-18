@@ -314,11 +314,21 @@ async function handleFile(inp,type,idx){
 /* ---- GITHUB LOAD/SAVE ---- */
 async function loadFromGitHub(){
   $("hstatus").textContent="Carregando…";
-  var info=await apiGet("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE+"?ref="+BRANCH);
-  currentSha=info.sha;
-  var data=JSON.parse(atob(info.content.replace(/\n/g,"")));
-  noticias=(data.noticias||[]).map(function(n){return Object.assign({editoria:"locais",titulo:"",resumo:"",texto:"",foto:"",autor:"Redação 11hr",hora:"Hoje, 10h",link:""},n)});
-  anuncios=(data.anuncios||[]).map(function(a){return Object.assign({foto:"",link:"",alvo:"todas"},a)});
+  try{
+    var info=await apiGet("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE+"?ref="+BRANCH);
+    currentSha=info.sha;
+    var raw=atob(info.content.replace(/\n/g,""));
+    var text=decodeURIComponent(raw.split("").map(function(c){return"%"+("00"+c.charCodeAt(0).toString(16)).slice(-2)}).join(""));
+    var data=JSON.parse(text);
+    noticias=(data.noticias||[]).map(function(n){return Object.assign({editoria:"locais",titulo:"",resumo:"",texto:"",foto:"",autor:"Redação 11hr",hora:"Hoje, 10h",link:""},n)});
+    anuncios=(data.anuncios||[]).map(function(a){return Object.assign({foto:"",link:"",alvo:"todas"},a)});
+  }catch(e){
+    if(String(e).includes("404")){
+      currentSha="";
+      noticias=[];anuncios=[];
+      toast("Arquivo data.json não encontrado. Crie sua primeira notícia!","ok");
+    }else throw e;
+  }
   $("hstatus").textContent="";
   renderNoticias();renderAnuncios();setDirty(false);
 }
@@ -328,7 +338,14 @@ async function saveToGitHub(){
   try{
     var json=JSON.stringify({noticias:noticias,anuncios:anuncios},null,2);
     var b64=btoa(unescape(encodeURIComponent(json)));
-    await apiPut("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE,{message:"Atualizar conteúdo via admin",content:b64,sha:currentSha,branch:BRANCH});
+    /* Buscar SHA mais recente antes de salvar */
+    try{
+      var fresh=await apiGet("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE+"?ref="+BRANCH);
+      currentSha=fresh.sha;
+    }catch(e){currentSha="";}
+    var body={message:"Atualizar conteúdo via admin",content:b64,branch:BRANCH};
+    if(currentSha)body.sha=currentSha;
+    await apiPut("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE,body);
     var info=await apiGet("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE+"?ref="+BRANCH);
     currentSha=info.sha;
     setDirty(false);
