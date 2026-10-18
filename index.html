@@ -12,7 +12,6 @@
   --mast:#14213D;--accent:#FFC20E;--alert:#1A6B3A;--link:#1F3FBF;--ph1:#E3E8F2;--ph2:#D3DAE9;
   --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"Source Serif 4",Georgia,serif;
   color-scheme:light;
-  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0A0F1E;--surface:#131A2E;--ink:#EEF1F8;--muted:#9AA5BC;--line:#26304A;--mast:#1B2A55;--link:#9DB2FF;--ph1:#1A2340;--ph2:#222D50;color-scheme:dark}}
@@ -37,7 +36,7 @@ body{background:var(--out)}
 .tabs::-webkit-scrollbar{display:none}
 .tab{flex:none;border:0;background:transparent;color:var(--muted);font:600 15px var(--head);padding:9px 13px;border-radius:999px;cursor:pointer}
 .tab[aria-selected="true"]{background:var(--mast);color:#fff}
-.tab:focus-visible,.item:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.tab:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 main{padding:18px 18px 80px}
 h2{font:800 28px/1.1 var(--head);letter-spacing:-.02em;margin:0 0 16px}
 .ph{aspect-ratio:16/9;border-radius:8px;background:repeating-linear-gradient(135deg,var(--ph1) 0 14px,var(--ph2) 14px 28px);display:flex;align-items:flex-end;padding:10px;font:500 12px var(--head);color:var(--muted)}
@@ -61,39 +60,15 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 .art h1{font:800 29px/1.12 var(--head);letter-spacing:-.02em;margin:14px 0 10px}
 .art .body p{font-size:19px;line-height:1.6;margin:0 0 16px}
 .art .sum{font-size:20px;line-height:1.45;color:var(--muted);margin:0 0 14px}
-
-/* Loading state */
 .loading{display:flex;flex-direction:column;align-items:center;gap:14px;padding:60px 20px;color:var(--muted);font:600 15px var(--head)}
 .spinner{width:36px;height:36px;border:3px solid var(--line);border-top-color:var(--mast);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* Anúncio flutuante */
-#ad-widget{
-  position:fixed;
-  bottom:calc(16px + env(safe-area-inset-bottom,0px));
-  right:16px;
-  z-index:40;
-  width:220px;
-  border-radius:12px;
-  box-shadow:0 4px 20px rgba(0,0,0,.35);
-  overflow:hidden;
-  background:var(--surface);
-  border:1px solid var(--line);
-  transition:transform .25s ease,opacity .25s ease;
-}
+#ad-widget{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:16px;z-index:40;width:220px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.35);overflow:hidden;background:var(--surface);border:1px solid var(--line);transition:transform .25s ease,opacity .25s ease}
 #ad-widget.hidden-ad{transform:translateY(calc(100% + 20px));opacity:0;pointer-events:none}
-#ad-header{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:6px 10px;
-  background:var(--mast);
-  color:#fff;
-  font:700 11px var(--head);
-  letter-spacing:.04em;
-}
-#ad-toggle{
-  background:none;border:none;color:#fff;cursor:pointer;
-  font:700 16px var(--head);line-height:1;padding:0;
-}
+#ad-header{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--mast);color:#fff;font:700 11px var(--head);letter-spacing:.04em}
+#ad-toggle{background:none;border:none;color:#fff;cursor:pointer;font:700 16px var(--head);line-height:1;padding:0}
 #ad-body{overflow:hidden;transition:max-height .3s ease}
 #ad-body.collapsed{max-height:0!important}
 #ad-img{width:100%;display:block;cursor:pointer;object-fit:cover}
@@ -117,7 +92,7 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 <div id="ad-widget" class="hidden-ad">
   <div id="ad-header">
     <span>PUBLICIDADE</span>
-    <button id="ad-toggle" title="Recolher anúncio">▼</button>
+    <button id="ad-toggle" title="Recolher">▼</button>
   </div>
   <div id="ad-body">
     <a id="ad-link" href="#" target="_blank" rel="noopener">
@@ -127,18 +102,8 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 </div>
 
 <script>
-/* ============================================================
-   CONFIGURAÇÃO — cole o ID da sua planilha abaixo
-   Estrutura da planilha:
-   Aba "Noticias": editoria | titulo | resumo | texto | foto_url | autor | hora | link_externo
-   Aba "Anuncios": foto_url | link_url | alvo  (alvo = "todas" ou nome da editoria)
-   ============================================================ */
-var SHEET_ID = "COLE_O_ID_DA_SUA_PLANILHA_AQUI";
-
-/* ---- Editorias ---- */
 var EDS=[["locais","Notícias locais"],["politica","Política"],["dinheiro","Dinheiro"],["negocios","Negócios"],["esportes","Esportes"],["turismo","Turismo"],["entretenimento","Entretenimento"],["cultura","Cultura"]];
-
-var rows=[], ads=[], currentAd=null;
+var rows=[], ads=[];
 var $=function(i){return document.getElementById(i)};
 var tabs=$("tabs"), view=$("view");
 
@@ -146,6 +111,7 @@ function esc(x){return String(x==null?"":x).replace(/&/g,"&amp;").replace(/</g,"
 function edName(id){for(var i=0;i<EDS.length;i++)if(EDS[i][0]===id)return EDS[i][1];return id}
 function okUrl(u){return /^https?:\/\//i.test(u||"")}
 function pic(r,c){return okUrl(r.f)?'<img class="ph '+(c||'')+'" src="'+esc(r.f)+'" alt="">':'<div class="ph '+(c||'')+'">Foto da matéria</div>'}
+
 function lead(r,i,tag){
   var href=okUrl(r.l)?'href="'+esc(r.l)+'" target="_blank" rel="noopener"':'href="#/n/'+i+'"';
   return '<a class="lead" '+href+'>'+pic(r)+'<h3>'+esc(r.t)+'</h3><span class="meta">'+(tag?'<span class="tag">'+tag+'</span> · ':'')+esc(edName(r.ed))+'</span><p>'+esc(r.r)+'</p><span class="meta">'+esc(r.a)+' · '+esc(r.h)+'</span></a>'
@@ -159,147 +125,76 @@ function route(){
   var h=location.hash,m,sel="inicio",out="";
   if(m=h.match(/^#\/n\/(\d+)/)){
     var r=rows[+m[1]];
-    if(r){sel=r.ed;var ps=(r.x||r.r).split(/\n+/).map(function(p){return"<p>"+esc(p)+"</p>"}).join("");
-      out='<article class="art"><button class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">‹ Voltar</button>'+pic(r)+'<h1>'+esc(r.t)+'</h1><span class="meta"><span class="tag">'+esc(edName(r.ed))+'</span> · '+esc(r.a)+' · '+esc(r.h)+'</span>'+(r.x?'<p class="sum" style="margin-top:14px">'+esc(r.r)+'</p>':'')+'<div class="body" style="margin-top:16px">'+ps+'</div></article>'}
+    if(r){
+      sel=r.ed;
+      var ps=(r.x||r.r).split(/\n+/).map(function(p){return"<p>"+esc(p)+"</p>"}).join("");
+      out='<article class="art"><button class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">‹ Voltar</button>'+pic(r)+'<h1>'+esc(r.t)+'</h1><span class="meta"><span class="tag">'+esc(edName(r.ed))+'</span> · '+esc(r.a)+' · '+esc(r.h)+'</span>'+(r.x?'<p class="sum" style="margin-top:14px">'+esc(r.r)+'</p>':'')+'<div class="body" style="margin-top:16px">'+ps+'</div></article>';
+    }
   }else if(m=h.match(/^#\/e\/(\w+)/)){
     sel=m[1];var ix=[];rows.forEach(function(r,i){if(r.ed===sel)ix.push(i)});
     out='<h2>'+esc(edName(sel))+'</h2>';
     if(!ix.length)out+='<p class="meta">Ainda não há notícias nesta editoria.</p>';
     else{out+=lead(rows[ix[0]],ix[0]);if(ix.length>1){out+='<ul class="list">';ix.slice(1).forEach(function(i){out+=item(rows[i],i)});out+='</ul>'}}
   }else if(rows.length){
-    out=lead(rows[0],0,"Destaque")+'<h3 class="sub" style="font:700 17px var(--head);margin:26px 0 0;color:var(--muted)">Nas editorias</h3><ul class="list">';
+    out=lead(rows[0],0,"Destaque")+'<h3 style="font:700 17px var(--head);margin:26px 0 0;color:var(--muted)">Nas editorias</h3><ul class="list">';
     var seen={};seen[rows[0].ed]=1;
     rows.forEach(function(r,i){if(i&&!seen[r.ed]){seen[r.ed]=1;out+=item(r,i,1)}});out+='</ul>';
   }else{
-    out='<div class="loading"><div class="spinner"></div><span>Carregando notícias…</span></div>';
+    out='<div class="loading"><div class="spinner"></div><span>Carregando…</span></div>';
   }
-  view.innerHTML=out;window.scrollTo(0,0);
+  view.innerHTML=out;
+  window.scrollTo(0,0);
   updateAd(sel);
   [].forEach.call(tabs.children,function(b){var on=b.dataset.id===sel;b.setAttribute("aria-selected",on);if(on)b.scrollIntoView({inline:"center",block:"nearest"})});
 }
 
-/* ---- Anúncios ---- */
-function updateAd(currentSection){
-  if(!ads.length)return;
-  var candidates=ads.filter(function(a){
-    var t=(a.target||"todas").toLowerCase().trim();
-    return t==="todas"||t===currentSection||t===edName(currentSection).toLowerCase();
-  });
-  if(!candidates.length)candidates=ads.filter(function(a){return(a.target||"todas").toLowerCase().trim()==="todas"});
-  if(!candidates.length){$("ad-widget").classList.add("hidden-ad");return;}
-  var ad=candidates[Math.floor(Math.random()*candidates.length)];
+/* Anúncios */
+function updateAd(section){
+  if(!ads.length){$("ad-widget").classList.add("hidden-ad");return}
+  var list=ads.filter(function(a){var t=(a.alvo||"todas").toLowerCase().trim();return t==="todas"||t===section});
+  if(!list.length)list=ads.filter(function(a){return(a.alvo||"todas").toLowerCase().trim()==="todas"});
+  if(!list.length){$("ad-widget").classList.add("hidden-ad");return}
+  var ad=list[Math.floor(Math.random()*list.length)];
   if(okUrl(ad.foto)){
     $("ad-img").src=ad.foto;
     $("ad-link").href=okUrl(ad.link)?ad.link:"#";
     $("ad-widget").classList.remove("hidden-ad");
-  }else{
-    $("ad-widget").classList.add("hidden-ad");
-  }
+  }else{$("ad-widget").classList.add("hidden-ad")}
 }
 
-/* toggle recolher/expandir anúncio */
-var adCollapsed=false;
+var adCol=false;
 $("ad-toggle").onclick=function(){
-  adCollapsed=!adCollapsed;
+  adCol=!adCol;
   var body=$("ad-body");
-  if(adCollapsed){
-    body.style.maxHeight=body.scrollHeight+"px";
-    setTimeout(function(){body.classList.add("collapsed")},10);
-    $("ad-toggle").textContent="▲";
-  }else{
-    body.classList.remove("collapsed");
-    body.style.maxHeight=body.scrollHeight+"px";
-    $("ad-toggle").textContent="▼";
-    setTimeout(function(){body.style.maxHeight=""},300);
-  }
+  if(adCol){body.style.maxHeight=body.scrollHeight+"px";setTimeout(function(){body.classList.add("collapsed")},10);$("ad-toggle").textContent="▲"}
+  else{body.classList.remove("collapsed");body.style.maxHeight=body.scrollHeight+"px";$("ad-toggle").textContent="▼";setTimeout(function(){body.style.maxHeight=""},300)}
 };
 
-/* ---- Tabs ---- */
+/* Tabs */
 [["inicio","Início"]].concat(EDS).forEach(function(s){
-  var b=document.createElement("button");b.className="tab";
-  b.setAttribute("role","tab");b.dataset.id=s[0];b.textContent=s[1];
+  var b=document.createElement("button");b.className="tab";b.setAttribute("role","tab");b.dataset.id=s[0];b.textContent=s[1];
   b.onclick=function(){location.hash=s[0]==="inicio"?"#/":"#/e/"+s[0]};
   tabs.appendChild(b);
 });
 window.addEventListener("hashchange",route);
 
-/* ---- Data ---- */
+/* Data */
 var d=new Date().toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long"});
 $("date").textContent=d.charAt(0).toUpperCase()+d.slice(1);
 
-/* ---- CSV parser simples ---- */
-function parseCSV(text){
-  var rows=[],cur=[],field="",inQ=false;
-  for(var i=0;i<text.length;i++){
-    var c=text[i];
-    if(inQ){
-      if(c==='"'&&text[i+1]==='"'){field+='"';i++;}
-      else if(c==='"'){inQ=false;}
-      else field+=c;
-    }else{
-      if(c==='"'){inQ=true;}
-      else if(c===','){cur.push(field);field="";}
-      else if(c==='\n'||c==='\r'){
-        cur.push(field);field="";
-        if(cur.some(function(f){return f.trim()!==""}))rows.push(cur);
-        cur=[];
-        if(c==='\r'&&text[i+1]==='\n')i++;
-      }else field+=c;
-    }
-  }
-  if(field||cur.length){cur.push(field);if(cur.some(function(f){return f.trim()!==""}))rows.push(cur);}
-  return rows;
-}
-
-/* ---- Carregar do Google Planilhas ---- */
-function sheetUrl(tab){
-  return "https://docs.google.com/spreadsheets/d/"+SHEET_ID+"/gviz/tq?tqx=out:csv&sheet="+encodeURIComponent(tab);
-}
-
-function loadSheets(){
-  if(SHEET_ID==="COLE_O_ID_DA_SUA_PLANILHA_AQUI"){
-    view.innerHTML='<div class="loading"><span>⚠️ Configure o ID da planilha no código.</span><br><span style="font:500 13px var(--body);color:var(--muted);margin-top:8px">Abra o index.html e substitua COLE_O_ID_DA_SUA_PLANILHA_AQUI pelo ID da sua planilha do Google.</span></div>';
-    return;
-  }
-  view.innerHTML='<div class="loading"><div class="spinner"></div><span>Carregando notícias…</span></div>';
-
-  var newsP=fetch(sheetUrl("Noticias")).then(function(r){return r.ok?r.text():Promise.reject("Aba Noticias não encontrada")});
-  var adsP=fetch(sheetUrl("Anuncios")).then(function(r){return r.ok?r.text():""}).catch(function(){return ""});
-
-  Promise.all([newsP,adsP]).then(function(results){
-    var newsCSV=results[0], adsCSV=results[1];
-
-    /* Notícias: pula cabeçalho */
-    var newsData=parseCSV(newsCSV).slice(1);
-    rows=newsData.filter(function(r){return r[1]&&r[1].trim();}).map(function(r){
-      return{
-        ed:(r[0]||"locais").trim().toLowerCase(),
-        t:(r[1]||"").trim(),
-        r:(r[2]||"").trim(),
-        x:(r[3]||"").trim(),
-        f:(r[4]||"").trim(),
-        a:(r[5]||"Redação 11hr").trim(),
-        h:(r[6]||"Hoje").trim(),
-        l:(r[7]||"").trim()   /* link externo opcional */
-      };
-    });
-
-    /* Anúncios: pula cabeçalho */
-    if(adsCSV){
-      var adsData=parseCSV(adsCSV).slice(1);
-      ads=adsData.filter(function(r){return r[0]&&r[0].trim();}).map(function(r){
-        return{foto:(r[0]||"").trim(),link:(r[1]||"").trim(),target:(r[2]||"todas").trim()};
-      });
-    }
-
+/* Carregar data.json */
+view.innerHTML='<div class="loading"><div class="spinner"></div><span>Carregando…</span></div>';
+fetch("/11hr/data.json?v="+Date.now())
+  .then(function(r){return r.ok?r.json():Promise.reject("Erro "+r.status)})
+  .then(function(data){
+    rows=(data.noticias||[]).map(function(n){return{ed:n.editoria||"locais",t:n.titulo||"",r:n.resumo||"",x:n.texto||"",f:n.foto||"",a:n.autor||"Redação 11hr",h:n.hora||"",l:n.link||""}});
+    ads=(data.anuncios||[]).map(function(a){return{foto:a.foto||"",link:a.link||"",alvo:a.alvo||"todas"}});
     route();
-  }).catch(function(err){
-    view.innerHTML='<div class="loading"><span>❌ Erro ao carregar a planilha.</span><br><span style="font:500 13px var(--body);color:var(--muted);margin-top:8px">Verifique se o ID está correto e se a planilha está publicada na web (Arquivo → Compartilhar → Publicar na web).</span></div>';
-    console.error(err);
+  })
+  .catch(function(e){
+    view.innerHTML='<div class="loading"><span>⚠️ Erro ao carregar notícias.</span></div>';
+    console.error(e);
   });
-}
-
-loadSheets();
 </script>
 </body>
 </html>

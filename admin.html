@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11hr — Painel Admin</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --mast:#14213D;--accent:#FFC20E;--surface:#fff;--bg:#F0F2F7;
+  --ink:#14213D;--muted:#5B6579;--line:#D9DEE8;--link:#1F3FBF;
+  --green:#1A6B3A;--red:#C0392B;--alert:#1A6B3A;
+  --head:"Segoe UI","Trebuchet MS",system-ui,sans-serif;
+}
+body{font-family:var(--head);background:var(--bg);color:var(--ink);min-height:100vh}
+
+/* ---- SETUP ---- */
+#setup{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+.setup-box{background:var(--surface);border-radius:16px;padding:40px;max-width:500px;width:100%;box-shadow:0 4px 32px rgba(0,0,0,.12)}
+.setup-logo{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.setup-mark{background:var(--accent);color:var(--mast);font-weight:800;font-size:36px;padding:6px 10px 4px;border-radius:6px;line-height:1}
+.setup-mark small{font-size:16px}
+.setup-title{font-size:22px;font-weight:800}
+.setup-title span{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:2px}
+.setup-box h2{font-size:17px;margin-bottom:8px}
+.setup-box p{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+.steps{background:var(--bg);border-radius:10px;padding:16px 20px;margin-bottom:20px;font-size:13px;color:var(--muted);line-height:1.9}
+.steps b{color:var(--ink)}
+.steps a{color:var(--link)}
+.inp{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:8px;font-size:15px;font-family:inherit;margin-bottom:12px}
+.inp:focus{outline:2px solid var(--accent);border-color:var(--accent)}
+.btn-pri{width:100%;padding:12px;background:var(--mast);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer}
+.btn-pri:hover{opacity:.9}
+
+/* ---- PAINEL ---- */
+#painel{display:none;flex-direction:column;min-height:100vh}
+header{background:var(--mast);color:#fff;padding:0 24px;display:flex;align-items:center;gap:16px;height:60px;flex-shrink:0}
+.h-logo{background:var(--accent);color:var(--mast);font-weight:800;font-size:22px;padding:4px 8px 2px;border-radius:5px;line-height:1}
+.h-logo small{font-size:11px}
+.h-title{font-weight:700;font-size:17px;flex:1}
+.h-status{font-size:13px;opacity:.75;margin-right:8px}
+.btn-pub{background:var(--accent);color:var(--mast);border:none;border-radius:8px;padding:8px 18px;font-weight:700;font-size:14px;cursor:pointer}
+.btn-pub:disabled{opacity:.5;cursor:not-allowed}
+.btn-out{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer;margin-left:8px}
+
+/* tabs */
+.tab-bar{background:var(--surface);border-bottom:2px solid var(--line);display:flex;padding:0 24px;gap:0;flex-shrink:0}
+.tb{padding:14px 20px;border:none;background:transparent;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tb.on{color:var(--mast);border-bottom-color:var(--mast)}
+
+/* content */
+.content{flex:1;padding:24px;overflow:auto}
+.sec-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sec-header h2{font-size:20px}
+.btn-add{background:var(--mast);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-weight:700;font-size:14px;cursor:pointer}
+.btn-add:hover{opacity:.88}
+
+/* table */
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:900px}
+thead th{background:var(--bg);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);padding:10px 12px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--line)}
+tbody tr:not(:last-child){border-bottom:1px solid var(--line)}
+tbody tr:hover{background:#FAFBFD}
+td{padding:6px 8px;vertical-align:middle}
+td input,td textarea,td select{width:100%;border:1px solid transparent;background:transparent;font-family:inherit;font-size:14px;color:var(--ink);padding:6px 8px;border-radius:6px;resize:vertical}
+td input:focus,td textarea:focus,td select:focus{outline:none;border-color:var(--accent);background:var(--bg)}
+td textarea{min-height:60px}
+.td-num{width:36px;text-align:center;color:var(--muted);font-size:13px;font-weight:600;user-select:none}
+.td-ord{width:44px}
+.td-act{width:60px;text-align:center}
+
+/* order buttons */
+.ord-btns{display:flex;flex-direction:column;gap:2px;align-items:center}
+.ord-btn{background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;width:26px;height:20px;font-size:10px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.ord-btn:hover{background:var(--bg);color:var(--ink)}
+
+/* delete button */
+.btn-del{background:none;border:1px solid var(--line);color:var(--red);border-radius:6px;width:30px;height:30px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.btn-del:hover{background:#FFF0EE;border-color:var(--red)}
+
+/* photo preview */
+.foto-cell{display:flex;flex-direction:column;gap:4px}
+.foto-prev{width:80px;height:50px;object-fit:cover;border-radius:4px;display:none;border:1px solid var(--line)}
+.foto-prev.show{display:block}
+
+/* anuncios target */
+select.alvo{font-size:14px}
+
+/* empty state */
+.empty{padding:40px;text-align:center;color:var(--muted);font-size:15px}
+
+/* toast */
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;z-index:99;display:none;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+#toast.ok{background:var(--green)}
+#toast.err{background:var(--red)}
+</style>
+</head>
+<body>
+
+<!-- ============ SETUP ============ -->
+<div id="setup">
+  <div class="setup-box">
+    <div class="setup-logo">
+      <div class="setup-mark">11<small>hr</small></div>
+      <div class="setup-title">Admin<span>Painel de controle</span></div>
+    </div>
+    <h2>Configure o acesso ao GitHub</h2>
+    <p>Para publicar no site, você precisa de um Token do GitHub. Só precisa fazer isso uma vez.</p>
+    <div class="steps">
+      1. Acesse <a href="https://github.com/settings/tokens/new" target="_blank"><b>github.com → Settings → Developer settings → Personal access tokens → Tokens (classic)</b></a><br>
+      2. Em "Note" escreva: <b>11hr Admin</b><br>
+      3. Em "Expiration" escolha: <b>No expiration</b><br>
+      4. Marque a caixa <b>"repo"</b><br>
+      5. Clique <b>Generate token</b> e copie o token gerado (começa com <b>ghp_</b>)
+    </div>
+    <input class="inp" type="password" id="inp-token" placeholder="Cole o token aqui: ghp_...">
+    <button class="btn-pri" id="btn-entrar">Entrar no Painel</button>
+  </div>
+</div>
+
+<!-- ============ PAINEL ============ -->
+<div id="painel">
+  <header>
+    <div class="h-logo">11<small>hr</small></div>
+    <div class="h-title">Painel Admin</div>
+    <span class="h-status" id="hstatus"></span>
+    <button class="btn-pub" id="btn-pub" disabled>💾 Salvar e publicar</button>
+    <button class="btn-out" id="btn-sair">Sair</button>
+  </header>
+
+  <div class="tab-bar">
+    <button class="tb on" id="tb-noticias" onclick="showTab('noticias')">📰 Notícias</button>
+    <button class="tb" id="tb-anuncios" onclick="showTab('anuncios')">📢 Anúncios</button>
+  </div>
+
+  <div class="content">
+
+    <!-- NOTÍCIAS -->
+    <div id="sec-noticias">
+      <div class="sec-header">
+        <h2>Notícias</h2>
+        <button class="btn-add" onclick="addNoticia()">+ Nova notícia</button>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="td-ord"></th>
+              <th class="td-num">#</th>
+              <th style="min-width:130px">Editoria</th>
+              <th style="min-width:220px">Título</th>
+              <th style="min-width:200px">Resumo</th>
+              <th style="min-width:220px">Texto completo</th>
+              <th style="min-width:140px">Foto (URL)</th>
+              <th style="min-width:120px">Autor</th>
+              <th style="min-width:90px">Hora</th>
+              <th style="min-width:140px">Link externo</th>
+              <th class="td-act"></th>
+            </tr>
+          </thead>
+          <tbody id="tb-not"></tbody>
+        </table>
+        <div class="empty" id="empty-not" style="display:none">Nenhuma notícia ainda. Clique em "+ Nova notícia".</div>
+      </div>
+    </div>
+
+    <!-- ANÚNCIOS -->
+    <div id="sec-anuncios" style="display:none">
+      <div class="sec-header">
+        <h2>Anúncios</h2>
+        <button class="btn-add" onclick="addAnuncio()">+ Novo anúncio</button>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:14px">
+        Os anúncios aparecem no canto inferior direito do site. O visitante pode recolher clicando na seta.
+        Em "Onde aparece" escolha <b>todas</b> para aparecer em todo o site, ou o nome de uma editoria específica.
+      </p>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="td-ord"></th>
+              <th class="td-num">#</th>
+              <th style="min-width:180px">Foto do anúncio (URL)</th>
+              <th style="min-width:180px">Link ao clicar</th>
+              <th style="min-width:160px">Onde aparece</th>
+              <th class="td-act"></th>
+            </tr>
+          </thead>
+          <tbody id="tb-anu"></tbody>
+        </table>
+        <div class="empty" id="empty-anu" style="display:none">Nenhum anúncio ainda. Clique em "+ Novo anúncio".</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+var OWNER="JsilvaM7", REPO="11hr", BRANCH="main", FILE="data.json";
+var EDS=[["locais","Notícias locais"],["politica","Política"],["dinheiro","Dinheiro"],["negocios","Negócios"],["esportes","Esportes"],["turismo","Turismo"],["entretenimento","Entretenimento"],["cultura","Cultura"]];
+var noticias=[], anuncios=[], currentSha="", dirty=false;
+
+/* ---- utils ---- */
+function $(id){return document.getElementById(id)}
+function esc(x){return String(x==null?"":x).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
+function token(){return localStorage.getItem("11hr_tok")||""}
+function setDirty(v){dirty=v;$("btn-pub").disabled=!v;$("hstatus").textContent=v?"● Alterações não salvas":"";}
+function toast(msg,type){var t=$("toast");t.textContent=msg;t.className=type||"";t.style.display="block";clearTimeout(toast._t);toast._t=setTimeout(function(){t.style.display="none"},3000)}
+
+/* ---- AUTH ---- */
+$("btn-entrar").onclick=function(){
+  var tok=$("inp-token").value.trim();
+  if(!tok){toast("Cole o token do GitHub","err");return}
+  localStorage.setItem("11hr_tok",tok);
+  init();
+};
+$("btn-sair").onclick=function(){localStorage.removeItem("11hr_tok");location.reload()};
+
+/* ---- TABS ---- */
+function showTab(t){
+  $("sec-noticias").style.display=t==="noticias"?"block":"none";
+  $("sec-anuncios").style.display=t==="anuncios"?"block":"none";
+  $("tb-noticias").className="tb"+(t==="noticias"?" on":"");
+  $("tb-anuncios").className="tb"+(t==="anuncios"?" on":"");
+}
+
+/* ---- GITHUB API ---- */
+async function apiGet(path){
+  var r=await fetch("https://api.github.com"+path,{headers:{Authorization:"token "+token(),"Accept":"application/vnd.github.v3+json"}});
+  if(!r.ok)throw new Error(r.status+" "+r.statusText);
+  return r.json();
+}
+async function apiPut(path,body){
+  var r=await fetch("https://api.github.com"+path,{method:"PUT",headers:{Authorization:"token "+token(),"Accept":"application/vnd.github.v3+json","Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(!r.ok){var e=await r.json().catch(()=>({}));throw new Error(e.message||r.status)}
+  return r.json();
+}
+
+async function loadFromGitHub(){
+  $("hstatus").textContent="Carregando…";
+  var info=await apiGet("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE+"?ref="+BRANCH);
+  currentSha=info.sha;
+  var content=atob(info.content.replace(/\n/g,""));
+  var data=JSON.parse(content);
+  noticias=(data.noticias||[]).map(n=>Object.assign({editoria:"locais",titulo:"",resumo:"",texto:"",foto:"",autor:"Redação 11hr",hora:"Hoje, 10h",link:""},n));
+  anuncios=(data.anuncios||[]).map(a=>Object.assign({foto:"",link:"",alvo:"todas"},a));
+  $("hstatus").textContent="";
+  renderNoticias();
+  renderAnuncios();
+  setDirty(false);
+}
+
+async function saveToGitHub(){
+  $("btn-pub").disabled=true;
+  $("hstatus").textContent="Publicando…";
+  try{
+    var data={noticias:noticias,anuncios:anuncios};
+    var json=JSON.stringify(data,null,2);
+    var b64=btoa(unescape(encodeURIComponent(json)));
+    await apiPut("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE,{message:"Atualizar notícias e anúncios via admin",content:b64,sha:currentSha,branch:BRANCH});
+    /* refresh sha */
+    var info=await apiGet("/repos/"+OWNER+"/"+REPO+"/contents/"+FILE+"?ref="+BRANCH);
+    currentSha=info.sha;
+    setDirty(false);
+    toast("✅ Publicado com sucesso! O site atualiza em ~1 minuto.","ok");
+  }catch(e){
+    toast("❌ Erro ao publicar: "+e.message,"err");
+    $("btn-pub").disabled=false;
+  }
+  $("hstatus").textContent="";
+}
+
+$("btn-pub").onclick=saveToGitHub;
+
+/* ---- RENDER NOTÍCIAS ---- */
+function renderNoticias(){
+  var tb=$("tb-not");
+  if(!noticias.length){tb.innerHTML="";$("empty-not").style.display="block";return}
+  $("empty-not").style.display="none";
+  tb.innerHTML=noticias.map(function(n,i){
+    var edOpts=EDS.map(function(e){return'<option value="'+e[0]+'"'+(e[0]===n.editoria?" selected":"")+'>'+e[1]+'</option>'}).join("");
+    return '<tr id="nrow-'+i+'">'+
+      '<td class="td-ord"><div class="ord-btns">'+
+        '<button class="ord-btn" title="Subir" onclick="moveN('+i+',-1)">▲</button>'+
+        '<button class="ord-btn" title="Descer" onclick="moveN('+i+',1)">▼</button>'+
+      '</div></td>'+
+      '<td class="td-num">'+(i+1)+'</td>'+
+      '<td><select onchange="setN('+i+',\'editoria\',this.value)">'+edOpts+'</select></td>'+
+      '<td><input value="'+esc(n.titulo)+'" oninput="setN('+i+',\'titulo\',this.value)" placeholder="Título da matéria"></td>'+
+      '<td><textarea oninput="setN('+i+',\'resumo\',this.value)" placeholder="Resumo curto">'+esc(n.resumo)+'</textarea></td>'+
+      '<td><textarea oninput="setN('+i+',\'texto\',this.value)" placeholder="Texto completo (deixe vazio para usar o resumo)">'+esc(n.texto)+'</textarea></td>'+
+      '<td><div class="foto-cell">'+
+        '<input value="'+esc(n.foto)+'" oninput="setN('+i+',\'foto\',this.value);previewFoto(this,\'fp-'+i+'\')" placeholder="https://...">'+
+        '<img id="fp-'+i+'" class="foto-prev'+(n.foto?' show':'')+'" src="'+esc(n.foto)+'" onerror="this.className=\'foto-prev\'">'+
+      '</div></td>'+
+      '<td><input value="'+esc(n.autor)+'" oninput="setN('+i+',\'autor\',this.value)" placeholder="Redação 11hr"></td>'+
+      '<td><input value="'+esc(n.hora)+'" oninput="setN('+i+',\'hora\',this.value)" placeholder="Hoje, 10h"></td>'+
+      '<td><input value="'+esc(n.link)+'" oninput="setN('+i+',\'link\',this.value)" placeholder="https://... (opcional)"></td>'+
+      '<td class="td-act"><button class="btn-del" title="Apagar" onclick="delN('+i+')">✕</button></td>'+
+    '</tr>';
+  }).join("");
+}
+
+function setN(i,k,v){noticias[i][k]=v;setDirty(true)}
+function addNoticia(){noticias.push({editoria:"locais",titulo:"",resumo:"",texto:"",foto:"",autor:"Redação 11hr",hora:"Hoje, 10h",link:""});renderNoticias();setDirty(true);var rows=$("tb-not").children;if(rows.length)rows[rows.length-1].scrollIntoView({behavior:"smooth"})}
+function delN(i){if(!confirm("Apagar esta notícia?"))return;noticias.splice(i,1);renderNoticias();setDirty(true)}
+function moveN(i,dir){var ni=i+dir;if(ni<0||ni>=noticias.length)return;var t=noticias[i];noticias[i]=noticias[ni];noticias[ni]=t;renderNoticias();setDirty(true)}
+function previewFoto(inp,id){var el=$(id);if(!el)return;if(inp.value.trim()){el.src=inp.value.trim();el.className="foto-prev show"}else{el.className="foto-prev"}}
+
+/* ---- RENDER ANÚNCIOS ---- */
+function renderAnuncios(){
+  var tb=$("tb-anu");
+  if(!anuncios.length){tb.innerHTML="";$("empty-anu").style.display="block";return}
+  $("empty-anu").style.display="none";
+  var alvos=['<option value="todas">Todas as páginas</option>'].concat(EDS.map(function(e){return'<option value="'+e[0]+'">'+e[1]+'</option>'})).join("");
+  tb.innerHTML=anuncios.map(function(a,i){
+    var alvoOpts=EDS.reduce(function(acc,e){return acc.replace('value="'+e[0]+'"','value="'+e[0]+'"'+(e[0]===a.alvo?" selected":""))},alvos).replace('value="todas"','value="todas"'+("todas"===a.alvo?" selected":""));
+    return '<tr>'+
+      '<td class="td-ord"><div class="ord-btns">'+
+        '<button class="ord-btn" onclick="moveA('+i+',-1)">▲</button>'+
+        '<button class="ord-btn" onclick="moveA('+i+',1)">▼</button>'+
+      '</div></td>'+
+      '<td class="td-num">'+(i+1)+'</td>'+
+      '<td><div class="foto-cell">'+
+        '<input value="'+esc(a.foto)+'" oninput="setA('+i+',\'foto\',this.value);previewFoto(this,\'ap-'+i+'\')" placeholder="https://imagem-do-anuncio.jpg">'+
+        '<img id="ap-'+i+'" class="foto-prev'+(a.foto?' show':'')+'" src="'+esc(a.foto)+'" onerror="this.className=\'foto-prev\'">'+
+      '</div></td>'+
+      '<td><input value="'+esc(a.link)+'" oninput="setA('+i+',\'link\',this.value)" placeholder="https://site-do-cliente.com.br"></td>'+
+      '<td><select class="alvo" onchange="setA('+i+',\'alvo\',this.value)">'+alvoOpts+'</select></td>'+
+      '<td class="td-act"><button class="btn-del" onclick="delA('+i+')">✕</button></td>'+
+    '</tr>';
+  }).join("");
+}
+
+function setA(i,k,v){anuncios[i][k]=v;setDirty(true)}
+function addAnuncio(){anuncios.push({foto:"",link:"",alvo:"todas"});renderAnuncios();setDirty(true)}
+function delA(i){if(!confirm("Apagar este anúncio?"))return;anuncios.splice(i,1);renderAnuncios();setDirty(true)}
+function moveA(i,dir){var ni=i+dir;if(ni<0||ni>=anuncios.length)return;var t=anuncios[i];anuncios[i]=anuncios[ni];anuncios[ni]=t;renderAnuncios();setDirty(true)}
+
+/* ---- INIT ---- */
+async function init(){
+  if(!token()){$("setup").style.display="flex";$("painel").style.display="none";return}
+  $("setup").style.display="none";$("painel").style.display="flex";
+  try{
+    await loadFromGitHub();
+  }catch(e){
+    if(String(e).includes("401")||String(e).includes("403")){
+      toast("Token inválido ou sem permissão. Verifique e entre novamente.","err");
+      setTimeout(function(){localStorage.removeItem("11hr_tok");location.reload()},3000);
+    }else{
+      toast("Erro ao carregar dados: "+e.message,"err");
+    }
+  }
+}
+
+window.onbeforeunload=function(){if(dirty)return"Há alterações não salvas. Deseja sair mesmo assim?"};
+
+init();
+</script>
+</body>
+</html>
