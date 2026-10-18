@@ -9,7 +9,7 @@
 <style>
 :root{
   --bg:#EEF1F6;--surface:#FFFFFF;--ink:#14213D;--muted:#5B6579;--line:#D9DEE8;
-  --mast:#14213D;--accent:#FFC20E;--alert:#D7263D;--link:#1F3FBF;--ph1:#E3E8F2;--ph2:#D3DAE9;
+  --mast:#14213D;--accent:#FFC20E;--alert:#1A6B3A;--link:#1F3FBF;--ph1:#E3E8F2;--ph2:#D3DAE9;
   --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;--body:"Source Serif 4",Georgia,serif;
   color-scheme:light;
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -21,9 +21,9 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-text-size-adjust:100%}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--mast);z-index:30}
-:root{--out:#BFC8DA}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--out:#03060E}}
-:root[data-theme="dark"]{--out:#03060E}
+:root{--out:#5B7FA8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--out:#1A2A45}}
+:root[data-theme="dark"]{--out:#1A2A45}
 body{background:var(--out)}
 .app{max-width:430px;margin:0 auto;background:var(--surface);min-height:100vh;box-shadow:0 0 0 1px var(--line),0 0 36px 10px rgba(10,20,50,.35)}
 .mast{background:var(--mast);color:#fff;padding:18px 18px 14px}
