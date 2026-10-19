@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#14213D"/>
+  <!-- Logo box -->
+  <rect x="80" y="185" width="220" height="200" rx="16" fill="#FFC20E"/>
+  <text x="148" y="330" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="120" fill="#14213D">11</text>
+  <text x="250" y="308" font-family="Arial,sans-serif" font-weight="700" font-size="46" fill="#14213D">hr</text>
+  <!-- Title -->
+  <text x="340" y="280" font-family="Arial,sans-serif" font-weight="700" font-size="68" fill="#FFFFFF">Jornal</text>
+  <text x="340" y="345" font-family="Arial,sans-serif" font-weight="400" font-size="42" fill="#9AA5BC">da Zona Norte</text>
+  <!-- Tagline -->
+  <text x="600" y="460" font-family="Arial,sans-serif" font-size="30" fill="#5B6579" text-anchor="middle">Notícias da Zona Norte · Todos os dias</text>
+  <!-- URL -->
+  <text x="600" y="560" font-family="Arial,sans-serif" font-size="26" fill="#3A5080" text-anchor="middle">11hr.e-dolphin.info</text>
+</svg>

@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>11hr Jornal da Zona Norte</title>
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="11hr Jornal da Zona Norte">
+<meta property="og:title" id="og-title" content="11hr Jornal da Zona Norte">
+<meta property="og:description" id="og-desc" content="Notícias da Zona Norte de São Paulo, todos os dias.">
+<meta property="og:image" id="og-image" content="https://11hr.e-dolphin.info/banner.svg">
+<meta property="og:url" id="og-url" content="https://11hr.e-dolphin.info/">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" id="tw-title" content="11hr Jornal da Zona Norte">
+<meta name="twitter:description" id="tw-desc" content="Notícias da Zona Norte de São Paulo, todos os dias.">
+<meta name="twitter:image" id="tw-image" content="https://11hr.e-dolphin.info/banner.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -159,6 +171,7 @@ function route(){
         +'<button class="sh-btn sh-cp" id="btn-cp" onclick="copyLink(this)" title="Copiar link">🔗</button>'
         +'</div>';
       out='<article class="art"><button class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">‹ Voltar</button>'+pic(r)+'<h1>'+esc(r.t)+'</h1><span class="meta"><span class="tag">'+esc(edName(r.ed))+'</span> · '+esc(r.a)+' · '+esc(r.h)+'</span>'+(r.x?'<p class="sum" style="margin-top:14px">'+esc(r.r)+'</p>':'')+'<div class="body" style="margin-top:16px">'+ps+'</div>'+shareBar+'</article>';
+      setOg(r,location.href);
     }
   }else if(m=h.match(/^#\/e\/(\w+)/)){
     sel=m[1];var ix=[];rows.forEach(function(r,i){if(r.ed===sel)ix.push(i)});
@@ -181,10 +194,36 @@ function route(){
   [].forEach.call(tabs.children,function(b){var on=b.dataset.id===sel;b.setAttribute("aria-selected",on);if(on)b.scrollIntoView({inline:"center",block:"nearest"})});
 }
 
+/* Atualiza meta tags OG para a notícia atual */
+function setOg(r,url){
+  var img=r.f&&/^https?:\/\//i.test(r.f)?r.f:'https://11hr.e-dolphin.info/banner.svg';
+  var setA=function(id,attr,val){var el=document.getElementById(id);if(el)el.setAttribute(attr,val)};
+  setA('og-title','content',r.t);setA('og-desc','content',r.r);setA('og-image','content',img);setA('og-url','content',url);
+  setA('tw-title','content',r.t);setA('tw-desc','content',r.r);setA('tw-image','content',img);
+  document.title=r.t+' · 11hr Jornal da Zona Norte';
+}
+
 /* Compartilhamento */
 function doShare(i){
   var r=rows[i];if(!r)return;
-  navigator.share({title:r.t,text:r.r,url:location.href}).catch(function(){});
+  var shareBase={title:r.t,text:r.r,url:location.href};
+  /* Tenta compartilhar com a foto da notícia */
+  if(r.f&&/^https?:\/\//i.test(r.f)&&navigator.canShare){
+    fetch(r.f)
+      .then(function(res){return res.blob()})
+      .then(function(blob){
+        var ext=blob.type.includes('png')?'foto.png':'foto.jpg';
+        var file=new File([blob],ext,{type:blob.type});
+        var withFile={title:r.t,text:r.r,files:[file]};
+        if(navigator.canShare(withFile)){
+          return navigator.share(withFile);
+        }
+        return navigator.share(shareBase);
+      })
+      .catch(function(){navigator.share(shareBase).catch(function(){})});
+  }else{
+    navigator.share(shareBase).catch(function(){});
+  }
 }
 function copyLink(btn){
   var url=location.href;
