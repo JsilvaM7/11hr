@@ -82,10 +82,10 @@
     },
     {
       "editoria": "cultura",
-      "titulo": "Centro cultural abre exposição sobre a memória dos bairros",
-      "resumo": "Fotografias antigas e relatos de moradores contam como a região cresceu.",
+      "titulo": "Batalhão Tobias de Aguiar — a ROTA",
+      "resumo": "Para contextualizar historicamente as origens da tensão entre o estado paulista e o Governo Federal, a Revolução Constitucionalista de 1932 foi o maior conflito armado ocorrido no estado de São Paulo, marcando decisivamente a memória da capital paulista e de instituições históricas sediadas na região.",
       "texto": "A exposição ficará aberta até o final do mês com entrada gratuita de terça a domingo das 10h às 18h.",
-      "foto": "",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792444563336_images__15_.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -131,6 +131,11 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792443453246_images__13_.jpg",
       "link": "",
       "alvo": "Roteiro de um dia pela Zona Norte: parque, mirante e boa comida"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792444760164_images__16_.jpg",
+      "link": "",
+      "alvo": "todas"
     }
   ]
 }
