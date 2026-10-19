@@ -192,7 +192,7 @@ $("date").textContent=d.charAt(0).toUpperCase()+d.slice(1);
 
 /* Carregar data.json */
 view.innerHTML='<div class="loading"><div class="spinner"></div><span>Carregando…</span></div>';
-fetch("/11hr/data.json?v="+Date.now())
+fetch("data.json?v="+Date.now())
   .then(function(r){return r.ok?r.json():Promise.reject("Erro "+r.status)})
   .then(function(data){
     rows=(data.noticias||[]).map(function(n){return{ed:n.editoria||"locais",t:n.titulo||"",r:n.resumo||"",x:n.texto||"",f:n.foto||"",a:n.autor||"Redação 11hr",h:n.hora||"",l:n.link||""}});
