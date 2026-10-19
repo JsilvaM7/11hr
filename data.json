@@ -62,10 +62,10 @@
     },
     {
       "editoria": "entretenimento",
-      "titulo": "Cinema de rua volta a exibir sessões a preço popular",
-      "resumo": "Programação mistura filmes nacionais e clássicos.",
-      "texto": "O cinema de rua do bairro retoma as sessões populares aos finais de semana com ingressos a R$ 8.",
-      "foto": "",
+      "titulo": "Paquera e o Afeto Espontâneo",
+      "resumo": "A energia do Carnaval de rua na Zona Norte de São Paulo transcende a simples celebração da folia, convertendo as artérias dos bairros tradicionais num autêntico cenário de conquista, descontração e beijos de rua.",
+      "texto": "Quando os blocos e fanfarras ocupam as vias públicas, a atmosfera festiva contagia foliões de todas as idades, transformando a paquera e o afeto espontâneo na grande atração das tardes de festa.\n\nBairros como Santana, Freguesia do Ó e Tucuruvi abrigam blocos de rua que atraem multidões dispostas a desarmar o estresse do quotidiano e vivenciar encontros e paixões passageiras. Sob o ritmo das marchinhas, do samba e dos ritmos baianos, os corredores de folia tornam-se o refúgio perfeito para quem busca flertes ligeiros, troca de olhares marcantes e abraços calorosos em pleno espaço público.\n\nAlém da liberdade expressa nos festejos, o movimento carnavalesco fortalece o comércio boémio e a integração da comunidade local, transformando esquinas e calçadas em pontos de reencontro. Entre confetes, serpentinas e bebidas bem geladas, a tradição dos beijos de rua na Zona Norte renova o espírito festivo da região e celebra a diversidade e o afeto urbano.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792438803527_JALPB6NZ5VPALGDRP3GN2WL5VI.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -119,6 +119,11 @@
     },
     {
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792438007695_images__9_.jpg",
+      "link": "",
+      "alvo": "todas"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792440578036_images__11_.jpg",
       "link": "",
       "alvo": "todas"
     }
