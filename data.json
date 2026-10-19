@@ -32,10 +32,10 @@
     },
     {
       "editoria": "dinheiro",
-      "titulo": "Como organizar o orçamento antes das compras de fim de ano",
-      "resumo": "Separe gastos fixos, defina um teto para presentes e evite parcelamentos longos.",
-      "texto": "Especialistas recomendam listar todos os compromissos financeiros fixos antes de calcular quanto sobra para as compras de natal e ano novo.",
-      "foto": "",
+      "titulo": "Feira do Jaçanã",
+      "resumo": "As feiras livres do Jaçanã continuam a se consolidar como o verdadeiro coração comunitário da Zona Norte de São Paulo, reunindo semanalmente centenas de moradores em busca de produtos frescos e convivência.",
+      "texto": "Pelas calçadas do bairro, barracas coloridas e organizadas exibem o melhor da hortifrúti diretamente de produtores locais, oferecendo uma variedade que combina qualidade, preço acessível e sustentabilidade para a mesa das famílias regionais.\n\nAlém do abastecimento essencial, esses espaços promovem uma forte redescoberta da identidade cultural e da tradição boêmia do Jaçanã. Entre conversas descontraídas, encontros entre vizinhos e o irrecusável aroma dos tradicionais pastéis com caldo de cana, as feiras livres transformam a rotina matinal em um evento festivo que fortalece os laços sociais do bairro.\n\nOs investimentos em infraestrutura e limpeza urbana têm garantido a organização e o conforto tanto dos feirantes quanto dos frequentadores durante os dias de evento. Com isso, o Jaçanã reforça sua vocação de acolhimento e vitalidade, provando que a tradição das feiras de rua permanece essencial para a economia local e o bem-estar da população.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431735179_images__5_.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -106,6 +106,11 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431320004_shopping-metro-tucuruvi.jpg",
       "link": "",
       "alvo": "Política Zona Norte "
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431793306_images__6_.jpg",
+      "link": "",
+      "alvo": "Feira do Jaçanã"
     }
   ]
 }
