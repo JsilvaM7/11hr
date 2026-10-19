@@ -22,10 +22,10 @@
     },
     {
       "editoria": "politica",
-      "titulo": "Câmara debate orçamento para os bairros da Zona Norte",
-      "resumo": "Vereadores discutem verbas para saúde, transporte e zeladoria.",
-      "texto": "A sessão de ontem reuniu vereadores e representantes das subprefeituras para debater a destinação das verbas municipais para a região norte.",
-      "foto": "",
+      "titulo": "Política Zona Norte ",
+      "resumo": "A política e a gestão pública exercem um impacto direto e profundo na dinâmica diária, no desenvolvimento urbano e na qualidade de vida dos moradores da Zona Norte de São Paulo. Por ser uma região vasta, diversa e historicamente marcada por contrastes socioeconômicos, as decisões políticas moldam desde a mobilidade urbana até o acesso a serviços essenciais.",
+      "texto": "1. Mobilidade Urbana e Infraestrutura\nA presença e a expansão de grandes obras de transporte são frutos diretos de escolhas de políticas públicas. A chegada de novas linhas de metrô, o gerenciamento do transporte sobre pneus e a manutenção de corredores de ônibus determinam o tempo que o morador da Zona Norte gasta para se deslocar diariamente até o centro e outras regiões de trabalho. Além disso, obras de drenagem e canalização de córregos dependem diretamente de investimentos do orçamento público para combater enchentes históricas em bairros mais suscetíveis.\n\n2. Preservação Ambiental e Lazer\nA Zona Norte abriga importantes áreas de preservação ambiental, como o Parque Estadual Alberto Löfgren (Horto Florestal) e o Parque Estadual da Cantareira. A gestão pública e a formulação de leis ambientais definem as políticas de concessão, a manutenção da biodiversidade e os investimentos em lazer e turismo ecológico. Decisões políticas adequadas garantem que essas áreas verdes permaneçam acessíveis à população e protegidas contra a especulação imobiliária irregular.\n\n3. Serviços Públicos e Desenvolvimento Social\nA distribuição e a qualidade dos equipamentos de saúde (como UBSs e hospitais regionais), das escolas públicas e das creches refletem prioridades orçamentárias estabelecidas pelos governos municipal e estadual. Além disso, políticas voltadas para a segurança pública e o fomento ao comércio e à vida boêmia local — como a regulamentação do uso do solo e o apoio a eventos culturais — influenciam diretamente o dinamismo econômico e a sensação de segurança de bairros emblemáticos como Santana, Tucuruvi e Vila Guilherme.\n\nComo você gostaria de aprofundar esse tema? Podemos focar em um setor específico (como transporte ou meio ambiente) ou em algum bairro da Zona Norte.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431235319_images__4_.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -101,6 +101,11 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792430910104_images__3_.jpg",
       "link": "",
       "alvo": "Avenida Nova"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431320004_shopping-metro-tucuruvi.jpg",
+      "link": "",
+      "alvo": "todas"
     }
   ]
 }
