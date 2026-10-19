@@ -75,7 +75,7 @@
       "titulo": "Roteiro de um dia pela Zona Norte: parque, mirante e boa comida",
       "resumo": "Do verde da Cantareira aos bares tradicionais de Santana.",
       "texto": "Um passeio completo pela Zona Norte começa no Parque da Cantareira, passa pelo mirante e termina nos bares históricos de Santana.",
-      "foto": "",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792443059735_images__12_.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -126,6 +126,11 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792440578036_images__11_.jpg",
       "link": "",
       "alvo": "todas"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792443453246_images__13_.jpg",
+      "link": "",
+      "alvo": "Roteiro de um dia pela Zona Norte: parque, mirante e boa comida"
     }
   ]
 }
