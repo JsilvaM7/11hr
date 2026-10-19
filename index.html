@@ -172,10 +172,12 @@ function route(){
       var shareBar='<div class="share-bar">'
         +'<span class="share-label">Compartilhar</span>'
         +('share' in navigator?'<button class="sh-btn sh-nat" onclick="doShare('+idx+')" title="Compartilhar">⬆</button>':'')
-        +'<a class="sh-btn sh-wa" href="https://wa.me/?text='+pageTxt+'%20'+pageUrl+'" target="_blank" rel="noopener" title="WhatsApp">W</a>'
+        /* WhatsApp: só a URL → gera card clicável (foto+título+desc) ao invés de texto solto */
+        +'<a class="sh-btn sh-wa" href="https://wa.me/?text='+pageUrl+'" target="_blank" rel="noopener" title="WhatsApp">W</a>'
         +'<a class="sh-btn sh-fb" href="https://www.facebook.com/sharer/sharer.php?u='+pageUrl+'" target="_blank" rel="noopener" title="Facebook">f</a>'
         +'<a class="sh-btn sh-tw" href="https://twitter.com/intent/tweet?text='+pageTxt+'&url='+pageUrl+'" target="_blank" rel="noopener" title="X / Twitter">𝕏</a>'
-        +'<a class="sh-btn sh-tg" href="https://t.me/share/url?url='+pageUrl+'&text='+pageTxt+'" target="_blank" rel="noopener" title="Telegram">✈</a>'
+        /* Telegram: só a URL → card clicável */
+        +'<a class="sh-btn sh-tg" href="https://t.me/share/url?url='+pageUrl+'" target="_blank" rel="noopener" title="Telegram">✈</a>'
         +'<button class="sh-btn sh-cp" id="btn-cp" onclick="copyLink(this,\''+artUrl+'\')" title="Copiar link">🔗</button>'
         +'</div>';
       out='<article class="art"><button class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">‹ Voltar</button>'+pic(r)+'<h1>'+esc(r.t)+'</h1><span class="meta"><span class="tag">'+esc(edName(r.ed))+'</span> · '+esc(r.a)+' · '+esc(r.h)+'</span>'+(r.x?'<p class="sum" style="margin-top:14px">'+esc(r.r)+'</p>':'')+'<div class="body" style="margin-top:16px">'+ps+'</div>'+shareBar+'</article>';
