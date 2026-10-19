@@ -142,6 +142,13 @@ function edName(id){for(var i=0;i<EDS.length;i++)if(EDS[i][0]===id)return EDS[i]
 function okUrl(u){return /^https?:\/\//i.test(u||"")}
 function pic(r,c){return okUrl(r.f)?'<img class="ph '+(c||'')+'" src="'+esc(r.f)+'" alt="">':'<div class="ph '+(c||'')+'">Foto da matéria</div>'}
 
+/* Lê query-string ?n= para links compartilhados (sem hash) */
+function getQS(name){var m=location.search.match(new RegExp('[?&]'+name+'=([^&]*)'));return m?decodeURIComponent(m[1]):null;}
+(function(){var qn=getQS('n');if(qn!==null){location.replace(location.pathname+'#/n/'+qn);}})();
+
+/* URL limpa para compartilhamento (sem hash — WhatsApp reconhece como link) */
+function shareUrl(idx){return location.protocol+'//'+location.host+location.pathname+'?n='+idx;}
+
 function lead(r,i,tag){
   var href=okUrl(r.l)?'href="'+esc(r.l)+'" target="_blank" rel="noopener"':'href="#/n/'+i+'"';
   return '<a class="lead" '+href+'>'+pic(r)+'<h3>'+esc(r.t)+'</h3><span class="meta">'+(tag?'<span class="tag">'+tag+'</span> · ':'')+esc(edName(r.ed))+'</span><p>'+esc(r.r)+'</p><span class="meta">'+esc(r.a)+' · '+esc(r.h)+'</span></a>'
@@ -159,7 +166,8 @@ function route(){
       sel=r.ed;
       var idx=+m[1];
       var ps=(r.x||r.r).split(/\n+/).map(function(p){return"<p>"+esc(p)+"</p>"}).join("");
-      var pageUrl=encodeURIComponent(location.href);
+      var artUrl=shareUrl(idx);                        /* ex: https://11hr.e-dolphin.info/?n=0 */
+      var pageUrl=encodeURIComponent(artUrl);
       var pageTxt=encodeURIComponent(r.t);
       var shareBar='<div class="share-bar">'
         +'<span class="share-label">Compartilhar</span>'
@@ -168,7 +176,7 @@ function route(){
         +'<a class="sh-btn sh-fb" href="https://www.facebook.com/sharer/sharer.php?u='+pageUrl+'" target="_blank" rel="noopener" title="Facebook">f</a>'
         +'<a class="sh-btn sh-tw" href="https://twitter.com/intent/tweet?text='+pageTxt+'&url='+pageUrl+'" target="_blank" rel="noopener" title="X / Twitter">𝕏</a>'
         +'<a class="sh-btn sh-tg" href="https://t.me/share/url?url='+pageUrl+'&text='+pageTxt+'" target="_blank" rel="noopener" title="Telegram">✈</a>'
-        +'<button class="sh-btn sh-cp" id="btn-cp" onclick="copyLink(this)" title="Copiar link">🔗</button>'
+        +'<button class="sh-btn sh-cp" id="btn-cp" onclick="copyLink(this,\''+artUrl+'\')" title="Copiar link">🔗</button>'
         +'</div>';
       out='<article class="art"><button class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">‹ Voltar</button>'+pic(r)+'<h1>'+esc(r.t)+'</h1><span class="meta"><span class="tag">'+esc(edName(r.ed))+'</span> · '+esc(r.a)+' · '+esc(r.h)+'</span>'+(r.x?'<p class="sum" style="margin-top:14px">'+esc(r.r)+'</p>':'')+'<div class="body" style="margin-top:16px">'+ps+'</div>'+shareBar+'</article>';
       setOg(r,location.href);
@@ -206,7 +214,8 @@ function setOg(r,url){
 /* Compartilhamento */
 function doShare(i){
   var r=rows[i];if(!r)return;
-  var shareBase={title:r.t,text:r.r,url:location.href};
+  var url=shareUrl(i);                              /* URL sem hash — funciona no WhatsApp */
+  var shareBase={title:r.t,text:r.r,url:url};
   /* Tenta compartilhar com a foto da notícia */
   if(r.f&&/^https?:\/\//i.test(r.f)&&navigator.canShare){
     fetch(r.f)
@@ -214,19 +223,17 @@ function doShare(i){
       .then(function(blob){
         var ext=blob.type.includes('png')?'foto.png':'foto.jpg';
         var file=new File([blob],ext,{type:blob.type});
-        var withFile={title:r.t,text:r.r,files:[file]};
-        if(navigator.canShare(withFile)){
-          return navigator.share(withFile);
-        }
+        var withFile={title:r.t,text:r.r,url:url,files:[file]};
+        if(navigator.canShare(withFile)){return navigator.share(withFile);}
         return navigator.share(shareBase);
       })
-      .catch(function(){navigator.share(shareBase).catch(function(){})});
+      .catch(function(){navigator.share(shareBase).catch(function(){});});
   }else{
     navigator.share(shareBase).catch(function(){});
   }
 }
-function copyLink(btn){
-  var url=location.href;
+function copyLink(btn,url){
+  url=url||location.href;
   if(navigator.clipboard){
     navigator.clipboard.writeText(url).then(function(){
       btn.textContent='✓';btn.classList.add('copied');
