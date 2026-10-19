@@ -72,6 +72,30 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 #ad-body{overflow:hidden;transition:max-height .3s ease}
 #ad-body.collapsed{max-height:0!important}
 #ad-img{width:100%;display:block;cursor:pointer;object-fit:cover}
+
+/* Painel lateral — canto superior direito */
+#sidebar-right{
+  display:none;
+  position:fixed;
+  top:80px;
+  /* fica à direita do bloco central de 430px */
+  left:calc(50% + 222px);
+  width:210px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  box-shadow:0 4px 18px rgba(10,20,50,.18);
+  overflow:hidden;
+  z-index:15;
+}
+@media(min-width:710px){#sidebar-right{display:block}}
+#sb-head{background:var(--mast);color:#fff;padding:9px 12px;font:700 12px var(--head);letter-spacing:.06em;text-transform:uppercase}
+.sb-item{display:block;padding:11px 12px;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;cursor:pointer}
+.sb-item:last-child{border-bottom:0}
+.sb-item:hover{background:var(--ph1)}
+.sb-sec{font:700 11px var(--head);color:var(--link);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.sb-title{font:600 13.5px/1.35 var(--head);color:var(--ink);margin:0}
+.sb-hora{font:500 11px var(--head);color:var(--muted);margin-top:3px}
 </style>
 </head>
 <body>
@@ -99,6 +123,12 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
       <img id="ad-img" src="" alt="Anúncio">
     </a>
   </div>
+</div>
+
+<!-- Painel lateral: Últimas Notícias -->
+<div id="sidebar-right">
+  <div id="sb-head">📰 Últimas Notícias</div>
+  <div id="sb-list"></div>
 </div>
 
 <script>
@@ -190,6 +220,24 @@ window.addEventListener("hashchange",route);
 var d=new Date().toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long"});
 $("date").textContent=d.charAt(0).toUpperCase()+d.slice(1);
 
+/* Painel lateral: mostra as 3 notícias mais recentes (ou mais se tiver) */
+function buildSidebar(){
+  var sbList=$(\"sb-list\");
+  if(!sbList)return;
+  var limit=Math.max(3,Math.min(rows.length,5)); /* 3 a 5 notícias */
+  var html=\"\";
+  for(var i=0;i<limit;i++){
+    var r=rows[i];
+    if(!r)break;
+    html+='<a class=\"sb-item\" href=\"#/n/'+i+'\">'
+      +'<div class=\"sb-sec\">'+esc(edName(r.ed))+'</div>'
+      +'<p class=\"sb-title\">'+esc(r.t)+'</p>'
+      +'<div class=\"sb-hora\">'+esc(r.h)+'</div>'
+      +'</a>';
+  }
+  sbList.innerHTML=html||'<div style=\"padding:12px;font:500 13px var(--head);color:var(--muted)\">Sem notícias ainda.</div>';
+}
+
 /* Carregar data.json */
 view.innerHTML='<div class="loading"><div class="spinner"></div><span>Carregando…</span></div>';
 fetch("data.json?v="+Date.now())
@@ -197,6 +245,7 @@ fetch("data.json?v="+Date.now())
   .then(function(data){
     rows=(data.noticias||[]).map(function(n){return{ed:n.editoria||"locais",t:n.titulo||"",r:n.resumo||"",x:n.texto||"",f:n.foto||"",a:n.autor||"Redação 11hr",h:n.hora||"",l:n.link||""}});
     ads=(data.anuncios||[]).map(function(a){return{foto:a.foto||"",link:a.link||"",alvo:a.alvo||"todas"}});
+    buildSidebar();
     route();
   })
   .catch(function(e){
