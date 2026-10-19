@@ -75,6 +75,20 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 
 /* Frase do cabeçalho */
 .mast-tagline{font:600 11px var(--head);opacity:.75;text-align:right;white-space:nowrap;letter-spacing:.02em}
+
+/* Barra de compartilhamento */
+.share-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:28px;padding-top:18px;border-top:2px solid var(--line)}
+.share-label{font:700 13px var(--head);color:var(--muted);width:100%;margin-bottom:2px;letter-spacing:.03em;text-transform:uppercase}
+.sh-btn{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;font:800 17px/1 sans-serif;text-decoration:none;transition:transform .15s,opacity .15s;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+.sh-btn:hover{opacity:.82;transform:scale(1.08)}
+.sh-btn:active{transform:scale(.94)}
+.sh-wa{background:#25D366;color:#fff}
+.sh-fb{background:#1877F2;color:#fff;font-size:20px}
+.sh-tw{background:#000;color:#fff;font-size:15px;letter-spacing:-.01em}
+.sh-tg{background:#229ED9;color:#fff;font-size:19px}
+.sh-nat{background:var(--accent);color:#14213D;font-size:20px}
+.sh-cp{background:var(--line);color:var(--ink);font-size:16px}
+.sh-cp.copied{background:var(--alert);color:#fff}
 </style>
 </head>
 <body>
@@ -131,8 +145,20 @@ function route(){
     var r=rows[+m[1]];
     if(r){
       sel=r.ed;
+      var idx=+m[1];
       var ps=(r.x||r.r).split(/\n+/).map(function(p){return"<p>"+esc(p)+"</p>"}).join("");
-      out='<article class="art"><button class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">‹ Voltar</button>'+pic(r)+'<h1>'+esc(r.t)+'</h1><span class="meta"><span class="tag">'+esc(edName(r.ed))+'</span> · '+esc(r.a)+' · '+esc(r.h)+'</span>'+(r.x?'<p class="sum" style="margin-top:14px">'+esc(r.r)+'</p>':'')+'<div class="body" style="margin-top:16px">'+ps+'</div></article>';
+      var pageUrl=encodeURIComponent(location.href);
+      var pageTxt=encodeURIComponent(r.t);
+      var shareBar='<div class="share-bar">'
+        +'<span class="share-label">Compartilhar</span>'
+        +('share' in navigator?'<button class="sh-btn sh-nat" onclick="doShare('+idx+')" title="Compartilhar">⬆</button>':'')
+        +'<a class="sh-btn sh-wa" href="https://wa.me/?text='+pageTxt+'%20'+pageUrl+'" target="_blank" rel="noopener" title="WhatsApp">W</a>'
+        +'<a class="sh-btn sh-fb" href="https://www.facebook.com/sharer/sharer.php?u='+pageUrl+'" target="_blank" rel="noopener" title="Facebook">f</a>'
+        +'<a class="sh-btn sh-tw" href="https://twitter.com/intent/tweet?text='+pageTxt+'&url='+pageUrl+'" target="_blank" rel="noopener" title="X / Twitter">𝕏</a>'
+        +'<a class="sh-btn sh-tg" href="https://t.me/share/url?url='+pageUrl+'&text='+pageTxt+'" target="_blank" rel="noopener" title="Telegram">✈</a>'
+        +'<button class="sh-btn sh-cp" id="btn-cp" onclick="copyLink(this)" title="Copiar link">🔗</button>'
+        +'</div>';
+      out='<article class="art"><button class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">‹ Voltar</button>'+pic(r)+'<h1>'+esc(r.t)+'</h1><span class="meta"><span class="tag">'+esc(edName(r.ed))+'</span> · '+esc(r.a)+' · '+esc(r.h)+'</span>'+(r.x?'<p class="sum" style="margin-top:14px">'+esc(r.r)+'</p>':'')+'<div class="body" style="margin-top:16px">'+ps+'</div>'+shareBar+'</article>';
     }
   }else if(m=h.match(/^#\/e\/(\w+)/)){
     sel=m[1];var ix=[];rows.forEach(function(r,i){if(r.ed===sel)ix.push(i)});
@@ -153,6 +179,26 @@ function route(){
   if(nm){var rr=rows[+nm[1]];if(rr)artTitle=rr.t;}
   updateAd(sel,artTitle);
   [].forEach.call(tabs.children,function(b){var on=b.dataset.id===sel;b.setAttribute("aria-selected",on);if(on)b.scrollIntoView({inline:"center",block:"nearest"})});
+}
+
+/* Compartilhamento */
+function doShare(i){
+  var r=rows[i];if(!r)return;
+  navigator.share({title:r.t,text:r.r,url:location.href}).catch(function(){});
+}
+function copyLink(btn){
+  var url=location.href;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(url).then(function(){
+      btn.textContent='✓';btn.classList.add('copied');
+      setTimeout(function(){btn.textContent='🔗';btn.classList.remove('copied')},2000);
+    });
+  }else{
+    var ta=document.createElement('textarea');ta.value=url;document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    btn.textContent='✓';btn.classList.add('copied');
+    setTimeout(function(){btn.textContent='🔗';btn.classList.remove('copied')},2000);
+  }
 }
 
 /* Anúncios: alvo="todas" → qualquer página, alvo=título → só naquela notícia */
