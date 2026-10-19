@@ -1,14 +1,95 @@
 {
   "noticias": [
-    {"editoria":"locais","titulo":"Obras na Avenida Cruzeiro do Sul mudam o trânsito em Santana","resumo":"Equipes fazem interdições parciais entre sábado e domingo. Veja os desvios indicados.","texto":"Equipes da prefeitura iniciaram obras de recapeamento na Avenida Cruzeiro do Sul. O trabalho ocorre nos fins de semana entre 22h e 6h para causar menor impacto no trânsito.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""},
-    {"editoria":"locais","titulo":"Feira livre do Tucuruvi ganha novos horários aos domingos","resumo":"Barracas passam a abrir mais cedo e moradores aprovam a mudança.","texto":"A feira livre do Tucuruvi agora abre às 6h aos domingos. A mudança foi aprovada pela subprefeitura da região.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""},
-    {"editoria":"politica","titulo":"Câmara debate orçamento para os bairros da Zona Norte","resumo":"Vereadores discutem verbas para saúde, transporte e zeladoria.","texto":"A sessão de ontem reuniu vereadores e representantes das subprefeituras para debater a destinação das verbas municipais para a região norte.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""},
-    {"editoria":"dinheiro","titulo":"Como organizar o orçamento antes das compras de fim de ano","resumo":"Separe gastos fixos, defina um teto para presentes e evite parcelamentos longos.","texto":"Especialistas recomendam listar todos os compromissos financeiros fixos antes de calcular quanto sobra para as compras de natal e ano novo.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""},
-    {"editoria":"negocios","titulo":"Comércio de rua da Zona Norte aposta em entregas locais","resumo":"Lojistas montam redes de entrega por bairro e relatam mais vendas.","texto":"Comerciantes dos bairros de Santana e Tucuruvi se uniram para criar uma rede de entrega própria com taxas menores.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""},
-    {"editoria":"esportes","titulo":"Final do campeonato de várzea do Jaçanã reúne torcida no domingo","resumo":"Os dois finalistas chegam invictos. Entrada gratuita.","texto":"O estádio municipal do Jaçanã recebe no domingo a grande final do campeonato de várzea com portões abertos a partir das 14h.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""},
-    {"editoria":"entretenimento","titulo":"Cinema de rua volta a exibir sessões a preço popular","resumo":"Programação mistura filmes nacionais e clássicos.","texto":"O cinema de rua do bairro retoma as sessões populares aos finais de semana com ingressos a R$ 8.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""},
-    {"editoria":"turismo","titulo":"Roteiro de um dia pela Zona Norte: parque, mirante e boa comida","resumo":"Do verde da Cantareira aos bares tradicionais de Santana.","texto":"Um passeio completo pela Zona Norte começa no Parque da Cantareira, passa pelo mirante e termina nos bares históricos de Santana.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""},
-    {"editoria":"cultura","titulo":"Centro cultural abre exposição sobre a memória dos bairros","resumo":"Fotografias antigas e relatos de moradores contam como a região cresceu.","texto":"A exposição ficará aberta até o final do mês com entrada gratuita de terça a domingo das 10h às 18h.","foto":"","autor":"Redação 11hr","hora":"Hoje, 10h","link":""}
+    {
+      "editoria": "locais",
+      "titulo": "Obras na Avenida Cruzeiro do Sul mudam o trânsito em Santana",
+      "resumo": "Equipes fazem interdições parciais entre sábado e domingo. Veja os desvios indicados.",
+      "texto": "Equipes da prefeitura iniciaram obras de recapeamento na Avenida Cruzeiro do Sul. O trabalho ocorre nos fins de semana entre 22h e 6h para causar menor impacto no trânsito.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "locais",
+      "titulo": "Feira livre do Tucuruvi ganha novos horários aos domingos",
+      "resumo": "Barracas passam a abrir mais cedo e moradores aprovam a mudança.",
+      "texto": "A feira livre do Tucuruvi agora abre às 6h aos domingos. A mudança foi aprovada pela subprefeitura da região.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "politica",
+      "titulo": "Câmara debate orçamento para os bairros da Zona Norte",
+      "resumo": "Vereadores discutem verbas para saúde, transporte e zeladoria.",
+      "texto": "A sessão de ontem reuniu vereadores e representantes das subprefeituras para debater a destinação das verbas municipais para a região norte.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "dinheiro",
+      "titulo": "Como organizar o orçamento antes das compras de fim de ano",
+      "resumo": "Separe gastos fixos, defina um teto para presentes e evite parcelamentos longos.",
+      "texto": "Especialistas recomendam listar todos os compromissos financeiros fixos antes de calcular quanto sobra para as compras de natal e ano novo.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "negocios",
+      "titulo": "Comércio de rua da Zona Norte aposta em entregas locais",
+      "resumo": "Lojistas montam redes de entrega por bairro e relatam mais vendas.",
+      "texto": "Comerciantes dos bairros de Santana e Tucuruvi se uniram para criar uma rede de entrega própria com taxas menores.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "esportes",
+      "titulo": "Final do campeonato de várzea do Jaçanã reúne torcida no domingo",
+      "resumo": "Os dois finalistas chegam invictos. Entrada gratuita.",
+      "texto": "O estádio municipal do Jaçanã recebe no domingo a grande final do campeonato de várzea com portões abertos a partir das 14h.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "entretenimento",
+      "titulo": "Cinema de rua volta a exibir sessões a preço popular",
+      "resumo": "Programação mistura filmes nacionais e clássicos.",
+      "texto": "O cinema de rua do bairro retoma as sessões populares aos finais de semana com ingressos a R$ 8.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "turismo",
+      "titulo": "Roteiro de um dia pela Zona Norte: parque, mirante e boa comida",
+      "resumo": "Do verde da Cantareira aos bares tradicionais de Santana.",
+      "texto": "Um passeio completo pela Zona Norte começa no Parque da Cantareira, passa pelo mirante e termina nos bares históricos de Santana.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "cultura",
+      "titulo": "Centro cultural abre exposição sobre a memória dos bairros",
+      "resumo": "Fotografias antigas e relatos de moradores contam como a região cresceu.",
+      "texto": "A exposição ficará aberta até o final do mês com entrada gratuita de terça a domingo das 10h às 18h.",
+      "foto": "",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    }
   ],
   "anuncios": []
 }
