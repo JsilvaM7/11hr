@@ -12,10 +12,10 @@
     },
     {
       "editoria": "locais",
-      "titulo": "Feira livre do Tucuruvi ganha novos horários aos domingos",
-      "resumo": "Barracas passam a abrir mais cedo e moradores aprovam a mudança.",
-      "texto": "A feira livre do Tucuruvi agora abre às 6h aos domingos. A mudança foi aprovada pela subprefeitura da região.",
-      "foto": "",
+      "titulo": "Avenida Nova",
+      "resumo": "A Avenida Luiz Dumont Villares, carinhosamente conhecida como Avenida Nova, destaca-se como uma das artérias mais vibrantes e dinâmicas da Zona Norte de São Paulo.",
+      "texto": "Estendendo-se entre bairros emblemáticos como Santana, Parada Inglesa e Tucuruvi, a via combina modernidade e praticidade urbana ao abrigar uma excelente infraestrutura de transportes, ciclofaixas e áreas verdes que convidam ao convívio comunitário diário.\n\nDurante o dia, a avenida exibe uma intensa vocação comercial e de serviços, atraindo moradores e visitantes que buscam desde opções de gastronomia diversificada até conveniências variadas. Com as suas calçadas amplas e o seu fluxo constante de pessoas, o local transformou-se num ponto de referência incontornável para quem valoriza a conveniência e o dinamismo do ecossistema urbano paulistano.\n\nQuando a noite cai, a Avenida Nova revela a sua faceta mais célebre, convertendo-se num dos principais polos de entretenimento e vida boémia da região. Repleta de bares, restaurantes e espaços de lazer aclamados, a via transforma-se num verdadeiro ponto de encontro para descontração, onde conversas animadas, música ao vivo e uma atmosfera acolhedora ditam o ritmo de momentos inesquecíveis.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792430781823_barguile-baressp-1-min.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -96,6 +96,11 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792374146577_images.jpg",
       "link": "",
       "alvo": "A noite na Zona Norte"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792430910104_images__3_.jpg",
+      "link": "",
+      "alvo": "Avenida Nova"
     }
   ]
 }
