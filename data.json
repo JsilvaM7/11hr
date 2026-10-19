@@ -42,10 +42,10 @@
     },
     {
       "editoria": "negocios",
-      "titulo": "Comércio de rua da Zona Norte aposta em entregas locais",
-      "resumo": "Lojistas montam redes de entrega por bairro e relatam mais vendas.",
-      "texto": "Comerciantes dos bairros de Santana e Tucuruvi se uniram para criar uma rede de entrega própria com taxas menores.",
-      "foto": "",
+      "titulo": "Fábrica da Panco",
+      "resumo": "A fábrica da Panco na Zona Norte permanece como um dos marcos industriais mais emblemáticos da região, simbolizando a tradição e o vigor econômico que impulsionam o cotidiano dos moradores locais.",
+      "texto": "Estrategicamente posicionada para abastecer milhares de pontos de venda, a unidade combina processos modernos de panificação a uma logística eficiente, garantindo que pães, bolos e biscoitos frescos saiam diariamente das linhas de produção diretamente para as mesas paulistas.\n\nAlém de sua relevância no setor alimentício, o complexo industrial desempenha um papel fundamental no ecossistema socioeconômico do seu entorno. A operação gera centenas de empregos diretos e indiretos, movimentando o comércio local e fortalecendo a renda de inúmeras famílias da Zona Norte. O fluxo constante de colaboradores e fornecedores transforma a dinâmica do bairro, consolidando o local como um polo produtivo de grande importância para São Paulo.\n\nCom décadas de história e forte vínculo comunitário, a presença da Panco reforça a identidade industrial da Zona Norte sem perder o carinho do público que cresceu consumindo seus produtos. A fábrica não representa apenas um centro de produção de em larga escala, mas também um ponto de referência cultural e afetivo, mantendo viva a tradição de qualidade e inovação no setor de panificação.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792432211312_images__7_.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -111,6 +111,11 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431793306_images__6_.jpg",
       "link": "",
       "alvo": "Feira do Jaçanã"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792432284907_images__8_.jpg",
+      "link": "",
+      "alvo": "todas"
     }
   ]
 }
