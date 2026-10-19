@@ -53,9 +53,9 @@
     {
       "editoria": "esportes",
       "titulo": "Final do campeonato de várzea do Jaçanã reúne torcida no domingo",
-      "resumo": "Os dois finalistas chegam invictos. Entrada gratuita.",
-      "texto": "O estádio municipal do Jaçanã recebe no domingo a grande final do campeonato de várzea com portões abertos a partir das 14h.",
-      "foto": "",
+      "resumo": "A história do futebol na Zona Norte de São Paulo revela a força do esporte amador e comunitário, que há mais de um século conecta bairros e forma gerações de praticantes e torcedores. Dentre as agremiações mais tradicionais que marcam o ecossistema esportivo da região, destacam-se o A.A. Anhanguera, o G.D.R. 7 de Setembro da Água Fria e o S.C.",
+      "texto": "Americano das Imbiras, clubes varzeanos emblemáticos que moldaram a cultura futebolística local nas divisões de várzea e torneios comunitários.\n\nFundada na primeira metade do século XX em Santana, a Associação Atlética Anhanguera destaca-se como um dos polos poliesportivos e sociais mais antigos da Zona Norte, promovendo torneios amadores de campo e salão que movimentam atletas de diferentes faixas etárias. Da mesma forma, o Grêmio Esportivo e Recreativo 7 de Setembro, situado no bairro da Água Fria, carrega décadas de tradição em campeonatos de futebol de várzea da capital paulista, servindo como um ponto de encontro comunitário para os moradores locais.\n\nCompletando essa rica trajetória esportiva na região, o Sport Club Americano das Imbiras mantém viva a essência do futebol de bairro, onde os campos e sedes sociais funcionam como centros de lazer, integração e identidade cultural. Esses clubes continuam a desempenhar um papel fundamental na formação de novos talentos e na preservação da paixão pelo futebol popular na Zona Norte.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792437875144_images__10_.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -114,6 +114,11 @@
     },
     {
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792432284907_images__8_.jpg",
+      "link": "",
+      "alvo": "todas"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792437904139_images__9_.jpg",
       "link": "",
       "alvo": "todas"
     }
