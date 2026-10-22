@@ -89,6 +89,36 @@
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
+    },
+    {
+      "editoria": "locais",
+      "titulo": "Drenagem no Córrego Carandiru",
+      "resumo": "Manchete 22/10/26: A Prefeitura reforçou nesta semana as ações de limpeza e desassoreamento ao longo do Córrego Carandiru e de galerias de águas pluviais entre Santana e a Vila Guilherme. A medida preventiva visa aumentar a capacidade de escoamento e reduzir o risco de alagamentos nos pontos críticos da região durante a temporada de fortes chuvas de primavera.",
+      "texto": "A fiscalização e as obras de drenagem no Córrego Carandiru avançam com um ritmo envolvente que renova o alívio de quem vive entre Santana e a Vila Guilherme. O cuidado minucioso com a limpeza das galerias transforma o cenário urbano, desenhando um horizonte de proteção e aconchego para a comunidade. Sentir as calçadas livres do receio das enchentes traz um frescor revigorante, convidando cada morador a caminhar pela região com a mente tranquila e o peito leve.\n\nEssa presença constante do poder público e o movimento das equipes na rua geram um sentimento delicioso de acolhimento e pertença. Saber que a infraestrutura está sendo moldada para proteger o nosso espaço desperta um conforto profundo, como o abraço caloroso de quem cuida do próprio lar. É a segurança de ver a água fluir suavemente, devolvendo à rotina da Zona Norte aquela sensação gostosa de bem-estar e paz.\n\nAo caminhar pelas alamedas arborizadas do entorno, a percepção de transformação é acompanhada por um toque de satisfação genuína. A harmonia entre as intervenções técnicas e a tranquilidade das famílias cria uma atmosfera vibrante e apetitosa para se viver. Morar onde o cuidado se faz presente é vivenciar diariamente o prazer de estar em casa, cercado de proteção e do carinho de uma comunidade que se fortalece a cada melhoria.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686555047_images__17_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "locais",
+      "titulo": "Reinauguração e Ações Culturais no Centro Cultural da Juventude",
+      "resumo": "Localizado na Vila Nova Cachoeirinha, o Centro Cultural da Juventude (CCJ Ruth de Souza) apresenta uma programação especial com oficinas gratuitas de tecnologia, dança e batalhas de rima. O espaço se consolida como um dos maiores polos de fomento à cultura urbana e inclusão social para os jovens da periferia da Zona Norte.",
+      "texto": "Localizado na Vila Nova Cachoeirinha, o Centro Cultural da Juventude (CCJ Ruth de Souza) apresenta uma programação especial com oficinas gratuitas de tecnologia, dança e batalhas de rima. O espaço se consolida como um dos maiores polos de fomento à cultura urbana e inclusão social para os jovens da periferia da Zona Norte.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686734023_images__18_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "locais",
+      "titulo": "Operação de Monitoramento de Trânsito na Marginal Tietê",
+      "resumo": "A Companhia de Engenharia de Tráfego (CET) intensificou a fiscalização e o monitoramento nos acessos às pontes da Zona Norte — como as pontes do Limão, Vila Maria e Cruzeiro do Sul —, devido ao aumento do fluxo de veículos pesados e às intervenções pontuais de manutenção no piso asfáltico ao longo da Marginal Tietê.",
+      "texto": "A operação especial de monitoramento promovida pela Companhia de Engenharia de Tráfego traz um sopro de fluidez e tranquilidade aos acessos da Marginal Tietê. Ver a coordenação atenta dos agentes perto das pontes do Limão, Vila Maria e Cruzeiro do Sul acalma os ânimos e transforma a rotina do trânsito num percurso muito mais sereno. O ritmo acelerado da metrópole ganha contornos de suavidade quando a organização nos permite rodar sem sobressaltos.\n\nDeslizar pelas vias da Zona Norte sabendo que as intervenções no asfalto garantem uma viagem segura proporciona uma sensação deliciosa de alívio e conforto ao volante. O estresse das grandes avenidas cede lugar à satisfação de um trajeto eficiente, permitindo que motoristas e passageiros relaxem e aproveitem a paisagem urbana. Cada melhoria concluída é um carinho no cotidiano de quem precisa se deslocar com agilidade e paz de espírito.\n\nO impacto positivo dessa fiscalização cuidadosa reflete-se no humor de toda a região, espalhando uma onda de leveza pelos motoristas e trabalhadores. Retomar o controle do próprio tempo e chegar ao destino sem percalços desperta um prazer sutil, mas profundamente satisfatório, ao longo do dia. A Zona Norte mostra que, com cuidado e planejamento, até mesmo o trânsito da capital pode se tornar uma experiência de bem-estar e harmonia.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686842415_images__19_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
     }
   ],
   "anuncios": [
@@ -136,6 +166,21 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792444760164_images__16_.jpg",
       "link": "",
       "alvo": "Batalhão Tobias de Aguiar — a ROTA"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686577973_anuncie-11hr.png",
+      "link": "",
+      "alvo": "Drenagem no Córrego Carandiru"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686881126_images.jpg",
+      "link": "",
+      "alvo": "Reinauguração e Ações Culturais no Centro Cultural da Juventude"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686924534_anuncie-11hr.png",
+      "link": "",
+      "alvo": "Operação de Monitoramento de Trânsito na Marginal Tietê"
     }
   ]
 }
