@@ -149,6 +149,16 @@
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
+    },
+    {
+      "editoria": "cultura",
+      "titulo": "A Força da Comunidade no Jaçanã e Tremembé",
+      "resumo": "Nesta sexta-feira, 23 de outubro de 2026, a Zona Norte de São Paulo combina o otimismo do progresso urbano com a vibração da sua vida comunitária: enquanto os avanços da futura Linha 19-Celeste do Metrô e as obras de drenagem no Córrego Carandiru garantem mais mobilidade e tranquilidade contra alagamentos, o encerramento dos grandes eventos no Expo Center Norte aquece o comércio local; paralelamente, a energia acolhedora dos bairros se manifesta do happy hour na Avenida Nova às batidas da Batalha da Norte e aos ensaios na Mocidade Alegre, reafirmando o Jaçanã, o Tremembé e toda a região como polos pulsantes de cultura, negócios e bem-estar.",
+      "texto": "A Força da Comunidade no Jaçanã e Tremembé: Entre a Tradição e o Pertencimento\n\nEntre as encostas da Serra da Cantareira e as vias tradicionais do extremo Norte, o cotidiano do Jaçanã e do Tremembé ganha vida em lugares icônicos como o Jardim Jaçanã, a Vila Albertina e o Filhos da Terra. Onde a poesia do samba imortalizada no rádio se conecta ao ritmo diário das feiras de rua e das praças movimentadas, revela-se um ecossistema vibrante marcado pela solidariedade de quem cuida do próprio território. Caminhar pelas calçadas dessa região é sentir a textura da história paulistana se entrelaçar ao calor humano, criando uma atmosfera apetitosa de convivência urbana.\n\nNas alamedas do Jardim Jaçanã, na efervescência da Vila Albertina e nos becos cheios de arte do Filhos da Terra, o sentimento de pertença se traduz em ações coletivas que aquecem o peito e fortalecem os laços sociais. O movimento constante das associações de bairro, os projetos culturais para os jovens e o comércio local de proximidade transformam as esquinas em verdadeiros pontos de encontro e celebração. A sensação gostosa de ver a vida pulsar com tanta autenticidade traz aquele alívio no peito, permitindo que cada morador desfrute da leveza e do acolhimento característicos da Zona Norte.\n\nA harmonia entre a natureza exuberante do entorno da Cantareira e a energia contagiante da gente local confere a essas periferias uma identidade única na capital. O prazer de trocar um cumprimento caloroso na padaria do bairro, ver as crianças brincando nas praças e sentir a comunidade unida em prol de melhorias contínuas renova o espírito e desperta um bem-estar genuíno. É a certeza de que a maior riqueza dessas quebradas reside na força humana e no afeto que pulsa, sem pausa, no coração da região.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792788071936_jardim-filhos-da-terra-zona-norte-v0-f8u96phb03nd1.webp",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
     }
   ],
   "anuncios": [
@@ -226,6 +236,11 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792759840409_anuncie-11hr.png",
       "link": "",
       "alvo": "Operação de Verão e Estado de Atenção pela Defesa Civil"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792788215071_images.jpg",
+      "link": "",
+      "alvo": "A Força da Comunidade no Jaçanã e Tremembé"
     }
   ]
 }
