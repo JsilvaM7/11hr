@@ -10,14 +10,14 @@
 <meta property="og:site_name" content="11hr Jornal da Zona Norte">
 <meta property="og:title" id="og-title" content="11hr Jornal da Zona Norte">
 <meta property="og:description" id="og-desc" content="Notícias da Zona Norte de São Paulo, todos os dias.">
-<meta property="og:image" id="og-image" content="https://11hr.e-dolphin.info/banner.png">
+<meta property="og:image" id="og-image" content="https://e-dolphin.info/banner.png">
 <!-- og:url deixado em branco para WhatsApp usar a URL da mensagem como destino do card -->
 <meta property="og:url" id="og-url" content="">
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" id="tw-title" content="11hr Jornal da Zona Norte">
 <meta name="twitter:description" id="tw-desc" content="Notícias da Zona Norte de São Paulo, todos os dias.">
-<meta name="twitter:image" id="tw-image" content="https://11hr.e-dolphin.info/banner.png">
+<meta name="twitter:image" id="tw-image" content="https://e-dolphin.info/banner.png">
 <!-- ================================================
      GOOGLE ADSENSE — substitua ca-pub-6173105609015183 pelo seu ID real
      após a aprovação da sua conta em https://adsense.google.com
@@ -190,7 +190,7 @@ function route(){
       sel=r.ed;
       var idx=+m[1];
       var ps=(r.x||r.r).split(/\n+/).map(function(p){return"<p>"+esc(p)+"</p>"}).join("");
-      var artUrl=shareUrl(idx);                        /* ex: https://11hr.e-dolphin.info/?n=0 */
+      var artUrl=shareUrl(idx);                        /* ex: https://e-dolphin.info/?n=0 */
       var pageUrl=encodeURIComponent(artUrl);
       var pageTxt=encodeURIComponent(r.t);
       var shareBar='<div class="share-bar">'
@@ -230,7 +230,7 @@ function route(){
 
 /* Atualiza meta tags OG para a notícia atual */
 function setOg(r,url){
-  var img=r.f&&/^https?:\/\//i.test(r.f)?r.f:'https://11hr.e-dolphin.info/banner.svg';
+  var img=r.f&&/^https?:\/\//i.test(r.f)?r.f:'https://e-dolphin.info/banner.svg';
   var setA=function(id,attr,val){var el=document.getElementById(id);if(el)el.setAttribute(attr,val)};
   setA('og-title','content',r.t);setA('og-desc','content',r.r);setA('og-image','content',img);setA('og-url','content',url);
   setA('tw-title','content',r.t);setA('tw-desc','content',r.r);setA('tw-image','content',img);
