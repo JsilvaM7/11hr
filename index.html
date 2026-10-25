@@ -241,22 +241,9 @@ function setOg(r,url){
 function doShare(i){
   var r=rows[i];if(!r)return;
   var url=shareUrl(i);                              /* URL sem hash — funciona no WhatsApp */
-  var shareBase={title:r.t,text:r.r+'\n\n'+url,url:url};
+  var shareBase={title:r.t,text:r.r,url:url};
   /* Tenta compartilhar com a foto da notícia */
-  if(r.f&&/^https?:\/\//i.test(r.f)&&navigator.canShare){
-    fetch(r.f)
-      .then(function(res){return res.blob()})
-      .then(function(blob){
-        var ext=blob.type.includes('png')?'foto.png':'foto.jpg';
-        var file=new File([blob],ext,{type:blob.type});
-        var withFile={title:r.t,text:r.r+'\n\n'+url,url:url,files:[file]};
-        if(navigator.canShare(withFile)){return navigator.share(withFile);}
-        return navigator.share(shareBase);
-      })
-      .catch(function(){navigator.share(shareBase).catch(function(){});});
-  }else{
-    navigator.share(shareBase).catch(function(){});
-  }
+  navigator.share(shareBase).catch(function(){});
 }
 function copyLink(btn,url){
   url=url||location.href;
