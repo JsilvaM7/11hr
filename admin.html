@@ -61,7 +61,8 @@ td{padding:5px 6px;vertical-align:middle}
 td input,td textarea,td select{width:100%;border:1px solid transparent;background:transparent;font-family:inherit;font-size:13.5px;color:var(--ink);padding:6px 7px;border-radius:6px;resize:vertical}
 td input:focus,td textarea:focus,td select:focus{outline:none;border-color:var(--accent);background:#FFFDF0}
 td textarea{min-height:56px}
-.td-num{width:32px;text-align:center;color:var(--muted);font-size:12px;font-weight:600;user-select:none}
+.td-num{width:48px;text-align:center}
+.num-inp{width:40px;text-align:center;border:1px solid var(--line)!important;border-radius:6px!important;background:#fff!important;color:var(--ink)!important;font-size:13px!important;font-weight:700!important;padding:4px 2px!important;cursor:text}
 .td-ord{width:40px}
 .td-act{width:48px;text-align:center}
 
@@ -397,7 +398,7 @@ function renderNoticias(){
     var edOpts=EDS.map(function(e){return'<option value="'+e[0]+'"'+(e[0]===n.editoria?" selected":"")+'>'+e[1]+'</option>'}).join("");
     return '<tr>'+
       '<td class="td-ord"><div class="ord-btns"><button class="ord-btn" onclick="moveN('+i+',-1)">▲</button><button class="ord-btn" onclick="moveN('+i+',1)">▼</button></div></td>'+
-      '<td class="td-num">'+(i+1)+'</td>'+
+      '<td class="td-num"><input class="num-inp" type="number" min="1" max="'+noticias.length+'" value="'+(i+1)+'" onchange="moveNtoPos('+i+',this)" onkeydown="if(event.key===\'Enter\')this.blur()"></td>'+
       '<td><select onchange="setN('+i+',\'editoria\',this.value)">'+edOpts+'</select></td>'+
       '<td><input value="'+esc(n.titulo)+'" oninput="setN('+i+',\'titulo\',this.value)" placeholder="Título da matéria"></td>'+
       '<td><textarea oninput="setN('+i+',\'resumo\',this.value)" placeholder="Resumo curto">'+esc(n.resumo)+'</textarea></td>'+
@@ -419,6 +420,15 @@ function addNoticia(){
 }
 function delN(i){if(!confirm("Apagar esta notícia?"))return;noticias.splice(i,1);renderNoticias();setDirty(true)}
 function moveN(i,dir){var ni=i+dir;if(ni<0||ni>=noticias.length)return;var t=noticias[i];noticias[i]=noticias[ni];noticias[ni]=t;renderNoticias();setDirty(true)}
+function moveNtoPos(i,inp){
+  var pos=parseInt(inp.value,10)-1;
+  if(isNaN(pos)||pos<0)pos=0;
+  if(pos>=noticias.length)pos=noticias.length-1;
+  if(pos===i){renderNoticias();return;}
+  var item=noticias.splice(i,1)[0];
+  noticias.splice(pos,0,item);
+  renderNoticias();setDirty(true);
+}
 
 /* ---- RENDER ANÚNCIOS ---- */
 function renderAnuncios(){
@@ -432,7 +442,7 @@ function renderAnuncios(){
       .concat(['</optgroup>']).join("");
     return '<tr>'+
       '<td class="td-ord"><div class="ord-btns"><button class="ord-btn" onclick="moveA('+i+',-1)">▲</button><button class="ord-btn" onclick="moveA('+i+',1)">▼</button></div></td>'+
-      '<td class="td-num">'+(i+1)+'</td>'+
+      '<td class="td-num"><input class="num-inp" type="number" min="1" max="'+anuncios.length+'" value="'+(i+1)+'" onchange="moveAtoPos('+i+',this)" onkeydown="if(event.key===\'Enter\')this.blur()"></td>'+
       '<td>'+fotoCell(a.foto,"a",i)+'</td>'+
       '<td><input value="'+esc(a.link)+'" oninput="setA('+i+',\'link\',this.value)" placeholder="https://site-do-cliente.com.br"></td>'+
       '<td><select onchange="setA('+i+',\'alvo\',this.value)">'+alvoOpts+'</select></td>'+
@@ -445,6 +455,15 @@ function setA(i,k,v){anuncios[i][k]=v;setDirty(true)}
 function addAnuncio(){anuncios.push({foto:"",link:"",alvo:"todas"});renderAnuncios();setDirty(true)}
 function delA(i){if(!confirm("Apagar este anúncio?"))return;anuncios.splice(i,1);renderAnuncios();setDirty(true)}
 function moveA(i,dir){var ni=i+dir;if(ni<0||ni>=anuncios.length)return;var t=anuncios[i];anuncios[i]=anuncios[ni];anuncios[ni]=t;renderAnuncios();setDirty(true)}
+function moveAtoPos(i,inp){
+  var pos=parseInt(inp.value,10)-1;
+  if(isNaN(pos)||pos<0)pos=0;
+  if(pos>=anuncios.length)pos=anuncios.length-1;
+  if(pos===i){renderAnuncios();return;}
+  var item=anuncios.splice(i,1)[0];
+  anuncios.splice(pos,0,item);
+  renderAnuncios();setDirty(true);
+}
 
 /* ---- INIT ---- */
 async function init(){
