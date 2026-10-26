@@ -1,6 +1,16 @@
 {
   "noticias": [
     {
+      "editoria": "politica",
+      "titulo": "A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo",
+      "resumo": "Manchete 11hr jornal da zona norte 26/10/26: A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo com o direcionamento estratégico de recursos federais para grandes obras de mobilidade e infraestrutura — com destaque para os avanços na Linha 19-Celeste do Metrô e intervenções viárias —, ao mesmo tempo em que o fortalecimento de programas sociais e do poder de compra das famílias reaquece o pequeno comércio, as feiras livres e as padarias locais no Jaçanã, Tremembé e periferias, injetando uma onda de otimismo, segurança financeira e acolhimento cultural para a juventude e os moradores da região.",
+      "texto": "A vitória do governo Lula no cenário nacional reflete-se na Zona Norte de São Paulo com o direcionamento e a garantia de verbas federais para grandes obras de infraestrutura e mobilidade. A parceria entre os orçamentos da União e as concessões locais acelera empreendimentos cruciais, como os trechos da Linha 19-Celeste do Metrô e as obras do Rodoanel Norte. Ver os investimentos públicos finalmente se traduzirem em canteiros de obras ativos traz aquele alívio gostoso no peito de quem vislumbra, em um futuro próximo, trajetos mais rápidos, transporte moderno e a valorização direta dos imóveis da nossa região.\n\nOutro impacto direto no cotidiano das famílias do Jaçanã, Tremembé e Brasilândia é o fortalecimento de programas sociais federais e o incentivo ao comércio de bairro. A ampliação do poder de compra e a manutenção de repasses em áreas de alta vulnerabilidade injetam um ritmo dinâmico nas feiras livres, padarias e pequenos negócios locais. Caminhar pelas avenidas comerciais e ver as lojas movimentadas desperta um sentimento quentinho de otimismo e pertencimento, onde a estabilidade econômica se transforma em mesas fartas, empregos preservados e segurança financeira para o dia a dia.\n\nAlém da economia e dos trilhos, a destinação de verbas federais para áreas sociais amplia o acesso à cultura, educação e saúde nos equipamentos públicos do extremo Norte, como o CCJ e os CEUs regionais. O fortalecimento dessas redes comunitárias garante que a juventude da periferia encontre caminhos de capacitação, arte e lazer gratuito com dignidade e respeito. É o prazer reconfortante de ver o cuidado social chegar à porta de casa, transformando a rotina da Zona Norte em uma experiência mais justa, acolhedora e cheia de boas perspectivas.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031872425_images__28_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
       "editoria": "locais",
       "titulo": "A noite na Zona Norte",
       "resumo": "A noite na Zona Norte desperta como um convite irrecusável para aqueles que buscam sacudir a poeira dos dias exaustivos, entregando-se ao deleite do convívio social refinado e do bom entretenimento. Sob a promessa de encontros memoráveis e conversas fluídas, a nobreza local se reúne para celebrar a vida em recantos emblemáticos que mesclam o charme tradicional à sofisticação boêmia contemporânea. ",
@@ -31,6 +41,16 @@
       "link": ""
     },
     {
+      "editoria": "politica",
+      "titulo": "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo",
+      "resumo": "Manchete 11hr jornal da zona norte 26/10/26: A vitória de Tarcísio de Freitas no governo de São Paulo acelera a execução de grandes obras de infraestrutura na Zona Norte através do modelo de concessões e parcerias público-privadas, garantindo prioridade ao avanço da Linha 19-Celeste do Metrô e direcionando novos investimentos da Sabesp privatizada para o saneamento e desassoreamento de córregos críticos como o Carandiru, ao mesmo tempo em que a ampliação do monitoramento tecnológico e do policiamento ostensivo busca reforçar a segurança e a fluidez nos principais corredores viários do Tremembé, Jaçanã e Santana.",
+      "texto": "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo, priorizando parcerias público-privadas e leilões de infraestrutura. A manutenção dessa diretriz estadual coloca em posição central o avanço da Linha 19-Celeste do Metrô, com foco na aceleração dos processos de desapropriação e no detalhamento de engenharia para conectar bairros periféricos diretamente ao centro da capital.\n\nNo campo dos serviços essenciais, a privatização da Sabesp sob a gestão estadual direciona novos aportes financeiros para o cumprimento das metas de saneamento básico na região. Moradores de bairros como Jaçanã e Tremembé acompanham a expectativa de intensificação nas obras de desassoreamento, canalização e limpeza do Córrego Carandiru e de outros leitos d'água, prevenindo alagamentos históricos em períodos de chuvas intensas.\n\nParalelamente, o plano estadual focado na ampliação do monitoramento tecnológico e no reforço do policiamento ostensivo busca diminuir os índices de criminalidade nos grandes corredores viários da Zona Norte. O impacto dessas medidas visa aumentar a segurança em locais de alta circulação, como a Avenida Cruzeiro do Sul e o Terminal Santana, influenciando diretamente a mobilidade diária e a percepção de tranquilidade da comunidade local.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031878579_images__29_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
       "editoria": "cultura",
       "titulo": "Padarias da ZN Finalistas no Padocaria SP",
       "resumo": "Manchete 11hr jornal da zona norte 25/10/26: Padarias da ZN Finalistas no Padocaria SP: Cinco estabelecimentos de Santana, Freguesia do Ó e Parada Inglesa brilham na fase final do prêmio, celebrando a tradição artesanal, o aconchego e a rica gastronomia da região.",
@@ -46,6 +66,16 @@
       "resumo": "Manchete 11hr jornal da zona norte 23/10/26:\nExposição Histórica A mostra cultural \"Santana: História, Metrô, Gastronomia e Cultura\", em cartaz no movimentado Terminal Santana, transforma a rotina de quem circula pela região em uma experiência imersiva cheia de afeto e nostalgia. O acervo reúne painéis fotográficos e registros marcantes que resgatam o desenvolvimento do bairro, celebrando desde a chegada da Linha 1-Azul até a rica tradição gastronômica da região. Parar por alguns minutos para contemplar as imagens antigas desperta um sentimento quentinho no peito, permitindo que moradores e trabalhadores se reconectem com as origens da Zona Norte e sintam um orgulho genuíno da terra onde vivem e constroem suas histórias.",
       "texto": "Exposição Histórica sobre o Metrô e a Gastronomia de Santana Cativa Passageiros\nA mostra cultural \"Santana: História, Metrô, Gastronomia e Cultura\", em cartaz no movimentado Terminal Santana, transforma a rotina de quem circula pela região em uma experiência imersiva cheia de afeto e nostalgia. O acervo reúne painéis fotográficos e registros marcantes que resgatam o desenvolvimento do bairro, celebrando desde a chegada da Linha 1-Azul até a rica tradição gastronômica da região. Parar por alguns minutos para contemplar as imagens antigas desperta um sentimento quentinho no peito, permitindo que moradores e trabalhadores se reconectem com as origens da Zona Norte e sintam um orgulho genuíno da terra onde vivem e constroem suas histórias.\n\nCaminhar entre os painéis enquanto a cidade se movimenta ao redor cria uma pausa apetitosa no ritmo acelerado do cotidiano paulistano. A visão dos antigos bondes, das primeiras fachadas comerciais e dos bares tradicionais que atravessaram gerações traz um alívio gostoso, lembrando a todos do valor da nossa memória coletiva. Essa atmosfera acolhedora envolve quem passa pelo terminal, transformando uma simples caminhada até o transporte em um momento leve de descoberta e conexão com o coração de Santana.\n\nEssa celebração da identidade local fortalece o sentimento de pertença e enche o peito de quem ama a Zona Norte. Observar a evolução de Santana ao longo das décadas desperta a certeza de estar em um lugar vivo, pulsante e cheio de cuidado comunitário. É o prazer sutil de ver o passado e o presente se abraçarem no meio do terminal, inspirando cada visitante a olhar para o seu próprio bairro com mais carinho, respeito e admiração.",
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792789522780_images__22_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "politica",
+      "titulo": "Cenário Político e Oportunidades para empresas na Zona Norte: Infraestrutura, Crédito e Posicionamento Estratégico",
+      "resumo": "Manchete 11hr jornal da zona norte 26/10/26: A consolidação do poder estadual sob a gestão de Tarcísio de Freitas e o direcionamento de investimentos da União criam um cenário de forte previsibilidade para os negócios na Zona Norte de São Paulo, onde pequenas e médias empresas podem se beneficiar da aceleração de obras de infraestrutura — como a Linha 19-Celeste do Metrô e o saneamento da Sabesp —, devendo se posicionar estrategicamente em eixos de alta circulação e recorrer a linhas de crédito acessíveis pelos canais da Desenvolve SP (desenvolvesp.com.br) e do Banco do Povo Paulista (bancodopovo.sp.gov.br) para expandir operações e capturar o aumento do consumo local.",
+      "texto": "O advento simultâneo da manutenção do poder no âmbito do Estado e do alinhamento às forças da União estabelece um raro período de estabilidade administrativa, no qual a prosperidade dependerá da rápida compreensão das intenções de quem governa. Enquanto as diretrizes federais garantem a injeção contínua de recursos e a sustentação do consumo básico nas periferias, a gestão estadual consolida seu empenho em atrair a iniciativa privada para erguer grandes estruturas. O homem de negócios perspicaz não perde tempo em julgamentos morais sobre as alianças firmadas, mas examina friamente onde os orçamentos serão aplicados, adaptando sua conduta para extrair o máximo proveito das conjunturas que se desenham.Para suprir as exigências de capital e expandir as operações neste novo ciclo, o crédito subsidiado encontra-se acessível por meio dos portais oficiais da Desenvolve SP (desenvolvesp.com.br), agência de fomento dedicada ao financiamento de projetos e capital de giro para empresas paulistas, bem como na plataforma do Banco do Povo Paulista (bancodopovo.sp.gov.br), voltada ao microcrédito com taxas reduzidas. Tais canais governamentais constituem os instrumentos adequados para fortalecer o caixa e assegurar os ativos necessários antes que a concorrência perceba a movimentação dos ventos.   Quanto ao posicionamento ideal, a sabedoria exige que o comerciante se coloque exatamente nos pontos de convergência entre as grandes obras estaduais e o fluxo de consumo impulsionado pela União. Estabelecer-se no entorno dos eixos viários e de mobilidade em expansão na Zona Norte — como o corredor da futura Linha 19-Celeste e as áreas de modernização do saneamento — garante a preferência no atendimento às demandas que dali surgirão. Aquele que souber aliar a elegância no servir à leitura atenta dos movimentos do Estado conquistará não apenas a simpatia da clientela local, mas a perenidade de sua fortuna.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031999266_images__31_.jpg",
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
@@ -331,6 +361,21 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792951477117_anuncie-11hr-R56.png",
       "link": "",
       "alvo": "Padarias da ZN Finalistas no Padocaria SP"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032105499_anuncie-11hr-R56.png",
+      "link": "",
+      "alvo": "A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032100357_anuncie-11hr-R56.png",
+      "link": "",
+      "alvo": "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032087348_images__13_.jpg",
+      "link": "",
+      "alvo": "Cenário Político e Oportunidades para empresas na Zona Norte: Infraestrutura, Crédito e Posicionamento Estratégico"
     }
   ]
 }
