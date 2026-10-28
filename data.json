@@ -279,6 +279,36 @@
       "autor": "Redação 11hr",
       "hora": "Hoje, 10h",
       "link": ""
+    },
+    {
+      "editoria": "locais",
+      "titulo": "Defesa Civil Reforça Acolhimento Aos Moradores de Rua Com Queda de Temperatura",
+      "resumo": "Queda Brusca de Temperatura Aciona Rede de Acolhimento na Zona Norte: A chegada de uma massa de ar frio provocou chuva fraca, nevoeiro na Serra da Cantareira e fez os termômetros despencarem para 12°C nos bairros do Jaçanã, Tremembé e Santana, mobilizando a Defesa Civil municipal e equipes de assistência social para intensificar as abordagens noturnas e a distribuição de cobertores e refeições quentes aos moradores em situação de vulnerabilidade.",
+      "texto": "Uma massa de ar frio vinda do Sul provocou chuva fraca, denso nevoeiro nas encostas da Serra da Cantareira e fez os termômetros despencarem para 12°C na Zona Norte. A variação drástica do tempo impactou diretamente a rotina dos moradores dos bairros do Jaçanã, Tremembé e Santana.\n\nDiante do frio atípico, a Defesa Civil municipal e as equipes de assistência social intensificaram o acolhimento noturno, com distribuição de cobertores e refeições quentes. As abordagens foram concentradas nas proximidades dos Centros de Acolhida da região, priorizando populações em situação de vulnerabilidade expostas ao frio.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209362822_images__35_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "locais",
+      "titulo": "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt",
+      "resumo": "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt: O circuito cultural da Zona Norte ganha destaque com a estreia do espetáculo Sarah Bernhardt em São Paulo no teatro do Sesc Santana, montagem que revisita a histórica turnê da célebre atriz francesa pela capital paulista no final do século XIX e consolida o espaço da Avenida Luiz Dumont Villares como um importante polo de difusão artística na região.",
+      "texto": "A agenda cultural da Zona Norte ganha destaque com a estreia da peça Sarah Bernhardt em São Paulo no teatro do Sesc Santana. A montagem revisita a emblemática turnê da célebre atriz francesa pela capital paulista no final do século XIX, trazendo um panorama das artes cênicas da época.\n\nA atração movimenta o circuito cultural local, atraindo público geral e estudantes para o espaço situado na Avenida Luiz Dumont Villares. A produção reforça o papel do Sesc Santana como um dos principais polos de formação e difusão artística acessível na região.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209510996_images__36_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "locais",
+      "titulo": "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual",
+      "resumo": "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual: O Centro Cultural da Juventude Ruth de Souza (CCJ), situado na Parada Inglesa, abriu inscrições para novas turmas de oficinas gratuitas voltadas à formação prática em audiovisual, fotografia e edição digital, oferecendo capacitação técnica para jovens da periferia que buscam ingressar no mercado de trabalho ou desenvolver projetos independentes.",
+      "texto": "O Centro Cultural da Juventude Ruth de Souza (CCJ), na Parada Inglesa, abriu inscrições para novas turmas de oficinas gratuitas de formação em audiovisual, fotografia e edição digital. As aulas práticas oferecem contato direto com equipamentos profissionais e métodos de produção independente.\n\nO projeto é voltado prioritariamente para jovens dos bairros da periferia da Zona Norte em busca de capacitação técnica para o mercado de trabalho. A iniciativa busca fortalecer a economia criativa e incentivar produções culturais autônomas na comunidade.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209521627_images__37_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
     }
   ],
   "anuncios": [
@@ -421,6 +451,21 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120745997_anuncie-11hr-R56.png",
       "link": "",
       "alvo": "SPTrans Realiza Adequações Operacionais nas Plataformas do Terminal Santana"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209659661_anuncie-11hr-R67.png",
+      "link": "",
+      "alvo": "Defesa Civil Reforça Acolhimento Aos Moradores de Rua Com Queda de Temperatura"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209678307_anuncie-11hr-R67.png",
+      "link": "",
+      "alvo": "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209693973_Frente_empilhado.png",
+      "link": "",
+      "alvo": "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual"
     }
   ]
 }
