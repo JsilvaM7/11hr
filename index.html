@@ -5,53 +5,7 @@
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-444SSPGWKL"></script>
 
-<!-- ==================== Chat Widget ==================== -->
-<button id="chat-fab" aria-label="Bate-papo da Zona Norte" onclick="chatToggle()">
-  💬<span id="chat-unread"></span>
-</button>
-<div id="chat-panel" role="dialog" aria-label="Bate-papo da Zona Norte">
-  <div id="cp-head">
-    <div id="cp-head-info">
-      <span id="cp-head-title">💬 BATE-PAPO DA ZONA NORTE</span>
-      <span id="cp-head-bairro"></span>
-    </div>
-    <button id="cp-close-btn" onclick="chatToggle()" title="Fechar">✕</button>
-  </div>
-  <div id="cp-body">
-    <div id="cp-loading">Carregando…</div>
-    <!-- Cadastro -->
-    <div id="cp-reg" class="cform" style="display:none">
-      <h3>🏘️ Entre no Bate-papo</h3>
-      <p>Conecte-se com moradores da Zona Norte! Cada apelido é único — sem senha.</p>
-      <input class="cinp" id="r-phone" type="tel" placeholder="Celular: (11) 99999-9999" maxlength="15" autocomplete="tel">
-      <input class="cinp" id="r-name" type="text" placeholder="Apelido único (ex: João Santana)" maxlength="28" autocomplete="nickname">
-      <select class="cinp" id="r-bairro"><option value="">— Escolha seu bairro —</option></select>
-      <button class="cbtn" id="r-btn" onclick="chatRegister()">Criar conta e entrar »</button>
-      <div class="cerr" id="r-err"></div>
-      <button class="clink" onclick="chatShowLogin()">Já tenho conta — entrar com apelido</button>
-    </div>
-    <!-- Login -->
-    <div id="cp-log" class="cform" style="display:none">
-      <h3>👋 Bem-vindo de volta!</h3>
-      <p>Digite seu apelido para entrar no bate-papo do seu bairro. Sem senha.</p>
-      <input class="cinp" id="l-name" type="text" placeholder="Seu apelido" maxlength="28" autocomplete="nickname">
-      <button class="cbtn" id="l-btn" onclick="chatLogin()">Entrar »</button>
-      <div class="cerr" id="l-err"></div>
-      <button class="clink" onclick="chatShowReg()">Criar nova conta</button>
-    </div>
-    <!-- Chat -->
-    <div id="cp-chat-wrap">
-      <div id="cp-msgs"></div>
-      <div id="cp-info-bar"></div>
-      <div id="cp-send-area">
-        <textarea id="cp-txt" placeholder="Mensagem para o bairro…" rows="1"
-          oninput="chatResize(this)" onkeydown="chatKey(event)"></textarea>
-        <button id="cp-sbtn" onclick="chatSend()" title="Enviar">➤</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ====================================================== -->
+
 
 <script>
   window.dataLayer=window.dataLayer||[];
@@ -171,47 +125,6 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 .ads-block ins{display:block;min-height:0}
 .ads-label{font:600 10px var(--head);letter-spacing:.08em;color:var(--muted);text-transform:uppercase;text-align:center;margin-bottom:4px;opacity:.7}
 
-/* ---- Chat Widget ---- */
-#chat-fab{position:fixed;bottom:calc(80px + env(safe-area-inset-bottom,0px));left:16px;z-index:41;width:54px;height:54px;border-radius:50%;background:var(--mast);color:#fff;border:none;font-size:22px;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.38);display:none;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s;flex-shrink:0}
-#chat-fab:hover{transform:scale(1.09)}
-#chat-unread{position:absolute;top:-4px;right:-4px;background:#e53935;color:#fff;font:700 10px var(--head);border-radius:50%;min-width:18px;height:18px;display:none;align-items:center;justify-content:center;padding:0 3px;pointer-events:none}
-#chat-panel{position:fixed;bottom:calc(146px + env(safe-area-inset-bottom,0px));left:16px;z-index:40;width:330px;border-radius:14px;box-shadow:0 6px 30px rgba(0,0,0,.42);background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;max-height:460px;transform:translateY(24px) scale(.96);opacity:0;pointer-events:none;transition:transform .25s,opacity .25s}
-#chat-panel.open{transform:none;opacity:1;pointer-events:auto}
-#cp-head{background:var(--mast);color:#fff;padding:10px 14px;border-radius:14px 14px 0 0;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-#cp-head-info{display:flex;flex-direction:column;gap:2px}
-#cp-head-title{font:800 12px var(--head);letter-spacing:.05em}
-#cp-head-bairro{font:500 11px var(--head);opacity:.8}
-#cp-close-btn{background:none;border:none;color:#fff;cursor:pointer;font-size:19px;line-height:1;padding:2px 5px}
-#cp-body{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
-#cp-loading{padding:30px;text-align:center;color:var(--muted);font:500 13px var(--head)}
-.cform{padding:16px;display:flex;flex-direction:column;gap:10px;overflow-y:auto;max-height:400px}
-.cform h3{font:800 15px var(--head);margin:0;color:var(--ink)}
-.cform p{font:400 12.5px var(--head);color:var(--muted);margin:0;line-height:1.55}
-.cinp{padding:9px 12px;border:1px solid var(--line);border-radius:8px;font:14px var(--head);color:var(--ink);background:var(--surface);width:100%;box-sizing:border-box}
-.cinp:focus{outline:2px solid var(--accent);border-color:var(--accent)}
-.cbtn{padding:10px;background:var(--mast);color:#fff;border:none;border-radius:8px;font:700 14px var(--head);cursor:pointer;transition:opacity .15s;width:100%}
-.cbtn:hover{opacity:.88}
-.cbtn:disabled{opacity:.4;cursor:not-allowed}
-.cerr{font:600 11.5px var(--head);color:#c62828;text-align:center;min-height:16px}
-.clink{font:500 12px var(--head);color:var(--link);text-align:center;cursor:pointer;background:none;border:none;width:100%;padding:2px;text-decoration:underline}
-#cp-chat-wrap{flex:1;min-height:0;display:none;flex-direction:column;overflow:hidden}
-#cp-msgs{flex:1;overflow-y:auto;padding:10px 12px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
-.cmsg{display:flex;flex-direction:column}
-.cmsg.me{align-items:flex-end}
-.cmsg.ot{align-items:flex-start}
-.cbubble{padding:8px 12px;border-radius:14px;font-size:13.5px;line-height:1.45;word-break:break-word;max-width:82%}
-.cmsg.me .cbubble{background:var(--mast);color:#fff;border-radius:14px 14px 4px 14px}
-.cmsg.ot .cbubble{background:var(--bg);color:var(--ink);border-radius:14px 14px 14px 4px;border:1px solid var(--line)}
-.cmeta{font:500 10px var(--head);color:var(--muted);margin-top:2px;padding:0 3px}
-.cname{color:var(--link);font-weight:700}
-#cp-info-bar{background:rgba(255,193,14,.13);padding:5px 12px;font:600 11px var(--head);color:var(--mast);text-align:center;flex-shrink:0;border-top:1px solid rgba(255,193,14,.3)}
-#cp-send-area{padding:8px 10px;border-top:1px solid var(--line);display:flex;gap:6px;align-items:flex-end;flex-shrink:0}
-#cp-txt{flex:1;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:14px var(--body);color:var(--ink);background:var(--surface);resize:none;min-height:36px;max-height:76px;line-height:1.4;box-sizing:border-box}
-#cp-txt:focus{outline:2px solid var(--accent);border-color:var(--accent)}
-#cp-sbtn{background:var(--mast);color:#fff;border:none;border-radius:8px;width:36px;height:36px;cursor:pointer;font-size:15px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-#cp-sbtn:hover{opacity:.85}
-#cp-sbtn:disabled{opacity:.35;cursor:not-allowed}
-.cempty{text-align:center;color:var(--muted);font:500 12.5px var(--head);padding:24px 16px;line-height:1.7}
 </style>
 </head>
 <body>
@@ -439,257 +352,98 @@ fetch("data.json?v="+Date.now())
     console.error(e);
   });
 
-/* ================================================================
-   BATE-PAPO DA ZONA NORTE — Firebase Firestore
-   Preencha FB_CFG com as chaves do seu projeto Firebase
-   ================================================================ */
-(function(){
-  var BAIRROS=['Santana','Tucuruvi','Vila Guilherme','Parada Inglesa',
-    'Jardim São Paulo','Mandaqui','Tremembé','Jaçanã','Casa Verde',
-    'Freguesia do Ó','Brasilândia','Cachoeirinha','Lauzane Paulista',
-    'Limão','Pirituba','Jaraguá','São Domingos','Vila Maria',
-    'Vila Medeiros','Imirim'];
-  var MAX_BAIRRO=100, MAX_MSG=2, MSGS_LIMIT=60;
-  var LSKEY='11hr_chat_v1';
-
-  /* ---- Firebase config — substituir após criar projeto ---- */
-  var FB_CFG={
-    apiKey:"FIREBASE_API_KEY",
-    authDomain:"FIREBASE_PROJECT_ID.firebaseapp.com",
-    projectId:"FIREBASE_PROJECT_ID",
-    storageBucket:"FIREBASE_PROJECT_ID.appspot.com",
-    messagingSenderId:"FIREBASE_SENDER_ID",
-    appId:"FIREBASE_APP_ID"
-  };
-
-  var db=null, chatIsOpen=false, unsubFn=null, me=null;
-
-  function gid(id){return document.getElementById(id);}
-  function show(id,flex){var e=gid(id);if(e)e.style.display=flex?'flex':'block';}
-  function hide(id){var e=gid(id);if(e)e.style.display='none';}
-  function safeHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-
-  /* ---- Carregar Firebase SDK ---- */
-  function loadFirebase(){
-    var s1=document.createElement('script');
-    s1.src='https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js';
-    s1.onload=function(){
-      var s2=document.createElement('script');
-      s2.src='https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js';
-      s2.onload=initChat;
-      document.head.appendChild(s2);
-    };
-    s1.onerror=function(){gid('cp-loading').textContent='Chat indisponível (sem conexão).';};
-    document.head.appendChild(s1);
-  }
-
-  function initChat(){
-    try{
-      if(!firebase.apps.length) firebase.initializeApp(FB_CFG);
-      db=firebase.firestore();
-    }catch(e){
-      gid('cp-loading').textContent='Chat não configurado ainda.';
-      console.warn('Chat init:',e); return;
-    }
-    /* Popula select de bairros */
-    var sel=gid('r-bairro');
-    BAIRROS.forEach(function(b){var o=document.createElement('option');o.value=b;o.textContent=b;sel.appendChild(o);});
-    /* Mostra FAB */
-    var fab=gid('chat-fab');if(fab){fab.style.display='flex';}
-    /* Verifica sessão salva */
-    var saved=localStorage.getItem(LSKEY);
-    if(saved){
-      try{
-        me=JSON.parse(saved);
-        db.collection('chat_users').doc(me.username).get().then(function(d){
-          hide('cp-loading');
-          if(d.exists){chatEnterChat();}else{me=null;localStorage.removeItem(LSKEY);chatShowReg();}
-        }).catch(function(){hide('cp-loading');chatShowReg();});
-        return;
-      }catch(e){me=null;}
-    }
-    hide('cp-loading');
-    chatShowReg();
-  }
-
-  /* ---- Toggle panel ---- */
-  window.chatToggle=function(){
-    chatIsOpen=!chatIsOpen;
-    var p=gid('chat-panel');
-    if(chatIsOpen){
-      p.classList.add('open');
-      var u=gid('chat-unread');if(u)u.style.display='none';
-      if(me) chatScrollBottom();
-    } else {
-      p.classList.remove('open');
-    }
-  };
-
-  /* ---- Telas ---- */
-  window.chatShowReg=function(){hide('cp-loading');hide('cp-log');hide('cp-chat-wrap');show('cp-reg');};
-  window.chatShowLogin=function(){hide('cp-reg');hide('cp-chat-wrap');show('cp-log');};
-
-  /* ---- Cadastro ---- */
-  window.chatRegister=async function(){
-    if(!db)return;
-    var phone=(gid('r-phone').value||'').trim().replace(/\D/g,'');
-    var name=(gid('r-name').value||'').trim();
-    var bairro=(gid('r-bairro').value||'').trim();
-    var err=gid('r-err'); err.textContent='';
-    if(phone.length<10||phone.length>11){err.textContent='Número de celular inválido.';return;}
-    if(name.length<2){err.textContent='Apelido muito curto (mín. 2 letras).';return;}
-    if(name.length>28){err.textContent='Apelido muito longo (máx. 28 caracteres).';return;}
-    if(!/^[\u00C0-\u017Ea-zA-Z0-9 _.\-]{2,28}$/.test(name)){err.textContent='Use letras, números, espaço ou . _ -';return;}
-    if(!bairro){err.textContent='Selecione seu bairro.';return;}
-    var btn=gid('r-btn');btn.disabled=true;btn.textContent='Verificando…';
-    try{
-      /* Checar unicidade do apelido */
-      var uRef=db.collection('chat_users').doc(name);
-      if((await uRef.get()).exists){
-        err.textContent='Apelido já em uso — escolha outro.';
-        btn.disabled=false;btn.textContent='Criar conta e entrar »';return;
-      }
-      /* Checar limite do bairro */
-      var bRef=db.collection('chat_bairros').doc(bairro);
-      var bSnap=await bRef.get();
-      if(bSnap.exists&&(bSnap.data().count||0)>=MAX_BAIRRO){
-        err.textContent=bairro+' atingiu o limite de '+MAX_BAIRRO+' participantes.';
-        btn.disabled=false;btn.textContent='Criar conta e entrar »';return;
-      }
-      /* Criar usuário */
-      await uRef.set({username:name,bairro:bairro,phone:phone.length,daily:{},at:firebase.firestore.FieldValue.serverTimestamp()});
-      /* Incrementar contador do bairro */
-      await bRef.set({count:firebase.firestore.FieldValue.increment(1)},{merge:true});
-      me={username:name,bairro:bairro};
-      localStorage.setItem(LSKEY,JSON.stringify(me));
-      chatEnterChat();
-    }catch(e){
-      err.textContent='Erro: '+e.message;
-      btn.disabled=false;btn.textContent='Criar conta e entrar »';
-    }
-  };
-
-  /* ---- Login ---- */
-  window.chatLogin=async function(){
-    if(!db)return;
-    var name=(gid('l-name').value||'').trim();
-    var err=gid('l-err');err.textContent='';
-    if(!name){err.textContent='Digite seu apelido.';return;}
-    var btn=gid('l-btn');btn.disabled=true;btn.textContent='Entrando…';
-    try{
-      var snap=await db.collection('chat_users').doc(name).get();
-      if(!snap.exists){err.textContent='Apelido não encontrado.';btn.disabled=false;btn.textContent='Entrar »';return;}
-      var d=snap.data();
-      me={username:d.username||name,bairro:d.bairro};
-      localStorage.setItem(LSKEY,JSON.stringify(me));
-      chatEnterChat();
-    }catch(e){err.textContent='Erro: '+e.message;btn.disabled=false;btn.textContent='Entrar »';}
-  };
-
-  /* ---- Entrar no chat ---- */
-  function chatEnterChat(){
-    hide('cp-reg');hide('cp-log');hide('cp-loading');
-    var w=gid('cp-chat-wrap');w.style.display='flex';
-    gid('cp-head-bairro').textContent=me.bairro;
-    listenMsgs();
-    updateBar();
-  }
-
-  /* ---- Listener em tempo real ---- */
-  function listenMsgs(){
-    if(unsubFn)unsubFn();
-    unsubFn=db.collection('chat_msgs')
-      .where('bairro','==',me.bairro)
-      .orderBy('ts','asc')
-      .limitToLast(MSGS_LIMIT)
-      .onSnapshot(function(snap){renderMsgs(snap.docs);},function(e){console.warn('listen:',e);});
-  }
-
-  function renderMsgs(docs){
-    var box=gid('cp-msgs');box.innerHTML='';
-    if(!docs.length){
-      box.innerHTML='<div class="cempty">Nenhuma mensagem ainda no '+safeHtml(me.bairro)+'.<br>Seja o primeiro a escrever! 💬<br><br><small style="opacity:.7">Mensagens ficam visíveis apenas para moradores do mesmo bairro.</small></div>';
-      return;
-    }
-    var frag=document.createDocumentFragment();
-    var lastDate='';
-    docs.forEach(function(doc){
-      var d=doc.data();
-      var isMe=d.username===me.username;
-      var ts=d.ts?new Date(d.ts.seconds*1000):new Date();
-      var dateStr=ts.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});
-      var timeStr=ts.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
-      /* Separador de data */
-      if(dateStr!==lastDate){
-        lastDate=dateStr;
-        var sep=document.createElement('div');
-        sep.style.cssText='text-align:center;font:600 11px var(--head);color:var(--muted);padding:6px 0';
-        sep.textContent=dateStr;frag.appendChild(sep);
-      }
-      var div=document.createElement('div');
-      div.className='cmsg '+(isMe?'me':'ot');
-      div.innerHTML='<div class="cbubble">'+safeHtml(d.text)+'</div>'
-        +'<div class="cmeta">'+(isMe?'Você':'<span class="cname">'+safeHtml(d.username)+'</span>')+' · '+timeStr+'</div>';
-      frag.appendChild(div);
-    });
-    box.appendChild(frag);
-    chatScrollBottom();
-    if(!chatIsOpen){var u=gid('chat-unread');if(u){u.style.display='flex';u.textContent='!';}}
-  }
-
-  function chatScrollBottom(){var b=gid('cp-msgs');if(b)setTimeout(function(){b.scrollTop=b.scrollHeight;},50);}
-
-  /* ---- Limite diário ---- */
-  function todayKey(){return new Date().toISOString().slice(0,10);}
-  function updateBar(){
-    if(!me||!db)return;
-    db.collection('chat_users').doc(me.username).get().then(function(snap){
-      var daily=(snap.exists&&snap.data().daily)||{};
-      var used=daily[todayKey()]||0;
-      var rem=Math.max(0,MAX_MSG-used);
-      var bar=gid('cp-info-bar'),sbtn=gid('cp-sbtn'),txt=gid('cp-txt');
-      if(rem===0){
-        if(bar)bar.textContent='✋ Limite diário atingido. Volte amanhã!';
-        if(sbtn)sbtn.disabled=true;if(txt)txt.disabled=true;
-      }else{
-        if(bar)bar.textContent='💬 '+rem+' mensagem'+(rem!==1?'ns':'')+' restante'+(rem!==1?'s':'')+' hoje';
-        if(sbtn)sbtn.disabled=false;if(txt)txt.disabled=false;
-      }
-    }).catch(function(){});
-  }
-
-  /* ---- Enviar mensagem ---- */
-  window.chatSend=async function(){
-    if(!db||!me)return;
-    var el=gid('cp-txt');
-    var txt=(el.value||'').trim();
-    if(!txt)return;
-    if(txt.length>300){gid('cp-info-bar').textContent='⚠️ Máximo 300 caracteres.';return;}
-    var sbtn=gid('cp-sbtn');sbtn.disabled=true;
-    try{
-      var uRef=db.collection('chat_users').doc(me.username);
-      var uSnap=await uRef.get();
-      var daily=((uSnap.exists&&uSnap.data().daily)||{});
-      var today=todayKey();
-      if((daily[today]||0)>=MAX_MSG){updateBar();return;}
-      await db.collection('chat_msgs').add({
-        username:me.username,bairro:me.bairro,text:txt,
-        ts:firebase.firestore.FieldValue.serverTimestamp()
-      });
-      var upd={};upd['daily.'+today]=firebase.firestore.FieldValue.increment(1);
-      await uRef.update(upd);
-      el.value='';chatResize(el);updateBar();
-    }catch(e){console.warn('send:',e);}
-    sbtn.disabled=false;
-  };
-
-  window.chatResize=function(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,76)+'px';};
-  window.chatKey=function(ev){if(ev.key==='Enter'&&!ev.shiftKey){ev.preventDefault();chatSend();}};
-
-  /* ---- Iniciar após carregar página ---- */
-  window.addEventListener('load',function(){setTimeout(loadFirebase,900);});
-})();
-
 </script>
+
+<!-- ==================== Chat Widget (estilo publicidade) ==================== -->
+<style>
+/* Chat widget — mesmo padrão do ad-widget, posicionado à ESQUERDA */
+#chat-widget{
+  position:fixed;
+  bottom:calc(16px + env(safe-area-inset-bottom,0px));
+  left:16px;
+  z-index:40;
+  width:300px;
+  border-radius:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,.38);
+  overflow:hidden;
+  background:var(--surface);
+  border:1px solid var(--line);
+  transition:transform .25s ease, opacity .25s ease;
+}
+#chat-widget.hidden-chat{
+  transform:translateY(calc(100% + 20px));
+  opacity:0;
+  pointer-events:none;
+}
+#chat-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 12px;
+  background:var(--mast);
+  color:#fff;
+  font:700 11px var(--head);
+  letter-spacing:.04em;
+  cursor:pointer;
+  user-select:none;
+}
+#chat-toggle-btn{
+  background:none;border:none;color:#fff;
+  cursor:pointer;font:700 16px var(--head);
+  line-height:1;padding:0;flex-shrink:0;
+}
+#chat-body{
+  overflow:hidden;
+  transition:max-height .3s ease;
+  max-height:440px;
+}
+#chat-body.collapsed{max-height:0!important;}
+#chat-iframe{
+  width:100%;
+  height:440px;
+  border:none;
+  display:block;
+}
+</style>
+
+<div id="chat-widget" class="hidden-chat">
+  <div id="chat-header" onclick="chatWidgetToggle()">
+    <span>💬 CHAT DE CONVERSA</span>
+    <button id="chat-toggle-btn" title="Recolher/Expandir">▼</button>
+  </div>
+  <div id="chat-body">
+    <iframe id="chat-iframe" src="chat.html" title="Bate-papo da Zona Norte" loading="lazy"></iframe>
+  </div>
+</div>
+
+<script>
+(function(){
+  var LSKEY  = '11hr_chat_widget_v1';
+  var widget = document.getElementById('chat-widget');
+  var cbody  = document.getElementById('chat-body');
+  var ctog   = document.getElementById('chat-toggle-btn');
+  var open   = true;
+
+  /* Aparecer após 1.5 s (igual ao anúncio) */
+  setTimeout(function(){ widget.classList.remove('hidden-chat'); }, 1500);
+
+  /* Toggle do painel — seta sobe/desce */
+  window.chatWidgetToggle = function(){
+    open = !open;
+    cbody.classList.toggle('collapsed', !open);
+    ctog.textContent = open ? '▼' : '▲';
+    localStorage.setItem(LSKEY, open ? 'open' : 'closed');
+  };
+
+  /* Restaurar estado */
+  if(localStorage.getItem(LSKEY) === 'closed'){
+    open = false;
+    cbody.classList.add('collapsed');
+    ctog.textContent = '▲';
+  }
+})();
+</script>
+<!-- ============================================================ -->
+
 </body>
 </html>

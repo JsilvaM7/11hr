@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bate-papo da Zona Norte — 11hr</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mast:#14213D;--accent:#FFC20E;--surface:#fff;--bg:#F0F2F7;
+  --ink:#14213D;--muted:#5B6579;--line:#D9DEE8;--link:#1F3FBF;
+  --green:#1A6B3A;--red:#C0392B;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,serif;
+}
+@media(prefers-color-scheme:dark){:root{--bg:#0A0F1E;--surface:#131A2E;--ink:#EEF1F8;--muted:#9AA5BC;--line:#26304A;--mast:#1B2A55}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--head);background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center}
+.app{width:100%;max-width:430px;background:var(--surface);min-height:100vh;box-shadow:0 0 0 1px var(--line),0 0 36px 10px rgba(10,20,50,.25);display:flex;flex-direction:column}
+
+/* HEADER */
+.mast{background:var(--mast);color:#fff;padding:14px 18px 12px;flex-shrink:0}
+.mast-top{display:flex;align-items:center;gap:10px}
+.mark{font-family:var(--head);font-weight:800;font-size:38px;line-height:.85;background:var(--accent);color:#14213D;padding:8px 8px 6px;border-radius:5px;display:flex;align-items:baseline}
+.mark small{font-size:16px;margin-left:1px}
+.mast-txt{flex:1}
+.mast-title{font:800 18px var(--head);letter-spacing:-.01em}
+.mast-sub{font:500 12px var(--head);opacity:.8;margin-top:2px}
+.mast-back{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:8px;padding:7px 12px;font:700 13px var(--head);cursor:pointer;text-decoration:none;display:flex;align-items:center;gap:5px}
+.mast-back:hover{background:rgba(255,255,255,.25)}
+
+/* BAIRRO SELECTOR */
+.bairro-bar{background:var(--surface);border-bottom:2px solid var(--line);padding:10px 14px;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.bairro-bar label{font:700 12px var(--head);color:var(--muted);white-space:nowrap}
+.bairro-sel{flex:1;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:13px var(--head);color:var(--ink);background:var(--surface);cursor:pointer}
+.bairro-sel:focus{outline:2px solid var(--accent)}
+.count-badge{background:var(--accent);color:var(--mast);font:700 11px var(--head);border-radius:99px;padding:3px 9px;white-space:nowrap}
+
+/* SCREENS */
+.screen{flex:1;display:flex;flex-direction:column;overflow:hidden}
+
+/* REGISTRO */
+#s-reg{padding:20px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}
+#s-reg h2{font:800 20px var(--head);color:var(--ink)}
+#s-reg p{font:400 13.5px var(--head);color:var(--muted);line-height:1.6}
+.inp-group{display:flex;flex-direction:column;gap:4px}
+.inp-group label{font:700 12px var(--head);color:var(--muted);letter-spacing:.03em;text-transform:uppercase}
+.finp{padding:10px 12px;border:1px solid var(--line);border-radius:9px;font:14px var(--head);color:var(--ink);background:var(--surface);width:100%}
+.finp:focus{outline:2px solid var(--accent);border-color:var(--accent)}
+.fbtn{padding:12px;background:var(--mast);color:#fff;border:none;border-radius:9px;font:700 15px var(--head);cursor:pointer;width:100%;transition:opacity .15s}
+.fbtn:hover{opacity:.88}
+.fbtn:disabled{opacity:.45;cursor:not-allowed}
+.fbtn.sec{background:transparent;color:var(--link);border:1px solid var(--line)}
+.ferr{font:600 12px var(--head);color:var(--red);text-align:center;min-height:16px}
+.finfo{font:500 12px var(--head);color:var(--muted);text-align:center}
+.flink{color:var(--link);cursor:pointer;text-decoration:underline;background:none;border:none;font:inherit}
+
+/* CHAT */
+#s-chat{display:none;flex:1;flex-direction:column;overflow:hidden;min-height:0}
+#msgs{flex:1;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
+.msg{display:flex;flex-direction:column}
+.msg.me{align-items:flex-end}
+.msg.ot{align-items:flex-start}
+.bubble{padding:9px 13px;border-radius:16px;font:400 14px/1.45 var(--body);word-break:break-word;max-width:85%}
+.msg.me .bubble{background:var(--mast);color:#fff;border-radius:16px 16px 4px 16px}
+.msg.ot .bubble{background:var(--bg);color:var(--ink);border-radius:16px 16px 16px 4px;border:1px solid var(--line)}
+.msg-meta{font:500 10px var(--head);color:var(--muted);margin-top:3px;padding:0 4px;display:flex;align-items:center;gap:5px}
+.msg-name{color:var(--link);font-weight:700}
+.msg-admin{background:var(--accent);color:var(--mast);font:700 9px var(--head);padding:1px 6px;border-radius:99px;letter-spacing:.04em}
+.date-sep{text-align:center;font:600 11px var(--head);color:var(--muted);padding:8px 0}
+.empty{padding:40px 20px;text-align:center;color:var(--muted);font:500 14px var(--head);line-height:1.8}
+
+/* SEND BAR */
+.send-bar{padding:10px 12px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:flex-end;flex-shrink:0;background:var(--surface)}
+#msg-txt{flex:1;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font:14px var(--body);color:var(--ink);background:var(--surface);resize:none;min-height:40px;max-height:90px;line-height:1.4;box-sizing:border-box}
+#msg-txt:focus{outline:2px solid var(--accent);border-color:var(--accent)}
+#msg-txt:disabled{opacity:.5;cursor:not-allowed}
+#send-btn{background:var(--mast);color:#fff;border:none;border-radius:10px;width:40px;height:40px;font-size:16px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:opacity .15s}
+#send-btn:hover{opacity:.85}
+#send-btn:disabled{opacity:.35;cursor:not-allowed}
+.limit-bar{padding:5px 14px;font:600 11px var(--head);color:var(--mast);background:rgba(255,193,14,.12);border-top:1px solid rgba(255,193,14,.3);text-align:center;flex-shrink:0}
+.user-bar{padding:7px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:var(--surface);flex-shrink:0}
+.user-info{font:500 12px var(--head);color:var(--muted)}
+.user-name{color:var(--ink);font-weight:700}
+.logout-btn{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:4px 10px;font:600 11px var(--head);cursor:pointer}
+.logout-btn:hover{background:var(--bg)}
+
+/* TOAST */
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 20px;border-radius:10px;font:600 13px var(--head);z-index:99;display:none;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+#toast.ok{background:var(--green)}#toast.err{background:var(--red)}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <header class="mast">
+    <div class="mast-top">
+      <div class="mark">11<small>hr</small></div>
+      <div class="mast-txt">
+        <div class="mast-title">Bate-papo da Zona Norte</div>
+        <div class="mast-sub">Conecte-se com seu bairro</div>
+      </div>
+      <a href="index.html" class="mast-back">‹ Voltar</a>
+    </div>
+  </header>
+
+  <div class="bairro-bar">
+    <label>📍 Bairro:</label>
+    <select class="bairro-sel" id="bairro-sel" onchange="onBairroChange()">
+      <option value="">— Todos —</option>
+    </select>
+    <span class="count-badge" id="count-badge">0 msg</span>
+  </div>
+
+  <!-- TELA REGISTRO -->
+  <div class="screen" id="s-reg">
+    <h2>🏘️ Entre no Bate-papo</h2>
+    <p>Conecte-se com moradores da Zona Norte. Escolha um apelido único — sem senha, sem e-mail.</p>
+
+    <div class="inp-group">
+      <label>Celular</label>
+      <input class="finp" id="r-phone" type="tel" placeholder="(11) 99999-9999" maxlength="15" autocomplete="tel">
+    </div>
+    <div class="inp-group">
+      <label>Apelido único</label>
+      <input class="finp" id="r-name" type="text" placeholder="Ex: João Santana" maxlength="28" autocomplete="nickname">
+    </div>
+    <div class="inp-group">
+      <label>Seu bairro</label>
+      <select class="finp" id="r-bairro"><option value="">— Escolha —</option></select>
+    </div>
+    <div class="inp-group">
+      <label>Código de acesso</label>
+      <input class="finp" id="r-pin" type="text" placeholder="Código fornecido pelo 11hr" maxlength="10" autocomplete="off">
+      <span style="font:500 11px var(--head);color:var(--muted)">Solicite o código pelo WhatsApp do 11hr</span>
+    </div>
+    <button class="fbtn" id="r-btn" onclick="doRegister()">Criar conta e entrar »</button>
+    <div class="ferr" id="r-err"></div>
+    <div class="finfo">Já tem conta? <button class="flink" onclick="showLogin()">Entrar com apelido</button></div>
+  </div>
+
+  <!-- TELA LOGIN -->
+  <div class="screen" id="s-log" style="display:none;padding:20px;flex-direction:column;gap:12px">
+    <h2>👋 Bem-vindo de volta!</h2>
+    <p style="font:400 13.5px var(--head);color:var(--muted);line-height:1.6">Digite seu apelido para entrar no bate-papo do seu bairro.</p>
+    <div class="inp-group">
+      <label>Seu apelido</label>
+      <input class="finp" id="l-name" type="text" placeholder="Seu apelido" maxlength="28" autocomplete="nickname">
+    </div>
+    <button class="fbtn" id="l-btn" onclick="doLogin()">Entrar »</button>
+    <div class="ferr" id="l-err"></div>
+    <div class="finfo"><button class="flink" onclick="showReg()">Criar nova conta</button></div>
+  </div>
+
+  <!-- TELA CHAT -->
+  <div id="s-chat">
+    <div class="user-bar">
+      <span class="user-info">Logado como <span class="user-name" id="uname-label"></span></span>
+      <button class="logout-btn" onclick="doLogout()">Sair</button>
+    </div>
+    <div id="msgs"></div>
+    <div class="limit-bar" id="limit-bar"></div>
+    <div class="send-bar">
+      <textarea id="msg-txt" placeholder="Mensagem para o bairro…" rows="1"
+        oninput="autoResize(this)" onkeydown="onKey(event)"></textarea>
+      <button id="send-btn" onclick="sendMsg()">➤</button>
+    </div>
+  </div>
+
+</div>
+<div id="toast"></div>
+
+<script>
+var OWNER='JsilvaM7', REPO='11hr', BRANCH='main', CHAT_FILE='chat.json';
+var RAW_URL='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+CHAT_FILE;
+var BAIRROS=['Santana','Tucuruvi','Vila Guilherme','Parada Inglesa','Jardim São Paulo','Mandaqui','Tremembé','Jaçanã','Casa Verde','Freguesia do Ó','Brasilândia','Cachoeirinha','Lauzane Paulista','Limão','Pirituba','Jaraguá','São Domingos','Vila Maria','Vila Medeiros','Imirim'];
+var MAX_BAIRRO=100, MAX_MSG=2;
+var LSKEY='11hr_chat_v2';
+var chatData={mensagens:[],usuarios:{},config:{pin:'',bairros:{}}};
+var currentSha='', me=null, refreshTimer=null;
+
+function $(id){return document.getElementById(id)}
+function tok(){return localStorage.getItem('11hr_tok')||''}
+function me_tok(){return localStorage.getItem('11hr_chat_tok')||tok()}
+function toast(msg,t){var el=$('toast');el.textContent=msg;el.className=t||'';el.style.display='block';clearTimeout(toast._t);toast._t=setTimeout(function(){el.style.display='none'},3500)}
+function todayKey(){return new Date().toISOString().slice(0,10)}
+function safeHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+/* ---- Build selects ---- */
+function buildSelects(){
+  var opts='<option value="">— Todos os bairros —</option>';
+  BAIRROS.forEach(function(b){opts+='<option value="'+b+'">'+b+'</option>'});
+  $('bairro-sel').innerHTML=opts;
+  var opts2='<option value="">— Escolha seu bairro —</option>';
+  BAIRROS.forEach(function(b){opts2+='<option value="'+b+'">'+b+'</option>'});
+  $('r-bairro').innerHTML=opts2;
+  /* Pre-select from user */
+  var saved=localStorage.getItem(LSKEY);
+  if(saved){try{var u=JSON.parse(saved);if(u.bairro)$('bairro-sel').value=u.bairro;}catch(e){}}
+}
+
+/* ---- Fetch chat.json ---- */
+async function fetchChat(){
+  try{
+    var r=await fetch(RAW_URL+'?v='+Date.now());
+    if(!r.ok)throw new Error(r.status);
+    chatData=await r.json();
+    /* Also get SHA for updating */
+    var info=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
+      {headers:me_tok()?{Authorization:'token '+me_tok()}:{}});
+    if(info.ok){var d=await info.json();currentSha=d.sha||'';}
+  }catch(e){console.warn('fetch chat:',e);}
+  renderMsgs();
+  updateLimitBar();
+}
+
+/* ---- Save chat.json to GitHub ---- */
+async function saveChat(){
+  if(!me_tok()){toast('Sem token para salvar','err');return false;}
+  var json=JSON.stringify(chatData,null,2);
+  var b64=btoa(unescape(encodeURIComponent(json)));
+  /* Refresh SHA */
+  try{
+    var fresh=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
+      {headers:{Authorization:'token '+me_tok()}});
+    if(fresh.ok){var fd=await fresh.json();currentSha=fd.sha||'';}
+  }catch(e){}
+  var body={message:'Chat: nova mensagem',content:b64,branch:BRANCH};
+  if(currentSha)body.sha=currentSha;
+  var r=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE,
+    {method:'PUT',headers:{Authorization:'token '+me_tok(),'Content-Type':'application/json'},body:JSON.stringify(body)});
+  if(!r.ok){var err=await r.json().catch(()=>({}));throw new Error(err.message||r.status);}
+  var rd=await r.json();
+  if(rd.content)currentSha=rd.content.sha||currentSha;
+  return true;
+}
+
+/* ---- Auth ---- */
+function showReg(){$('s-reg').style.display='flex';$('s-log').style.display='none';$('s-chat').style.display='none';}
+function showLogin(){$('s-reg').style.display='none';$('s-log').style.display='flex';$('s-chat').style.display='none';}
+function showChat(){$('s-reg').style.display='none';$('s-log').style.display='none';$('s-chat').style.display='flex';}
+
+async function doRegister(){
+  var phone=($('r-phone').value||'').trim().replace(/\D/g,'');
+  var name=($('r-name').value||'').trim();
+  var bairro=($('r-bairro').value||'').trim();
+  var pin=($('r-pin').value||'').trim();
+  var err=$('r-err'); err.textContent='';
+  if(phone.length<10||phone.length>11){err.textContent='Celular inválido.';return;}
+  if(name.length<2){err.textContent='Apelido muito curto.';return;}
+  if(!/^[\u00C0-\u017Ea-zA-Z0-9 _.\-]{2,28}$/.test(name)){err.textContent='Apelido com caracteres inválidos.';return;}
+  if(!bairro){err.textContent='Escolha seu bairro.';return;}
+  if(pin!==chatData.config.pin){err.textContent='Código de acesso incorreto. Solicite ao 11hr.';return;}
+  var btn=$('r-btn'); btn.disabled=true; btn.textContent='Verificando…';
+  await fetchChat();
+  if(chatData.usuarios[name]){err.textContent='Apelido já em uso — escolha outro.';btn.disabled=false;btn.textContent='Criar conta e entrar »';return;}
+  var bCount=chatData.config.bairros[bairro]||0;
+  if(bCount>=MAX_BAIRRO){err.textContent=bairro+' atingiu o limite de '+MAX_BAIRRO+' participantes.';btn.disabled=false;btn.textContent='Criar conta e entrar »';return;}
+  chatData.usuarios[name]={bairro:bairro,at:new Date().toISOString(),daily:{}};
+  chatData.config.bairros[bairro]=(chatData.config.bairros[bairro]||0)+1;
+  try{
+    await saveChat();
+    me={username:name,bairro:bairro};
+    localStorage.setItem(LSKEY,JSON.stringify(me));
+    if(bairro)$('bairro-sel').value=bairro;
+    enterChat();
+  }catch(e){err.textContent='Erro ao salvar: '+e.message;}
+  btn.disabled=false;btn.textContent='Criar conta e entrar »';
+}
+
+async function doLogin(){
+  var name=($('l-name').value||'').trim();
+  var err=$('l-err'); err.textContent='';
+  if(!name){err.textContent='Digite seu apelido.';return;}
+  var btn=$('l-btn'); btn.disabled=true; btn.textContent='Entrando…';
+  await fetchChat();
+  if(!chatData.usuarios[name]){err.textContent='Apelido não encontrado.';btn.disabled=false;btn.textContent='Entrar »';return;}
+  var u=chatData.usuarios[name];
+  me={username:name,bairro:u.bairro};
+  localStorage.setItem(LSKEY,JSON.stringify(me));
+  if(u.bairro)$('bairro-sel').value=u.bairro;
+  enterChat();
+  btn.disabled=false;btn.textContent='Entrar »';
+}
+
+function enterChat(){
+  $('uname-label').textContent=me.username+' · '+me.bairro;
+  showChat();
+  renderMsgs();
+  updateLimitBar();
+  startAutoRefresh();
+}
+
+function doLogout(){
+  me=null; localStorage.removeItem(LSKEY);
+  clearInterval(refreshTimer);
+  showReg();
+}
+
+/* ---- Render messages ---- */
+function onBairroChange(){renderMsgs();updateCountBadge();}
+
+function renderMsgs(){
+  var box=$('msgs'); if(!box)return;
+  var bairro=$('bairro-sel').value;
+  var msgs=(chatData.mensagens||[]).filter(function(m){return !bairro||m.bairro===bairro;});
+  if(!msgs.length){
+    box.innerHTML='<div class="empty">Nenhuma mensagem ainda'+(bairro?' em '+bairro:'')+'.<br>Seja o primeiro a escrever! 💬<br><br><small>Mensagens ficam visíveis apenas para moradores do mesmo bairro.</small></div>';
+    return;
+  }
+  var html=''; var lastDate='';
+  msgs.forEach(function(m){
+    var ts=new Date(m.at);
+    var dateStr=ts.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'2-digit'});
+    var timeStr=ts.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+    if(dateStr!==lastDate){lastDate=dateStr;html+='<div class="date-sep">'+dateStr+'</div>';}
+    var isMe=me&&m.autor===me.username;
+    html+='<div class="msg '+(isMe?'me':'ot')+'">'
+      +'<div class="bubble">'+safeHtml(m.texto)+'</div>'
+      +'<div class="msg-meta">'
+      +(m.isAdmin?'<span class="msg-admin">ADMIN</span>':'')
+      +(isMe?'Você':'<span class="msg-name">'+safeHtml(m.autor)+'</span>')
+      +' · '+safeHtml(m.bairro)+' · '+timeStr
+      +'</div></div>';
+  });
+  box.innerHTML=html;
+  setTimeout(function(){box.scrollTop=box.scrollHeight;},40);
+  updateCountBadge();
+}
+
+function updateCountBadge(){
+  var bairro=$('bairro-sel').value;
+  var total=(chatData.mensagens||[]).filter(function(m){return !bairro||m.bairro===bairro;}).length;
+  $('count-badge').textContent=total+' msg';
+}
+
+/* ---- Limit bar ---- */
+function updateLimitBar(){
+  if(!me||!$('limit-bar'))return;
+  var u=chatData.usuarios[me.username];
+  var daily=(u&&u.daily)||{};
+  var used=daily[todayKey()]||0;
+  var rem=Math.max(0,MAX_MSG-used);
+  var bar=$('limit-bar'), btn=$('send-btn'), txt=$('msg-txt');
+  if(rem===0){
+    bar.textContent='✋ Limite diário atingido. Volte amanhã!';
+    if(btn)btn.disabled=true;if(txt)txt.disabled=true;
+  }else{
+    bar.textContent='💬 '+rem+' mensagem'+(rem!==1?'ns':'')+' restante'+(rem!==1?'s':'')+' hoje · '+me.bairro;
+    if(btn)btn.disabled=false;if(txt)txt.disabled=false;
+  }
+}
+
+/* ---- Send ---- */
+async function sendMsg(){
+  if(!me)return;
+  var txt=($('msg-txt').value||'').trim();
+  if(!txt)return;
+  if(txt.length>300){toast('Máximo 300 caracteres','err');return;}
+  var u=chatData.usuarios[me.username];
+  if(!u){toast('Usuário não encontrado. Faça login novamente.','err');doLogout();return;}
+  var daily=u.daily||{};
+  var today=todayKey();
+  if((daily[today]||0)>=MAX_MSG){updateLimitBar();return;}
+  var btn=$('send-btn');btn.disabled=true;
+  try{
+    var msg={id:Date.now()+'',autor:me.username,bairro:me.bairro,texto:txt,at:new Date().toISOString(),isAdmin:false};
+    chatData.mensagens.push(msg);
+    /* Update daily count */
+    if(!chatData.usuarios[me.username].daily)chatData.usuarios[me.username].daily={};
+    chatData.usuarios[me.username].daily[today]=(daily[today]||0)+1;
+    /* Keep only last 500 messages */
+    if(chatData.mensagens.length>500)chatData.mensagens=chatData.mensagens.slice(-500);
+    await saveChat();
+    $('msg-txt').value='';autoResize($('msg-txt'));
+    renderMsgs();updateLimitBar();
+    toast('Mensagem enviada! ✅','ok');
+  }catch(e){
+    chatData.mensagens.pop();
+    toast('Erro ao enviar: '+e.message,'err');
+  }
+  btn.disabled=false;
+}
+
+function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,90)+'px';}
+function onKey(ev){if(ev.key==='Enter'&&!ev.shiftKey){ev.preventDefault();sendMsg();}}
+
+/* ---- Auto refresh ---- */
+function startAutoRefresh(){
+  clearInterval(refreshTimer);
+  refreshTimer=setInterval(function(){fetchChat();},60000);
+}
+
+/* ---- INIT ---- */
+buildSelects();
+fetchChat().then(function(){
+  var saved=localStorage.getItem(LSKEY);
+  if(saved){
+    try{
+      var u=JSON.parse(saved);
+      if(chatData.usuarios[u.username]){
+        me=u;
+        if(u.bairro)$('bairro-sel').value=u.bairro;
+        enterChat();
+        return;
+      }
+    }catch(e){}
+  }
+  showReg();
+});
+</script>
+</body>
+</html>
