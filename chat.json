@@ -9,11 +9,11 @@
       "isAdmin": false
     },
     {
-      "id": "1793398915435",
+      "id": "1793398954307_frsdy",
       "autor": "Julio Cesar08",
       "bairro": "Tucuruvi",
-      "texto": "Vou air no cabeleleiro 11 tem vaga? vou mandar mensagem no whats",
-      "at": "2026-10-30T22:21:55.435Z",
+      "texto": "vou ai con cabelleiro 11 tem vaga?",
+      "at": "2026-10-30T22:22:34.307Z",
       "isAdmin": false
     }
   ],
@@ -22,7 +22,7 @@
       "bairro": "Tucuruvi",
       "at": "2026-10-30T22:10:31.438Z",
       "daily": {
-        "2026-10-30": 2
+        "2026-10-30": 1
       }
     }
   },
