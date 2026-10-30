@@ -37,6 +37,11 @@
       "bairro": "Tucuruvi",
       "at": "2026-10-30T22:32:02.376Z",
       "daily": {}
+    },
+    "julio88": {
+      "bairro": "Jaçanã",
+      "at": "2026-10-30T23:47:14.365Z",
+      "daily": {}
     }
   },
   "config": {
@@ -49,7 +54,7 @@
       "Jardim São Paulo": 0,
       "Mandaqui": 0,
       "Tremembé": 0,
-      "Jaçanã": 0,
+      "Jaçanã": 1,
       "Casa Verde": 0,
       "Freguesia do Ó": 0,
       "Brasilândia": 0,
