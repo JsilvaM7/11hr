@@ -1,1 +1,35 @@
-{"mensagens":[],"usuarios":{},"config":{"pin":"1111","bairros":{"Santana":0,"Tucuruvi":0,"Vila Guilherme":0,"Parada Inglesa":0,"Jardim São Paulo":0,"Mandaqui":0,"Tremembé":0,"Jaçanã":0,"Casa Verde":0,"Freguesia do Ó":0,"Brasilândia":0,"Cachoeirinha":0,"Lauzane Paulista":0,"Limão":0,"Pirituba":0,"Jaraguá":0,"São Domingos":0,"Vila Maria":0,"Vila Medeiros":0,"Imirim":0}}}
+{
+  "mensagens": [],
+  "usuarios": {
+    "Julio Cesar08": {
+      "bairro": "Tucuruvi",
+      "at": "2026-10-30T22:06:58.467Z",
+      "daily": {}
+    }
+  },
+  "config": {
+    "pin": "1111",
+    "bairros": {
+      "Santana": 0,
+      "Tucuruvi": 1,
+      "Vila Guilherme": 0,
+      "Parada Inglesa": 0,
+      "Jardim São Paulo": 0,
+      "Mandaqui": 0,
+      "Tremembé": 0,
+      "Jaçanã": 0,
+      "Casa Verde": 0,
+      "Freguesia do Ó": 0,
+      "Brasilândia": 0,
+      "Cachoeirinha": 0,
+      "Lauzane Paulista": 0,
+      "Limão": 0,
+      "Pirituba": 0,
+      "Jaraguá": 0,
+      "São Domingos": 0,
+      "Vila Maria": 0,
+      "Vila Medeiros": 0,
+      "Imirim": 0
+    }
+  }
+}
