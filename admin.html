@@ -226,6 +226,34 @@ td textarea{min-height:56px}
       </div>
     </div>
 
+    <!-- BATE-PAPO -->
+    <div id="sec-chat" style="display:none;padding:0">
+      <iframe id="chat-admin-frame" src="" style="width:100%;height:calc(100vh - 90px);border:none;display:block;" title="Chat Admin"></iframe>
+    </div>
+
+    <!-- VISITAS -->
+    <div id="sec-visitas" style="display:none;padding:24px 16px;max-width:820px">
+      <h2 style="font:800 18px sans-serif;color:#14213D;margin-bottom:16px;">📈 Visitas ao Site</h2>
+      <p style="font:400 13px sans-serif;color:#666;margin-bottom:16px;">
+        Contador próprio armazenado no GitHub — sem Google Analytics, sem cookies.<br>
+        As visitas são registradas cada vez que o portal é aberto com o admin logado no mesmo navegador.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px">
+        <div class="ca-stat"><b id="vst-total">—</b><span>Total de acessos</span></div>
+        <div class="ca-stat"><b id="vst-hoje">—</b><span>Hoje</span></div>
+        <div class="ca-stat"><b id="vst-semana">—</b><span>Últimos 7 dias</span></div>
+        <div class="ca-stat"><b id="vst-mes">—</b><span>Últimos 30 dias</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden">
+        <div style="background:#14213D;color:#fff;padding:10px 16px;font:700 13px sans-serif">
+          Histórico de Visitas por Dia
+        </div>
+        <div id="vst-table" style="padding:0">
+          <p style="padding:20px;color:#999;font:13px sans-serif;text-align:center">Clique na aba Visitas para carregar…</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -280,9 +308,10 @@ function showTab(t){
   });
   if(t==="chat"){
     var fr=$("chat-admin-frame");
-    if(fr && !fr.src) fr.src="chat-admin.html";
-    else if(fr) fr.contentWindow.location.reload();
+    if(fr && !fr.src){ fr.src="chat-admin.html"; }
+    else if(fr && fr.src){ try{fr.contentWindow.location.reload();}catch(e){} }
   }
+  if(t==="visitas") loadVisitas();
 }
 
 /* ---- GITHUB API ---- */
@@ -574,33 +603,10 @@ function loadVisitas(){
       document.getElementById('vst-table').innerHTML='<p style="padding:20px;color:#c62828;font:13px sans-serif">Erro ao carregar: '+e+'</p>';
     });
 }
-/* Hook into showTab */
-(function(){
-  var orig=window.showTab||function(){};
-  window.showTab=function(t){
-    orig(t);
-    if(t==='visitas') loadVisitas();
-  };
-})();
+/* showTab already handles visitas */
 
 </script>
 
-  <!-- ==================== Chat Admin Section ==================== -->
-  <section id="sec-chat" class="admin-section" style="display:none;">
-    <iframe id="chat-admin-frame" src="" style="width:100%;height:calc(100vh - 90px);border:none;display:block;" title="Chat Admin"></iframe>
-  </section>
-  <!-- ============================================================ -->
-
-
-    <!-- VISITAS -->
-    <div id="sec-visitas" style="display:none;padding:24px 16px;max-width:820px">
-      <h2 style="font:800 18px sans-serif;color:#14213D;margin-bottom:16px;">📈 Visitas ao Site</h2>
-      <p style="font:400 13px sans-serif;color:#666;margin-bottom:16px;">
-        Contador próprio armazenado no GitHub (sem Google Analytics, sem cookies).<br>
-        As visitas são registradas quando o painel admin está logado no mesmo navegador que acessa o portal.
-      </p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-        <div class="ca-stat"><b id="vst-total">—</b><span>Total de acessos</span></div>
         <div class="ca-stat"><b id="vst-hoje">—</b><span>Hoje</span></div>
         <div class="ca-stat"><b id="vst-semana">—</b><span>Últimos 7 dias</span></div>
         <div class="ca-stat"><b id="vst-mes">—</b><span>Últimos 30 dias</span></div>
