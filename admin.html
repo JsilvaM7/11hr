@@ -273,10 +273,15 @@ $("btn-sair").onclick=function(){localStorage.removeItem("11hr_tok");location.re
 
 /* ---- TABS ---- */
 function showTab(t){
-  $("sec-noticias").style.display=t==="noticias"?"block":"none";
-  $("sec-anuncios").style.display=t==="anuncios"?"block":"none";
-  $("tb-noticias").className="tb"+(t==="noticias"?" on":"");
-  $("tb-anuncios").className="tb"+(t==="anuncios"?" on":"");
+  ["noticias","anuncios","chat"].forEach(function(s){
+    var sec=$("sec-"+s); if(sec) sec.style.display=(t===s?"block":"none");
+    var btn=$("tb-"+s); if(btn) btn.className="tb"+(t===s?" on":"");
+  });
+  if(t==="chat"){
+    var fr=$("chat-admin-frame");
+    if(fr && !fr.src) fr.src="chat-admin.html";
+    else if(fr) fr.contentWindow.location.reload();
+  }
 }
 
 /* ---- GITHUB API ---- */
@@ -523,272 +528,13 @@ async function init(){
 window.onbeforeunload=function(){if(dirty)return"Há alterações não salvas. Sair mesmo assim?"};
 init();
 
-/* ─────────────── CHAT ADMIN ─────────────── */
-var CHAT_RAW_URL = 'https://raw.githubusercontent.com/JsilvaM7/11hr/main/chat.json';
-var CHAT_API_URL = 'https://api.github.com/repos/JsilvaM7/11hr/contents/chat.json';
-var BAIRROS_LIST = ['Santana','Tucuruvi','Vila Guilherme','Parada Inglesa','Jardim São Paulo','Mandaqui','Tremembé','Jaçanã','Casa Verde','Freguesia do Ó','Brasilândia','Cachoeirinha','Lauzane Paulista','Limão','Pirituba','Jaraguá','São Domingos','Vila Maria','Vila Medeiros','Imirim'];
-var chatAdminLoaded = false;
-var chatData = null;
-
-function getAdminTok(){return localStorage.getItem('11hr_tok')||'';}
-
-function loadChatAdmin(){
-  if(chatAdminLoaded) return;
-  chatAdminLoaded = true;
-  fetchChatData();
-}
-
-function fetchChatData(cb){
-  fetch(CHAT_RAW_URL+'?v='+Date.now())
-    .then(function(r){return r.ok?r.json():Promise.reject(r.status);})
-    .then(function(d){
-      chatData = d;
-      renderChatAdmin();
-      if(cb) cb(d);
-    })
-    .catch(function(e){
-      document.getElementById('ca-bairros-list').innerHTML='<p style="color:#c62828;">Erro ao carregar chat.json: '+e+'</p>';
-    });
-}
-
-function renderChatAdmin(){
-  if(!chatData) return;
-  var pin = chatData.pin||'1111';
-  var pinInp = document.getElementById('ca-pin-inp');
-  if(pinInp) pinInp.value = pin;
-
-  // Stats
-  var users = chatData.users||{};
-  var msgs = chatData.messages||[];
-  var bairrosSt = chatData.bairros||{};
-  var activeBairros = Object.keys(bairrosSt).filter(function(b){return (bairrosSt[b]||0)>0;});
-  var tu = document.getElementById('ca-total-users');
-  var tm = document.getElementById('ca-total-msgs');
-  var tb2 = document.getElementById('ca-total-bairros');
-  if(tu) tu.textContent = Object.keys(users).length;
-  if(tm) tm.textContent = msgs.length;
-  if(tb2) tb2.textContent = activeBairros.length;
-
-  // Bairros list
-  var container = document.getElementById('ca-bairros-list');
-  container.innerHTML = '';
-  BAIRROS_LIST.forEach(function(bairro){
-    var bMsgs = msgs.filter(function(m){return m.bairro===bairro;});
-    var count = bairrosSt[bairro]||0;
-    var card = document.createElement('div');
-    card.className='ca-bairro-card';
-    var headId = 'bh-'+bairro.replace(/\s/g,'_');
-    var bodyId = 'bb-'+bairro.replace(/\s/g,'_');
-    card.innerHTML = '<div class="ca-bairro-head" onclick="toggleBairroCard(\''+bodyId+'\')">'
-      +'<h4>'+bairro+'</h4>'
-      +'<span class="ca-count">👥 '+count+'/100 &nbsp;💬 '+bMsgs.length+' msg</span>'
-      +'</div>'
-      +'<div class="ca-bairro-msgs" id="'+bodyId+'">'
-      + (bMsgs.length===0
-        ? '<p style="color:#999;font:13px sans-serif;padding:8px 0;">Sem mensagens neste bairro.</p>'
-        : bMsgs.map(function(m,i){
-            return '<div class="ca-msg-row">'
-              +'<div class="ca-msg-content">'
-              +'<div class="ca-msg-user">'+safeH(m.username)+(m.isAdmin?' 🛡️ Admin':'')+'</div>'
-              +'<div class="ca-msg-text">'+safeH(m.text)+'</div>'
-              +'<div class="ca-msg-time">'+formatMsgTime(m.ts)+'</div>'
-              +'</div>'
-              +'<button class="ca-del-btn" onclick="caDeleteMsg(\''+bairro+'\','+i+')">🗑 Apagar</button>'
-              +'</div>';
-          }).join('')
-        )
-      +'</div>';
-    container.appendChild(card);
-  });
-
-  // Users
-  var usersWrap = document.getElementById('ca-users-wrap');
-  var usersList = document.getElementById('ca-users-list');
-  if(usersWrap && usersList){
-    var uKeys = Object.keys(users);
-    if(uKeys.length>0){
-      usersWrap.style.display='block';
-      usersList.innerHTML = uKeys.map(function(k){
-        var u=users[k];
-        return '<div class="ca-user-row">'
-          +'<div class="ca-user-info"><b>'+safeH(k)+'</b> — '+safeH(u.bairro||'?')+' — Tel: '+safeH(String(u.phone||'').replace(/(\d{2})(\d{5})(\d{4})/,'($1) $2-$3'))+'</div>'
-          +'<button class="ca-user-ban" onclick="caBanUser(\''+k+'\')">Banir</button>'
-          +'</div>';
-      }).join('');
-    }
-  }
-}
-
-function toggleBairroCard(id){
-  var el=document.getElementById(id);
-  if(el) el.classList.toggle('open');
-}
-
-function safeH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-
-function formatMsgTime(ts){
-  if(!ts) return '';
-  var d=new Date(ts);
-  return d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})
-    +' '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
-}
-
-function caSavePin(){
-  var pin=(document.getElementById('ca-pin-inp').value||'').trim();
-  if(!pin){alert('Digite um PIN.');return;}
-  var msg=document.getElementById('ca-pin-msg');
-  msg.textContent='Salvando…';
-  if(!chatData){msg.textContent='Carregue os dados primeiro.';return;}
-  chatData.pin=pin;
-  pushChatData('PIN atualizado para: '+pin, function(ok){
-    msg.textContent=ok?'✔ PIN salvo!':'✘ Erro ao salvar.';
-    setTimeout(function(){msg.textContent='';},3000);
-  });
-}
-
-function caPostAdmin(){
-  var bairro=(document.getElementById('ca-post-bairro').value||'').trim();
-  var txt=(document.getElementById('ca-post-txt').value||'').trim();
-  var msgEl=document.getElementById('ca-post-msg');
-  if(!bairro){alert('Selecione o bairro.');return;}
-  if(!txt){alert('Digite a mensagem.');return;}
-  if(!chatData){alert('Dados não carregados.');return;}
-  msgEl.textContent='Publicando…';
-  var now=new Date().toISOString();
-  var today=now.slice(0,10);
-  if(!chatData.messages) chatData.messages=[];
-  chatData.messages.push({
-    id:'admin_'+Date.now(),
-    username:'🛡️ Redação 11hr',
-    bairro:bairro,
-    text:txt,
-    ts:now,
-    isAdmin:true
-  });
-  pushChatData('Admin post em '+bairro, function(ok){
-    if(ok){
-      document.getElementById('ca-post-txt').value='';
-      document.getElementById('ca-post-bairro').value='';
-      msgEl.style.color='#2e7d32';
-      msgEl.textContent='✔ Publicado com sucesso!';
-      chatAdminLoaded=false;
-      setTimeout(function(){loadChatAdmin();msgEl.textContent='';},1500);
-    } else {
-      msgEl.style.color='#c62828';
-      msgEl.textContent='✘ Erro ao publicar.';
-    }
-  });
-}
-
-function caDeleteMsg(bairro, idx){
-  if(!confirm('Apagar esta mensagem?')) return;
-  if(!chatData||!chatData.messages) return;
-  // Find and remove by bairro + relative index
-  var bMsgs=chatData.messages.filter(function(m){return m.bairro===bairro;});
-  var target=bMsgs[idx];
-  if(!target){alert('Mensagem não encontrada.');return;}
-  chatData.messages=chatData.messages.filter(function(m){return m!==target;});
-  pushChatData('Delete msg em '+bairro, function(ok){
-    if(ok){chatAdminLoaded=false;loadChatAdmin();}
-    else alert('Erro ao apagar mensagem.');
-  });
-}
-
-function caBanUser(username){
-  if(!confirm('Banir usuário "'+username+'" e apagar suas mensagens?')) return;
-  if(!chatData) return;
-  // Remove user
-  if(chatData.users) delete chatData.users[username];
-  // Remove messages
-  if(chatData.messages) chatData.messages=chatData.messages.filter(function(m){return m.username!==username;});
-  // Decrement bairro count (we don't track which bairro easily without user data, so find from messages or skip)
-  pushChatData('Ban user '+username, function(ok){
-    if(ok){chatAdminLoaded=false;loadChatAdmin();}
-    else alert('Erro ao banir usuário.');
-  });
-}
-
-function pushChatData(commitMsg, cb){
-  var tok=getAdminTok();
-  if(!tok){alert('Token GitHub não encontrado. Configure em Ajustes.');if(cb)cb(false);return;}
-  // Get current SHA first
-  fetch(CHAT_API_URL,{headers:{'Authorization':'token '+tok,'Accept':'application/vnd.github.v3+json'}})
-    .then(function(r){return r.json();})
-    .then(function(meta){
-      var sha=meta.sha;
-      var content=btoa(unescape(encodeURIComponent(JSON.stringify(chatData,null,2))));
-      return fetch(CHAT_API_URL,{
-        method:'PUT',
-        headers:{'Authorization':'token '+tok,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
-        body:JSON.stringify({message:'[admin] '+commitMsg,content:content,sha:sha,branch:'main'})
-      });
-    })
-    .then(function(r){if(cb)cb(r.ok||r.status===200||r.status===201);})
-    .catch(function(e){console.error(e);if(cb)cb(false);});
-}
-
-// Extend showTab to call loadChatAdmin
-(function(){
-  var _orig=window.showTab;
-  window.showTab=function(t){
-    _orig(t);
-    if(t==='chat') loadChatAdmin();
-  };
-})();
-/* ─────────────────────────────────────────── */
+/* Chat admin moved to chat-admin.html */
 
 </script>
 
   <!-- ==================== Chat Admin Section ==================== -->
   <section id="sec-chat" class="admin-section" style="display:none;">
-    <div style="max-width:820px;margin:0 auto;padding:0 16px;">
-      <h2 style="font:800 20px var(--head,sans-serif);color:#14213D;margin-bottom:16px;">💬 Bate-papo por Bairro</h2>
-
-      <!-- PIN Config -->
-      <div class="ca-pin-box">
-        <h3>🔑 PIN de Acesso da Comunidade</h3>
-        <p style="font:400 13px sans-serif;color:#666;margin:0 0 10px;">Compartilhe este PIN com moradores para que possam se cadastrar no bate-papo.</p>
-        <input type="text" id="ca-pin-inp" maxlength="8" placeholder="1111">
-        <button onclick="caSavePin()">Salvar PIN</button>
-        <span id="ca-pin-msg" style="font:600 12px sans-serif;color:#2e7d32;margin-left:8px;"></span>
-      </div>
-
-      <!-- Post como Admin -->
-      <div class="ca-post-box">
-        <h3>📣 Postar como Admin</h3>
-        <select id="ca-post-bairro">
-          <option value="">— Escolha o bairro —</option>
-          <option>Santana</option><option>Tucuruvi</option><option>Vila Guilherme</option>
-          <option>Parada Inglesa</option><option>Jardim São Paulo</option><option>Mandaqui</option>
-          <option>Tremembé</option><option>Jaçanã</option><option>Casa Verde</option>
-          <option>Freguesia do Ó</option><option>Brasilândia</option><option>Cachoeirinha</option>
-          <option>Lauzane Paulista</option><option>Limão</option><option>Pirituba</option>
-          <option>Jaraguá</option><option>São Domingos</option><option>Vila Maria</option>
-          <option>Vila Medeiros</option><option>Imirim</option>
-        </select>
-        <textarea id="ca-post-txt" placeholder="Mensagem do admin para o bairro…"></textarea>
-        <button onclick="caPostAdmin()">Publicar no Bate-papo</button>
-        <span id="ca-post-msg" style="font:600 12px sans-serif;color:#2e7d32;margin-left:8px;display:block;margin-top:6px;"></span>
-      </div>
-
-      <!-- Stats -->
-      <div class="ca-stats" id="ca-stats">
-        <div class="ca-stat"><b id="ca-total-users">—</b><span>Usuários</span></div>
-        <div class="ca-stat"><b id="ca-total-msgs">—</b><span>Mensagens</span></div>
-        <div class="ca-stat"><b id="ca-total-bairros">—</b><span>Bairros Ativos</span></div>
-      </div>
-
-      <!-- Messages by bairro -->
-      <div id="ca-bairros-list">
-        <p style="color:#999;font:13px sans-serif;">Carregando dados do bate-papo…</p>
-      </div>
-
-      <!-- Users list -->
-      <div class="ca-users-box" id="ca-users-wrap" style="display:none;">
-        <h3>👥 Usuários Registrados</h3>
-        <div id="ca-users-list"></div>
-      </div>
-    </div>
+    <iframe id="chat-admin-frame" src="" style="width:100%;height:calc(100vh - 90px);border:none;display:block;" title="Chat Admin"></iframe>
   </section>
   <!-- ============================================================ -->
 
