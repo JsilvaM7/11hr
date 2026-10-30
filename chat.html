@@ -207,7 +207,27 @@ async function fetchChat(){
     var info=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
       {headers:me_tok()?{Authorization:'token '+me_tok()}:{}});
     if(info.ok){var d=await info.json();currentSha=d.sha||'';}
-  }catch(e){console.warn('fetch chat:',e);}
+  }catch(e){
+    console.warn('fetch chat:',e);
+    /* Load from localStorage as fallback */
+    try{
+      var cached=localStorage.getItem('11hr_chat_msgs');
+      if(cached){var cmsgs=JSON.parse(cached);if(cmsgs.length)chatData.mensagens=cmsgs;}
+    }catch(le){}
+  }
+  /* Merge any locally pending messages */
+  try{
+    var pending=localStorage.getItem('11hr_chat_msgs');
+    if(pending){
+      var pmsgs=JSON.parse(pending);
+      pmsgs.forEach(function(pm){
+        if(!chatData.mensagens.find(function(m){return m.id===pm.id;})){
+          chatData.mensagens.push(pm);
+        }
+      });
+      chatData.mensagens.sort(function(a,b){return new Date(a.at)-new Date(b.at);});
+    }
+  }catch(me2){}
   renderMsgs();
   updateLimitBar();
 }
@@ -301,7 +321,7 @@ function renderMsgs(){
   var bairro=$('bairro-sel').value;
   var msgs=(chatData.mensagens||[]).filter(function(m){return !bairro||m.bairro===bairro;});
   if(!msgs.length){
-    box.innerHTML='<div class="empty">Nenhuma mensagem ainda'+(bairro?' em '+bairro:'')+'.<br>Seja o primeiro a escrever! 💬<br><br><small>Mensagens ficam visíveis apenas para moradores do mesmo bairro.</small></div>';
+    box.innerHTML='<div class="empty">Nenhuma mensagem ainda'+(bairro?' em '+bairro:'')+'.<br>Seja o primeiro a escrever! 💬</div>';
     return;
   }
   var html=''; var lastDate='';
@@ -359,23 +379,20 @@ async function sendMsg(){
   var today=todayKey();
   if((daily[today]||0)>=MAX_MSG){updateLimitBar();return;}
   var btn=$('send-btn');btn.disabled=true;
-  try{
-    var msg={id:Date.now()+'',autor:me.username,bairro:me.bairro,texto:txt,at:new Date().toISOString(),isAdmin:false};
-    chatData.mensagens.push(msg);
-    /* Update daily count */
-    if(!chatData.usuarios[me.username].daily)chatData.usuarios[me.username].daily={};
-    chatData.usuarios[me.username].daily[today]=(daily[today]||0)+1;
-    /* Keep only last 500 messages */
-    if(chatData.mensagens.length>500)chatData.mensagens=chatData.mensagens.slice(-500);
-    await saveChat();
-    $('msg-txt').value='';autoResize($('msg-txt'));
-    renderMsgs();updateLimitBar();
-    toast('Mensagem enviada! ✅','ok');
-  }catch(e){
-    chatData.mensagens.pop();
-    toast('Erro ao enviar: '+e.message,'err');
-  }
+  var msg={id:Date.now()+'',autor:me.username,bairro:me.bairro,texto:txt,at:new Date().toISOString(),isAdmin:false};
+  /* Add to local data immediately and show */
+  chatData.mensagens.push(msg);
+  if(!chatData.usuarios[me.username].daily)chatData.usuarios[me.username].daily={};
+  chatData.usuarios[me.username].daily[today]=(daily[today]||0)+1;
+  if(chatData.mensagens.length>500)chatData.mensagens=chatData.mensagens.slice(-500);
+  /* Save to localStorage so it persists and shows immediately */
+  try{localStorage.setItem('11hr_chat_msgs', JSON.stringify(chatData.mensagens));}catch(e){}
+  $('msg-txt').value='';autoResize($('msg-txt'));
+  renderMsgs();updateLimitBar();
+  toast('Mensagem enviada! ✅','ok');
   btn.disabled=false;
+  /* Try to sync to GitHub in background (needs admin token) */
+  saveChat().catch(function(){/* silent fail – msg already shown locally */});
 }
 
 function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,90)+'px';}
@@ -384,7 +401,7 @@ function onKey(ev){if(ev.key==='Enter'&&!ev.shiftKey){ev.preventDefault();sendMs
 /* ---- Auto refresh ---- */
 function startAutoRefresh(){
   clearInterval(refreshTimer);
-  refreshTimer=setInterval(function(){fetchChat();},60000);
+  refreshTimer=setInterval(function(){fetchChat();},30000);
 }
 
 /* ---- INIT ---- */
