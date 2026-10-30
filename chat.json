@@ -32,13 +32,18 @@
       "daily": {
         "2026-10-30": 1
       }
+    },
+    "julio cesar": {
+      "bairro": "Tucuruvi",
+      "at": "2026-10-30T22:32:02.376Z",
+      "daily": {}
     }
   },
   "config": {
     "pin": "1111",
     "bairros": {
       "Santana": 0,
-      "Tucuruvi": 1,
+      "Tucuruvi": 2,
       "Vila Guilherme": 0,
       "Parada Inglesa": 0,
       "Jardim São Paulo": 0,
