@@ -168,6 +168,7 @@ td textarea{min-height:56px}
     <button class="tb on" id="tb-noticias" onclick="showTab('noticias')">📰 Notícias</button>
     <button class="tb" id="tb-anuncios" onclick="showTab('anuncios')">📢 Anúncios</button>
     <button class="tb" id="tb-chat" onclick="showTab('chat')">💬 Bate-papo</button>
+    <button class="tb" id="tb-visitas" onclick="showTab('visitas')">📈 Visitas</button>
   </div>
 
   <div class="content">
@@ -273,7 +274,7 @@ $("btn-sair").onclick=function(){localStorage.removeItem("11hr_tok");location.re
 
 /* ---- TABS ---- */
 function showTab(t){
-  ["noticias","anuncios","chat"].forEach(function(s){
+  ["noticias","anuncios","chat","visitas"].forEach(function(s){
     var sec=$("sec-"+s); if(sec) sec.style.display=(t===s?"block":"none");
     var btn=$("tb-"+s); if(btn) btn.className="tb"+(t===s?" on":"");
   });
@@ -530,6 +531,58 @@ init();
 
 /* Chat admin moved to chat-admin.html */
 
+
+/* ── VISITAS ── */
+var statsLoaded=false;
+function loadVisitas(){
+  if(statsLoaded)return;
+  statsLoaded=true;
+  var RAW='https://raw.githubusercontent.com/JsilvaM7/11hr/main/stats.json';
+  fetch(RAW+'?v='+Date.now())
+    .then(function(r){return r.ok?r.json():Promise.reject(r.status);})
+    .then(function(data){
+      var visits=data.visits||{};
+      var today=new Date().toISOString().slice(0,10);
+      var total=data.total||Object.values(visits).reduce(function(a,b){return a+b;},0);
+      var hoje=visits[today]||0;
+      var sem=0,mes=0;
+      for(var i=0;i<30;i++){
+        var d=new Date();d.setDate(d.getDate()-i);
+        var dk=d.toISOString().slice(0,10);
+        var v=visits[dk]||0;
+        mes+=v;if(i<7)sem+=v;
+      }
+      document.getElementById('vst-total').textContent=total;
+      document.getElementById('vst-hoje').textContent=hoje;
+      document.getElementById('vst-semana').textContent=sem;
+      document.getElementById('vst-mes').textContent=mes;
+      /* Table */
+      var days=Object.keys(visits).sort().reverse().slice(0,60);
+      if(!days.length){document.getElementById('vst-table').innerHTML='<p style="padding:20px;color:#999;font:13px sans-serif">Nenhuma visita registrada ainda.</p>';return;}
+      var max=Math.max.apply(null,days.map(function(d){return visits[d];}));
+      var rows=days.map(function(d){
+        var v=visits[d];
+        var pct=max?Math.round(v/max*100):0;
+        return '<tr><td style="padding:8px 14px;font:600 12px sans-serif;white-space:nowrap">'+d+'</td>'
+          +'<td style="padding:8px 14px;width:100%"><div style="background:#e0e0e0;border-radius:4px;height:14px"><div style="background:#14213D;width:'+pct+'%;height:14px;border-radius:4px"></div></div></td>'
+          +'<td style="padding:8px 14px;font:700 13px sans-serif;white-space:nowrap;color:#14213D">'+v+' acesso'+(v!==1?'s':'')+'</td>'
+          +'</tr>';
+      }).join('');
+      document.getElementById('vst-table').innerHTML='<table style="width:100%;border-collapse:collapse"><tbody>'+rows+'</tbody></table>';
+    })
+    .catch(function(e){
+      document.getElementById('vst-table').innerHTML='<p style="padding:20px;color:#c62828;font:13px sans-serif">Erro ao carregar: '+e+'</p>';
+    });
+}
+/* Hook into showTab */
+(function(){
+  var orig=window.showTab||function(){};
+  window.showTab=function(t){
+    orig(t);
+    if(t==='visitas') loadVisitas();
+  };
+})();
+
 </script>
 
   <!-- ==================== Chat Admin Section ==================== -->
@@ -538,5 +591,28 @@ init();
   </section>
   <!-- ============================================================ -->
 
+
+    <!-- VISITAS -->
+    <div id="sec-visitas" style="display:none;padding:24px 16px;max-width:820px">
+      <h2 style="font:800 18px sans-serif;color:#14213D;margin-bottom:16px;">📈 Visitas ao Site</h2>
+      <p style="font:400 13px sans-serif;color:#666;margin-bottom:16px;">
+        Contador próprio armazenado no GitHub (sem Google Analytics, sem cookies).<br>
+        As visitas são registradas quando o painel admin está logado no mesmo navegador que acessa o portal.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px">
+        <div class="ca-stat"><b id="vst-total">—</b><span>Total de acessos</span></div>
+        <div class="ca-stat"><b id="vst-hoje">—</b><span>Hoje</span></div>
+        <div class="ca-stat"><b id="vst-semana">—</b><span>Últimos 7 dias</span></div>
+        <div class="ca-stat"><b id="vst-mes">—</b><span>Últimos 30 dias</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden">
+        <div style="background:#14213D;color:#fff;padding:10px 16px;font:700 13px sans-serif">
+          Histórico de Visitas por Dia
+        </div>
+        <div id="vst-table" style="padding:0">
+          <p style="padding:20px;color:#999;font:13px sans-serif">Carregando…</p>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

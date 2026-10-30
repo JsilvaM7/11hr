@@ -442,6 +442,49 @@ fetch("data.json?v="+Date.now())
     ctog.textContent = '▲';
   }
 })();
+
+/* ── Visit counter (sem Google Analytics) ── */
+(function(){
+  var STATS_RAW='https://raw.githubusercontent.com/JsilvaM7/11hr/main/stats.json';
+  var STATS_API='https://api.github.com/repos/JsilvaM7/11hr/contents/stats.json';
+  var LS_VIS='11hr_vis_v1';
+  var today=new Date().toISOString().slice(0,10);
+
+  /* Mark visit locally */
+  try{
+    var vis=JSON.parse(localStorage.getItem(LS_VIS)||'{"days":{}}');
+    if(!vis.days) vis.days={};
+    vis.days[today]=(vis.days[today]||0)+1;
+    // keep 90 days
+    var cutoff=new Date();cutoff.setDate(cutoff.getDate()-90);
+    Object.keys(vis.days).forEach(function(d){if(d<cutoff.toISOString().slice(0,10))delete vis.days[d];});
+    localStorage.setItem(LS_VIS,JSON.stringify(vis));
+  }catch(e){}
+
+  /* If admin token available, push stats to GitHub */
+  var tok=localStorage.getItem('11hr_tok');
+  if(!tok) return;
+  fetch(STATS_RAW+'?v='+Date.now())
+    .then(function(r){return r.ok?r.json():Promise.reject(r.status);})
+    .then(function(data){
+      if(!data.visits) data.visits={};
+      data.visits[today]=(data.visits[today]||0)+1;
+      data.total=(data.total||0)+1;
+      // Get SHA and update
+      return fetch(STATS_API+'?ref=main',{headers:{Authorization:'token '+tok}})
+        .then(function(r){return r.json();})
+        .then(function(meta){
+          var b64=btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
+          return fetch(STATS_API,{
+            method:'PUT',
+            headers:{Authorization:'token '+tok,'Content-Type':'application/json'},
+            body:JSON.stringify({message:'stats: visit '+today,content:b64,sha:meta.sha,branch:'main'})
+          });
+        });
+    })
+    .catch(function(){/* silent */});
+})();
+
 </script>
 <!-- ============================================================ -->
 

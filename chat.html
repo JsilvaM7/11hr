@@ -120,6 +120,10 @@ body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);dis
     </select>
     <span class="count-badge" id="count-badge">0 msg</span>
   </div>
+  <div id="bairro-info" style="background:#111;border-bottom:1px solid #222;padding:5px 12px;font:500 11px var(--head);color:#888;display:none;gap:12px;flex-wrap:wrap">
+    <span id="bi-pessoas">👥 0 pessoas</span>
+    <span id="bi-msgs">💬 0 mensagens</span>
+  </div>
 
   <!-- TELA REGISTRO -->
   <div class="screen" id="s-reg">
@@ -228,12 +232,21 @@ function loadLocalMsgs(){
 
 /* ── Build selects ── */
 function buildSelects(){
-  var opts='<option value="">— Todos os bairros —</option>';
-  BAIRROS.forEach(function(b){opts+='<option value="'+b+'">'+b+'</option>';});
-  $('bairro-sel').innerHTML=opts;
+  rebuildBairroSel();
   var opts2='<option value="">— Escolha seu bairro —</option>';
   BAIRROS.forEach(function(b){opts2+='<option value="'+b+'">'+b+'</option>';});
   $('r-bairro').innerHTML=opts2;
+}
+function rebuildBairroSel(){
+  var bairros=chatData.config&&chatData.config.bairros||{};
+  var selected=$('bairro-sel')?$('bairro-sel').value:'';
+  var opts='<option value="">— Todos os bairros —</option>';
+  BAIRROS.forEach(function(b){
+    var cnt=bairros[b]||0;
+    opts+='<option value="'+b+'">'+b+(cnt?' ('+cnt+' pessoa'+(cnt!==1?'s':'')+')'):'')+'</option>';
+  });
+  $('bairro-sel').innerHTML=opts;
+  if(selected) $('bairro-sel').value=selected;
 }
 
 /* ── Fetch from GitHub ── */
@@ -269,6 +282,7 @@ async function fetchChat(){
     var loc=loadLocalMsgs();
     if(loc) chatData.mensagens=loc;
   }
+  rebuildBairroSel();
   renderMsgs();
   updateLimitBar();
 }
@@ -372,7 +386,18 @@ function doLogout(){
 }
 
 /* ── Render messages (ALL bairros visible, filter optional) ── */
-function onBairroChange(){renderMsgs();updateCountBadge();updateLimitBar();}
+function onBairroChange(){
+  renderMsgs();updateCountBadge();updateLimitBar();
+  var b=$('bairro-sel').value;
+  var info=$('bairro-info');
+  if(b&&info){
+    var cnt=(chatData.config&&chatData.config.bairros&&chatData.config.bairros[b])||0;
+    var msgs=(chatData.mensagens||[]).filter(function(m){return m.bairro===b;}).length;
+    $('bi-pessoas').textContent='👥 '+cnt+' pessoa'+(cnt!==1?'s':'');
+    $('bi-msgs').textContent='💬 '+msgs+' mensagem'+(msgs!==1?'ns':'');
+    info.style.display='flex';
+  } else if(info){info.style.display='none';}
+}
 
 function renderMsgs(){
   var box=$('msgs'); if(!box)return;
