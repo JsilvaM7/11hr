@@ -129,11 +129,6 @@ body{font-family:var(--head);background:var(--bg);color:var(--ink);min-height:10
       <label>Seu bairro</label>
       <select class="finp" id="r-bairro"><option value="">— Escolha —</option></select>
     </div>
-    <div class="inp-group">
-      <label>Código de acesso</label>
-      <input class="finp" id="r-pin" type="text" placeholder="Código fornecido pelo 11hr" maxlength="10" autocomplete="off">
-      <span style="font:500 11px var(--head);color:var(--muted)">Solicite o código pelo WhatsApp do 11hr</span>
-    </div>
     <button class="fbtn" id="r-btn" onclick="doRegister()">Criar conta e entrar »</button>
     <div class="ferr" id="r-err"></div>
     <div class="finfo">Já tem conta? <button class="flink" onclick="showLogin()">Entrar com apelido</button></div>
@@ -176,7 +171,7 @@ var RAW_URL='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+C
 var BAIRROS=['Santana','Tucuruvi','Vila Guilherme','Parada Inglesa','Jardim São Paulo','Mandaqui','Tremembé','Jaçanã','Casa Verde','Freguesia do Ó','Brasilândia','Cachoeirinha','Lauzane Paulista','Limão','Pirituba','Jaraguá','São Domingos','Vila Maria','Vila Medeiros','Imirim'];
 var MAX_BAIRRO=100, MAX_MSG=2;
 var LSKEY='11hr_chat_v2';
-var chatData={mensagens:[],usuarios:{},config:{pin:'',bairros:{}}};
+var chatData={mensagens:[],usuarios:{},config:{bairros:{}}};
 var currentSha='', me=null, refreshTimer=null;
 
 function $(id){return document.getElementById(id)}
@@ -244,13 +239,11 @@ async function doRegister(){
   var phone=($('r-phone').value||'').trim().replace(/\D/g,'');
   var name=($('r-name').value||'').trim();
   var bairro=($('r-bairro').value||'').trim();
-  var pin=($('r-pin').value||'').trim();
   var err=$('r-err'); err.textContent='';
   if(phone.length<10||phone.length>11){err.textContent='Celular inválido.';return;}
   if(name.length<2){err.textContent='Apelido muito curto.';return;}
   if(!/^[\u00C0-\u017Ea-zA-Z0-9 _.\-]{2,28}$/.test(name)){err.textContent='Apelido com caracteres inválidos.';return;}
   if(!bairro){err.textContent='Escolha seu bairro.';return;}
-  if(pin!==chatData.config.pin){err.textContent='Código de acesso incorreto. Solicite ao 11hr.';return;}
   var btn=$('r-btn'); btn.disabled=true; btn.textContent='Verificando…';
   await fetchChat();
   if(chatData.usuarios[name]){err.textContent='Apelido já em uso — escolha outro.';btn.disabled=false;btn.textContent='Criar conta e entrar »';return;}
