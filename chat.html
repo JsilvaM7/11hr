@@ -372,7 +372,7 @@ function doLogout(){
 }
 
 /* ── Render messages (ALL bairros visible, filter optional) ── */
-function onBairroChange(){renderMsgs();updateCountBadge();}
+function onBairroChange(){renderMsgs();updateCountBadge();updateLimitBar();}
 
 function renderMsgs(){
   var box=$('msgs'); if(!box)return;
@@ -421,7 +421,8 @@ function updateLimitBar(){
     bar.textContent='✋ Limite diário atingido. Volte amanhã!';
     if(btn)btn.disabled=true; if(txt)txt.disabled=true;
   }else{
-    bar.textContent='💬 '+rem+(rem===1?' mensagem restante':' mensagens restantes')+' hoje · '+me.bairro;
+    var selBairro=$('bairro-sel').value||me.bairro;
+    bar.textContent='💬 '+rem+(rem===1?' mensagem restante':' mensagens restantes')+' hoje · Enviando em: '+selBairro;
     if(btn)btn.disabled=false; if(txt)txt.disabled=false;
   }
 }
@@ -439,10 +440,13 @@ async function sendMsg(){
 
   var btn=$('send-btn'); btn.disabled=true;
 
+  // Usa o bairro selecionado no dropdown; se 'Todos', usa o bairro do cadastro
+  var targetBairro=$('bairro-sel').value||me.bairro;
+
   var msg={
     id:Date.now()+'_'+Math.random().toString(36).slice(2,7),
     autor:me.username,
-    bairro:me.bairro,
+    bairro:targetBairro,
     texto:txt,
     at:new Date().toISOString(),
     isAdmin:false
