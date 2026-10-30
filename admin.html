@@ -308,8 +308,13 @@ function showTab(t){
   });
   if(t==="chat"){
     var fr=$("chat-admin-frame");
-    if(fr && !fr.src){ fr.src="chat-admin.html"; }
-    else if(fr && fr.src){ try{fr.contentWindow.location.reload();}catch(e){} }
+    if(fr){
+      if(!fr.getAttribute("src")||fr.getAttribute("src")===""){
+        fr.setAttribute("src","chat-admin.html");
+      } else {
+        try{fr.contentWindow.location.reload();}catch(e){fr.src=fr.src;}
+      }
+    }
   }
   if(t==="visitas") loadVisitas();
 }
