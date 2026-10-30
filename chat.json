@@ -1,10 +1,21 @@
 {
-  "mensagens": [],
+  "mensagens": [
+    {
+      "id": "1793398076655",
+      "autor": "Julio Cesar08",
+      "bairro": "Tucuruvi",
+      "texto": "Como vai o Santana",
+      "at": "2026-10-30T22:07:56.655Z",
+      "isAdmin": false
+    }
+  ],
   "usuarios": {
     "Julio Cesar08": {
       "bairro": "Tucuruvi",
       "at": "2026-10-30T22:06:58.467Z",
-      "daily": {}
+      "daily": {
+        "2026-10-30": 1
+      }
     }
   },
   "config": {
