@@ -10,87 +10,93 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --mast:#14213D;--accent:#FFC20E;--surface:#fff;--bg:#F0F2F7;
-  --ink:#14213D;--muted:#5B6579;--line:#D9DEE8;--link:#1F3FBF;
+  --mast:#14213D;--accent:#FFC20E;
+  --chat-bg:#0d0d0d;--chat-surface:#1a1a1a;--chat-border:#2e2e2e;
+  --chat-ink:#f0f0f0;--chat-muted:#888;
   --green:#1A6B3A;--red:#C0392B;
   --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
   --body:"Source Serif 4",Georgia,serif;
 }
-@media(prefers-color-scheme:dark){:root{--bg:#0A0F1E;--surface:#131A2E;--ink:#EEF1F8;--muted:#9AA5BC;--line:#26304A;--mast:#1B2A55}}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--head);background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center}
-.app{width:100%;max-width:430px;background:var(--surface);min-height:100vh;box-shadow:0 0 0 1px var(--line),0 0 36px 10px rgba(10,20,50,.25);display:flex;flex-direction:column}
+html,body{height:100%}
+body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);display:flex;flex-direction:column;align-items:center;height:100%}
+.app{width:100%;max-width:430px;background:var(--chat-bg);height:100%;display:flex;flex-direction:column;border-left:1px solid var(--chat-border);border-right:1px solid var(--chat-border)}
 
 /* HEADER */
-.mast{background:var(--mast);color:#fff;padding:14px 18px 12px;flex-shrink:0}
+.mast{background:var(--mast);color:#fff;padding:10px 14px 10px;flex-shrink:0}
 .mast-top{display:flex;align-items:center;gap:10px}
-.mark{font-family:var(--head);font-weight:800;font-size:38px;line-height:.85;background:var(--accent);color:#14213D;padding:8px 8px 6px;border-radius:5px;display:flex;align-items:baseline}
-.mark small{font-size:16px;margin-left:1px}
+.mark{font-family:var(--head);font-weight:800;font-size:32px;line-height:.85;background:var(--accent);color:#14213D;padding:6px 6px 5px;border-radius:5px;display:flex;align-items:baseline}
+.mark small{font-size:13px;margin-left:1px}
 .mast-txt{flex:1}
-.mast-title{font:800 18px var(--head);letter-spacing:-.01em}
-.mast-sub{font:500 12px var(--head);opacity:.8;margin-top:2px}
-.mast-back{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:8px;padding:7px 12px;font:700 13px var(--head);cursor:pointer;text-decoration:none;display:flex;align-items:center;gap:5px}
+.mast-title{font:800 15px var(--head);letter-spacing:-.01em}
+.mast-sub{font:500 11px var(--head);opacity:.75;margin-top:1px}
+.mast-back{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:7px;padding:5px 10px;font:700 12px var(--head);cursor:pointer;text-decoration:none;display:flex;align-items:center;gap:4px;white-space:nowrap}
 .mast-back:hover{background:rgba(255,255,255,.25)}
 
 /* BAIRRO SELECTOR */
-.bairro-bar{background:var(--surface);border-bottom:2px solid var(--line);padding:10px 14px;display:flex;align-items:center;gap:8px;flex-shrink:0}
-.bairro-bar label{font:700 12px var(--head);color:var(--muted);white-space:nowrap}
-.bairro-sel{flex:1;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:13px var(--head);color:var(--ink);background:var(--surface);cursor:pointer}
+.bairro-bar{background:var(--chat-surface);border-bottom:1px solid var(--chat-border);padding:8px 12px;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.bairro-bar label{font:700 11px var(--head);color:var(--chat-muted);white-space:nowrap}
+.bairro-sel{flex:1;border:1px solid var(--chat-border);border-radius:7px;padding:6px 8px;font:12px var(--head);color:var(--chat-ink);background:var(--chat-bg);cursor:pointer}
 .bairro-sel:focus{outline:2px solid var(--accent)}
-.count-badge{background:var(--accent);color:var(--mast);font:700 11px var(--head);border-radius:99px;padding:3px 9px;white-space:nowrap}
+.count-badge{background:var(--accent);color:var(--mast);font:700 10px var(--head);border-radius:99px;padding:2px 7px;white-space:nowrap}
 
 /* SCREENS */
 .screen{flex:1;display:flex;flex-direction:column;overflow:hidden}
 
-/* REGISTRO */
-#s-reg{padding:20px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}
-#s-reg h2{font:800 20px var(--head);color:var(--ink)}
-#s-reg p{font:400 13.5px var(--head);color:var(--muted);line-height:1.6}
+/* REGISTRO/LOGIN */
+#s-reg,#s-log{padding:20px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}
+#s-reg h2,#s-log h2{font:800 18px var(--head);color:var(--chat-ink)}
+#s-reg p,#s-log p{font:400 13px var(--head);color:var(--chat-muted);line-height:1.6}
 .inp-group{display:flex;flex-direction:column;gap:4px}
-.inp-group label{font:700 12px var(--head);color:var(--muted);letter-spacing:.03em;text-transform:uppercase}
-.finp{padding:10px 12px;border:1px solid var(--line);border-radius:9px;font:14px var(--head);color:var(--ink);background:var(--surface);width:100%}
+.inp-group label{font:700 11px var(--head);color:var(--chat-muted);letter-spacing:.04em;text-transform:uppercase}
+.finp{padding:10px 12px;border:1px solid var(--chat-border);border-radius:8px;font:14px var(--head);color:var(--chat-ink);background:var(--chat-surface);width:100%}
 .finp:focus{outline:2px solid var(--accent);border-color:var(--accent)}
-.fbtn{padding:12px;background:var(--mast);color:#fff;border:none;border-radius:9px;font:700 15px var(--head);cursor:pointer;width:100%;transition:opacity .15s}
+.finp option{background:var(--chat-surface);color:var(--chat-ink)}
+.fbtn{padding:11px;background:var(--mast);color:#fff;border:none;border-radius:8px;font:700 14px var(--head);cursor:pointer;width:100%;transition:opacity .15s}
 .fbtn:hover{opacity:.88}
 .fbtn:disabled{opacity:.45;cursor:not-allowed}
-.fbtn.sec{background:transparent;color:var(--link);border:1px solid var(--line)}
-.ferr{font:600 12px var(--head);color:var(--red);text-align:center;min-height:16px}
-.finfo{font:500 12px var(--head);color:var(--muted);text-align:center}
-.flink{color:var(--link);cursor:pointer;text-decoration:underline;background:none;border:none;font:inherit}
+.ferr{font:600 12px var(--head);color:#ff6b6b;text-align:center;min-height:16px}
+.finfo{font:500 12px var(--head);color:var(--chat-muted);text-align:center}
+.flink{color:var(--accent);cursor:pointer;text-decoration:underline;background:none;border:none;font:inherit}
 
 /* CHAT */
 #s-chat{display:none;flex:1;flex-direction:column;overflow:hidden;min-height:0}
-#msgs{flex:1;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
+#msgs{flex:1;overflow-y:auto;padding:10px 12px;display:flex;flex-direction:column;gap:6px;scroll-behavior:smooth;background:var(--chat-bg)}
 .msg{display:flex;flex-direction:column}
 .msg.me{align-items:flex-end}
 .msg.ot{align-items:flex-start}
-.bubble{padding:9px 13px;border-radius:16px;font:400 14px/1.45 var(--body);word-break:break-word;max-width:85%}
-.msg.me .bubble{background:var(--mast);color:#fff;border-radius:16px 16px 4px 16px}
-.msg.ot .bubble{background:var(--bg);color:var(--ink);border-radius:16px 16px 16px 4px;border:1px solid var(--line)}
-.msg-meta{font:500 10px var(--head);color:var(--muted);margin-top:3px;padding:0 4px;display:flex;align-items:center;gap:5px}
-.msg-name{color:var(--link);font-weight:700}
-.msg-admin{background:var(--accent);color:var(--mast);font:700 9px var(--head);padding:1px 6px;border-radius:99px;letter-spacing:.04em}
-.date-sep{text-align:center;font:600 11px var(--head);color:var(--muted);padding:8px 0}
-.empty{padding:40px 20px;text-align:center;color:var(--muted);font:500 14px var(--head);line-height:1.8}
+.bubble{padding:8px 12px;border-radius:14px;font:400 13.5px/1.45 var(--body);word-break:break-word;max-width:85%}
+.msg.me .bubble{background:#1F3FBF;color:#fff;border-radius:14px 14px 4px 14px}
+.msg.ot .bubble{background:var(--chat-surface);color:var(--chat-ink);border-radius:14px 14px 14px 4px;border:1px solid var(--chat-border)}
+.msg-meta{font:600 10px var(--head);color:var(--chat-muted);margin-top:2px;padding:0 3px;display:flex;align-items:center;gap:4px}
+.msg-name{color:var(--accent);font-weight:700}
+.msg-admin{background:var(--accent);color:var(--mast);font:700 9px var(--head);padding:1px 5px;border-radius:99px}
+.date-sep{text-align:center;font:600 10px var(--head);color:var(--chat-muted);padding:6px 0;letter-spacing:.04em}
+.empty{padding:32px 16px;text-align:center;color:var(--chat-muted);font:500 13px var(--head);line-height:1.8}
+
+/* USER BAR */
+.user-bar{padding:7px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--chat-border);background:var(--chat-surface);flex-shrink:0}
+.user-info{font:500 11px var(--head);color:var(--chat-muted)}
+.user-name{color:var(--chat-ink);font-weight:700}
+.logout-btn{background:none;border:1px solid var(--chat-border);color:var(--chat-muted);border-radius:5px;padding:3px 9px;font:600 10px var(--head);cursor:pointer}
+.logout-btn:hover{background:var(--chat-bg)}
+
+/* LIMIT BAR */
+.limit-bar{padding:4px 12px;font:600 10px var(--head);color:#aaa;background:#111;border-top:1px solid var(--chat-border);text-align:center;flex-shrink:0}
 
 /* SEND BAR */
-.send-bar{padding:10px 12px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:flex-end;flex-shrink:0;background:var(--surface)}
-#msg-txt{flex:1;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font:14px var(--body);color:var(--ink);background:var(--surface);resize:none;min-height:40px;max-height:90px;line-height:1.4;box-sizing:border-box}
+.send-bar{padding:8px 10px;border-top:1px solid var(--chat-border);display:flex;gap:7px;align-items:flex-end;flex-shrink:0;background:var(--chat-surface)}
+#msg-txt{flex:1;border:1px solid var(--chat-border);border-radius:9px;padding:8px 11px;font:14px var(--body);color:var(--chat-ink);background:var(--chat-bg);resize:none;min-height:38px;max-height:90px;line-height:1.4;box-sizing:border-box}
+#msg-txt::placeholder{color:var(--chat-muted)}
 #msg-txt:focus{outline:2px solid var(--accent);border-color:var(--accent)}
-#msg-txt:disabled{opacity:.5;cursor:not-allowed}
-#send-btn{background:var(--mast);color:#fff;border:none;border-radius:10px;width:40px;height:40px;font-size:16px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:opacity .15s}
+#msg-txt:disabled{opacity:.4;cursor:not-allowed}
+#send-btn{background:var(--mast);color:#fff;border:none;border-radius:9px;width:38px;height:38px;font-size:16px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:opacity .15s}
 #send-btn:hover{opacity:.85}
 #send-btn:disabled{opacity:.35;cursor:not-allowed}
-.limit-bar{padding:5px 14px;font:600 11px var(--head);color:var(--mast);background:rgba(255,193,14,.12);border-top:1px solid rgba(255,193,14,.3);text-align:center;flex-shrink:0}
-.user-bar{padding:7px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:var(--surface);flex-shrink:0}
-.user-info{font:500 12px var(--head);color:var(--muted)}
-.user-name{color:var(--ink);font-weight:700}
-.logout-btn{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:4px 10px;font:600 11px var(--head);cursor:pointer}
-.logout-btn:hover{background:var(--bg)}
 
 /* TOAST */
-#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 20px;border-radius:10px;font:600 13px var(--head);z-index:99;display:none;box-shadow:0 4px 20px rgba(0,0,0,.3)}
-#toast.ok{background:var(--green)}#toast.err{background:var(--red)}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:9px 18px;border-radius:9px;font:600 12px var(--head);z-index:99;display:none;box-shadow:0 4px 20px rgba(0,0,0,.5)}
+#toast.ok{background:#1A6B3A}#toast.err{background:#C0392B}
 </style>
 </head>
 <body>
@@ -101,7 +107,7 @@ body{font-family:var(--head);background:var(--bg);color:var(--ink);min-height:10
       <div class="mark">11<small>hr</small></div>
       <div class="mast-txt">
         <div class="mast-title">Bate-papo da Zona Norte</div>
-        <div class="mast-sub">Conecte-se com seu bairro</div>
+        <div class="mast-sub">Converse com seu bairro</div>
       </div>
       <a href="index.html" class="mast-back">‹ Voltar</a>
     </div>
@@ -118,8 +124,7 @@ body{font-family:var(--head);background:var(--bg);color:var(--ink);min-height:10
   <!-- TELA REGISTRO -->
   <div class="screen" id="s-reg">
     <h2>🏘️ Entre no Bate-papo</h2>
-    <p>Conecte-se com moradores da Zona Norte. Escolha um apelido único — sem senha, sem e-mail.</p>
-
+    <p>Conecte-se com moradores da Zona Norte. Escolha um apelido único — sem senha.</p>
     <div class="inp-group">
       <label>Celular</label>
       <input class="finp" id="r-phone" type="tel" placeholder="(11) 99999-9999" maxlength="15" autocomplete="tel">
@@ -138,9 +143,9 @@ body{font-family:var(--head);background:var(--bg);color:var(--ink);min-height:10
   </div>
 
   <!-- TELA LOGIN -->
-  <div class="screen" id="s-log" style="display:none;padding:20px;flex-direction:column;gap:12px">
+  <div class="screen" id="s-log" style="display:none">
     <h2>👋 Bem-vindo de volta!</h2>
-    <p style="font:400 13.5px var(--head);color:var(--muted);line-height:1.6">Digite seu apelido para entrar no bate-papo do seu bairro.</p>
+    <p>Digite seu apelido para entrar.</p>
     <div class="inp-group">
       <label>Seu apelido</label>
       <input class="finp" id="l-name" type="text" placeholder="Seu apelido" maxlength="28" autocomplete="nickname">
@@ -173,91 +178,125 @@ var OWNER='JsilvaM7', REPO='11hr', BRANCH='main', CHAT_FILE='chat.json';
 var RAW_URL='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+CHAT_FILE;
 var BAIRROS=['Santana','Tucuruvi','Vila Guilherme','Parada Inglesa','Jardim São Paulo','Mandaqui','Tremembé','Jaçanã','Casa Verde','Freguesia do Ó','Brasilândia','Cachoeirinha','Lauzane Paulista','Limão','Pirituba','Jaraguá','São Domingos','Vila Maria','Vila Medeiros','Imirim'];
 var MAX_BAIRRO=100, MAX_MSG=2;
-var LSKEY='11hr_chat_v2';
+
+// localStorage keys
+var LS_ME    ='11hr_chat_v2';       // {username, bairro}
+var LS_MSGS  ='11hr_chat_msgs_v2';  // array of messages (local pending)
+var LS_DAILY ='11hr_chat_daily_v2'; // {date: count} — daily send count, stored locally
+
 var chatData={mensagens:[],usuarios:{},config:{bairros:{}}};
 var currentSha='', me=null, refreshTimer=null;
 
 function $(id){return document.getElementById(id)}
-function tok(){return localStorage.getItem('11hr_tok')||''}
-function me_tok(){return localStorage.getItem('11hr_chat_tok')||tok()}
-function toast(msg,t){var el=$('toast');el.textContent=msg;el.className=t||'';el.style.display='block';clearTimeout(toast._t);toast._t=setTimeout(function(){el.style.display='none'},3500)}
+function adminTok(){return localStorage.getItem('11hr_tok')||''}
+function toast(msg,t){var el=$('toast');el.textContent=msg;el.className=t||'';el.style.display='block';clearTimeout(toast._t);toast._t=setTimeout(function(){el.style.display='none'},3000)}
 function todayKey(){return new Date().toISOString().slice(0,10)}
 function safeHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
 
-/* ---- Build selects ---- */
-function buildSelects(){
-  var opts='<option value="">— Todos os bairros —</option>';
-  BAIRROS.forEach(function(b){opts+='<option value="'+b+'">'+b+'</option>'});
-  $('bairro-sel').innerHTML=opts;
-  var opts2='<option value="">— Escolha seu bairro —</option>';
-  BAIRROS.forEach(function(b){opts2+='<option value="'+b+'">'+b+'</option>'});
-  $('r-bairro').innerHTML=opts2;
-  /* Pre-select from user */
-  var saved=localStorage.getItem(LSKEY);
-  if(saved){try{var u=JSON.parse(saved);if(u.bairro)$('bairro-sel').value=u.bairro;}catch(e){}}
+/* ── Daily count stored in localStorage (not dependent on GitHub) ── */
+function getLocalDaily(){
+  try{var d=JSON.parse(localStorage.getItem(LS_DAILY)||'{}');return d;}catch(e){return {};}
+}
+function incLocalDaily(){
+  var d=getLocalDaily();
+  var today=todayKey();
+  d[today]=(d[today]||0)+1;
+  // keep only last 3 days
+  Object.keys(d).forEach(function(k){if(k<today)delete d[k];});
+  localStorage.setItem(LS_DAILY,JSON.stringify(d));
+  return d[today];
+}
+function getTodayUsed(){
+  var d=getLocalDaily();
+  return d[todayKey()]||0;
 }
 
-/* ---- Fetch chat.json ---- */
+/* ── Local messages storage ── */
+function saveLocalMsgs(){
+  try{localStorage.setItem(LS_MSGS,JSON.stringify(chatData.mensagens));}catch(e){}
+}
+function loadLocalMsgs(){
+  try{
+    var cached=localStorage.getItem(LS_MSGS);
+    if(cached){
+      var cmsgs=JSON.parse(cached);
+      if(Array.isArray(cmsgs)&&cmsgs.length) return cmsgs;
+    }
+  }catch(e){}
+  return null;
+}
+
+/* ── Build selects ── */
+function buildSelects(){
+  var opts='<option value="">— Todos os bairros —</option>';
+  BAIRROS.forEach(function(b){opts+='<option value="'+b+'">'+b+'</option>';});
+  $('bairro-sel').innerHTML=opts;
+  var opts2='<option value="">— Escolha seu bairro —</option>';
+  BAIRROS.forEach(function(b){opts2+='<option value="'+b+'">'+b+'</option>';});
+  $('r-bairro').innerHTML=opts2;
+}
+
+/* ── Fetch from GitHub ── */
 async function fetchChat(){
   try{
     var r=await fetch(RAW_URL+'?v='+Date.now());
-    if(!r.ok)throw new Error(r.status);
-    chatData=await r.json();
-    /* Also get SHA for updating */
-    var info=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
-      {headers:me_tok()?{Authorization:'token '+me_tok()}:{}});
-    if(info.ok){var d=await info.json();currentSha=d.sha||'';}
-  }catch(e){
-    console.warn('fetch chat:',e);
-    /* Load from localStorage as fallback */
-    try{
-      var cached=localStorage.getItem('11hr_chat_msgs');
-      if(cached){var cmsgs=JSON.parse(cached);if(cmsgs.length)chatData.mensagens=cmsgs;}
-    }catch(le){}
-  }
-  /* Merge any locally pending messages */
-  try{
-    var pending=localStorage.getItem('11hr_chat_msgs');
-    if(pending){
-      var pmsgs=JSON.parse(pending);
-      pmsgs.forEach(function(pm){
-        if(!chatData.mensagens.find(function(m){return m.id===pm.id;})){
-          chatData.mensagens.push(pm);
-        }
-      });
-      chatData.mensagens.sort(function(a,b){return new Date(a.at)-new Date(b.at);});
+    if(!r.ok) throw new Error(r.status);
+    var fresh=await r.json();
+
+    // Merge: keep local messages not yet in GitHub
+    var localMsgs=loadLocalMsgs()||[];
+    var ghIds=new Set((fresh.mensagens||[]).map(function(m){return m.id;}));
+    localMsgs.forEach(function(pm){
+      if(!ghIds.has(pm.id)) fresh.mensagens.push(pm);
+    });
+    fresh.mensagens.sort(function(a,b){return new Date(a.at)-new Date(b.at);});
+
+    chatData=fresh;
+    // Update local storage with merged result
+    saveLocalMsgs();
+
+    // Get SHA for future writes
+    if(adminTok()){
+      try{
+        var info=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
+          {headers:{Authorization:'token '+adminTok()}});
+        if(info.ok){var d=await info.json();currentSha=d.sha||'';}
+      }catch(e){}
     }
-  }catch(me2){}
+  }catch(e){
+    console.warn('fetchChat error:',e);
+    // Use local data as fallback
+    var loc=loadLocalMsgs();
+    if(loc) chatData.mensagens=loc;
+  }
   renderMsgs();
   updateLimitBar();
 }
 
-/* ---- Save chat.json to GitHub ---- */
+/* ── Save to GitHub (admin only, background) ── */
 async function saveChat(){
-  if(!me_tok()){toast('Sem token para salvar','err');return false;}
+  if(!adminTok()) return false;
   var json=JSON.stringify(chatData,null,2);
   var b64=btoa(unescape(encodeURIComponent(json)));
-  /* Refresh SHA */
   try{
     var fresh=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
-      {headers:{Authorization:'token '+me_tok()}});
+      {headers:{Authorization:'token '+adminTok()}});
     if(fresh.ok){var fd=await fresh.json();currentSha=fd.sha||'';}
   }catch(e){}
   var body={message:'Chat: nova mensagem',content:b64,branch:BRANCH};
-  if(currentSha)body.sha=currentSha;
+  if(currentSha) body.sha=currentSha;
   var r=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE,
-    {method:'PUT',headers:{Authorization:'token '+me_tok(),'Content-Type':'application/json'},body:JSON.stringify(body)});
-  if(!r.ok){var err=await r.json().catch(()=>({}));throw new Error(err.message||r.status);}
-  var rd=await r.json();
-  if(rd.content)currentSha=rd.content.sha||currentSha;
-  return true;
+    {method:'PUT',headers:{Authorization:'token '+adminTok(),'Content-Type':'application/json'},body:JSON.stringify(body)});
+  if(r.ok){var rd=await r.json();if(rd.content)currentSha=rd.content.sha||currentSha;}
+  return r.ok;
 }
 
-/* ---- Auth ---- */
+/* ── Auth screens ── */
 function showReg(){$('s-reg').style.display='flex';$('s-log').style.display='none';$('s-chat').style.display='none';}
 function showLogin(){$('s-reg').style.display='none';$('s-log').style.display='flex';$('s-chat').style.display='none';}
 function showChat(){$('s-reg').style.display='none';$('s-log').style.display='none';$('s-chat').style.display='flex';}
 
+/* ── Register ── */
 async function doRegister(){
   var phone=($('r-phone').value||'').trim().replace(/\D/g,'');
   var name=($('r-name').value||'').trim();
@@ -268,35 +307,53 @@ async function doRegister(){
   if(!/^[\u00C0-\u017Ea-zA-Z0-9 _.\-]{2,28}$/.test(name)){err.textContent='Apelido com caracteres inválidos.';return;}
   if(!bairro){err.textContent='Escolha seu bairro.';return;}
   var btn=$('r-btn'); btn.disabled=true; btn.textContent='Verificando…';
+
   await fetchChat();
-  if(chatData.usuarios[name]){err.textContent='Apelido já em uso — escolha outro.';btn.disabled=false;btn.textContent='Criar conta e entrar »';return;}
+
+  // Check username availability
+  if(chatData.usuarios[name]){
+    err.textContent='Apelido já em uso — escolha outro.';
+    btn.disabled=false; btn.textContent='Criar conta e entrar »'; return;
+  }
   var bCount=chatData.config.bairros[bairro]||0;
-  if(bCount>=MAX_BAIRRO){err.textContent=bairro+' atingiu o limite de '+MAX_BAIRRO+' participantes.';btn.disabled=false;btn.textContent='Criar conta e entrar »';return;}
+  if(bCount>=MAX_BAIRRO){
+    err.textContent=bairro+' atingiu o limite de '+MAX_BAIRRO+' participantes.';
+    btn.disabled=false; btn.textContent='Criar conta e entrar »'; return;
+  }
+
+  // Register locally immediately
+  me={username:name,bairro:bairro};
   chatData.usuarios[name]={bairro:bairro,at:new Date().toISOString(),daily:{}};
+  if(!chatData.config) chatData.config={bairros:{}};
   chatData.config.bairros[bairro]=(chatData.config.bairros[bairro]||0)+1;
-  try{
-    await saveChat();
-    me={username:name,bairro:bairro};
-    localStorage.setItem(LSKEY,JSON.stringify(me));
-    if(bairro)$('bairro-sel').value=bairro;
-    enterChat();
-  }catch(e){err.textContent='Erro ao salvar: '+e.message;}
-  btn.disabled=false;btn.textContent='Criar conta e entrar »';
+  localStorage.setItem(LS_ME,JSON.stringify(me));
+  if(bairro) $('bairro-sel').value=bairro;
+  enterChat();
+
+  // Try to persist to GitHub in background
+  saveChat().catch(function(){});
+  btn.disabled=false; btn.textContent='Criar conta e entrar »';
 }
 
+/* ── Login ── */
 async function doLogin(){
   var name=($('l-name').value||'').trim();
   var err=$('l-err'); err.textContent='';
   if(!name){err.textContent='Digite seu apelido.';return;}
   var btn=$('l-btn'); btn.disabled=true; btn.textContent='Entrando…';
+
   await fetchChat();
-  if(!chatData.usuarios[name]){err.textContent='Apelido não encontrado.';btn.disabled=false;btn.textContent='Entrar »';return;}
+
+  if(!chatData.usuarios[name]){
+    err.textContent='Apelido não encontrado.';
+    btn.disabled=false; btn.textContent='Entrar »'; return;
+  }
   var u=chatData.usuarios[name];
   me={username:name,bairro:u.bairro};
-  localStorage.setItem(LSKEY,JSON.stringify(me));
-  if(u.bairro)$('bairro-sel').value=u.bairro;
+  localStorage.setItem(LS_ME,JSON.stringify(me));
+  if(u.bairro) $('bairro-sel').value=u.bairro;
   enterChat();
-  btn.disabled=false;btn.textContent='Entrar »';
+  btn.disabled=false; btn.textContent='Entrar »';
 }
 
 function enterChat(){
@@ -308,22 +365,25 @@ function enterChat(){
 }
 
 function doLogout(){
-  me=null; localStorage.removeItem(LSKEY);
+  me=null;
+  localStorage.removeItem(LS_ME);
   clearInterval(refreshTimer);
   showReg();
 }
 
-/* ---- Render messages ---- */
+/* ── Render messages (ALL bairros visible, filter optional) ── */
 function onBairroChange(){renderMsgs();updateCountBadge();}
 
 function renderMsgs(){
   var box=$('msgs'); if(!box)return;
   var bairro=$('bairro-sel').value;
   var msgs=(chatData.mensagens||[]).filter(function(m){return !bairro||m.bairro===bairro;});
+
   if(!msgs.length){
-    box.innerHTML='<div class="empty">Nenhuma mensagem ainda'+(bairro?' em '+bairro:'')+'.<br>Seja o primeiro a escrever! 💬</div>';
+    box.innerHTML='<div class="empty">Nenhuma mensagem ainda'+(bairro?' em '+bairro:'')+'. Seja o primeiro! 💬</div>';
     return;
   }
+
   var html=''; var lastDate='';
   msgs.forEach(function(m){
     var ts=new Date(m.at);
@@ -331,11 +391,12 @@ function renderMsgs(){
     var timeStr=ts.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
     if(dateStr!==lastDate){lastDate=dateStr;html+='<div class="date-sep">'+dateStr+'</div>';}
     var isMe=me&&m.autor===me.username;
+    // ALWAYS show the sender's name (even for own messages)
     html+='<div class="msg '+(isMe?'me':'ot')+'">'
       +'<div class="bubble">'+safeHtml(m.texto)+'</div>'
       +'<div class="msg-meta">'
       +(m.isAdmin?'<span class="msg-admin">ADMIN</span>':'')
-      +(isMe?'Você':'<span class="msg-name">'+safeHtml(m.autor)+'</span>')
+      +'<span class="'+(isMe?'msg-name':'msg-name')+'">'+safeHtml(m.autor)+'</span>'
       +' · '+safeHtml(m.bairro)+' · '+timeStr
       +'</div></div>';
   });
@@ -350,70 +411,84 @@ function updateCountBadge(){
   $('count-badge').textContent=total+' msg';
 }
 
-/* ---- Limit bar ---- */
+/* ── Limit bar (uses localStorage daily count — not reset by fetch) ── */
 function updateLimitBar(){
   if(!me||!$('limit-bar'))return;
-  var u=chatData.usuarios[me.username];
-  var daily=(u&&u.daily)||{};
-  var used=daily[todayKey()]||0;
+  var used=getTodayUsed();
   var rem=Math.max(0,MAX_MSG-used);
   var bar=$('limit-bar'), btn=$('send-btn'), txt=$('msg-txt');
   if(rem===0){
     bar.textContent='✋ Limite diário atingido. Volte amanhã!';
-    if(btn)btn.disabled=true;if(txt)txt.disabled=true;
+    if(btn)btn.disabled=true; if(txt)txt.disabled=true;
   }else{
-    bar.textContent='💬 '+rem+' mensagem'+(rem!==1?'ns':'')+' restante'+(rem!==1?'s':'')+' hoje · '+me.bairro;
-    if(btn)btn.disabled=false;if(txt)txt.disabled=false;
+    bar.textContent='💬 '+rem+(rem===1?' mensagem restante':' mensagens restantes')+' hoje · '+me.bairro;
+    if(btn)btn.disabled=false; if(txt)txt.disabled=false;
   }
 }
 
-/* ---- Send ---- */
+/* ── Send message ── */
 async function sendMsg(){
   if(!me)return;
   var txt=($('msg-txt').value||'').trim();
   if(!txt)return;
   if(txt.length>300){toast('Máximo 300 caracteres','err');return;}
-  var u=chatData.usuarios[me.username];
-  if(!u){toast('Usuário não encontrado. Faça login novamente.','err');doLogout();return;}
-  var daily=u.daily||{};
-  var today=todayKey();
-  if((daily[today]||0)>=MAX_MSG){updateLimitBar();return;}
-  var btn=$('send-btn');btn.disabled=true;
-  var msg={id:Date.now()+'',autor:me.username,bairro:me.bairro,texto:txt,at:new Date().toISOString(),isAdmin:false};
-  /* Add to local data immediately and show */
+
+  // Check daily limit from localStorage (not overridden by fetch)
+  var used=getTodayUsed();
+  if(used>=MAX_MSG){updateLimitBar();return;}
+
+  var btn=$('send-btn'); btn.disabled=true;
+
+  var msg={
+    id:Date.now()+'_'+Math.random().toString(36).slice(2,7),
+    autor:me.username,
+    bairro:me.bairro,
+    texto:txt,
+    at:new Date().toISOString(),
+    isAdmin:false
+  };
+
+  // 1. Add to local data
   chatData.mensagens.push(msg);
-  if(!chatData.usuarios[me.username].daily)chatData.usuarios[me.username].daily={};
-  chatData.usuarios[me.username].daily[today]=(daily[today]||0)+1;
-  if(chatData.mensagens.length>500)chatData.mensagens=chatData.mensagens.slice(-500);
-  /* Save to localStorage so it persists and shows immediately */
-  try{localStorage.setItem('11hr_chat_msgs', JSON.stringify(chatData.mensagens));}catch(e){}
-  $('msg-txt').value='';autoResize($('msg-txt'));
-  renderMsgs();updateLimitBar();
+  if(chatData.mensagens.length>500) chatData.mensagens=chatData.mensagens.slice(-500);
+
+  // 2. Increment local daily count (persistent, not wiped by fetch)
+  incLocalDaily();
+
+  // 3. Save to localStorage immediately
+  saveLocalMsgs();
+
+  // 4. Show in UI immediately
+  $('msg-txt').value=''; autoResize($('msg-txt'));
+  renderMsgs();
+  updateLimitBar();
   toast('Mensagem enviada! ✅','ok');
   btn.disabled=false;
-  /* Try to sync to GitHub in background (needs admin token) */
-  saveChat().catch(function(){/* silent fail – msg already shown locally */});
+
+  // 5. Try GitHub sync in background
+  saveChat().catch(function(){});
 }
 
 function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,90)+'px';}
 function onKey(ev){if(ev.key==='Enter'&&!ev.shiftKey){ev.preventDefault();sendMsg();}}
 
-/* ---- Auto refresh ---- */
+/* ── Auto refresh (merge, no count reset) ── */
 function startAutoRefresh(){
   clearInterval(refreshTimer);
   refreshTimer=setInterval(function(){fetchChat();},30000);
 }
 
-/* ---- INIT ---- */
+/* ── INIT ── */
 buildSelects();
 fetchChat().then(function(){
-  var saved=localStorage.getItem(LSKEY);
+  var saved=localStorage.getItem(LS_ME);
   if(saved){
     try{
       var u=JSON.parse(saved);
-      if(chatData.usuarios[u.username]){
+      // Accept local session even if GitHub doesn't have user yet
+      if(u&&u.username){
         me=u;
-        if(u.bairro)$('bairro-sel').value=u.bairro;
+        if(u.bairro) $('bairro-sel').value=u.bairro;
         enterChat();
         return;
       }
