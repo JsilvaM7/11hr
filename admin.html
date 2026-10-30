@@ -571,42 +571,84 @@ var statsLoaded=false;
 function loadVisitas(){
   if(statsLoaded)return;
   statsLoaded=true;
+
   var RAW='https://raw.githubusercontent.com/JsilvaM7/11hr/main/stats.json';
+  var API='https://api.github.com/repos/JsilvaM7/11hr/contents/stats.json';
+  var tok=token();
+
+  /* Read local accumulated visits */
+  var local={days:{},total:0};
+  try{local=JSON.parse(localStorage.getItem('11hr_visits')||'{"days":{},"total":0}');}catch(e){}
+
+  /* Fetch GitHub stats, merge with local, push back */
   fetch(RAW+'?v='+Date.now())
     .then(function(r){return r.ok?r.json():Promise.reject(r.status);})
-    .then(function(data){
-      var visits=data.visits||{};
-      var today=new Date().toISOString().slice(0,10);
-      var total=data.total||Object.values(visits).reduce(function(a,b){return a+b;},0);
-      var hoje=visits[today]||0;
-      var sem=0,mes=0;
-      for(var i=0;i<30;i++){
-        var d=new Date();d.setDate(d.getDate()-i);
-        var dk=d.toISOString().slice(0,10);
-        var v=visits[dk]||0;
-        mes+=v;if(i<7)sem+=v;
-      }
-      document.getElementById('vst-total').textContent=total;
-      document.getElementById('vst-hoje').textContent=hoje;
-      document.getElementById('vst-semana').textContent=sem;
-      document.getElementById('vst-mes').textContent=mes;
-      /* Table */
-      var days=Object.keys(visits).sort().reverse().slice(0,60);
-      if(!days.length){document.getElementById('vst-table').innerHTML='<p style="padding:20px;color:#999;font:13px sans-serif">Nenhuma visita registrada ainda.</p>';return;}
-      var max=Math.max.apply(null,days.map(function(d){return visits[d];}));
-      var rows=days.map(function(d){
-        var v=visits[d];
-        var pct=max?Math.round(v/max*100):0;
-        return '<tr><td style="padding:8px 14px;font:600 12px sans-serif;white-space:nowrap">'+d+'</td>'
-          +'<td style="padding:8px 14px;width:100%"><div style="background:#e0e0e0;border-radius:4px;height:14px"><div style="background:#14213D;width:'+pct+'%;height:14px;border-radius:4px"></div></div></td>'
-          +'<td style="padding:8px 14px;font:700 13px sans-serif;white-space:nowrap;color:#14213D">'+v+' acesso'+(v!==1?'s':'')+'</td>'
-          +'</tr>';
-      }).join('');
-      document.getElementById('vst-table').innerHTML='<table style="width:100%;border-collapse:collapse"><tbody>'+rows+'</tbody></table>';
+    .then(function(ghData){
+      /* Merge local visits into GitHub data */
+      if(!ghData.visits) ghData.visits={};
+      Object.keys(local.days).forEach(function(d){
+        ghData.visits[d]=(ghData.visits[d]||0)+local.days[d];
+      });
+      ghData.total=(ghData.total||0)+local.total;
+
+      /* Reset local counter after merging */
+      localStorage.setItem('11hr_visits',JSON.stringify({days:{},total:0}));
+
+      renderVisitas(ghData);
+
+      /* Push merged data to GitHub */
+      if(!tok) return;
+      return fetch(API+'?ref=main',{headers:{Authorization:'token '+tok}})
+        .then(function(r){return r.json();})
+        .then(function(meta){
+          var b64=btoa(unescape(encodeURIComponent(JSON.stringify(ghData,null,2))));
+          return fetch(API,{
+            method:'PUT',
+            headers:{Authorization:'token '+tok,'Content-Type':'application/json'},
+            body:JSON.stringify({message:'stats: sync visitas',content:b64,sha:meta.sha,branch:'main'})
+          });
+        })
+        .catch(function(e){console.warn('stats push:',e);});
     })
     .catch(function(e){
-      document.getElementById('vst-table').innerHTML='<p style="padding:20px;color:#c62828;font:13px sans-serif">Erro ao carregar: '+e+'</p>';
+      /* If GitHub fails, show local data */
+      renderVisitas({visits:local.days,total:local.total});
     });
+}
+
+function renderVisitas(data){
+  var visits=data.visits||{};
+  var total=data.total||Object.values(visits).reduce(function(a,b){return a+b;},0);
+  var today=new Date().toISOString().slice(0,10);
+  var hoje=visits[today]||0;
+  var sem=0,mes=0;
+  for(var i=0;i<30;i++){
+    var d=new Date();d.setDate(d.getDate()-i);
+    var dk=d.toISOString().slice(0,10);
+    var v2=visits[dk]||0;
+    mes+=v2;if(i<7)sem+=v2;
+  }
+  document.getElementById('vst-total').textContent=total;
+  document.getElementById('vst-hoje').textContent=hoje;
+  document.getElementById('vst-semana').textContent=sem;
+  document.getElementById('vst-mes').textContent=mes;
+
+  var days=Object.keys(visits).sort().reverse().slice(0,60);
+  if(!days.length){
+    document.getElementById('vst-table').innerHTML='<p style="padding:20px;color:#999;font:13px sans-serif;text-align:center">Nenhuma visita ainda. Abra o portal em outra aba.</p>';
+    return;
+  }
+  var max=Math.max.apply(null,days.map(function(d){return visits[d];}));
+  var rows=days.map(function(d){
+    var v2=visits[d];
+    var pct=max?Math.round(v2/max*100):0;
+    return '<tr>'
+      +'<td style="padding:8px 14px;font:600 12px sans-serif;white-space:nowrap">'+d+'</td>'
+      +'<td style="padding:8px 14px;width:100%"><div style="background:#e0e0e0;border-radius:4px;height:14px"><div style="background:#14213D;width:'+pct+'%;height:14px;border-radius:4px;min-width:4px"></div></div></td>'
+      +'<td style="padding:8px 14px;font:700 13px sans-serif;white-space:nowrap;color:#14213D">'+v2+' acesso'+(v2!==1?'s':'')+'</td>'
+      +'</tr>';
+  }).join('');
+  document.getElementById('vst-table').innerHTML='<table style="width:100%;border-collapse:collapse"><tbody>'+rows+'</tbody></table>';
 }
 /* showTab already handles visitas */
 

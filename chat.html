@@ -130,10 +130,6 @@ body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);dis
     <h2>🏘️ Entre no Bate-papo</h2>
     <p>Conecte-se com moradores da Zona Norte. Escolha um apelido único — sem senha.</p>
     <div class="inp-group">
-      <label>Celular</label>
-      <input class="finp" id="r-phone" type="tel" placeholder="(11) 99999-9999" maxlength="15" autocomplete="tel">
-    </div>
-    <div class="inp-group">
       <label>Apelido único</label>
       <input class="finp" id="r-name" type="text" placeholder="Ex: João Santana" maxlength="28" autocomplete="nickname">
     </div>
@@ -312,11 +308,9 @@ function showChat(){$('s-reg').style.display='none';$('s-log').style.display='no
 
 /* ── Register ── */
 async function doRegister(){
-  var phone=($('r-phone').value||'').trim().replace(/\D/g,'');
   var name=($('r-name').value||'').trim();
   var bairro=($('r-bairro').value||'').trim();
   var err=$('r-err'); err.textContent='';
-  if(phone.length<10||phone.length>11){err.textContent='Celular inválido.';return;}
   if(name.length<2){err.textContent='Apelido muito curto.';return;}
   if(!/^[\u00C0-\u017Ea-zA-Z0-9 _.\-]{2,28}$/.test(name)){err.textContent='Apelido com caracteres inválidos.';return;}
   if(!bairro){err.textContent='Escolha seu bairro.';return;}
