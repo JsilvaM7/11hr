@@ -1,10 +1,21 @@
 {
-  "mensagens": [],
+  "mensagens": [
+    {
+      "id": "1793398498152",
+      "autor": "Julio Cesar08",
+      "bairro": "Tucuruvi",
+      "texto": "Como vai",
+      "at": "2026-10-30T22:14:58.152Z",
+      "isAdmin": false
+    }
+  ],
   "usuarios": {
     "Julio Cesar08": {
       "bairro": "Tucuruvi",
       "at": "2026-10-30T22:10:31.438Z",
-      "daily": {}
+      "daily": {
+        "2026-10-30": 1
+      }
     }
   },
   "config": {
