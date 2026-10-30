@@ -569,7 +569,6 @@ init();
 /* ── VISITAS ── */
 var statsLoaded=false;
 function loadVisitas(){
-  if(statsLoaded)return;
   statsLoaded=true;
 
   var RAW='https://raw.githubusercontent.com/JsilvaM7/11hr/main/stats.json';
@@ -654,18 +653,5 @@ function renderVisitas(data){
 
 </script>
 
-        <div class="ca-stat"><b id="vst-hoje">—</b><span>Hoje</span></div>
-        <div class="ca-stat"><b id="vst-semana">—</b><span>Últimos 7 dias</span></div>
-        <div class="ca-stat"><b id="vst-mes">—</b><span>Últimos 30 dias</span></div>
-      </div>
-      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden">
-        <div style="background:#14213D;color:#fff;padding:10px 16px;font:700 13px sans-serif">
-          Histórico de Visitas por Dia
-        </div>
-        <div id="vst-table" style="padding:0">
-          <p style="padding:20px;color:#999;font:13px sans-serif">Carregando…</p>
-        </div>
-      </div>
-    </div>
 </body>
 </html>

@@ -239,7 +239,8 @@ function rebuildBairroSel(){
   var opts='<option value="">— Todos os bairros —</option>';
   BAIRROS.forEach(function(b){
     var cnt=bairros[b]||0;
-    opts+='<option value="'+b+'">'+b+(cnt?' ('+cnt+' pessoa'+(cnt!==1?'s':'')+')'):'')+'</option>';
+    var suffix=cnt?' ('+cnt+' pessoa'+(cnt!==1?'s':'')+')':'';
+    opts+='<option value="'+b+'">'+ b+suffix+'</option>';
   });
   $('bairro-sel').innerHTML=opts;
   if(selected) $('bairro-sel').value=selected;
