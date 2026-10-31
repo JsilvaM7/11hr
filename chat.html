@@ -192,7 +192,7 @@ var currentSha='', me=null, refreshTimer=null;
 function $(id){return document.getElementById(id)}
 function adminTok(){return localStorage.getItem('11hr_tok')||''}
 function toast(msg,t){var el=$('toast');el.textContent=msg;el.className=t||'';el.style.display='block';clearTimeout(toast._t);toast._t=setTimeout(function(){el.style.display='none'},3000)}
-function todayKey(){return new Date().toISOString().slice(0,10)}
+function todayKey(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function safeHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
 
 /* ── Daily count stored in localStorage (not dependent on GitHub) ── */

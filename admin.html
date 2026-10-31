@@ -618,12 +618,12 @@ function loadVisitas(){
 function renderVisitas(data){
   var visits=data.visits||{};
   var total=data.total||Object.values(visits).reduce(function(a,b){return a+b;},0);
-  var today=new Date().toISOString().slice(0,10);
+  var today=(function(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');})();
   var hoje=visits[today]||0;
   var sem=0,mes=0;
   for(var i=0;i<30;i++){
     var d=new Date();d.setDate(d.getDate()-i);
-    var dk=d.toISOString().slice(0,10);
+    var dk=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
     var v2=visits[dk]||0;
     mes+=v2;if(i<7)sem+=v2;
   }

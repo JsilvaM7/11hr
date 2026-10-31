@@ -445,7 +445,7 @@ fetch("data.json?v="+Date.now())
 
 /* ── Visit counter (localStorage accumulator) ── */
 (function(){
-  var today=new Date().toISOString().slice(0,10);
+  var today=(function(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');})();
   try{
     var v=JSON.parse(localStorage.getItem('11hr_visits')||'{"days":{},"total":0}');
     if(!v.days) v.days={};
