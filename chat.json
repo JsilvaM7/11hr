@@ -23,6 +23,14 @@
       "texto": "casa",
       "at": "2026-10-30T22:30:19.313Z",
       "isAdmin": false
+    },
+    {
+      "id": "1793440079183_yoomr",
+      "autor": "julio cesar",
+      "bairro": "Santana",
+      "texto": "pessoal o que ta acontecendo em santana?",
+      "at": "2026-10-31T09:47:59.183Z",
+      "isAdmin": false
     }
   ],
   "usuarios": {
