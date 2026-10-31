@@ -238,15 +238,19 @@ td textarea{min-height:56px}
         <button onclick="loadVisitas()" style="background:#14213D;color:#fff;border:none;border-radius:7px;padding:7px 14px;font:700 12px sans-serif;cursor:pointer">🔄 Atualizar</button>
       </div>
 
-      <!-- CONTADOR EM TEMPO REAL -->
-      <div style="background:#14213D;border-radius:12px;padding:18px 20px;margin-bottom:20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-        <div style="flex:1;min-width:160px">
-          <div style="color:#FFC20E;font:800 36px sans-serif;line-height:1" id="rt-count">⏳</div>
-          <div style="color:#fff;font:700 13px sans-serif;margin-top:4px">Total de acessos (tempo real)</div>
-          <div style="color:rgba(255,255,255,.6);font:400 11px sans-serif;margin-top:2px">Celular + computador + qualquer dispositivo • atualiza agora</div>
+      <!-- AVISO CONTADOR -->
+      <div style="background:#14213D;border-radius:12px;padding:16px 20px;margin-bottom:20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <div style="font:800 28px sans-serif" id="rt-count-wrap">
+          <img src="https://visitor-badge.laobi.icu/badge?page_id=JsilvaM7.11hr"
+               style="height:28px;vertical-align:middle;border-radius:4px"
+               id="rt-badge" alt="contador de visitas">
         </div>
-        <div style="color:rgba(255,255,255,.5);font:400 12px sans-serif;max-width:220px;line-height:1.5">
-          Cada vez que alguém abre o site, soma +1 aqui — sem atraso, sem Google Analytics.
+        <div>
+          <div style="color:#FFC20E;font:700 13px sans-serif">Contador em tempo real (todos os dispositivos)</div>
+          <div style="color:rgba(255,255,255,.65);font:400 12px sans-serif;margin-top:3px">
+            O número no badge é o total real de visitas ao portal.<br>
+            Atualiza automaticamente a cada acesso — celular, PC, qualquer lugar.
+          </div>
         </div>
       </div>
 
@@ -582,31 +586,8 @@ init();
 
 /* ── VISITAS — GitHub Traffic API (conta qualquer visita, qualquer dispositivo) ── */
 
-/* ---- CONTADOR EM TEMPO REAL (visitor-badge) ---- */
-function loadContadorRT(){
-  var el = document.getElementById('rt-count');
-  if(!el) return;
-  el.textContent = '⏳';
-  fetch('https://visitor-badge.laobi.icu/badge?page_id=JsilvaM7.11hr&nocache='+Date.now(), {cache:'no-store'})
-    .then(function(r){ return r.text(); })
-    .then(function(svg){
-      /* O SVG contem o numero de visitas como ultimo <text>NUMBER</text> */
-      var matches = svg.match(/>([0-9,]+)<\/text>/g);
-      if(matches){
-        for(var i=matches.length-1;i>=0;i--){
-          var m=matches[i].match(/([0-9,]+)/);
-          if(m && !isNaN(m[1].replace(',',''))){
-            el.textContent=parseInt(m[1].replace(',','')).toLocaleString('pt-BR');
-            return;
-          }
-        }
-      }
-      el.textContent='—';
-    })
-    .catch(function(){
-      el.innerHTML='<img src="https://visitor-badge.laobi.icu/badge?page_id=JsilvaM7.11hr" style="height:28px;vertical-align:middle">';
-    });
-}
+/* contador em tempo real: badge embutido no HTML */
+function loadContadorRT(){ /* badge exibido como imagem - nao faz fetch extra */ }
 
 function loadVisitas(){
   var tok=token();
