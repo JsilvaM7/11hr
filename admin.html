@@ -146,7 +146,7 @@ td textarea{min-height:56px}
     </p>
     <input class="inp" type="password" id="inp-senha" placeholder="Senha do painel: 11hrAdmin2024" style="margin-bottom:10px">
     <input class="inp" type="password" id="inp-token" placeholder="Token GitHub (ghp_...) - para publicar">
-    <button class="btn-pri" id="btn-entrar">Entrar no Painel</button>
+    <button class="btn-pri" id="btn-entrar" onclick="fazerLogin()">Entrar no Painel</button>
     <p style="font-size:12px;color:var(--muted);margin-top:16px;line-height:1.5">
       Token GitHub opcional para publicar. Sem token voce pode ver o painel mas nao publicar.<br>
       <a href="https://github.com/settings/tokens/new" target="_blank" style="color:var(--accent)">Gerar token (classic, escopo repo)</a>
@@ -161,7 +161,7 @@ td textarea{min-height:56px}
     <div class="h-title">Painel Admin</div>
     <span class="h-status" id="hstatus"></span>
     <button class="btn-pub" id="btn-pub" disabled>💾 Salvar e publicar</button>
-    <button class="btn-out" id="btn-sair">Sair</button>
+    <button class="btn-out" id="btn-sair" onclick="sair()">Sair</button>
   </header>
 
   <div class="tab-bar">
@@ -274,26 +274,23 @@ function setDirty(v){dirty=v;$("btn-pub").disabled=!v;$("hstatus").textContent=v
 function toast(msg,type){var t=$("toast");t.textContent=msg;t.className=type||"";t.style.display="block";clearTimeout(toast._t);toast._t=setTimeout(function(){t.style.display="none"},3500)}
 
 /* ---- AUTH ---- */
-var ADMIN_PASS = "11hrAdmin2024";
-$("btn-entrar").onclick=function(){
-  var senha=$("inp-senha").value.trim();
-  var tok=$("inp-token").value.trim();
-  if(senha !== ADMIN_PASS){
-    alert("Senha incorreta! A senha e: 11hrAdmin2024");
-    return;
-  }
-  /* Senha correta - salva token se informado e entra */
-  if(tok) localStorage.setItem("11hr_tok", tok);
-  localStorage.setItem("11hr_auth", "ok");
+function fazerLogin(){
+  var senha = document.getElementById("inp-senha").value.trim();
+  var tok   = document.getElementById("inp-token").value.trim();
+  var PASS  = "11hrAdmin2024";
+  if(!senha){ alert("Digite a senha!"); return; }
+  if(senha !== PASS){ alert("Senha errada! Use: 11hrAdmin2024"); return; }
+  if(tok){ localStorage.setItem("11hr_tok", tok); }
+  localStorage.setItem("11hr_auth","ok");
+  document.getElementById("setup").style.display  = "none";
+  document.getElementById("painel").style.display = "flex";
   init();
-};
-$("btn-sair").onclick=function(){
+}
+function sair(){
   localStorage.removeItem("11hr_tok");
   localStorage.removeItem("11hr_auth");
   location.reload();
-};
-
-$("btn-sair").onclick=function(){localStorage.removeItem("11hr_tok");location.reload()};
+}
 
 /* ---- TABS ---- */
 function showTab(t){
