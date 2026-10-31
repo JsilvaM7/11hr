@@ -94,14 +94,14 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 .spinner{width:36px;height:36px;border:3px solid var(--line);border-top-color:var(--mast);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* Anúncio flutuante */
-#ad-widget{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:16px;z-index:40;width:220px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.35);overflow:hidden;background:var(--surface);border:1px solid var(--line);transition:transform .25s ease,opacity .25s ease}
-#ad-widget.hidden-ad{transform:translateY(calc(100% + 20px));opacity:0;pointer-events:none}
-#ad-header{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--mast);color:#fff;font:700 11px var(--head);letter-spacing:.04em}
-#ad-toggle{background:none;border:none;color:#fff;cursor:pointer;font:700 16px var(--head);line-height:1;padding:0}
-#ad-body{overflow:hidden;transition:max-height .3s ease}
-#ad-body.collapsed{max-height:0!important}
-#ad-img{width:100%;display:block;cursor:pointer;object-fit:cover}
+/* Anúncio — gaveta lateral direita */
+#ad-widget{position:fixed;top:50%;right:0;z-index:50;width:180px;border-radius:10px 0 0 10px;box-shadow:-4px 0 18px rgba(0,0,0,.3);background:var(--surface);border:1px solid var(--line);border-right:none;transition:transform .3s ease,opacity .3s ease;transform:translateY(-50%);display:flex;flex-direction:row;align-items:stretch;}
+#ad-widget.hidden-ad{opacity:0;pointer-events:none;transform:translateY(-50%) translateX(200px);}
+#ad-tab{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;text-orientation:mixed;background:var(--mast);color:#fff;font:700 10px var(--head);letter-spacing:.06em;padding:12px 5px;cursor:pointer;border-radius:8px 0 0 8px;user-select:none;flex-shrink:0;min-width:26px;gap:4px;}
+#ad-tab-arrow{font-size:12px;font-style:normal;}
+#ad-content{overflow:hidden;width:154px;transition:width .3s ease,opacity .3s ease;flex-shrink:0;}
+#ad-content.collapsed{width:0;opacity:0;}
+#ad-img{width:154px;display:block;cursor:pointer;object-fit:cover;border-radius:0 0 0 10px;}
 
 /* Frase do cabeçalho */
 .mast-tagline{font:600 11px var(--head);opacity:.75;text-align:right;white-space:nowrap;letter-spacing:.02em}
@@ -154,13 +154,13 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
   <footer class="foot">11hr Jornal da Zona Norte</footer>
 </div>
 
-<!-- Anúncio flutuante -->
+<!-- Anúncio — gaveta lateral direita -->
 <div id="ad-widget" class="hidden-ad">
-  <div id="ad-header">
+  <div id="ad-tab" onclick="toggleAd()">
+    <i id="ad-tab-arrow">◀</i>
     <span>PUBLICIDADE</span>
-    <button id="ad-toggle" title="Recolher">▼</button>
   </div>
-  <div id="ad-body">
+  <div id="ad-content">
     <a id="ad-link" href="#" target="_blank" rel="noopener">
       <img id="ad-img" src="" alt="Anúncio">
     </a>
@@ -306,13 +306,13 @@ function updateAd(section,articleTitle){
   }else{$("ad-widget").classList.add("hidden-ad")}
 }
 
+/* Ad side-drawer toggle */
 var adCol=false;
-$("ad-toggle").onclick=function(){
+function toggleAd(){
   adCol=!adCol;
-  var body=$("ad-body");
-  if(adCol){body.style.maxHeight=body.scrollHeight+"px";setTimeout(function(){body.classList.add("collapsed")},10);$("ad-toggle").textContent="▲"}
-  else{body.classList.remove("collapsed");body.style.maxHeight=body.scrollHeight+"px";$("ad-toggle").textContent="▼";setTimeout(function(){body.style.maxHeight=""},300)}
-};
+  $("ad-content").classList.toggle("collapsed",adCol);
+  $("ad-tab-arrow").textContent=adCol?"▶":"◀";
+}
 
 /* Tabs */
 [["inicio","Início"]].concat(EDS).forEach(function(s){
@@ -356,22 +356,21 @@ fetch("data.json?v="+Date.now())
 
 <!-- ==================== Chat Widget (estilo publicidade) ==================== -->
 <style>
-/* Chat widget — mesmo padrão do ad-widget, posicionado à ESQUERDA */
+/* Chat widget — barra fixa na parte inferior */
 #chat-widget{
   position:fixed;
-  bottom:calc(16px + env(safe-area-inset-bottom,0px));
-  left:16px;
-  z-index:40;
-  width:300px;
-  border-radius:12px;
-  box-shadow:0 4px 20px rgba(0,0,0,.38);
-  overflow:hidden;
-  background:var(--surface);
-  border:1px solid var(--line);
-  transition:transform .25s ease, opacity .25s ease;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:45;
+  background:var(--mast);
+  box-shadow:0 -3px 16px rgba(0,0,0,.35);
+  transition:transform .3s ease, opacity .3s ease;
+  display:flex;
+  flex-direction:column;
 }
 #chat-widget.hidden-chat{
-  transform:translateY(calc(100% + 20px));
+  transform:translateY(100%);
   opacity:0;
   pointer-events:none;
 }
@@ -379,28 +378,29 @@ fetch("data.json?v="+Date.now())
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:8px 12px;
-  background:var(--mast);
+  padding:11px 16px;
   color:#fff;
-  font:700 11px var(--head);
+  font:700 12px var(--head);
   letter-spacing:.04em;
   cursor:pointer;
   user-select:none;
+  flex-shrink:0;
 }
 #chat-toggle-btn{
   background:none;border:none;color:#fff;
-  cursor:pointer;font:700 16px var(--head);
+  cursor:pointer;font:700 18px var(--head);
   line-height:1;padding:0;flex-shrink:0;
 }
 #chat-body{
   overflow:hidden;
-  transition:max-height .3s ease;
-  max-height:440px;
+  transition:height .3s ease;
+  height:420px;
+  max-height:60vh;
 }
-#chat-body.collapsed{max-height:0!important;}
+#chat-body.collapsed{height:0;}
 #chat-iframe{
   width:100%;
-  height:440px;
+  height:100%;
   border:none;
   display:block;
 }
@@ -409,25 +409,25 @@ fetch("data.json?v="+Date.now())
 <div id="chat-widget" class="hidden-chat">
   <div id="chat-header" onclick="chatWidgetToggle()">
     <span>💬 CHAT DE CONVERSA</span>
-    <button id="chat-toggle-btn" title="Recolher/Expandir">▼</button>
+    <button id="chat-toggle-btn" title="Abrir/Fechar">▲</button>
   </div>
-  <div id="chat-body">
-    <iframe id="chat-iframe" src="chat.html?v=5" title="Bate-papo da Zona Norte"></iframe>
+  <div id="chat-body" class="collapsed">
+    <iframe id="chat-iframe" src="chat.html?v=6" title="Bate-papo da Zona Norte"></iframe>
   </div>
 </div>
 
 <script>
 (function(){
-  var LSKEY  = '11hr_chat_widget_v1';
+  var LSKEY  = '11hr_chat_widget_v2';
   var widget = document.getElementById('chat-widget');
   var cbody  = document.getElementById('chat-body');
   var ctog   = document.getElementById('chat-toggle-btn');
-  var open   = true;
+  var open   = false; /* fechado por padrão */
 
-  /* Aparecer após 1.5 s (igual ao anúncio) */
+  /* Aparecer após 1.5 s */
   setTimeout(function(){ widget.classList.remove('hidden-chat'); }, 1500);
 
-  /* Toggle do painel — seta sobe/desce */
+  /* Toggle: clica na barra abre/fecha o iframe */
   window.chatWidgetToggle = function(){
     open = !open;
     cbody.classList.toggle('collapsed', !open);
@@ -435,11 +435,11 @@ fetch("data.json?v="+Date.now())
     localStorage.setItem(LSKEY, open ? 'open' : 'closed');
   };
 
-  /* Restaurar estado */
-  if(localStorage.getItem(LSKEY) === 'closed'){
-    open = false;
-    cbody.classList.add('collapsed');
-    ctog.textContent = '▲';
+  /* Restaurar estado (default: fechado) */
+  if(localStorage.getItem(LSKEY) === 'open'){
+    open = true;
+    cbody.classList.remove('collapsed');
+    ctog.textContent = '▼';
   }
 })();
 
