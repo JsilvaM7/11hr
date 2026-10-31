@@ -543,16 +543,21 @@ function moveAtoPos(i,inp){
 async function init(){
   if(!localStorage.getItem("11hr_auth")){$("setup").style.display="flex";$("painel").style.display="none";return}
   $("setup").style.display="none";$("painel").style.display="flex";
+  if(!token()){
+    renderNoticias();renderAnuncios();
+    toast("Sem token GitHub — voce pode ver o painel mas nao publicar.","err");
+    return;
+  }
   try{
     await loadFromGitHub();
   }catch(e){
     var es=String(e);
     if(es.includes("401")){
-      toast("Token inválido. Entrando novamente…","err");
-      setTimeout(function(){localStorage.removeItem("11hr_tok");location.reload()},3000);
+      localStorage.removeItem("11hr_tok");
+      toast("Token inválido — configure novo token para publicar.","err");
+      renderNoticias();renderAnuncios();
     }else{
-      /* Erro de rede ou arquivo vazio — não expulsa o admin */
-      toast("Aviso: "+e.message+" (edite e salve para corrigir)","err");
+      toast("Aviso: "+e.message,"err");
     }
   }
 }
