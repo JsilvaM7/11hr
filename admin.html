@@ -238,8 +238,8 @@ td textarea{min-height:56px}
         <button onclick="loadVisitas()" style="background:#14213D;color:#fff;border:none;border-radius:7px;padding:7px 14px;font:700 12px sans-serif;cursor:pointer">🔄 Atualizar</button>
       </div>
       <p style="font:400 13px sans-serif;color:#666;margin-bottom:16px;">
-        Contador direto do navegador — sem Google Analytics, sem cookies, sem intermediários.<br>
-        Registra <strong>toda abertura ou reload</strong> do portal neste navegador, incluindo repetições do mesmo usuário.
+        Dados reais de tráfego do GitHub — conta <strong>qualquer visitante, qualquer dispositivo</strong>, sem Google Analytics.<br>
+        O GitHub registra automaticamente todas as visitas ao portal. Últimos <strong>14 dias</strong> disponíveis.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px">
         <div class="ca-stat"><b id="vst-total">—</b><span>Total de acessos</span></div>
@@ -569,47 +569,88 @@ init();
 /* Chat admin moved to chat-admin.html */
 
 
-/* ── VISITAS — 100% localStorage, sem GitHub intermediário ── */
+/* ── VISITAS — GitHub Traffic API (conta qualquer visita, qualquer dispositivo) ── */
 function loadVisitas(){
-  /* Lê direto do localStorage — mesmo navegador, sem cache, sem race condition */
-  var data={days:{},total:0};
-  try{data=JSON.parse(localStorage.getItem('11hr_visits')||'{"days":{},"total":0}');}catch(e){}
-  renderVisitas({visits:data.days||{},total:data.total||0});
+  var tok=token();
+  var trafficEl=document.getElementById('vst-table');
+  trafficEl.innerHTML='<p style="padding:20px;color:#999;font:13px sans-serif;text-align:center">⏳ Carregando tráfego…</p>';
+
+  if(!tok){
+    trafficEl.innerHTML='<p style="padding:20px;color:#c62828;font:13px sans-serif;text-align:center">⚠️ Faça login no admin para ver as visitas.</p>';
+    return;
+  }
+
+  /* GitHub Traffic API — retorna os últimos 14 dias de visitas reais */
+  fetch('https://api.github.com/repos/JsilvaM7/11hr/traffic/views',{
+    headers:{Authorization:'token '+tok,Accept:'application/vnd.github.v3+json'}
+  })
+  .then(function(r){
+    if(!r.ok) throw new Error(r.status+' '+r.statusText);
+    return r.json();
+  })
+  .then(function(data){
+    renderVisitas(data);
+  })
+  .catch(function(e){
+    trafficEl.innerHTML='<p style="padding:20px;color:#c62828;font:600 13px sans-serif;text-align:center">⚠️ Erro ao carregar tráfego: '+e.message+'</p>';
+  });
 }
 
 function renderVisitas(data){
-  var visits=data.visits||{};
-  var total=data.total||Object.values(visits).reduce(function(a,b){return a+b;},0);
-  var today=(function(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');})();
-  var hoje=visits[today]||0;
-  var sem=0,mes=0;
-  for(var i=0;i<30;i++){
-    var d=new Date();d.setDate(d.getDate()-i);
-    var dk=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-    var v2=visits[dk]||0;
-    mes+=v2;if(i<7)sem+=v2;
-  }
-  document.getElementById('vst-total').textContent=total;
-  document.getElementById('vst-hoje').textContent=hoje;
-  document.getElementById('vst-semana').textContent=sem;
-  document.getElementById('vst-mes').textContent=mes;
+  /* data = {count, uniques, views:[{timestamp, count, uniques}]} */
+  var views=data.views||[];
+  var totalCount=data.count||0;
+  var totalUniq=data.uniques||0;
 
-  var days=Object.keys(visits).sort().reverse().slice(0,60);
-  if(!days.length){
-    document.getElementById('vst-table').innerHTML='<p style="padding:20px;color:#999;font:13px sans-serif;text-align:center">Nenhuma visita ainda. Abra o portal em outra aba.</p>';
+  /* Today and week sums */
+  function localDay(date){
+    var d=date?new Date(date):new Date();
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  }
+  var today=localDay();
+  var hojeCount=0, semCount=0;
+  var d7=new Date(); d7.setDate(d7.getDate()-6); var d7str=localDay(d7);
+
+  views.forEach(function(v){
+    var dk=localDay(v.timestamp);
+    if(dk===today) hojeCount+=v.count;
+    if(dk>=d7str)  semCount+=v.count;
+  });
+
+  document.getElementById('vst-total').textContent=totalCount;
+  document.getElementById('vst-hoje').textContent=hojeCount;
+  document.getElementById('vst-semana').textContent=semCount;
+  document.getElementById('vst-mes').textContent=totalCount; /* GitHub retorna 14 dias max */
+
+  /* Update label: "14 dias" em vez de "30 dias" */
+  var mesLabel=document.querySelector('#vst-mes + span, [for=vst-mes] span');
+  var mesEl=document.getElementById('vst-mes').nextElementSibling;
+  if(mesEl) mesEl.textContent='14 dias';
+
+  var trafficEl=document.getElementById('vst-table');
+  if(!views.length){
+    trafficEl.innerHTML='<p style="padding:20px;color:#999;font:13px sans-serif;text-align:center">Nenhuma visita nos últimos 14 dias. Abra o portal em outra aba.</p>';
     return;
   }
-  var max=Math.max.apply(null,days.map(function(d){return visits[d];}));
-  var rows=days.map(function(d){
-    var v2=visits[d];
-    var pct=max?Math.round(v2/max*100):0;
-    return '<tr>'
-      +'<td style="padding:8px 14px;font:600 12px sans-serif;white-space:nowrap">'+d+'</td>'
+
+  var maxV=Math.max.apply(null,views.map(function(v){return v.count;}));
+  var rows=views.slice().reverse().map(function(v){
+    var dk=localDay(v.timestamp);
+    var pct=maxV?Math.round(v.count/maxV*100):0;
+    var isToday=dk===today;
+    return '<tr'+(isToday?' style="background:#fffde7"':'')'>'
+      +'<td style="padding:8px 14px;font:600 12px sans-serif;white-space:nowrap">'+dk+(isToday?' 📍':'')'</td>'
       +'<td style="padding:8px 14px;width:100%"><div style="background:#e0e0e0;border-radius:4px;height:14px"><div style="background:#14213D;width:'+pct+'%;height:14px;border-radius:4px;min-width:4px"></div></div></td>'
-      +'<td style="padding:8px 14px;font:700 13px sans-serif;white-space:nowrap;color:#14213D">'+v2+' acesso'+(v2!==1?'s':'')+'</td>'
+      +'<td style="padding:8px 14px;font:700 13px sans-serif;white-space:nowrap;color:#14213D">'+v.count+' acesso'+(v.count!==1?'s':'')'</td>'
+      +'<td style="padding:8px 14px;font:500 11px sans-serif;white-space:nowrap;color:#888">'+v.uniques+' único'+(v.uniques!==1?'s':'')'</td>'
       +'</tr>';
   }).join('');
-  document.getElementById('vst-table').innerHTML='<table style="width:100%;border-collapse:collapse"><tbody>'+rows+'</tbody></table>';
+  trafficEl.innerHTML='<table style="width:100%;border-collapse:collapse"><thead><tr>'
+    +'<th style="padding:7px 14px;text-align:left;font:700 11px sans-serif;color:#555;background:#f5f5f5">Data</th>'
+    +'<th style="padding:7px 14px;background:#f5f5f5"></th>'
+    +'<th style="padding:7px 14px;text-align:left;font:700 11px sans-serif;color:#555;background:#f5f5f5">Acessos</th>'
+    +'<th style="padding:7px 14px;text-align:left;font:700 11px sans-serif;color:#555;background:#f5f5f5">Únicos</th>'
+    +'</tr></thead><tbody>'+rows+'</tbody></table>';
 }
 /* showTab already handles visitas */
 
