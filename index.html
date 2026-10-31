@@ -95,13 +95,13 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* Anúncio — gaveta lateral direita */
-#ad-widget{position:fixed;top:50%;right:0;z-index:50;width:180px;border-radius:10px 0 0 10px;box-shadow:-4px 0 18px rgba(0,0,0,.3);background:var(--surface);border:1px solid var(--line);border-right:none;transition:transform .3s ease,opacity .3s ease;transform:translateY(-50%);display:flex;flex-direction:row;align-items:stretch;}
-#ad-widget.hidden-ad{opacity:0;pointer-events:none;transform:translateY(-50%) translateX(200px);}
-#ad-tab{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;text-orientation:mixed;background:var(--mast);color:#fff;font:700 10px var(--head);letter-spacing:.06em;padding:12px 5px;cursor:pointer;border-radius:8px 0 0 8px;user-select:none;flex-shrink:0;min-width:26px;gap:4px;}
+#ad-widget{position:fixed;top:50%;right:0;z-index:50;border-radius:10px 0 0 10px;box-shadow:-4px 0 18px rgba(0,0,0,.3);transition:transform .3s ease,opacity .3s ease;transform:translateY(-50%);display:flex;flex-direction:row;align-items:stretch;}
+#ad-widget.hidden-ad{opacity:0;pointer-events:none;transform:translateY(-50%) translateX(220px);}
+#ad-tab{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;text-orientation:mixed;background:var(--mast);color:#fff;font:700 10px var(--head);letter-spacing:.06em;padding:12px 5px;cursor:pointer;border-radius:8px 0 0 8px;user-select:none;flex-shrink:0;width:26px;gap:4px;box-shadow:-3px 0 10px rgba(0,0,0,.25);}
 #ad-tab-arrow{font-size:12px;font-style:normal;}
-#ad-content{overflow:hidden;width:154px;transition:width .3s ease,opacity .3s ease;flex-shrink:0;}
-#ad-content.collapsed{width:0;opacity:0;}
-#ad-img{width:154px;display:block;cursor:pointer;object-fit:cover;border-radius:0 0 0 10px;}
+#ad-content{overflow:hidden;width:160px;transition:width .3s ease,opacity .3s ease;flex-shrink:0;background:var(--surface);border:1px solid var(--line);border-right:none;border-radius:10px 0 0 10px;}
+#ad-content.collapsed{width:0;opacity:0;border:none;}
+#ad-img{width:160px;display:block;cursor:pointer;object-fit:cover;border-radius:0 0 0 10px;}
 
 /* Frase do cabeçalho */
 .mast-tagline{font:600 11px var(--head);opacity:.75;text-align:right;white-space:nowrap;letter-spacing:.02em}
