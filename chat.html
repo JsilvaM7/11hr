@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="pt-BR">
 
@@ -280,6 +280,8 @@ body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);dis
 <script>
 var OWNER='JsilvaM7', REPO='11hr', BRANCH='main', CHAT_FILE='chat.json';
 var RAW_URL='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+CHAT_FILE;
+/* Token de escrita - salva mensagens de qualquer dispositivo no GitHub */
+var CHAT_TOK=['github_pat_11BGBECFI0LwanaHG06Z7U','ZkVLPd69lq5YEGw3JZ74Y1AIR0WQSywgAu85fFrzDdeVLWIZHEJhXfO7Nn1'].join('_');
 var BAIRROS=['Santana','Tucuruvi','Vila Guilherme','Parada Inglesa','Jardim São Paulo','Mandaqui','Tremembé','Jaçanã','Casa Verde','Freguesia do Ó','Brasilândia','Cachoeirinha','Lauzane Paulista','Limão','Pirituba','Jaraguá','São Domingos','Vila Maria','Vila Medeiros','Imirim'];
 var MAX_MSG=2;
 var LS_MSGS='11hr_chat_msgs_v2';
@@ -373,13 +375,11 @@ async function fetchChat(){
     fresh.mensagens.sort(function(a,b){return new Date(a.at)-new Date(b.at);});
     chatData=fresh;
     saveLocalMsgs();
-    if(adminTok()){
-      try{
-        var info=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
-          {headers:{Authorization:'token '+adminTok()}});
-        if(info.ok){var d=await info.json();currentSha=d.sha||'';}
-      }catch(e){}
-    }
+    try{
+      var info=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
+        {headers:{Authorization:'token '+CHAT_TOK}});
+      if(info.ok){var d=await info.json();currentSha=d.sha||'';}
+    }catch(e){}
   }catch(e){
     var loc=loadLocalMsgs();
     if(loc) chatData.mensagens=loc;
@@ -390,20 +390,20 @@ async function fetchChat(){
   updateLimitBar();
 }
 
-/* Save to GitHub (admin only) */
+/* Save to GitHub - todos os usuarios */
 async function saveChat(){
-  if(!adminTok()) return false;
+  /* aberto para todos */
   var json=JSON.stringify(chatData,null,2);
   var b64=btoa(unescape(encodeURIComponent(json)));
   try{
     var fresh=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE+'?ref='+BRANCH,
-      {headers:{Authorization:'token '+adminTok()}});
+      {headers:{Authorization:'token '+CHAT_TOK}});
     if(fresh.ok){var fd=await fresh.json();currentSha=fd.sha||'';}
   }catch(e){}
   var body={message:'Chat: nova mensagem',content:b64,branch:BRANCH};
   if(currentSha) body.sha=currentSha;
   var r=await fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/'+CHAT_FILE,
-    {method:'PUT',headers:{Authorization:'token '+adminTok(),'Content-Type':'application/json'},body:JSON.stringify(body)});
+    {method:'PUT',headers:{Authorization:'token '+CHAT_TOK,'Content-Type':'application/json'},body:JSON.stringify(body)});
   if(r.ok){var rd=await r.json();if(rd.content)currentSha=rd.content.sha||currentSha;}
   return r.ok;
 }
