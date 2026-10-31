@@ -233,10 +233,13 @@ td textarea{min-height:56px}
 
     <!-- VISITAS -->
     <div id="sec-visitas" style="display:none;padding:24px 16px;max-width:820px">
-      <h2 style="font:800 18px sans-serif;color:#14213D;margin-bottom:16px;">📈 Visitas ao Site</h2>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px">
+        <h2 style="font:800 18px sans-serif;color:#14213D;margin:0">📈 Visitas ao Site</h2>
+        <button onclick="loadVisitas()" style="background:#14213D;color:#fff;border:none;border-radius:7px;padding:7px 14px;font:700 12px sans-serif;cursor:pointer">🔄 Atualizar</button>
+      </div>
       <p style="font:400 13px sans-serif;color:#666;margin-bottom:16px;">
-        Contador próprio armazenado no GitHub — sem Google Analytics, sem cookies.<br>
-        As visitas são registradas cada vez que o portal é aberto com o admin logado no mesmo navegador.
+        Contador direto do navegador — sem Google Analytics, sem cookies, sem intermediários.<br>
+        Registra <strong>toda abertura ou reload</strong> do portal neste navegador, incluindo repetições do mesmo usuário.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px">
         <div class="ca-stat"><b id="vst-total">—</b><span>Total de acessos</span></div>
@@ -566,53 +569,12 @@ init();
 /* Chat admin moved to chat-admin.html */
 
 
-/* ── VISITAS ── */
-var statsLoaded=false;
+/* ── VISITAS — 100% localStorage, sem GitHub intermediário ── */
 function loadVisitas(){
-  statsLoaded=true;
-
-  var RAW='https://raw.githubusercontent.com/JsilvaM7/11hr/main/stats.json';
-  var API='https://api.github.com/repos/JsilvaM7/11hr/contents/stats.json';
-  var tok=token();
-
-  /* Read local accumulated visits */
-  var local={days:{},total:0};
-  try{local=JSON.parse(localStorage.getItem('11hr_visits')||'{"days":{},"total":0}');}catch(e){}
-
-  /* Fetch GitHub stats, merge with local, push back */
-  fetch(RAW+'?v='+Date.now())
-    .then(function(r){return r.ok?r.json():Promise.reject(r.status);})
-    .then(function(ghData){
-      /* Merge local visits into GitHub data */
-      if(!ghData.visits) ghData.visits={};
-      Object.keys(local.days).forEach(function(d){
-        ghData.visits[d]=(ghData.visits[d]||0)+local.days[d];
-      });
-      ghData.total=(ghData.total||0)+local.total;
-
-      /* Reset local counter after merging */
-      localStorage.setItem('11hr_visits',JSON.stringify({days:{},total:0}));
-
-      renderVisitas(ghData);
-
-      /* Push merged data to GitHub */
-      if(!tok) return;
-      return fetch(API+'?ref=main',{headers:{Authorization:'token '+tok}})
-        .then(function(r){return r.json();})
-        .then(function(meta){
-          var b64=btoa(unescape(encodeURIComponent(JSON.stringify(ghData,null,2))));
-          return fetch(API,{
-            method:'PUT',
-            headers:{Authorization:'token '+tok,'Content-Type':'application/json'},
-            body:JSON.stringify({message:'stats: sync visitas',content:b64,sha:meta.sha,branch:'main'})
-          });
-        })
-        .catch(function(e){console.warn('stats push:',e);});
-    })
-    .catch(function(e){
-      /* If GitHub fails, show local data */
-      renderVisitas({visits:local.days,total:local.total});
-    });
+  /* Lê direto do localStorage — mesmo navegador, sem cache, sem race condition */
+  var data={days:{},total:0};
+  try{data=JSON.parse(localStorage.getItem('11hr_visits')||'{"days":{},"total":0}');}catch(e){}
+  renderVisitas({visits:data.days||{},total:data.total||0});
 }
 
 function renderVisitas(data){
