@@ -279,25 +279,18 @@ $("btn-entrar").onclick=async function(){
   if(!tok){toast("Cole o token do GitHub","err");return}
   var btn=this;btn.disabled=true;btn.textContent="Verificando…";
   try{
-    /* Testa se o token tem permissão de escrita no repositório */
-    var r=await fetch("https://api.github.com/repos/"+OWNER+"/"+REPO,{
+    /* Valida o token checando /user — simples e confiável */
+    var r=await fetch("https://api.github.com/user",{
       headers:{Authorization:"token "+tok,Accept:"application/vnd.github.v3+json"}
     });
-    if(!r.ok)throw new Error(r.status);
-    var info=await r.json();
-    if(!info.permissions||!info.permissions.push){
-      throw new Error("sem_permissao");
-    }
+    if(r.status===401)throw new Error("Token inválido ou expirado.");
+    if(!r.ok)throw new Error("Erro "+r.status);
+    /* Token válido — salva e entra */
     localStorage.setItem("11hr_tok",tok);
+    btn.disabled=false;btn.textContent="Entrar no Painel";
     init();
   }catch(e){
-    var msg=e.message;
-    if(msg==="401"||msg==="403"){
-      msg="Token inválido ou expirado. Gere um novo token no GitHub.";
-    }else if(msg==="sem_permissao"||msg==="404"){
-      msg="Este token não tem permissão de escrita.\n\nSolução: gere um novo token do tipo Classic com o escopo 'repo' marcado.";
-    }
-    alert("❌ "+msg);
+    alert("❌ "+e.message);
     btn.disabled=false;btn.textContent="Entrar no Painel";
   }
 };
@@ -554,11 +547,13 @@ async function init(){
   try{
     await loadFromGitHub();
   }catch(e){
-    if(String(e).includes("401")||String(e).includes("403")){
-      toast("Token inválido. Verifique e entre novamente.","err");
+    var es=String(e);
+    if(es.includes("401")){
+      toast("Token inválido. Entrando novamente…","err");
       setTimeout(function(){localStorage.removeItem("11hr_tok");location.reload()},3000);
     }else{
-      toast("Erro ao carregar: "+e.message,"err");
+      /* Erro de rede ou arquivo vazio — não expulsa o admin */
+      toast("Aviso: "+e.message+" (edite e salve para corrigir)","err");
     }
   }
 }
