@@ -140,17 +140,17 @@ td textarea{min-height:56px}
       <div class="setup-mark">11<small>hr</small></div>
       <div class="setup-title">Admin<span>Painel de controle</span></div>
     </div>
-    <h2>Configure o acesso ao GitHub</h2>
-    <p style="font-size:14px;color:var(--muted);margin:8px 0 20px;line-height:1.6">Para publicar no site e subir fotos, você precisa de um Token do GitHub. Só precisa fazer isso uma vez.</p>
-    <div class="steps">
-      1. Acesse <a href="https://github.com/settings/tokens/new" target="_blank"><b>GitHub → Settings → Developer settings → Tokens (classic)</b></a><br>
-      2. Em "Note" escreva: <b>11hr Admin</b><br>
-      3. Em "Expiration" escolha: <b>No expiration</b><br>
-      4. Marque a caixa <b>"repo"</b> ✅<br>
-      5. Clique <b>Generate token</b> e copie o código (começa com <b>ghp_</b>)
-    </div>
-    <input class="inp" type="password" id="inp-token" placeholder="Cole o token aqui: ghp_...">
+    <h2>Acesso ao Painel</h2>
+    <p style="font-size:14px;color:var(--muted);margin:8px 0 16px;line-height:1.6">
+      Digite a senha do painel e o token GitHub (para publicar noticias e anuncios).
+    </p>
+    <input class="inp" type="password" id="inp-senha" placeholder="Senha do painel: 11hrAdmin2024" style="margin-bottom:10px">
+    <input class="inp" type="password" id="inp-token" placeholder="Token GitHub (ghp_...) - para publicar">
     <button class="btn-pri" id="btn-entrar">Entrar no Painel</button>
+    <p style="font-size:12px;color:var(--muted);margin-top:16px;line-height:1.5">
+      Token GitHub opcional para publicar. Sem token voce pode ver o painel mas nao publicar.<br>
+      <a href="https://github.com/settings/tokens/new" target="_blank" style="color:var(--accent)">Gerar token (classic, escopo repo)</a>
+    </p>
   </div>
 </div>
 
@@ -274,35 +274,25 @@ function setDirty(v){dirty=v;$("btn-pub").disabled=!v;$("hstatus").textContent=v
 function toast(msg,type){var t=$("toast");t.textContent=msg;t.className=type||"";t.style.display="block";clearTimeout(toast._t);toast._t=setTimeout(function(){t.style.display="none"},3500)}
 
 /* ---- AUTH ---- */
-$("btn-entrar").onclick=async function(){
+var ADMIN_PASS = "11hrAdmin2024";
+$("btn-entrar").onclick=function(){
+  var senha=$("inp-senha").value.trim();
   var tok=$("inp-token").value.trim();
-  if(!tok){alert("Cole o token do GitHub no campo acima.");return}
-  var btn=this;btn.disabled=true;btn.textContent="Verificando…";
-  try{
-    var r=await fetch("https://api.github.com/user",{
-      headers:{Authorization:"token "+tok,Accept:"application/vnd.github.v3+json"},
-      cache:"no-store"
-    });
-    if(r.status===401){
-      alert("❌ Token inválido ou expirado.\nGere um novo token:\nGitHub > Settings > Developer settings > Personal access tokens (classic)\nMarque o escopo 'repo'.");
-      btn.disabled=false;btn.textContent="Entrar no Painel";
-      return;
-    }
-    if(!r.ok){
-      alert("❌ Erro HTTP "+r.status+". Tente de novo.");
-      btn.disabled=false;btn.textContent="Entrar no Painel";
-      return;
-    }
-    var u=await r.json();
-    localStorage.setItem("11hr_tok",tok);
-    btn.disabled=false;btn.textContent="Entrar no Painel";
-    alert("✅ Token aceito! Logado como: "+u.login);
-    init();
-  }catch(e){
-    alert("❌ Falha de conexao: "+e.message);
-    btn.disabled=false;btn.textContent="Entrar no Painel";
+  if(senha !== ADMIN_PASS){
+    alert("Senha incorreta! A senha e: 11hrAdmin2024");
+    return;
   }
+  /* Senha correta - salva token se informado e entra */
+  if(tok) localStorage.setItem("11hr_tok", tok);
+  localStorage.setItem("11hr_auth", "ok");
+  init();
 };
+$("btn-sair").onclick=function(){
+  localStorage.removeItem("11hr_tok");
+  localStorage.removeItem("11hr_auth");
+  location.reload();
+};
+
 $("btn-sair").onclick=function(){localStorage.removeItem("11hr_tok");location.reload()};
 
 /* ---- TABS ---- */
@@ -551,7 +541,7 @@ function moveAtoPos(i,inp){
 
 /* ---- INIT ---- */
 async function init(){
-  if(!token()){$("setup").style.display="flex";$("painel").style.display="none";return}
+  if(!localStorage.getItem("11hr_auth")){$("setup").style.display="flex";$("painel").style.display="none";return}
   $("setup").style.display="none";$("painel").style.display="flex";
   try{
     await loadFromGitHub();
