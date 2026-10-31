@@ -179,14 +179,12 @@ body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);dis
 
 
 
-/* SEND BAR TOP (nome + bairro) */
-.send-bar-top{padding:6px 10px;display:flex;gap:6px;align-items:center;border-top:1px solid var(--chat-border);background:var(--chat-surface);flex-shrink:0}
-.send-bar-top input,.send-bar-top select{border:1px solid var(--chat-border);border-radius:8px;padding:6px 9px;font:12px var(--head);color:var(--chat-ink);background:var(--chat-bg)}
-.send-bar-top input{flex:1;min-width:80px}
-.send-bar-top input::placeholder{color:var(--chat-muted)}
-.send-bar-top select{flex:1;cursor:pointer}
-.send-bar-top input:focus,.send-bar-top select:focus{outline:1px solid var(--accent)}
-.user-count-badge{background:#222;border:1px solid var(--chat-border);color:var(--chat-muted);font:700 10px var(--head);border-radius:99px;padding:2px 8px;white-space:nowrap}
+/* NOME + BAIRRO inline na send-bar */
+.sb-nome{width:90px;border:none;border-right:1px solid var(--chat-border);border-radius:0;padding:6px 8px;font:12px var(--head);color:var(--chat-ink);background:transparent;flex-shrink:0;outline:none}
+.sb-nome::placeholder{color:var(--chat-muted)}
+.sb-nome:focus{background:rgba(255,255,255,.04)}
+.sb-bairro{width:105px;border:none;border-right:1px solid var(--chat-border);border-radius:0;padding:6px 4px;font:11px var(--head);color:var(--chat-ink);background:transparent;cursor:pointer;flex-shrink:0;outline:none}
+.sb-bairro option{background:var(--chat-surface)}
 /* TOAST */
 
 #toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:9px 18px;border-radius:9px;font:600 12px var(--head);z-index:99;display:none;box-shadow:0 4px 20px rgba(0,0,0,.5)}
@@ -255,13 +253,6 @@ body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);dis
 <div id="msgs"></div>
 
     <div class="limit-bar" id="limit-bar"></div>
-
-    <div class="send-bar-top">
-      <input id="inp-nome" placeholder="Seu nome..." maxlength="28" autocomplete="nickname" oninput="saveName()">
-      <select id="inp-bairro">
-        <option value="">— Bairro —</option>
-      </select>
-    </div>
     <div class="send-bar">
 
       <textarea id="msg-txt" placeholder="Mensagem para o bairro…" rows="1"
