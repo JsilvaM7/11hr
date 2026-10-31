@@ -455,6 +455,12 @@ fetch("data.json?v="+Date.now())
   }catch(e){}
 })();
 
+
+/* ---- COUNTER API — conta visitas de qualquer dispositivo em tempo real ---- */
+(function(){
+  fetch('https://api.counterapi.dev/v1/11hr-jornal/portal/up', {cache:'no-store'})
+    .catch(function(){}); /* silencioso — nao afeta o site se falhar */
+})();
 </script>
 <!-- ============================================================ -->
 

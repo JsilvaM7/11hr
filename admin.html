@@ -237,15 +237,27 @@ td textarea{min-height:56px}
         <h2 style="font:800 18px sans-serif;color:#14213D;margin:0">📈 Visitas ao Site</h2>
         <button onclick="loadVisitas()" style="background:#14213D;color:#fff;border:none;border-radius:7px;padding:7px 14px;font:700 12px sans-serif;cursor:pointer">🔄 Atualizar</button>
       </div>
+
+      <!-- CONTADOR EM TEMPO REAL -->
+      <div style="background:#14213D;border-radius:12px;padding:18px 20px;margin-bottom:20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:160px">
+          <div style="color:#FFC20E;font:800 36px sans-serif;line-height:1" id="rt-count">⏳</div>
+          <div style="color:#fff;font:700 13px sans-serif;margin-top:4px">Total de acessos (tempo real)</div>
+          <div style="color:rgba(255,255,255,.6);font:400 11px sans-serif;margin-top:2px">Celular + computador + qualquer dispositivo • atualiza agora</div>
+        </div>
+        <div style="color:rgba(255,255,255,.5);font:400 12px sans-serif;max-width:220px;line-height:1.5">
+          Cada vez que alguém abre o site, soma +1 aqui — sem atraso, sem Google Analytics.
+        </div>
+      </div>
+
       <p style="font:400 13px sans-serif;color:#666;margin-bottom:16px;">
-        Dados reais de tráfego do GitHub — conta <strong>qualquer visitante, qualquer dispositivo</strong>, sem Google Analytics.<br>
-        O GitHub registra automaticamente todas as visitas ao portal. Últimos <strong>14 dias</strong> disponíveis.
+        Histórico detalhado via GitHub — últimos <strong>14 dias</strong> (atualiza com ~1 dia de atraso).
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-        <div class="ca-stat"><b id="vst-total">—</b><span>Total de acessos</span></div>
-        <div class="ca-stat"><b id="vst-hoje">—</b><span>Hoje</span></div>
+        <div class="ca-stat"><b id="vst-total">—</b><span>Total GitHub (14d)</span></div>
+        <div class="ca-stat"><b id="vst-hoje">—</b><span>Hoje (GitHub)</span></div>
         <div class="ca-stat"><b id="vst-semana">—</b><span>Últimos 7 dias</span></div>
-        <div class="ca-stat"><b id="vst-mes">—</b><span>Últimos 30 dias</span></div>
+        <div class="ca-stat"><b id="vst-mes">—</b><span>14 dias</span></div>
       </div>
       <div style="background:#fff;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden">
         <div style="background:#14213D;color:#fff;padding:10px 16px;font:700 13px sans-serif">
@@ -308,7 +320,7 @@ function showTab(t){
       }
     }
   }
-  if(t==="visitas") loadVisitas();
+  if(t==="visitas"){ loadVisitas(); loadContadorRT(); }
 }
 
 /* ---- GITHUB API ---- */
@@ -541,21 +553,24 @@ async function init(){
   if(!localStorage.getItem("11hr_auth")){$("setup").style.display="flex";$("painel").style.display="none";return}
   $("setup").style.display="none";$("painel").style.display="flex";
   if(!token()){
+    $("hstatus").textContent="";
     renderNoticias();renderAnuncios();
-    toast("Sem token GitHub — voce pode ver o painel mas nao publicar.","err");
     return;
   }
   try{
     await loadFromGitHub();
   }catch(e){
+    $("hstatus").textContent="";
     var es=String(e);
-    if(es.includes("401")){
+    if(es.includes("401")||es.includes("403")){
       localStorage.removeItem("11hr_tok");
-      toast("Token inválido — configure novo token para publicar.","err");
-      renderNoticias();renderAnuncios();
+      toast("Token inválido. Clique Sair e entre com token válido.","err");
+    }else if(es.includes("404")){
+      toast("Nenhum conteúdo publicado ainda. Adicione notícias!","ok");
     }else{
       toast("Aviso: "+e.message,"err");
     }
+    renderNoticias();renderAnuncios();
   }
 }
 
@@ -566,6 +581,17 @@ init();
 
 
 /* ── VISITAS — GitHub Traffic API (conta qualquer visita, qualquer dispositivo) ── */
+
+/* ---- CONTADOR EM TEMPO REAL (CounterAPI) ---- */
+function loadContadorRT(){
+  var el = document.getElementById('rt-count');
+  if(!el) return;
+  fetch('https://api.counterapi.dev/v1/11hr-jornal/portal', {cache:'no-store'})
+    .then(function(r){ return r.json(); })
+    .then(function(d){ el.textContent = (d.count||0).toLocaleString('pt-BR'); })
+    .catch(function(){ el.textContent = '—'; });
+}
+
 function loadVisitas(){
   var tok=token();
   var trafficEl=document.getElementById('vst-table');
