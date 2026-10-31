@@ -152,18 +152,6 @@ body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);dis
 
 /* USER BAR */
 
-.user-bar{padding:7px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--chat-border);background:var(--chat-surface);flex-shrink:0}
-
-.user-info{font:500 11px var(--head);color:var(--chat-muted)}
-
-.user-name{color:var(--chat-ink);font-weight:700}
-
-.logout-btn{background:none;border:1px solid var(--chat-border);color:var(--chat-muted);border-radius:5px;padding:3px 9px;font:600 10px var(--head);cursor:pointer}
-
-.logout-btn:hover{background:var(--chat-bg)}
-
-
-
 /* LIMIT BAR */
 
 #char-counter.warn{color:#FFC20E}#char-counter.over{color:#ff6b6b}
@@ -264,16 +252,7 @@ body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);dis
   <!-- TELA CHAT -->
 
   <div id="s-chat">
-
-    <div class="user-bar">
-
-      <span class="user-info">Logado como <span class="user-name" id="uname-label"></span></span>
-
-      <button class="logout-btn" onclick="doLogout()">Sair</button>
-
-    </div>
-
-    <div id="msgs"></div>
+<div id="msgs"></div>
 
     <div class="limit-bar" id="limit-bar"></div>
 
