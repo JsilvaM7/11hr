@@ -254,7 +254,10 @@ body{font-family:var(--head);background:var(--chat-bg);color:var(--chat-ink);dis
 
     <div class="limit-bar" id="limit-bar"></div>
     <div class="send-bar">
-
+      <input id="inp-nome" class="sb-nome" placeholder="Nome" maxlength="28" autocomplete="nickname" oninput="saveName();updateLimitBar()">
+      <select id="inp-bairro" class="sb-bairro" onchange="updateLimitBar()">
+        <option value="">Bairro</option>
+      </select>
       <textarea id="msg-txt" placeholder="Mensagem para o bairro…" rows="1"
 
         maxlength="80" oninput="autoResize(this);updateCharCounter()" onkeydown="onKey(event)"></textarea>
@@ -329,6 +332,7 @@ function countUniqueUsers(){
 
 /* Build selects */
 function buildSelects(){
+  if(!$('inp-bairro')||!$('bairro-sel')) return;
   var opts='<option value="">— Todos os bairros —</option>';
   var opts2='<option value="">— Bairro —</option>';
   BAIRROS.forEach(function(b){
