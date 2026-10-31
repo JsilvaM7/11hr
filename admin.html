@@ -634,12 +634,13 @@ function renderVisitas(data){
     var dk=localDay(v.timestamp);
     var pct=maxV?Math.round(v.count/maxV*100):0;
     var isToday=dk===today;
-    return '<tr'+(isToday?' style="background:#fffde7"':'')'>'
-      +'<td style="padding:8px 14px;font:600 12px sans-serif;white-space:nowrap">'+dk+(isToday?' 📍':'')'</td>'
-      +'<td style="padding:8px 14px;width:100%"><div style="background:#e0e0e0;border-radius:4px;height:14px"><div style="background:#14213D;width:'+pct+'%;height:14px;border-radius:4px;min-width:4px"></div></div></td>'
-      +'<td style="padding:8px 14px;font:700 13px sans-serif;white-space:nowrap;color:#14213D">'+v.count+' acesso'+(v.count!==1?'s':'')'</td>'
-      +'<td style="padding:8px 14px;font:500 11px sans-serif;white-space:nowrap;color:#888">'+v.uniques+' único'+(v.uniques!==1?'s':'')'</td>'
-      +'</tr>';
+    var pin=isToday?' 📍':'';
+    return '<tr'+(isToday?' style="background:#fffde7"':'')+'>'+
+      '<td style="padding:8px 14px;font:600 12px sans-serif;white-space:nowrap">'+dk+pin+'</td>'+
+      '<td style="padding:8px 14px;width:100%"><div style="background:#e0e0e0;border-radius:4px;height:14px"><div style="background:#14213D;width:'+pct+'%;height:14px;border-radius:4px;min-width:4px"></div></div></td>'+
+      '<td style="padding:8px 14px;font:700 13px sans-serif;white-space:nowrap;color:#14213D">'+v.count+' acesso'+(v.count!==1?'s':'')+'</td>'+
+      '<td style="padding:8px 14px;font:500 11px sans-serif;white-space:nowrap;color:#888">'+v.uniques+' único'+(v.uniques!==1?'s':'')+'</td>'+
+      '</tr>';
   }).join('');
   trafficEl.innerHTML='<table style="width:100%;border-collapse:collapse"><thead><tr>'
     +'<th style="padding:7px 14px;text-align:left;font:700 11px sans-serif;color:#555;background:#f5f5f5">Data</th>'
