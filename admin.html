@@ -582,14 +582,30 @@ init();
 
 /* ── VISITAS — GitHub Traffic API (conta qualquer visita, qualquer dispositivo) ── */
 
-/* ---- CONTADOR EM TEMPO REAL (CounterAPI) ---- */
+/* ---- CONTADOR EM TEMPO REAL (visitor-badge) ---- */
 function loadContadorRT(){
   var el = document.getElementById('rt-count');
   if(!el) return;
-  fetch('https://api.counterapi.dev/v1/11hr-jornal/portal', {cache:'no-store'})
-    .then(function(r){ return r.json(); })
-    .then(function(d){ el.textContent = (d.count||0).toLocaleString('pt-BR'); })
-    .catch(function(){ el.textContent = '—'; });
+  el.textContent = '⏳';
+  fetch('https://visitor-badge.laobi.icu/badge?page_id=JsilvaM7.11hr&nocache='+Date.now(), {cache:'no-store'})
+    .then(function(r){ return r.text(); })
+    .then(function(svg){
+      /* O SVG contem o numero de visitas como ultimo <text>NUMBER</text> */
+      var matches = svg.match(/>([0-9,]+)<\/text>/g);
+      if(matches){
+        for(var i=matches.length-1;i>=0;i--){
+          var m=matches[i].match(/([0-9,]+)/);
+          if(m && !isNaN(m[1].replace(',',''))){
+            el.textContent=parseInt(m[1].replace(',','')).toLocaleString('pt-BR');
+            return;
+          }
+        }
+      }
+      el.textContent='—';
+    })
+    .catch(function(){
+      el.innerHTML='<img src="https://visitor-badge.laobi.icu/badge?page_id=JsilvaM7.11hr" style="height:28px;vertical-align:middle">';
+    });
 }
 
 function loadVisitas(){

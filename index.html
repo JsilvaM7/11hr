@@ -456,10 +456,13 @@ fetch("data.json?v="+Date.now())
 })();
 
 
-/* ---- COUNTER API — conta visitas de qualquer dispositivo em tempo real ---- */
+/* ---- CONTADOR DE VISITAS — invisivel para o visitante ---- */
 (function(){
-  fetch('https://api.counterapi.dev/v1/11hr-jornal/portal/up', {cache:'no-store'})
-    .catch(function(){}); /* silencioso — nao afeta o site se falhar */
+  var img=document.createElement('img');
+  img.src='https://visitor-badge.laobi.icu/badge?page_id=JsilvaM7.11hr&ts='+Date.now();
+  img.style.cssText='display:none;position:absolute;width:0;height:0';
+  img.alt='';
+  document.body.appendChild(img);
 })();
 </script>
 <!-- ============================================================ -->
