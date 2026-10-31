@@ -31,6 +31,14 @@
       "texto": "pessoal o que ta acontecendo em santana?",
       "at": "2026-10-31T09:47:59.183Z",
       "isAdmin": false
+    },
+    {
+      "id": "1793483613122_6eize",
+      "autor": "julio",
+      "bairro": "Santana",
+      "texto": "o que ta pegando ai?",
+      "at": "2026-10-31T21:53:33.122Z",
+      "isAdmin": false
     }
   ],
   "usuarios": {
@@ -50,6 +58,10 @@
       "bairro": "Jaçanã",
       "at": "2026-10-30T23:47:14.365Z",
       "daily": {}
+    },
+    "julio": {
+      "bairro": "Santana",
+      "at": "2026-10-31T21:53:33.122Z"
     }
   },
   "config": {
