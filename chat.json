@@ -25,6 +25,14 @@
       "isAdmin": false
     },
     {
+      "id": "1793404175389_2ec2u",
+      "autor": "Julio Cesar08",
+      "bairro": "Santana",
+      "texto": "Como vai pessoal",
+      "at": "2026-10-30T23:49:35.389Z",
+      "isAdmin": false
+    },
+    {
       "id": "1793440079183_yoomr",
       "autor": "julio cesar",
       "bairro": "Santana",
@@ -33,11 +41,27 @@
       "isAdmin": false
     },
     {
+      "id": "1793444162300_kv4yu",
+      "autor": "Casal tranquilo",
+      "bairro": "Tucuruvi",
+      "texto": "Como está o bairro hoje do tucuruvi vendeu muito?",
+      "at": "2026-10-31T10:56:02.300Z",
+      "isAdmin": false
+    },
+    {
       "id": "1793483613122_6eize",
       "autor": "julio",
       "bairro": "Santana",
       "texto": "o que ta pegando ai?",
       "at": "2026-10-31T21:53:33.122Z",
+      "isAdmin": false
+    },
+    {
+      "id": "1793483681671_j6o8l",
+      "autor": "Casal tranquilo",
+      "bairro": "Tucuruvi",
+      "texto": "Tranquilo no tucuruvi",
+      "at": "2026-10-31T21:54:41.671Z",
       "isAdmin": false
     }
   ],
@@ -62,6 +86,10 @@
     "julio": {
       "bairro": "Santana",
       "at": "2026-10-31T21:53:33.122Z"
+    },
+    "Casal tranquilo": {
+      "bairro": "Tucuruvi",
+      "at": "2026-10-31T21:54:41.671Z"
     }
   },
   "config": {
