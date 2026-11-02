@@ -63,6 +63,14 @@
       "texto": "Tranquilo no tucuruvi",
       "at": "2026-10-31T21:54:41.671Z",
       "isAdmin": false
+    },
+    {
+      "id": "1793606913289_admin",
+      "autor": "🛡️ Redação 11hr",
+      "bairro": "Jaçanã",
+      "texto": "Bom dia Zona norte",
+      "at": "2026-11-02T08:08:33.289Z",
+      "isAdmin": true
     }
   ],
   "usuarios": {
@@ -115,6 +123,7 @@
       "Vila Maria": 0,
       "Vila Medeiros": 0,
       "Imirim": 0
-    }
+    },
+    "blocked": {}
   }
 }
