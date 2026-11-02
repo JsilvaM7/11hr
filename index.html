@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
@@ -94,14 +94,15 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 .spinner{width:36px;height:36px;border:3px solid var(--line);border-top-color:var(--mast);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* Anúncio — gaveta lateral direita */
-#ad-widget{position:fixed;top:50%;right:0;z-index:50;border-radius:10px 0 0 10px;box-shadow:-4px 0 18px rgba(0,0,0,.3);transition:transform .3s ease,opacity .3s ease;transform:translateY(-50%);display:flex;flex-direction:row;align-items:stretch;}
-#ad-widget.hidden-ad{opacity:0;pointer-events:none;transform:translateY(-50%) translateX(220px);}
-#ad-tab{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;text-orientation:mixed;background:var(--mast);color:#fff;font:700 10px var(--head);letter-spacing:.06em;padding:12px 5px;cursor:pointer;border-radius:8px 0 0 8px;user-select:none;flex-shrink:0;width:26px;gap:4px;box-shadow:-3px 0 10px rgba(0,0,0,.25);}
-#ad-tab-arrow{font-size:12px;font-style:normal;}
-#ad-content{overflow:hidden;width:160px;transition:width .3s ease,opacity .3s ease;flex-shrink:0;background:var(--surface);border:1px solid var(--line);border-right:none;border-radius:10px 0 0 10px;}
-#ad-content.collapsed{width:0;opacity:0;border:none;}
-#ad-img{width:160px;display:block;cursor:pointer;object-fit:cover;border-radius:0 0 0 10px;}
+/* Anúncio — canto superior direito */
+#ad-widget{position:fixed;top:12px;right:12px;z-index:999;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.35);transition:opacity .3s ease,transform .3s ease;display:flex;flex-direction:column;align-items:stretch;width:170px;}
+#ad-widget.hidden-ad{opacity:0;pointer-events:none;transform:translateY(-20px);}
+#ad-tab{display:flex;align-items:center;justify-content:space-between;background:var(--mast);color:#fff;font:700 9px var(--head);letter-spacing:.08em;padding:6px 10px;cursor:pointer;border-radius:12px 12px 0 0;user-select:none;gap:6px;}
+#ad-tab-arrow{font-size:10px;font-style:normal;transition:transform .3s;}
+#ad-tab-arrow.open{transform:rotate(180deg);}
+#ad-content{overflow:hidden;max-height:220px;transition:max-height .3s ease,opacity .3s ease;background:var(--surface);border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;}
+#ad-content.collapsed{max-height:0;opacity:0;}
+#ad-img{width:170px;display:block;cursor:pointer;object-fit:cover;border-radius:0 0 12px 12px;}
 
 /* Frase do cabeçalho */
 .mast-tagline{font:600 11px var(--head);opacity:.75;text-align:right;white-space:nowrap;letter-spacing:.02em}
@@ -154,11 +155,11 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
   <footer class="foot">11hr Jornal da Zona Norte</footer>
 </div>
 
-<!-- Anúncio — gaveta lateral direita -->
+<!-- Anúncio — canto superior direito -->
 <div id="ad-widget" class="hidden-ad">
   <div id="ad-tab" onclick="toggleAd()">
-    <i id="ad-tab-arrow">◀</i>
     <span>PUBLICIDADE</span>
+    <i id="ad-tab-arrow" class="open">▾</i>
   </div>
   <div id="ad-content">
     <a id="ad-link" href="#" target="_blank" rel="noopener">
@@ -306,12 +307,12 @@ function updateAd(section,articleTitle){
   }else{$("ad-widget").classList.add("hidden-ad")}
 }
 
-/* Ad side-drawer toggle */
+/* Ad top-right toggle */
 var adCol=false;
 function toggleAd(){
   adCol=!adCol;
   $("ad-content").classList.toggle("collapsed",adCol);
-  $("ad-tab-arrow").textContent=adCol?"▶":"◀";
+  $("ad-tab-arrow").classList.toggle("open",!adCol);
 }
 
 /* Tabs */
