@@ -344,7 +344,7 @@ view.innerHTML='<div class="loading"><div class="spinner"></div><span>Carregando
 fetch("data.json?v="+Date.now())
   .then(function(r){return r.ok?r.json():Promise.reject("Erro "+r.status)})
   .then(function(data){
-    rows=(data.noticias||[]).map(function(n){return{ed:n.editoria||"locais",t:n.titulo||"",r:n.resumo||"",x:n.texto||"",f:n.foto||"",a:n.autor||"Redação 11hr",h:n.hora||"",l:n.link||""}}).reverse();
+    rows=(data.noticias||[]).map(function(n,i){return{ed:n.editoria||"locais",t:n.titulo||"",r:n.resumo||"",x:n.texto||"",f:n.foto||"",a:n.autor||"Redação 11hr",h:n.hora||"",l:n.link||"",ts:n.createdAt||"",idx:i}}).sort(function(a,b){if(a.ts&&b.ts)return b.ts.localeCompare(a.ts);if(a.ts)return -1;if(b.ts)return 1;return b.idx-a.idx;});
     ads=(data.anuncios||[]).map(function(a){return{foto:a.foto||"",link:a.link||"",alvo:a.alvo||"todas"}});
     route();
   })

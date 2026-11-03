@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
@@ -501,7 +501,7 @@ function renderNoticias(){
 
 function setN(i,k,v){noticias[i][k]=v;setDirty(true)}
 function addNoticia(){
-  noticias.push({editoria:"locais",titulo:"",resumo:"",texto:"",foto:"",autor:"Redação 11hr",hora:"Hoje, 10h",link:""});
+  noticias.push({editoria:"locais",titulo:"",resumo:"",texto:"",foto:"",autor:"Redação 11hr",hora:"Hoje, 10h",link:"",createdAt:new Date().toISOString()});
   renderNoticias();setDirty(true);
   var rows=$("tb-not").children;if(rows.length)rows[rows.length-1].scrollIntoView({behavior:"smooth",block:"center"});
 }
