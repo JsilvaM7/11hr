@@ -21,6 +21,36 @@
       "link": ""
     },
     {
+      "editoria": "dinheiro",
+      "titulo": "Comércio da Rua Voluntários da Pátria inicia preparativos para o fim de ano",
+      "resumo": "Os comerciantes da Rua Voluntários da Pátria, um dos maiores centros de comércio a céu aberto da cidade, começaram os preparativos operacionais para a temporada de vendas de fim de ano. As lojas já apresentam decorações temáticas e reforço nos estoques.",
+      "texto": "Os comerciantes da Rua Voluntários da Pátria, um dos maiores centros de comércio a céu aberto da cidade, começaram os preparativos operacionais para a temporada de vendas de fim de ano. As lojas já apresentam decorações temáticas e reforço nos estoques.\n\nAs associações comerciais locais projetam um aumento no movimento de consumidores e estimam a contratação de trabalhadores temporários para reforçar o atendimento. A Polícia Militar também promete intensificar o policiamento ostensivo no calçadão durante o período comercial aquecido.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718824427_images__45_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "locais",
+      "titulo": "Escolas estaduais de Tucuruvi realizam mostra de projetos de tecnologia",
+      "resumo": "Alunos de escolas estaduais localizadas no distrito de Tucuruvi participaram de uma feira tecnológica que reuniu trabalhos desenvolvidos em sala de aula ao longo do semestre. Os estudantes apresentaram protótipos de robótica, projetos de reciclagem e soluções digitais para o cotidiano.",
+      "texto": "Alunos de escolas estaduais localizadas no distrito de Tucuruvi participaram de uma feira tecnológica que reuniu trabalhos desenvolvidos em sala de aula ao longo do semestre. Os estudantes apresentaram protótipos de robótica, projetos de reciclagem e soluções digitais para o cotidiano.\n\nO evento contou com a presença de professores, familiares e avaliadores convidados, que premiaram os projetos mais inovadores. A direção regional de ensino ressaltou a importância da feira para estimular o pensamento crítico, a ciência e a tecnologia entre os jovens da periferia.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718663044_images__44_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
+      "editoria": "cultura",
+      "titulo": "Bairro do Limão ganha nova horta comunitária em terreno revitalizado",
+      "resumo": "Um espaço urbano que antes acumulação lixo e entulho no bairro do Limão foi transformado em uma horta comunitária por moradores locais. A iniciativa contou com apoio técnico de agrônomos voluntários e doações de mudas de hortaliças e ervas medicinais.",
+      "texto": "Um espaço urbano que antes acumulação lixo e entulho no bairro do Limão foi transformado em uma horta comunitária por moradores locais. A iniciativa contou com apoio técnico de agrônomos voluntários e doações de mudas de hortaliças e ervas medicinais.\n\nO projeto tem como objetivo incentivar o cultivo sustentável, criar um ponto de convivência comunitária e abastecer famílias da região com alimentos frescos. Os idealizadores planejam agora promover oficinas de horta comunitária para crianças de escolas do entorno.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718479753_images__43_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": ""
+    },
+    {
       "editoria": "cultura",
       "titulo": "Linha de ônibus tem itinerário alterado para atender a Rosas de Ouro",
       "resumo": "Manchete 02/11/26: Linha de ônibus tem itinerário alterado para atender a Rosas de Ouro",
@@ -556,6 +586,21 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608488195_images__8_.jpg",
       "link": "",
       "alvo": "Operação conjunta apreende veículos adulterados na Marginal Tietê"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718854311_anuncie-11hr-R67.png",
+      "link": "",
+      "alvo": "Bairro do Limão ganha nova horta comunitária em terreno revitalizado"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718859815_anuncie-11hr-R67.png",
+      "link": "",
+      "alvo": "Escolas estaduais de Tucuruvi realizam mostra de projetos de tecnologia"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718865714_images__45_.jpg",
+      "link": "",
+      "alvo": "Comércio da Rua Voluntários da Pátria inicia preparativos para o fim de ano"
     }
   ]
 }
