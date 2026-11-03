@@ -1,606 +1,646 @@
-{
-  "noticias": [
-    {
-      "editoria": "politica",
-      "titulo": "A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo",
-      "resumo": "Manchete 11hr jornal da zona norte 26/10/26: A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo com o direcionamento estratégico de recursos federais para grandes obras de mobilidade e infraestrutura — com destaque para os avanços na Linha 19-Celeste do Metrô e intervenções viárias —, ao mesmo tempo em que o fortalecimento de programas sociais e do poder de compra das famílias reaquece o pequeno comércio, as feiras livres e as padarias locais no Jaçanã, Tremembé e periferias, injetando uma onda de otimismo, segurança financeira e acolhimento cultural para a juventude e os moradores da região.",
-      "texto": "A vitória do governo Lula no cenário nacional reflete-se na Zona Norte de São Paulo com o direcionamento e a garantia de verbas federais para grandes obras de infraestrutura e mobilidade. A parceria entre os orçamentos da União e as concessões locais acelera empreendimentos cruciais, como os trechos da Linha 19-Celeste do Metrô e as obras do Rodoanel Norte. Ver os investimentos públicos finalmente se traduzirem em canteiros de obras ativos traz aquele alívio gostoso no peito de quem vislumbra, em um futuro próximo, trajetos mais rápidos, transporte moderno e a valorização direta dos imóveis da nossa região.\n\nOutro impacto direto no cotidiano das famílias do Jaçanã, Tremembé e Brasilândia é o fortalecimento de programas sociais federais e o incentivo ao comércio de bairro. A ampliação do poder de compra e a manutenção de repasses em áreas de alta vulnerabilidade injetam um ritmo dinâmico nas feiras livres, padarias e pequenos negócios locais. Caminhar pelas avenidas comerciais e ver as lojas movimentadas desperta um sentimento quentinho de otimismo e pertencimento, onde a estabilidade econômica se transforma em mesas fartas, empregos preservados e segurança financeira para o dia a dia.\n\nAlém da economia e dos trilhos, a destinação de verbas federais para áreas sociais amplia o acesso à cultura, educação e saúde nos equipamentos públicos do extremo Norte, como o CCJ e os CEUs regionais. O fortalecimento dessas redes comunitárias garante que a juventude da periferia encontre caminhos de capacitação, arte e lazer gratuito com dignidade e respeito. É o prazer reconfortante de ver o cuidado social chegar à porta de casa, transformando a rotina da Zona Norte em uma experiência mais justa, acolhedora e cheia de boas perspectivas.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031872425_images__28_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "A noite na Zona Norte",
-      "resumo": "A noite na Zona Norte desperta como um convite irrecusável para aqueles que buscam sacudir a poeira dos dias exaustivos, entregando-se ao deleite do convívio social refinado e do bom entretenimento. Sob a promessa de encontros memoráveis e conversas fluídas, a nobreza local se reúne para celebrar a vida em recantos emblemáticos que mesclam o charme tradicional à sofisticação boêmia contemporânea. ",
-      "texto": "Bairros consagrados como Santana, Jaçanã, Tucuruvi e Vila Guilherme convertem-se em verdadeiros impérios do júbilo, onde a arte de seduzir e conectar almas torna-se a principal virtude da madrugada.\n\nA serenidade das calçadas transforma-se em um palco vibrante ao longo das vias mais badaladas da região, destacando-se grandiosamente a imponente Avenida Luiz Dumont Villares e a movimentada Rua Augusta Vilela. Nestes corredores de puro fervor, os frequentadores encontram o antídoto ideal para os pesares rotineiros, envolvidos por atmosferas envolventes, luzes sugestivas e ritmos apaixonantes. Entre taças erguidas e olhares magnéticos, a atmosfera convida a desarmar os espíritos e permitir que o acaso orquestre novas e fascinantes amizades.\n\nPara governar esse cenário de encontros memoráveis, destacam-se três refúgios aclamados que dominam a arte do entretenimento noturno: o sofisticado Adega Original, o lendário Mandarim Bar e a festiva Gisela e o Marido. Cada qual com suas particularidades únicas, esses templos de descontração oferecem a mistura perfeita de boa gastronomia, drinques bem executados e um público vibrante pronto para encantar e se deixar encantar. Rendam-se, pois, aos atrativos da noite do norte e permitam que esses domínios reescrevam o vosso destino com encontros inesquecíveis.\n\nEdição - Julio Cesar Ferreira Silva",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792378575941_images__1_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "dinheiro",
-      "titulo": "Comércio da Rua Voluntários da Pátria inicia preparativos para o fim de ano",
-      "resumo": "Os comerciantes da Rua Voluntários da Pátria, um dos maiores centros de comércio a céu aberto da cidade, começaram os preparativos operacionais para a temporada de vendas de fim de ano. As lojas já apresentam decorações temáticas e reforço nos estoques.",
-      "texto": "Os comerciantes da Rua Voluntários da Pátria, um dos maiores centros de comércio a céu aberto da cidade, começaram os preparativos operacionais para a temporada de vendas de fim de ano. As lojas já apresentam decorações temáticas e reforço nos estoques.\n\nAs associações comerciais locais projetam um aumento no movimento de consumidores e estimam a contratação de trabalhadores temporários para reforçar o atendimento. A Polícia Militar também promete intensificar o policiamento ostensivo no calçadão durante o período comercial aquecido.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718824427_images__45_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Escolas estaduais de Tucuruvi realizam mostra de projetos de tecnologia",
-      "resumo": "Alunos de escolas estaduais localizadas no distrito de Tucuruvi participaram de uma feira tecnológica que reuniu trabalhos desenvolvidos em sala de aula ao longo do semestre. Os estudantes apresentaram protótipos de robótica, projetos de reciclagem e soluções digitais para o cotidiano.",
-      "texto": "Alunos de escolas estaduais localizadas no distrito de Tucuruvi participaram de uma feira tecnológica que reuniu trabalhos desenvolvidos em sala de aula ao longo do semestre. Os estudantes apresentaram protótipos de robótica, projetos de reciclagem e soluções digitais para o cotidiano.\n\nO evento contou com a presença de professores, familiares e avaliadores convidados, que premiaram os projetos mais inovadores. A direção regional de ensino ressaltou a importância da feira para estimular o pensamento crítico, a ciência e a tecnologia entre os jovens da periferia.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718663044_images__44_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "cultura",
-      "titulo": "Bairro do Limão ganha nova horta comunitária em terreno revitalizado",
-      "resumo": "Um espaço urbano que antes acumulação lixo e entulho no bairro do Limão foi transformado em uma horta comunitária por moradores locais. A iniciativa contou com apoio técnico de agrônomos voluntários e doações de mudas de hortaliças e ervas medicinais.",
-      "texto": "Um espaço urbano que antes acumulação lixo e entulho no bairro do Limão foi transformado em uma horta comunitária por moradores locais. A iniciativa contou com apoio técnico de agrônomos voluntários e doações de mudas de hortaliças e ervas medicinais.\n\nO projeto tem como objetivo incentivar o cultivo sustentável, criar um ponto de convivência comunitária e abastecer famílias da região com alimentos frescos. Os idealizadores planejam agora promover oficinas de horta comunitária para crianças de escolas do entorno.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718479753_images__43_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "cultura",
-      "titulo": "Linha de ônibus tem itinerário alterado para atender a Rosas de Ouro",
-      "resumo": "Manchete 02/11/26: Linha de ônibus tem itinerário alterado para atender a Rosas de Ouro",
-      "texto": "A partir deste fim de semana, os passageiros da linha 220P/10 (Term. Parada Inglesa – CTN) contarão com uma mudança importante em seu trajeto na Zona Norte. A SPTrans alterou o itinerário do coletivo para incluir uma parada em frente à quadra da escola de samba Rosas de Ouro, localizada na Freguesia do Ó, facilitando o acesso direto da população ao espaço cultural.\n\nA iniciativa faz parte do projeto \"Circuito Samba do Paulistar\" e tem como objetivo incentivar a cultura local e a mobilidade urbana durante os preparativos para o Carnaval. A alteração visa garantir o transporte gratuito e facilitado para moradores e turistas que desejam acompanhar os ensaios e eventos promovidos pela agremiação.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608307975_images__40_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "politica",
-      "titulo": "Defesa Civil Reforça Acolhimento Aos Moradores de Rua Com Queda de Temperatura",
-      "resumo": "Queda Brusca de Temperatura Aciona Rede de Acolhimento na Zona Norte: A chegada de uma massa de ar frio provocou chuva fraca, nevoeiro na Serra da Cantareira e fez os termômetros despencarem para 12°C nos bairros do Jaçanã, Tremembé e Santana, mobilizando a Defesa Civil municipal e equipes de assistência social para intensificar as abordagens noturnas e a distribuição de cobertores e refeições quentes aos moradores em situação de vulnerabilidade.",
-      "texto": "Uma massa de ar frio vinda do Sul provocou chuva fraca, denso nevoeiro nas encostas da Serra da Cantareira e fez os termômetros despencarem para 12°C na Zona Norte. A variação drástica do tempo impactou diretamente a rotina dos moradores dos bairros do Jaçanã, Tremembé e Santana.\n\nDiante do frio atípico, a Defesa Civil municipal e as equipes de assistência social intensificaram o acolhimento noturno, com distribuição de cobertores e refeições quentes. As abordagens foram concentradas nas proximidades dos Centros de Acolhida da região, priorizando populações em situação de vulnerabilidade expostas ao frio.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209362822_images__35_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Operação de Verão e Estado de Atenção pela Defesa Civil",
-      "resumo": "Manchete 23/10/26: Devido às pancadas de chuva típicas desta época do ano, a Defesa Civil estadual mantém o monitoramento preventivo e reforça as ações de manutenção nos córregos e galerias pluviométricas da Zona Norte (com atenção aos pontos baixos perto do Carandiru, Santana e Várzea da Barra Funda) para conter riscos de alagamento durante o fim de tarde.",
-      "texto": "A rotina nas alamedas e avenidas da Zona Norte ganha um contorno renovado de tranquilidade com a intensificação das ações preventivas de drenagem e monitoramento por parte da Defesa Civil e da Prefeitura. A atenção contínua voltada para a limpeza e o desassoreamento de córregos regionais — com foco especial nas galerias do Carandiru e nos pontos baixos das bacias locais — visa garantir a vazão rápida das águas pluviométricas. Essa presença constante das equipes de manutenção transmite um aconchego seguro, acalmando o coração de quem reside ou trabalha na região.\n\nSaber que a infraestrutura urbana está sendo zelada com rigor traz uma sensação profunda de alívio e bem-estar ao encarar o ritmo das tardes paulistanas. A visão das calçadas limpas, dos canais desimpedidos e dos agentes a postos nas vias de maior fluxo permite que a população transite com leveza e serenidade. O receio de transtornos dá lugar à confiança na proteção do próprio lar, permitindo que famílias e motoristas aproveitem o seu tempo com a mente leve e o espírito em paz.\n\nEssa harmonia entre a gestão técnica e a tranquilidade das pessoas cria uma atmosfera verdadeiramente aconchegante em bairros como Santana, Tucuruvi e Vila Maria. Chegar em casa sem percalços, deslizar pelas vias com a certeza do cuidado público e sentir a comunidade protegida despertam aquele prazer gostoso de pertencimento. É a demonstração diária de que, quando a prevenção e o carinho pelo espaço urbano andam juntos, a rotina na Zona Norte se transforma em uma experiência muito mais acolhedora e prazerosa.\n\nEdição - Julio Cesar Ferreira Silva.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792758938800_WhatsApp-Image-2025-12-01-at-15.40.56-800x435.webp",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "cultura",
-      "titulo": "Tucuruvi Celebra 123 Anos com Resgate Histórico e Foco no Comércio Local",
-      "resumo": "O distrito do Tucuruvi completa 123 anos de fundação com uma série de eventos culturais que homenageiam sua trajetória desde a época das chácaras e do Tramway da Cantareira. A data mobiliza comerciantes e associações de bairro, que aproveitam as celebrações para reforçar a identidade comunitária e impulsionar as vendas no comércio de rua ao longo da Avenida Mazzei e do entorno do terminal de metrô.",
-      "texto": "O Departamento de Homicídios e de Proteção à Pessoa (DHPP) assumiu as investigações sobre a morte do pai de santo Alexandre Amorim Coelho, de 55 anos, cujo corpo foi localizado em sua residência e terreiro de Candomblé na Brasilândia. O imóvel apresentava sinais claros de arrombamento e reviravolta, indicando que o local foi invadido e violentado antes do disparo que vitimou o líder religioso.\n\nO caso foi inicialmente registrado pelo 72º Distrito Policial (Vila Penteado) e transferido para a equipe especializada devido à gravidade do crime. Câmeras de segurança da vizinhança já foram apreendidas e registraram o momento exato em que um indivíduo pulou o muro da propriedade; a Polícia Civil trabalha agora na identificação do suspeito e no esclarecimento da motivação do homicídio.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120640075_images__33_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "entretenimento",
-      "titulo": "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt",
-      "resumo": "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt: O circuito cultural da Zona Norte ganha destaque com a estreia do espetáculo Sarah Bernhardt em São Paulo no teatro do Sesc Santana, montagem que revisita a histórica turnê da célebre atriz francesa pela capital paulista no final do século XIX e consolida o espaço da Avenida Luiz Dumont Villares como um importante polo de difusão artística na região.",
-      "texto": "A agenda cultural da Zona Norte ganha destaque com a estreia da peça Sarah Bernhardt em São Paulo no teatro do Sesc Santana. A montagem revisita a emblemática turnê da célebre atriz francesa pela capital paulista no final do século XIX, trazendo um panorama das artes cênicas da época.\n\nA atração movimenta o circuito cultural local, atraindo público geral e estudantes para o espaço situado na Avenida Luiz Dumont Villares. A produção reforça o papel do Sesc Santana como um dos principais polos de formação e difusão artística acessível na região.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209510996_images__36_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual",
-      "resumo": "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual: O Centro Cultural da Juventude Ruth de Souza (CCJ), situado na Parada Inglesa, abriu inscrições para novas turmas de oficinas gratuitas voltadas à formação prática em audiovisual, fotografia e edição digital, oferecendo capacitação técnica para jovens da periferia que buscam ingressar no mercado de trabalho ou desenvolver projetos independentes.",
-      "texto": "O Centro Cultural da Juventude Ruth de Souza (CCJ), na Parada Inglesa, abriu inscrições para novas turmas de oficinas gratuitas de formação em audiovisual, fotografia e edição digital. As aulas práticas oferecem contato direto com equipamentos profissionais e métodos de produção independente.\n\nO projeto é voltado prioritariamente para jovens dos bairros da periferia da Zona Norte em busca de capacitação técnica para o mercado de trabalho. A iniciativa busca fortalecer a economia criativa e incentivar produções culturais autônomas na comunidade.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209521627_images__37_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "politica",
-      "titulo": "Cenário Político e Oportunidades para empresas na Zona Norte: Infraestrutura, Crédito e Posicionamento Estratégico",
-      "resumo": "Manchete 11hr jornal da zona norte 26/10/26: A consolidação do poder estadual sob a gestão de Tarcísio de Freitas e o direcionamento de investimentos da União criam um cenário de forte previsibilidade para os negócios na Zona Norte de São Paulo, onde pequenas e médias empresas podem se beneficiar da aceleração de obras de infraestrutura — como a Linha 19-Celeste do Metrô e o saneamento da Sabesp —, devendo se posicionar estrategicamente em eixos de alta circulação e recorrer a linhas de crédito acessíveis pelos canais da Desenvolve SP (desenvolvesp.com.br) e do Banco do Povo Paulista (bancodopovo.sp.gov.br) para expandir operações e capturar o aumento do consumo local.",
-      "texto": "O advento simultâneo da manutenção do poder no âmbito do Estado e do alinhamento às forças da União estabelece um raro período de estabilidade administrativa, no qual a prosperidade dependerá da rápida compreensão das intenções de quem governa. Enquanto as diretrizes federais garantem a injeção contínua de recursos e a sustentação do consumo básico nas periferias, a gestão estadual consolida seu empenho em atrair a iniciativa privada para erguer grandes estruturas. O homem de negócios perspicaz não perde tempo em julgamentos morais sobre as alianças firmadas, mas examina friamente onde os orçamentos serão aplicados, adaptando sua conduta para extrair o máximo proveito das conjunturas que se desenham.Para suprir as exigências de capital e expandir as operações neste novo ciclo, o crédito subsidiado encontra-se acessível por meio dos portais oficiais da Desenvolve SP (desenvolvesp.com.br), agência de fomento dedicada ao financiamento de projetos e capital de giro para empresas paulistas, bem como na plataforma do Banco do Povo Paulista (bancodopovo.sp.gov.br), voltada ao microcrédito com taxas reduzidas. Tais canais governamentais constituem os instrumentos adequados para fortalecer o caixa e assegurar os ativos necessários antes que a concorrência perceba a movimentação dos ventos.   Quanto ao posicionamento ideal, a sabedoria exige que o comerciante se coloque exatamente nos pontos de convergência entre as grandes obras estaduais e o fluxo de consumo impulsionado pela União. Estabelecer-se no entorno dos eixos viários e de mobilidade em expansão na Zona Norte — como o corredor da futura Linha 19-Celeste e as áreas de modernização do saneamento — garante a preferência no atendimento às demandas que dali surgirão. Aquele que souber aliar a elegância no servir à leitura atenta dos movimentos do Estado conquistará não apenas a simpatia da clientela local, mas a perenidade de sua fortuna.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031999266_images__31_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Queda Brusca de Temperatura Aciona Rede de Acolhimento na Zona Norte",
-      "resumo": "A chegada de uma massa de ar frio vinda do sul trouxe chuva fraca, nevoeiro na Serra da Cantareira e fez os termômetros despencarem para 12°C nos bairros do Jaçanã, Tremembé e Santana. Em resposta às baixas temperaturas, a Defesa Civil municipal e as equipes de assistência social intensificaram as abordagens noturnas e a distribuição de cobertores e refeições quentes nas Centros de Acolhida da região, priorizando pessoas em situação de vulnerabilidade.",
-      "texto": "A chegada de uma massa de ar frio provocou uma mudança brusca no tempo em São Paulo, trazendo chuva fraca, nevoeiro na Serra da Cantareira e fazendo os termômetros despencarem para 12°C. A variação drástica de temperatura afetou diretamente a rotina dos moradores dos bairros do Jaçanã, Tremembé e Santana, com máximas que não ultrapassaram os 21°C ao longo do dia.\n\nEm resposta ao tempo gelado, a Defesa Civil municipal e as equipes de assistência social intensificaram as abordagens noturnas e a distribuição de cobertores, agasalhos e refeições quentes. As ações foram concentradas nas imediações dos Centros de Acolhida da região, priorizando o atendimento emergencial a pessoas em situação de rua e vulnerabilidade social expostas ao frio intenso.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120629427_images__32_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "negocios",
-      "titulo": "SPTrans Realiza Adequações Operacionais nas Plataformas do Terminal Santana",
-      "resumo": "A SPTrans e a Subprefeitura Santana/Tucuruvi iniciaram intervenções de manutenção no piso e nas estruturas de embarque do Terminal Santana. Agentes de trânsito e orientação estão posicionados nas plataformas e nos acessos à Estação Santana do Metrô para organizar o fluxo de passageiros e garantir a fluidez das linhas de ônibus municipais durante a realização dos reparos.",
-      "texto": "A SPTrans e a Subprefeitura Santana/Tucuruvi iniciaram intervenções técnicas de reparo e manutenção no piso e nas estruturas de embarque do Terminal Santana. As obras buscam corrigir desgastes no pavimento provocados pelo tráfego intenso de veículos pesados e melhorar as condições de acessibilidade para milhares de passageiros diários.\n\nPara minimizar os impactos na rotina dos usuários, agentes de orientação e fiscais de trânsito foram posicionados nas plataformas e nas alças de acesso à Estação Santana do Metrô. A operação organiza a fila dos ônibus, orienta sobre o remanejamento temporário de algumas linhas e garante a segurança do fluxo de pedestres durante a execução dos serviços.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120648077_images__34_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "politica",
-      "titulo": "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo",
-      "resumo": "Manchete 11hr jornal da zona norte 26/10/26: A vitória de Tarcísio de Freitas no governo de São Paulo acelera a execução de grandes obras de infraestrutura na Zona Norte através do modelo de concessões e parcerias público-privadas, garantindo prioridade ao avanço da Linha 19-Celeste do Metrô e direcionando novos investimentos da Sabesp privatizada para o saneamento e desassoreamento de córregos críticos como o Carandiru, ao mesmo tempo em que a ampliação do monitoramento tecnológico e do policiamento ostensivo busca reforçar a segurança e a fluidez nos principais corredores viários do Tremembé, Jaçanã e Santana.",
-      "texto": "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo, priorizando parcerias público-privadas e leilões de infraestrutura. A manutenção dessa diretriz estadual coloca em posição central o avanço da Linha 19-Celeste do Metrô, com foco na aceleração dos processos de desapropriação e no detalhamento de engenharia para conectar bairros periféricos diretamente ao centro da capital.\n\nNo campo dos serviços essenciais, a privatização da Sabesp sob a gestão estadual direciona novos aportes financeiros para o cumprimento das metas de saneamento básico na região. Moradores de bairros como Jaçanã e Tremembé acompanham a expectativa de intensificação nas obras de desassoreamento, canalização e limpeza do Córrego Carandiru e de outros leitos d'água, prevenindo alagamentos históricos em períodos de chuvas intensas.\n\nParalelamente, o plano estadual focado na ampliação do monitoramento tecnológico e no reforço do policiamento ostensivo busca diminuir os índices de criminalidade nos grandes corredores viários da Zona Norte. O impacto dessas medidas visa aumentar a segurança em locais de alta circulação, como a Avenida Cruzeiro do Sul e o Terminal Santana, influenciando diretamente a mobilidade diária e a percepção de tranquilidade da comunidade local.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031878579_images__29_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "politica",
-      "titulo": "Acessibilidade Eleitoral no Tremembé",
-      "resumo": "Manchete 11hr jornal da zona norte 25/10/26: Acessibilidade Eleitoral no Tremembé: Mais de 4,6 mil eleitores ganharam novos locais de votação com infraestrutura modernizada e vias sinalizadas, oferecendo mais conforto e acolhimento para a cidadania local.",
-      "texto": "Remanejamento Eleitoral Mobiliza Mais de 4,6 Mil Eleitores no Tremembé   A Justiça Eleitoral confirmou a alteração no local de votação de mais de 4,6 mil eleitores do distrito do Tremembé neste domingo (25). A mudança visa proporcionar instalações mais acessíveis, confortáveis e modernas para a comunidade local exercer seu papel cidadão. A reorganização dos fluxos nas vias do entorno conta com o apoio de agentes de trânsito e voluntários, garantindo que o trajeto até as novas urnas seja feito de maneira calma, sinalizada e sem sobressaltos.   Caminhar pelas alamedas arborizadas do Tremembé sabendo que a infraestrutura comunitária foi pensada para acolher melhor a todos traz um sentimento muito quentinho de pertencimento. Ver o envolvimento da vizinhança e o ambiente harmonioso nos locais de atendimento enche o peito de orgulho social. Essa atenção especial com o bem-estar dos moradores transforma a rotina do bairro em uma celebração viva de cidadania e apoio mútuo.A experiência de ser recebido em espaços mais bem equipados devolve ao cidadão a leveza de cumprir seus compromissos com total serenidade. A satisfação de ver o Tremembé evoluir e oferecer condições cada vez mais dignas aos seus idosos e famílias desperta uma alegria genuína. É a força do espírito comunitário da Zona Norte se manifestando na prática e gerando conforto para toda a região.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792947038928_images__26_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "cultura",
-      "titulo": "Padarias da ZN Finalistas no Padocaria SP",
-      "resumo": "Manchete 11hr jornal da zona norte 25/10/26: Padarias da ZN Finalistas no Padocaria SP: Cinco estabelecimentos de Santana, Freguesia do Ó e Parada Inglesa brilham na fase final do prêmio, celebrando a tradição artesanal, o aconchego e a rica gastronomia da região.",
-      "texto": "Finalistas da Zona Norte Brilham no Concurso Padocaria SP 2026\nCinco tradicionais padarias da Zona Norte garantiram presença na fase final do concurso Padocaria SP 2026, celebrando a excelência gastronômica e o carinho artesanal que marcam as manhãs da região. Bairros como Santana, Freguesia do Ó e Parada Inglesa mostram a força do seu comércio local com balcões repletos de pães quentinhos, vitrines apetitosas e aquele café passado na hora. A premiação movimenta os estabelecimentos do entorno, atraindo moradores e visitantes em busca de sabores inesquecíveis.\n\nSentir o aroma envolvente do pão recém-saído do forno e ser acolhido com o sorriso generoso dos padeiros e atendentes desperta um prazer acolhedor e profundo. Parar em uma dessas padarias premiadas é viver um ritual delicioso que alimenta a alma e aproxima vizinhos em torno da mesma mesa. Essa tradição afetuosa reflete a essência do estilo de vida da Zona Norte, onde o comer bem anda de mãos dadas com o calor humano.\n\nA presença marcante das padarias locais no topo do ranking paulistano enche a comunidade de orgulho e satisfação. Celebrar os estabelecimentos que fazem parte da história das nossas famílias é valorizar o empenho e a dedicação diária da nossa gente. É a deliciosa certeza de que, na Zona Norte, o cuidado artesanal transforma o cotidiano em momentos inesquecíveis de puro bem-estar e prazer.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792947125197_images__27_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "turismo",
-      "titulo": "Exposição Histórica sobre o Metrô e a Gastronomia de Santana Cativa Passageiros",
-      "resumo": "Manchete 11hr jornal da zona norte 23/10/26:\nExposição Histórica A mostra cultural \"Santana: História, Metrô, Gastronomia e Cultura\", em cartaz no movimentado Terminal Santana, transforma a rotina de quem circula pela região em uma experiência imersiva cheia de afeto e nostalgia. O acervo reúne painéis fotográficos e registros marcantes que resgatam o desenvolvimento do bairro, celebrando desde a chegada da Linha 1-Azul até a rica tradição gastronômica da região. Parar por alguns minutos para contemplar as imagens antigas desperta um sentimento quentinho no peito, permitindo que moradores e trabalhadores se reconectem com as origens da Zona Norte e sintam um orgulho genuíno da terra onde vivem e constroem suas histórias.",
-      "texto": "Exposição Histórica sobre o Metrô e a Gastronomia de Santana Cativa Passageiros\nA mostra cultural \"Santana: História, Metrô, Gastronomia e Cultura\", em cartaz no movimentado Terminal Santana, transforma a rotina de quem circula pela região em uma experiência imersiva cheia de afeto e nostalgia. O acervo reúne painéis fotográficos e registros marcantes que resgatam o desenvolvimento do bairro, celebrando desde a chegada da Linha 1-Azul até a rica tradição gastronômica da região. Parar por alguns minutos para contemplar as imagens antigas desperta um sentimento quentinho no peito, permitindo que moradores e trabalhadores se reconectem com as origens da Zona Norte e sintam um orgulho genuíno da terra onde vivem e constroem suas histórias.\n\nCaminhar entre os painéis enquanto a cidade se movimenta ao redor cria uma pausa apetitosa no ritmo acelerado do cotidiano paulistano. A visão dos antigos bondes, das primeiras fachadas comerciais e dos bares tradicionais que atravessaram gerações traz um alívio gostoso, lembrando a todos do valor da nossa memória coletiva. Essa atmosfera acolhedora envolve quem passa pelo terminal, transformando uma simples caminhada até o transporte em um momento leve de descoberta e conexão com o coração de Santana.\n\nEssa celebração da identidade local fortalece o sentimento de pertença e enche o peito de quem ama a Zona Norte. Observar a evolução de Santana ao longo das décadas desperta a certeza de estar em um lugar vivo, pulsante e cheio de cuidado comunitário. É o prazer sutil de ver o passado e o presente se abraçarem no meio do terminal, inspirando cada visitante a olhar para o seu próprio bairro com mais carinho, respeito e admiração.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792789522780_images__22_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "politica",
-      "titulo": "Chegada da Linha 19-Celeste do Metrô",
-      "resumo": "Manchete 23/10/26: Novos detalhes divulgados pelo portal Via Trolebus reforçam o planejamento para a construção da Linha 19-Celeste. O projeto prevê a criação de pelo menos 5 estações na Zona Norte — beneficiando diretamente bairros como Vila Maria, Vila Sabrina e Jardim Julieta —, além de preparar a logística para as escavações dos \"tatuzões\" que ligarão a região central até Guarulhos.",
-      "texto": "A mobilidade urbana na Zona Norte de São Paulo está prestes a vivenciar uma das maiores transformações de sua história recente com os novos avanços do projeto da Linha 19-Celeste do Metrô. A futura linha promete conectar o centro da capital, a partir do Anhangabaú, até o município de Guarulhos, cortando diretamente bairros populosos da Zona Norte que historicamente carecem de acesso direto à rede sobre trilhos. O impacto na qualidade de vida dos moradores promete ser imediato, reduzindo drasticamente o tempo de deslocamento até o centro financeiro e comercial da metrópole.\n\nDentre as novidades que mais entusiasmam a comunidade local está a confirmação de pelo menos cinco estações estratégicas na região. Bairros como Vila Maria, Vila Sabrina e Jardim Julieta finalmente ganharão o seu espaço no mapa metroviário, encurtando distâncias e valorizando todo o entorno residencial e comercial. Sentir a promessa de trilhos modernos chegando mais perto de casa traz aquele alívio gostoso no peito de quem enfrenta o trânsito diário, desenhando um horizonte de deslocamentos fluidos, viagens confortáveis e muito mais tempo livre para aproveitar com a família.\n\nA complexidade da engenharia envolvida também impressiona e reforça o orgulho de ver o desenvolvimento pulsar na Zona Norte. A operação contará com o trabalho de grandiosas escavadoras tuneladoras, conhecidas carinhosamente como \"tatuzões\", equipadas com tecnologias de ponta e inéditas no país para perfurar o solo sem interromper a vida na superfície. É o cuidado com a infraestrutura traduzido em bem-estar e modernidade, devolvendo aos bairros da região o frescor revigorante do progresso e o prazer de viver em uma comunidade cada vez mais conectada.\n\nEdição - Julio Cesar Ferreira Silva.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792758928863_images__20_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": " Ação nas Chuvas no Jaçanã",
-      "resumo": "Manchete 11hr jornal da zona norte 25/10/26: Alerta e Ação nas Chuvas no Jaçanã: Monitoramento intensivo da Defesa Civil garante rápida drenagem e vias desimpedidas após altos volumes de chuva no Jaçanã, trazendo segurança e alívio para os moradores.",
-      "texto": "1. Chuvas Fortes Mobilizam Defesa Civil e Registram Alto Volume no Jaçanã\nAs chuvas intensas que atingiram a capital entre a madrugada e a manhã deste domingo (25) colocaram a Zona Norte sob monitoramento constante da Defesa Civil e do CGE. O distrito do Jaçanã registrou um dos maiores índices pluviométricos da cidade (38,8 mm na estação do CEU Jaçanã), ativando o estado de atenção ao longo da Marginal Tietê e dos córregos locais. A sensação de alívio vem com a resposta rápida das equipes de manutenção e limpeza, que atuam para manter as vias desimpedidas e garantir que a população transite com paz de espírito.\n\nSentir que a cidade está protegida por ações preventivas contínuas traz um aconchego reconfortante para o lar durante o fim de semana. A visão dos canais de drenagem respondendo bem ao fluxo de água afasta receios e renova aquele bem-estar gostoso de estar seguro em casa. É a tranquilidade de ver a comunidade amparada pelo cuidado público, permitindo que cada morador aproveite o dia com a mente leve e o coração acolhido.\n\nA chegada da massa de ar frio promete declínio de temperatura nas próximas horas, convidando a uma pausa relaxante antes do início de mais uma semana. Desfrutar do aconchego da Zona Norte sob um clima fresco e calmo desperta aquele prazer sutil de desacelerar. O cuidado técnico aliado ao afeto com a rotina do bairro transforma o domingo num momento de puro conforto e acolhimento para as famílias da região.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792946565087_images__25_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Avenida Nova",
-      "resumo": "A Avenida Luiz Dumont Villares, carinhosamente conhecida como Avenida Nova, destaca-se como uma das artérias mais vibrantes e dinâmicas da Zona Norte de São Paulo.",
-      "texto": "Estendendo-se entre bairros emblemáticos como Santana, Parada Inglesa e Tucuruvi, a via combina modernidade e praticidade urbana ao abrigar uma excelente infraestrutura de transportes, ciclofaixas e áreas verdes que convidam ao convívio comunitário diário.\n\nDurante o dia, a avenida exibe uma intensa vocação comercial e de serviços, atraindo moradores e visitantes que buscam desde opções de gastronomia diversificada até conveniências variadas. Com as suas calçadas amplas e o seu fluxo constante de pessoas, o local transformou-se num ponto de referência incontornável para quem valoriza a conveniência e o dinamismo do ecossistema urbano paulistano.\n\nQuando a noite cai, a Avenida Nova revela a sua faceta mais célebre, convertendo-se num dos principais polos de entretenimento e vida boémia da região. Repleta de bares, restaurantes e espaços de lazer aclamados, a via transforma-se num verdadeiro ponto de encontro para descontração, onde conversas animadas, música ao vivo e uma atmosfera acolhedora ditam o ritmo de momentos inesquecíveis.\n\nEdição - Julio Cesar Ferreira Silva",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792430781823_barguile-baressp-1-min.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "dinheiro",
-      "titulo": "Feira do Jaçanã",
-      "resumo": "As feiras livres do Jaçanã continuam a se consolidar como o verdadeiro coração comunitário da Zona Norte de São Paulo, reunindo semanalmente centenas de moradores em busca de produtos frescos e convivência.",
-      "texto": "Pelas calçadas do bairro, barracas coloridas e organizadas exibem o melhor da hortifrúti diretamente de produtores locais, oferecendo uma variedade que combina qualidade, preço acessível e sustentabilidade para a mesa das famílias regionais.\n\nAlém do abastecimento essencial, esses espaços promovem uma forte redescoberta da identidade cultural e da tradição boêmia do Jaçanã. Entre conversas descontraídas, encontros entre vizinhos e o irrecusável aroma dos tradicionais pastéis com caldo de cana, as feiras livres transformam a rotina matinal em um evento festivo que fortalece os laços sociais do bairro.\n\nOs investimentos em infraestrutura e limpeza urbana têm garantido a organização e o conforto tanto dos feirantes quanto dos frequentadores durante os dias de evento. Com isso, o Jaçanã reforça sua vocação de acolhimento e vitalidade, provando que a tradição das feiras de rua permanece essencial para a economia local e o bem-estar da população.\n\nEdição - Julio Cesar Ferreira Silva",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431735179_images__5_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "negocios",
-      "titulo": "Expo Center Norte",
-      "resumo": "Manchete 23/10/26: \nO Expo Center Norte, localizado no bairro da Vila Guilherme, mobiliza o fluxo da região ao sediar os dias finais da Fenasan (Feira Nacional de Saneamento e Meio Ambiente) e a imersão de negócios do evento Ponto Fora da Curva. A movimentação dos pavilhões reflete no aumento do tráfego nos acessos pela Marginal Tietê e pela Avenida Otto Baumgart.",
-      "texto": "Grandes Feiras no Expo Center Norte Movimentam a Vila GuilhermeO Expo Center Norte, cravado no coração da Vila Guilherme, vibra como o epicentro dos grandes negócios e eventos da capital paulista. O pavilhão sedia encontros de alcance nacional e internacional, reunindo milhares de congressistas, empresários e especialistas que transformam o ritmo da região. Esse movimento intenso injeta uma energia contagiante pelas vias do entorno, acendendo o dinamismo da Zona Norte e consolidando a região como um polo indispensável para o turismo de negócios.   Cruzar o complexo da Avenida Otto Baumgart durante esses dias é ser envolvido por uma atmosfera efervescente de oportunidades e trocas de conhecimento. A presença massiva de visitantes reflete-se imediatamente no aquecimento dos hotéis, nas mesas fartas dos restaurantes de Santana e no movimento constante dos serviços locais. Ver o comércio do bairro pulsar com tanta força desperta uma satisfação calorosa, trazendo aquela sensação de orgulho comunitário ao presenciar a Zona Norte acolhendo grandes líderes e impulsionando a economia do estado.Além da relevância financeira, a estrutura do centro de convenções alia inovação técnica a um cuidado crescente com o conforto e a acessibilidade de quem por ali circula. A experiência de vivenciar um espaço amplo, moderno e bem organizado proporciona momentos de fluidez e encontros enriquecedores. É o prazer sutil de ver a tradição acolhedora dos bairros do entorno se misturar com o que há de mais avançado em infraestrutura urbana, garantindo leveza e satisfação tanto para os moradores quanto para quem visita a região.\n\nEdição - Julio Cesar Ferreira Silva.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792758934767_images__21_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "cultura",
-      "titulo": "A Força da Comunidade no Jaçanã e Tremembé",
-      "resumo": "Nesta sexta-feira, 23 de outubro de 2026, a Zona Norte de São Paulo combina o otimismo do progresso urbano com a vibração da sua vida comunitária: enquanto os avanços da futura Linha 19-Celeste do Metrô e as obras de drenagem no Córrego Carandiru garantem mais mobilidade e tranquilidade contra alagamentos, o encerramento dos grandes eventos no Expo Center Norte aquece o comércio local; paralelamente, a energia acolhedora dos bairros se manifesta do happy hour na Avenida Nova às batidas da Batalha da Norte e aos ensaios na Mocidade Alegre, reafirmando o Jaçanã, o Tremembé e toda a região como polos pulsantes de cultura, negócios e bem-estar.",
-      "texto": "A Força da Comunidade no Jaçanã e Tremembé: Entre a Tradição e o Pertencimento\n\nEntre as encostas da Serra da Cantareira e as vias tradicionais do extremo Norte, o cotidiano do Jaçanã e do Tremembé ganha vida em lugares icônicos como o Jardim Jaçanã, a Vila Albertina e o Filhos da Terra. Onde a poesia do samba imortalizada no rádio se conecta ao ritmo diário das feiras de rua e das praças movimentadas, revela-se um ecossistema vibrante marcado pela solidariedade de quem cuida do próprio território. Caminhar pelas calçadas dessa região é sentir a textura da história paulistana se entrelaçar ao calor humano, criando uma atmosfera apetitosa de convivência urbana.\n\nNas alamedas do Jardim Jaçanã, na efervescência da Vila Albertina e nos becos cheios de arte do Filhos da Terra, o sentimento de pertença se traduz em ações coletivas que aquecem o peito e fortalecem os laços sociais. O movimento constante das associações de bairro, os projetos culturais para os jovens e o comércio local de proximidade transformam as esquinas em verdadeiros pontos de encontro e celebração. A sensação gostosa de ver a vida pulsar com tanta autenticidade traz aquele alívio no peito, permitindo que cada morador desfrute da leveza e do acolhimento característicos da Zona Norte.\n\nA harmonia entre a natureza exuberante do entorno da Cantareira e a energia contagiante da gente local confere a essas periferias uma identidade única na capital. O prazer de trocar um cumprimento caloroso na padaria do bairro, ver as crianças brincando nas praças e sentir a comunidade unida em prol de melhorias contínuas renova o espírito e desperta um bem-estar genuíno. É a certeza de que a maior riqueza dessas quebradas reside na força humana e no afeto que pulsa, sem pausa, no coração da região.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792788071936_jardim-filhos-da-terra-zona-norte-v0-f8u96phb03nd1.webp",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "esportes",
-      "titulo": "Final do campeonato de várzea do Jaçanã reúne torcida no domingo",
-      "resumo": "Os dois finalistas chegam invictos. Entrada gratuita.",
-      "texto": "Dentre as agremiações mais tradicionais que marcam o ecossistema esportivo da região, destacam-se o A.A. Anhanguera, o G.D.R. 7 de Setembro da Água Fria e o S.C. Americano das Imbiras, clubes varzeanos emblemáticos que moldaram a cultura futebolística local nas divisões de várzea e torneios comunitários.\n\nFundada na primeira metade do século XX em Santana, a Associação Atlética Anhanguera destaca-se como um dos polos poliesportivos e sociais mais antigos da Zona Norte, promovendo torneios amadores de campo e salão que movimentam atletas de diferentes faixas etárias. Da mesma forma, o Grêmio Esportivo e Recreativo 7 de Setembro, situado no bairro da Água Fria, carrega décadas de tradição em campeonatos de futebol de várzea da capital paulista, servindo como um ponto de encontro comunitário para os moradores locais.\n\nCompletando essa rica trajetória esportiva na região, o Sport Club Americano das Imbiras mantém viva a essência do futebol de bairro, onde os campos e sedes sociais funcionam como centros de lazer, integração e identidade cultural. Esses clubes continuam a desempenhar um papel fundamental na formação de novos talentos e na preservação da paixão pelo futebol popular na Zona Norte.\n\nEdição - Julio Cesar Ferreira Silva",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792437995323_images__10_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "politica",
-      "titulo": "Frota de Ônibus Elétricos Traz Ar Mais Puro para as Avenidas da Zona Norte",
-      "resumo": "Manchete 11hr jornal da zona norte 23/10/26: a expansão da frota de ônibus elétricos na capital paulista reflete-se de forma direta no cotidiano da Zona Norte, que conta com novos veículos silenciosos e de emissão zero em circulação. A substituição gradual dos motores a diesel garante viagens muito mais suaves, reduzindo significativamente a poluição sonora e atmosférica ao longo das grandes vias como a Marginal Tietê e a Avenida Cruzeiro do Sul. Embarcar em um transporte moderno e climatizado proporciona uma agradável sensação de conforto e cuidado urbano, permitindo que a população desfrute de um deslocamento limpo, silencioso e revigorante pela cidade.",
-      "texto": "Frota de Ônibus Elétricos Traz Ar Mais Puro para as Avenidas da Zona Norte\nA expansão da frota de ônibus elétricos na capital paulista reflete-se de forma direta no cotidiano da Zona Norte, que conta com novos veículos silenciosos e de emissão zero em circulação. A substituição gradual dos motores a diesel garante viagens muito mais suaves, reduzindo significativamente a poluição sonora e atmosférica ao longo das grandes vias como a Marginal Tietê e a Avenida Cruzeiro do Sul. Embarcar em um transporte moderno e climatizado proporciona uma agradável sensação de conforto e cuidado urbano, permitindo que a população desfrute de um deslocamento limpo, silencioso e revigorante pela cidade.\n\nA sensação de deslizar pelas avenidas sem o ruído ensurdecedor ou o cheiro do combustível antigo renova o prazer de transitar pela metrópole. Ver a tecnologia trabalhar em favor do bem-estar diário traz um alívio profundo no peito, garantindo que trabalhadores e estudantes cheguem aos seus destinos com a mente descansada e o corpo relaxado. A leveza dentro dos veículos contagia os passageiros, transformando o trajeto do transporte público em um momento agradável de pausa e conforto.\n\nAlém do ganho imediato no trajeto, a presença desses veículos limpos espalha uma onda de frescor por todos os bairros cortados pelas linhas. Respirar um ar mais puro nas calçadas e sentir o barulho do tráfego diminuir traz uma satisfação genuína e reforça o orgulho de ver a Zona Norte na vanguarda da sustentabilidade. É o cuidado com o meio ambiente traduzido em saúde, leveza e qualidade de vida no dia a dia da comunidade.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792790082272_images__24_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "entretenimento",
-      "titulo": "Paquera e o Afeto Espontâneo",
-      "resumo": "A energia do Carnaval de rua na Zona Norte de São Paulo transcende a simples celebração da folia, convertendo as artérias dos bairros tradicionais num autêntico cenário de conquista, descontração e beijos de rua.",
-      "texto": "Quando os blocos e fanfarras ocupam as vias públicas, a atmosfera festiva contagia foliões de todas as idades, transformando a paquera e o afeto espontâneo na grande atração das tardes de festa.\n\nBairros como Santana, Freguesia do Ó e Tucuruvi abrigam blocos de rua que atraem multidões dispostas a desarmar o estresse do quotidiano e vivenciar encontros e paixões passageiras. Sob o ritmo das marchinhas, do samba e dos ritmos baianos, os corredores de folia tornam-se o refúgio perfeito para quem busca flertes ligeiros, troca de olhares marcantes e abraços calorosos em pleno espaço público.\n\nAlém da liberdade expressa nos festejos, o movimento carnavalesco fortalece o comércio boémio e a integração da comunidade local, transformando esquinas e calçadas em pontos de reencontro. Entre confetes, serpentinas e bebidas bem geladas, a tradição dos beijos de rua na Zona Norte renova o espírito festivo da região e celebra a diversidade e o afeto urbano.\n\nEdição - Julio Cesar Ferreira Silva",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792438803527_JALPB6NZ5VPALGDRP3GN2WL5VI.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "turismo",
-      "titulo": "Roteiro de um dia pela Zona Norte: parque, mirante.",
-      "resumo": "Do verde da Cantareira aos bares tradicionais de Santana.",
-      "texto": "Com uma vasta área de vegetação nativa da Mata Atlântica, o local oferece aos visitantes belíssimos lagos, trilhas para caminhada e um contato íntimo com a natureza, sendo o ponto de encontro ideal para famílias e praticantes de esportes que buscam tranquilidade no cotidiano urbano.\n\nLogo ao lado, a Serra da Cantareira abriga o imponente Núcleo Pedra Grande, um dos pontos mais fascinantes para o ecoturismo na capital paulista. Ao final de uma caminhada em meio à floresta preservada, os visitantes chegam a um mirante natural situado a mais de mil metros de altitude, de onde é possível contemplar uma vista panorâmica verdadeiramente espetacular de toda a metrópole.\n\nCompletando o roteiro de atrações regionais, a icônica Avenida Luiz Dumont Villares — a conhecida Avenida Nova — consolida-se como o grande polo gastronômico e de entretenimento noturno da Zona Norte. Reunindo uma ampla variedade de bares, restaurantes e opções culturais, a via é o destino perfeito para quem quer aproveitar a vida boêmia local, degustar a culinária paulistana e vivenciar a calorosa hospitalidade do ecossistema dos bairros do entorno.\n\nEdição - Julio Cesar Ferreira Silva",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792443059735_images__12_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "cultura",
-      "titulo": "Batalhão Tobias de Aguiar — a ROTA",
-      "resumo": "Para contextualizar historicamente as origens da tensão entre o estado paulista e o Governo Federal, a Revolução Constitucionalista de 1932 foi o maior conflito armado ocorrido no estado de São Paulo, marcando decisivamente a memória da capital paulista e de instituições históricas sediadas na região.",
-      "texto": "Cronologia da Revolução Constitucionalista de 1932\n23 de Maio de 1932: Durante um protesto no centro da capital contra o Governo Provisório de Getúlio Vargas, quatro estudantes (Martins, Miragaia, Dráusio e Camargo) são mortos por forças getulistas. Surge a sigla e o movimento M.M.D.C., que mobilizou a sociedade paulista e voluntários para a causa constitucionalista.\n\n9 de Julho de 1932: É deflagrada oficialmente a Revolução Constitucionalista de 1932. Tropas da Força Pública de São Paulo (atual Polícia Militar, incluindo o histórico Batalhão Tobias de Aguiar — a ROTA) e voluntários civis pegam em armas exigindo a restauração da ordem democrática e a promulgação de uma nova Constituição.\n\n10 de Julho a Setembro de 1932: Ocorrem intensos combates ao longo das fronteiras do estado de São Paulo (Setores Norte, Leste e Sul), onde voluntários e batalhões de choque paulistas enfrentam as forças do Governo Federal. Na capital, locais de instrução e alojamentos na Zona Norte e região central serviram como pontos estratégicos de apoio e mobilização das tropas voluntárias.\n\n2 de Outubro de 1932: Após quase três meses de cerco econômico e militar pelas tropas federais, o comando militar paulista assina a rendição e o cessar-fogo oficial na cidade de Cruzeiro (SP), encerrando o conflito armado.\n\n16 de Julho de 1934: Apesar da derrota militar no campo de batalha, o movimento alcançou seu objetivo político com a promulgação da Constituição Brasileira de 1934, garantindo o retorno da ordem constitucional no país.\n\nEdição - Julio Cesar Ferreira Silva",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792444563336_images__15_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Drenagem no Córrego Carandiru",
-      "resumo": "Manchete 22/10/26: A Prefeitura reforçou nesta semana as ações de limpeza e desassoreamento ao longo do Córrego Carandiru e de galerias de águas pluviais entre Santana e a Vila Guilherme. A medida preventiva visa aumentar a capacidade de escoamento e reduzir o risco de alagamentos nos pontos críticos da região durante a temporada de fortes chuvas de primavera.",
-      "texto": "A fiscalização e as obras de drenagem no Córrego Carandiru avançam com um ritmo envolvente que renova o alívio de quem vive entre Santana e a Vila Guilherme. O cuidado minucioso com a limpeza das galerias transforma o cenário urbano, desenhando um horizonte de proteção e aconchego para a comunidade. Sentir as calçadas livres do receio das enchentes traz um frescor revigorante, convidando cada morador a caminhar pela região com a mente tranquila e o peito leve.\n\nEssa presença constante do poder público e o movimento das equipes na rua geram um sentimento delicioso de acolhimento e pertença. Saber que a infraestrutura está sendo moldada para proteger o nosso espaço desperta um conforto profundo, como o abraço caloroso de quem cuida do próprio lar. É a segurança de ver a água fluir suavemente, devolvendo à rotina da Zona Norte aquela sensação gostosa de bem-estar e paz.\n\nAo caminhar pelas alamedas arborizadas do entorno, a percepção de transformação é acompanhada por um toque de satisfação genuína. A harmonia entre as intervenções técnicas e a tranquilidade das famílias cria uma atmosfera vibrante e apetitosa para se viver. Morar onde o cuidado se faz presente é vivenciar diariamente o prazer de estar em casa, cercado de proteção e do carinho de uma comunidade que se fortalece a cada melhoria.\n\nEdição - Julio Cesar Ferreira Silva.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686555047_images__17_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Reinauguração e Ações Culturais no Centro Cultural da Juventude",
-      "resumo": "Manchete 22/10/26: Localizado na Vila Nova Cachoeirinha, o Centro Cultural da Juventude (CCJ Ruth de Souza) apresenta uma programação especial com oficinas gratuitas de tecnologia, dança e batalhas de rima. O espaço se consolida como um dos maiores polos de fomento à cultura urbana e inclusão social para os jovens da periferia da Zona Norte.",
-      "texto": "Localizado na Vila Nova Cachoeirinha, o Centro Cultural da Juventude (CCJ Ruth de Souza) apresenta uma programação especial com oficinas gratuitas de tecnologia, dança e batalhas de rima. O espaço se consolida como um dos maiores polos de fomento à cultura urbana e inclusão social para os jovens da periferia da Zona Norte.\n\nEdição - Julio Cesar Ferreira Silva.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686734023_images__18_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Clima Ameno e Tarde sem Chuva Acalmam a Sexta-Feira na Freguesia do Ó",
-      "resumo": "Manchete 11hr jornal da zona norte 23/10/26: A Freguesia do Ó registrou uma tarde amena com termômetros na casa dos 23°C e céu encoberto nesta sexta-feira, garantindo uma trégua bem-vinda para o trânsito regional após o período de instabilidades. Sem o risco imediato de pancadas de chuva forte no final de tarde, o fluxo de veículos e pedestres pelas ladeiras históricas e principais avenidas transcorre de forma serena e altamente fluida. Esse clima fresco e agradável traz um alívio imediato no corpo, convidando cada morador a desacelerar o ritmo, respirar fundo o ar leve da região e preparar o espírito para aproveitar o descanso do fim de semana com total tranquilidade.",
-      "texto": "Clima Ameno e Tarde sem Chuva Acalmam a Sexta-Feira na Freguesia do Ó\nA Freguesia do Ó registrou uma tarde amena com termômetros na casa dos 23°C e céu encoberto nesta sexta-feira, garantindo uma trégua bem-vinda para o trânsito regional após o período de instabilidades. Sem o risco imediato de pancadas de chuva forte no final de tarde, o fluxo de veículos e pedestres pelas ladeiras históricas e principais avenidas transcorre de forma serena e altamente fluida. Esse clima fresco e agradável traz um alívio imediato no corpo, convidando cada morador a desacelerar o ritmo, respirar fundo o ar leve da região e preparar o espírito para aproveitar o descanso do fim de semana com total tranquilidade.\n\nDeslizar pelas vias da Freguesia sabendo que o caminho para casa está livre de alagamentos e sobreatos proporciona uma sensação deliciosa de paz e conforto ao volante. A brisa suave que desce da Serra da Cantareira refresca a rotina e transforma o trajeto do trabalho em uma viagem tranquila e prazerosa. As calçadas secas e o tráfego sem sobressaltos devolvem às pessoas aquele bem-estar precioso de quem recupera o controle do próprio tempo para vivenciar a cidade com leveza.\n\nA atmosfera serena da tarde reflete-se no humor dos moradores, que já começam a lotar os quiosques e mesas ao ar livre perto do Largo da Matriz. O clima ameno convida ao encontro espontâneo, às conversas sem pressa e ao prazer simples de ver a noite chegar em um dos bairros mais acolhedores de São Paulo. É a certeza de que, quando o tempo colabora, a rotina na Zona Norte ganha contornos de pura harmonia, descanso e aconchego.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792790094016_images__23_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Operação de Monitoramento de Trânsito na Marginal Tietê",
-      "resumo": "Manchete 22/10/26: A Companhia de Engenharia de Tráfego (CET) intensificou a fiscalização e o monitoramento nos acessos às pontes da Zona Norte — como as pontes do Limão, Vila Maria e Cruzeiro do Sul —, devido ao aumento do fluxo de veículos pesados e às intervenções pontuais de manutenção no piso asfáltico ao longo da Marginal Tietê.",
-      "texto": "A operação especial de monitoramento promovida pela Companhia de Engenharia de Tráfego traz um sopro de fluidez e tranquilidade aos acessos da Marginal Tietê. Ver a coordenação atenta dos agentes perto das pontes do Limão, Vila Maria e Cruzeiro do Sul acalma os ânimos e transforma a rotina do trânsito num percurso muito mais sereno. O ritmo acelerado da metrópole ganha contornos de suavidade quando a organização nos permite rodar sem sobressaltos.\n\nDeslizar pelas vias da Zona Norte sabendo que as intervenções no asfalto garantem uma viagem segura proporciona uma sensação deliciosa de alívio e conforto ao volante. O estresse das grandes avenidas cede lugar à satisfação de um trajeto eficiente, permitindo que motoristas e passageiros relaxem e aproveitem a paisagem urbana. Cada melhoria concluída é um carinho no cotidiano de quem precisa se deslocar com agilidade e paz de espírito.\n\nO impacto positivo dessa fiscalização cuidadosa reflete-se no humor de toda a região, espalhando uma onda de leveza pelos motoristas e trabalhadores. Retomar o controle do próprio tempo e chegar ao destino sem percalços desperta um prazer sutil, mas profundamente satisfatório, ao longo do dia. A Zona Norte mostra que, com cuidado e planejamento, até mesmo o trânsito da capital pode se tornar uma experiência de bem-estar e harmonia.\n\nEdição - Julio Cesar Ferreira Silva.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686842415_images__19_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "negocios",
-      "titulo": "Fábrica da Panco",
-      "resumo": "A fábrica da Panco na Zona Norte permanece como um dos marcos industriais mais emblemáticos da região, simbolizando a tradição e o vigor econômico que impulsionam o cotidiano dos moradores locais.",
-      "texto": "Estrategicamente posicionada para abastecer milhares de pontos de venda, a unidade combina processos modernos de panificação a uma logística eficiente, garantindo que pães, bolos e biscoitos frescos saiam diariamente das linhas de produção diretamente para as mesas paulistas.\n\nAlém de sua relevância no setor alimentício, o complexo industrial desempenha um papel fundamental no ecossistema socioeconômico do seu entorno. A operação gera centenas de empregos diretos e indiretos, movimentando o comércio local e fortalecendo a renda de inúmeras famílias da Zona Norte. O fluxo constante de colaboradores e fornecedores transforma a dinâmica do bairro, consolidando o local como um polo produtivo de grande importância para São Paulo.\n\nCom décadas de história e forte vínculo comunitário, a presença da Panco reforça a identidade industrial da Zona Norte sem perder o carinho do público que cresceu consumindo seus produtos. A fábrica não representa apenas um centro de produção de em larga escala, mas também um ponto de referência cultural e afetivo, mantendo viva a tradição de qualidade e inovação no setor de panificação.\n\nEdição - Julio Cesar Ferreira Silva.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792432211312_images__7_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "politica",
-      "titulo": "Política Zona Norte ",
-      "resumo": "A política e a gestão pública exercem um impacto direto e profundo na dinâmica diária, no desenvolvimento urbano e na qualidade de vida dos moradores da Zona Norte de São Paulo. Por ser uma região vasta, diversa e historicamente marcada por contrastes socioeconômicos, as decisões políticas moldam desde a mobilidade urbana até o acesso a serviços essenciais.",
-      "texto": "1. Mobilidade Urbana e Infraestrutura\nA presença e a expansão de grandes obras de transporte são frutos diretos de escolhas de políticas públicas. A chegada de novas linhas de metrô, o gerenciamento do transporte sobre pneus e a manutenção de corredores de ônibus determinam o tempo que o morador da Zona Norte gasta para se deslocar diariamente até o centro e outras regiões de trabalho. Além disso, obras de drenagem e canalização de córregos dependem diretamente de investimentos do orçamento público para combater enchentes históricas em bairros mais suscetíveis.\n\n2. Preservação Ambiental e Lazer\nA Zona Norte abriga importantes áreas de preservação ambiental, como o Parque Estadual Alberto Löfgren (Horto Florestal) e o Parque Estadual da Cantareira. A gestão pública e a formulação de leis ambientais definem as políticas de concessão, a manutenção da biodiversidade e os investimentos em lazer e turismo ecológico. Decisões políticas adequadas garantem que essas áreas verdes permaneçam acessíveis à população e protegidas contra a especulação imobiliária irregular.\n\n3. Serviços Públicos e Desenvolvimento Social\nA distribuição e a qualidade dos equipamentos de saúde (como UBSs e hospitais regionais), das escolas públicas e das creches refletem prioridades orçamentárias estabelecidas pelos governos municipal e estadual. Além disso, políticas voltadas para a segurança pública e o fomento ao comércio e à vida boêmia local — como a regulamentação do uso do solo e o apoio a eventos culturais — influenciam diretamente o dinamismo econômico e a sensação de segurança de bairros emblemáticos como Santana, Tucuruvi e Vila Guilherme.\n\nComo você gostaria de aprofundar esse tema? Podemos focar em um setor específico (como transporte ou meio ambiente) ou em algum bairro da Zona Norte.\n\nEdição - Julio Cesar Ferreira Silva",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431235319_images__4_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Mutirão da Subprefeitura Promove Poda de Árvores e Zeladoria na Av. Nova Cantareira",
-      "resumo": "Mutirão da Subprefeitura Promove Poda de Árvores e Zeladoria na Av. Nova Cantareira: Equipes de zeladoria da Subprefeitura Jaçanã/Tremembé atuam ao longo de toda a extensão da Avenida Nova Cantareira com serviços de poda preventiva em galhos de grande porte, recolhimento de entulho e limpeza das galerias pluviais para evitar quedas sobre a rede elétrica e preparar a via para as chuvas de verão.",
-      "texto": "Lideranças comunitárias e comerciantes da Vila Maria protocolaram um pedido formal junto à Subprefeitura Vila Maria/Vila Guilherme cobrando celeridade na vistoria e poda das árvores antigas que margeiam a Avenida Guilherme Cotching. A preocupação do bairro voltou a crescer devido à aproximação da temporada de tempestades, quando rajadas de vento e chuvas intensas aumentam significativamente os riscos de acidentes na via.\n\nO objetivo do abaixo-assinado e dos protocolos abertos é prevenir a queda de galhos de grande porte sobre fiações elétricas, veículos em trânsito e calçadas de grande circulação de pedestres. Além de evitar danos materiais aos estabelecimentos comerciais do corredor, os moradores enfatizam que o manejo arbóreo preventivo garante a segurança de quem circula diariamente pelo principal eixo do bairro.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793297795745_images__38_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Feira de Empreendedorismo Feminino Movimenta a Praça Escolar no Mandaqui",
-      "resumo": "Feira de Empreendedorismo Feminino Movimenta a Praça Escolar no Mandaqui: Dezenas de artesãs, produtoras locais e donas de PMEs participaram da Feira de Empreendedorismo Feminino na Praça Escolar, promovendo a venda direta de produtos, gastronomia e artesanato regional, além de oferecer palestras gratuitas de capacitação financeira para mulheres\n do bairro.",
-      "texto": "A Praça Escolar, no Mandaqui, transformou-se no epicentro da economia criativa local ao sediar a Feira de Empreendedorismo Feminino da Zona Norte. O evento reuniu dezenas de expositoras, incluindo artesãs, produtoras autônomas e donas de pequenas e médias empresas, que apresentaram ao público uma grande diversidade de artigos autorais, gastronomia regional e produtos artesanais.\n\nAlém da comercialização direta que impulsionou a renda das participantes, o encontro ofereceu uma grade de palestras gratuitas focadas em capacitação financeira, gestão de micronegócios e marketing digital. A iniciativa fortaleceu a rede de apoio entre as mulheres da comunidade, incentivando a autonomia econômica e o consumo de proximidade no bairro.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302192834_images__39_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Moradores da Vila Maria Solicitam Reforço no Manejo de Árvores na Av. Guilherme",
-      "resumo": "Moradores da Vila Maria Solicitam Reforço no Manejo de Árvores na Av. Guilherme Cotching: Lideranças comunitárias da Vila Maria protocolaram um pedido junto à subprefeitura local para acelerar a vistoria e poda de árvores antigas na Avenida Guilherme Cotching, prevenindo o risco de queda de galhos sobre fiação e veículos durante tempestades com ventos fortes.",
-      "texto": "Equipes de zeladoria da Subprefeitura Jaçanã/Tremembé colocaram em prática um mutirão intensivo ao longo de toda a extensão da Avenida Nova Cantareira. Os trabalhos concentram-se no corte preventivo de galhos que apresentam risco de contato com a rede de alta tensão, na raspagem do leito viário e no recolhimento imediato de entulhos e descartes irregulares acumulados nos passeios públicos.\n\nA força-tarefa abrange também a limpeza mecânica e o desassoreamento de bocas de lobo e galerias pluviais espalhadas pelo trecho. A intervenção busca assegurar a fluidez do tráfego em um dos principais corredores de ligação da Zona Norte, preparando a infraestrutura do bairro para suportar o volume de água e evitar alagamentos durante as tempestades de verão.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302150072_43938772.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Fiscalização encerra creche clandestina após denúncias de maus-tratos",
-      "resumo": "Manchete 02/11/26:  Uma operação conjunta envolvendo a Polícia Civil e fiscalizadores municipais interditou uma creche que funcionava de forma clandestina na Zona Norte. A ação ocorreu após denúncias de pais e vizinhos que registraram imagens de maus-tratos contra crianças no local.   ",
-      "texto": "Uma operação conjunta envolvendo a Polícia Civil e fiscalizadores municipais interditou uma creche que funcionava de forma clandestina na Zona Norte. A ação ocorreu após denúncias de pais e vizinhos que registraram imagens de maus-tratos contra crianças no local.   O espaço foi lacrado por falta de alvará de funcionamento e segurança inadequada. Os responsáveis pelo estabelecimento foram encaminhados à delegacia para prestar depoimento, enquanto as famílias afetadas estão sendo assistidas pelos serviços de proteção à infância do município.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608314689_images__41_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    },
-    {
-      "editoria": "locais",
-      "titulo": "Operação conjunta apreende veículos adulterados na Marginal Tietê",
-      "resumo": "Manchete 02/11/26: Uma fiscalização promovida pela Polícia Militar em conjunto com agentes do Detran resultou na apreensão de diversos veículos e motocicletas na região da Ponte da Vila Maria. A operação tinha como foco coibir rachas noturnos e fiscalizar escapamentos com ruído acima do permitido por lei.",
-      "texto": "Uma fiscalização promovida pela Polícia Militar em conjunto com agentes do Detran resultou na apreensão de diversos veículos e motocicletas na região da Ponte da Vila Maria. A operação tinha como foco coibir rachas noturnos e fiscalizar escapamentos com ruído acima do permitido por lei.\n\nDurante a ação, dezenas de motoristas foram autuados por irregularidades mecânicas ou documentação vencida. As autoridades destacaram que essas blitzes serão intensificadas na Marginal Tietê e avenidas de acesso para garantir a segurança viária e o sossego público.",
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608319252_images__42_.jpg",
-      "autor": "Redação 11hr",
-      "hora": "Hoje, 10h",
-      "link": ""
-    }
-  ],
-  "anuncios": [
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792374146577_images.jpg",
-      "link": "",
-      "alvo": "A noite na Zona Norte"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792430910104_images__3_.jpg",
-      "link": "",
-      "alvo": "Avenida Nova"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792685813850_anuncie-11hr.png",
-      "link": "",
-      "alvo": "Política Zona Norte "
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431793306_images__6_.jpg",
-      "link": "",
-      "alvo": "Feira do Jaçanã"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792432284907_images__8_.jpg",
-      "link": "",
-      "alvo": "Fábrica da Panco"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792438007695_images__9_.jpg",
-      "link": "",
-      "alvo": "Final do campeonato de várzea do Jaçanã reúne torcida no domingo"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792440578036_images__11_.jpg",
-      "link": "",
-      "alvo": "Paquera e o Afeto Espontâneo"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792685879448_anuncie-11hr.png",
-      "link": "",
-      "alvo": "A noite na Zona Norte"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792444760164_images__16_.jpg",
-      "link": "",
-      "alvo": "Batalhão Tobias de Aguiar — a ROTA"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686577973_anuncie-11hr.png",
-      "link": "",
-      "alvo": "Drenagem no Córrego Carandiru"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686881126_images.jpg",
-      "link": "",
-      "alvo": "Reinauguração e Ações Culturais no Centro Cultural da Juventude"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686924534_anuncie-11hr.png",
-      "link": "",
-      "alvo": "Operação de Monitoramento de Trânsito na Marginal Tietê"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792758978541_anuncie-11hr.png",
-      "link": "",
-      "alvo": "Chegada da Linha 19-Celeste do Metrô"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792759819019_Frente_2x__2_.png",
-      "link": "",
-      "alvo": "Expo Center Norte"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792759840409_anuncie-11hr.png",
-      "link": "",
-      "alvo": "Operação de Verão e Estado de Atenção pela Defesa Civil"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792788215071_images.jpg",
-      "link": "",
-      "alvo": "A Força da Comunidade no Jaçanã e Tremembé"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792791216638_anuncie-11hr.png",
-      "link": "",
-      "alvo": "Paquera e o Afeto Espontâneo"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792791223432_anuncie-11hr.png",
-      "link": "",
-      "alvo": "Frota de Ônibus Elétricos Traz Ar Mais Puro para as Avenidas da Zona Norte"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792791232300_Frente_empilhado.png",
-      "link": "",
-      "alvo": "Expo Center Norte"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792950024341_anuncie-11hr-R56.png",
-      "link": "",
-      "alvo": "Paquera e o Afeto Espontâneo"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792950031382_anuncie-11hr-R56.png",
-      "link": "",
-      "alvo": " Ação nas Chuvas no Jaçanã"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792951477117_anuncie-11hr-R56.png",
-      "link": "",
-      "alvo": "Padarias da ZN Finalistas no Padocaria SP"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032105499_anuncie-11hr-R56.png",
-      "link": "",
-      "alvo": "A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032100357_anuncie-11hr-R56.png",
-      "link": "",
-      "alvo": "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032087348_images__13_.jpg",
-      "link": "",
-      "alvo": "Cenário Político e Oportunidades para empresas na Zona Norte: Infraestrutura, Crédito e Posicionamento Estratégico"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120716908_Frente_empilhado.png",
-      "link": "",
-      "alvo": "Queda Brusca de Temperatura Aciona Rede de Acolhimento na Zona Norte"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120728820_anuncie-11hr-R56.png",
-      "link": "",
-      "alvo": "Paquera e o Afeto Espontâneo"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120745997_anuncie-11hr-R56.png",
-      "link": "",
-      "alvo": "SPTrans Realiza Adequações Operacionais nas Plataformas do Terminal Santana"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209659661_anuncie-11hr-R67.png",
-      "link": "",
-      "alvo": "Defesa Civil Reforça Acolhimento Aos Moradores de Rua Com Queda de Temperatura"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209678307_anuncie-11hr-R67.png",
-      "link": "",
-      "alvo": "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209693973_Frente_empilhado.png",
-      "link": "",
-      "alvo": "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302737912_anuncie-11hr-R67.png",
-      "link": "",
-      "alvo": "todas"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302744408_anuncie-11hr-R67.png",
-      "link": "",
-      "alvo": "todas"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302768004_images.jpg",
-      "link": "",
-      "alvo": "todas"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608414606_images.jpg",
-      "link": "",
-      "alvo": "Linha de ônibus tem itinerário alterado para atender a Rosas de Ouro"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608472696_anuncie-11hr-R67.png",
-      "link": "",
-      "alvo": "Fiscalização encerra creche clandestina após denúncias de maus-tratos"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608488195_images__8_.jpg",
-      "link": "",
-      "alvo": "Operação conjunta apreende veículos adulterados na Marginal Tietê"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718854311_anuncie-11hr-R67.png",
-      "link": "",
-      "alvo": "Bairro do Limão ganha nova horta comunitária em terreno revitalizado"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718859815_anuncie-11hr-R67.png",
-      "link": "",
-      "alvo": "Escolas estaduais de Tucuruvi realizam mostra de projetos de tecnologia"
-    },
-    {
-      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718865714_images__45_.jpg",
-      "link": "",
-      "alvo": "Comércio da Rua Voluntários da Pátria inicia preparativos para o fim de ano"
-    }
-  ]
+﻿{
+    "noticias":  [
+                     {
+                         "editoria":  "politica",
+                         "titulo":  "A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo",
+                         "resumo":  "Manchete 11hr jornal da zona norte 26/10/26: A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo com o direcionamento estratégico de recursos federais para grandes obras de mobilidade e infraestrutura — com destaque para os avanços na Linha 19-Celeste do Metrô e intervenções viárias —, ao mesmo tempo em que o fortalecimento de programas sociais e do poder de compra das famílias reaquece o pequeno comércio, as feiras livres e as padarias locais no Jaçanã, Tremembé e periferias, injetando uma onda de otimismo, segurança financeira e acolhimento cultural para a juventude e os moradores da região.",
+                         "texto":  "A vitória do governo Lula no cenário nacional reflete-se na Zona Norte de São Paulo com o direcionamento e a garantia de verbas federais para grandes obras de infraestrutura e mobilidade. A parceria entre os orçamentos da União e as concessões locais acelera empreendimentos cruciais, como os trechos da Linha 19-Celeste do Metrô e as obras do Rodoanel Norte. Ver os investimentos públicos finalmente se traduzirem em canteiros de obras ativos traz aquele alívio gostoso no peito de quem vislumbra, em um futuro próximo, trajetos mais rápidos, transporte moderno e a valorização direta dos imóveis da nossa região.\n\nOutro impacto direto no cotidiano das famílias do Jaçanã, Tremembé e Brasilândia é o fortalecimento de programas sociais federais e o incentivo ao comércio de bairro. A ampliação do poder de compra e a manutenção de repasses em áreas de alta vulnerabilidade injetam um ritmo dinâmico nas feiras livres, padarias e pequenos negócios locais. Caminhar pelas avenidas comerciais e ver as lojas movimentadas desperta um sentimento quentinho de otimismo e pertencimento, onde a estabilidade econômica se transforma em mesas fartas, empregos preservados e segurança financeira para o dia a dia.\n\nAlém da economia e dos trilhos, a destinação de verbas federais para áreas sociais amplia o acesso à cultura, educação e saúde nos equipamentos públicos do extremo Norte, como o CCJ e os CEUs regionais. O fortalecimento dessas redes comunitárias garante que a juventude da periferia encontre caminhos de capacitação, arte e lazer gratuito com dignidade e respeito. É o prazer reconfortante de ver o cuidado social chegar à porta de casa, transformando a rotina da Zona Norte em uma experiência mais justa, acolhedora e cheia de boas perspectivas.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031872425_images__28_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T02:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "A noite na Zona Norte",
+                         "resumo":  "A noite na Zona Norte desperta como um convite irrecusável para aqueles que buscam sacudir a poeira dos dias exaustivos, entregando-se ao deleite do convívio social refinado e do bom entretenimento. Sob a promessa de encontros memoráveis e conversas fluídas, a nobreza local se reúne para celebrar a vida em recantos emblemáticos que mesclam o charme tradicional à sofisticação boêmia contemporânea. ",
+                         "texto":  "Bairros consagrados como Santana, Jaçanã, Tucuruvi e Vila Guilherme convertem-se em verdadeiros impérios do júbilo, onde a arte de seduzir e conectar almas torna-se a principal virtude da madrugada.\n\nA serenidade das calçadas transforma-se em um palco vibrante ao longo das vias mais badaladas da região, destacando-se grandiosamente a imponente Avenida Luiz Dumont Villares e a movimentada Rua Augusta Vilela. Nestes corredores de puro fervor, os frequentadores encontram o antídoto ideal para os pesares rotineiros, envolvidos por atmosferas envolventes, luzes sugestivas e ritmos apaixonantes. Entre taças erguidas e olhares magnéticos, a atmosfera convida a desarmar os espíritos e permitir que o acaso orquestre novas e fascinantes amizades.\n\nPara governar esse cenário de encontros memoráveis, destacam-se três refúgios aclamados que dominam a arte do entretenimento noturno: o sofisticado Adega Original, o lendário Mandarim Bar e a festiva Gisela e o Marido. Cada qual com suas particularidades únicas, esses templos de descontração oferecem a mistura perfeita de boa gastronomia, drinques bem executados e um público vibrante pronto para encantar e se deixar encantar. Rendam-se, pois, aos atrativos da noite do norte e permitam que esses domínios reescrevam o vosso destino com encontros inesquecíveis.\n\nEdição - Julio Cesar Ferreira Silva",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792378575941_images__1_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T03:23:29Z"
+                     },
+                     {
+                         "editoria":  "dinheiro",
+                         "titulo":  "Comércio da Rua Voluntários da Pátria inicia preparativos para o fim de ano",
+                         "resumo":  "Os comerciantes da Rua Voluntários da Pátria, um dos maiores centros de comércio a céu aberto da cidade, começaram os preparativos operacionais para a temporada de vendas de fim de ano. As lojas já apresentam decorações temáticas e reforço nos estoques.",
+                         "texto":  "Os comerciantes da Rua Voluntários da Pátria, um dos maiores centros de comércio a céu aberto da cidade, começaram os preparativos operacionais para a temporada de vendas de fim de ano. As lojas já apresentam decorações temáticas e reforço nos estoques.\n\nAs associações comerciais locais projetam um aumento no movimento de consumidores e estimam a contratação de trabalhadores temporários para reforçar o atendimento. A Polícia Militar também promete intensificar o policiamento ostensivo no calçadão durante o período comercial aquecido.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718824427_images__45_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T04:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Escolas estaduais de Tucuruvi realizam mostra de projetos de tecnologia",
+                         "resumo":  "Alunos de escolas estaduais localizadas no distrito de Tucuruvi participaram de uma feira tecnológica que reuniu trabalhos desenvolvidos em sala de aula ao longo do semestre. Os estudantes apresentaram protótipos de robótica, projetos de reciclagem e soluções digitais para o cotidiano.",
+                         "texto":  "Alunos de escolas estaduais localizadas no distrito de Tucuruvi participaram de uma feira tecnológica que reuniu trabalhos desenvolvidos em sala de aula ao longo do semestre. Os estudantes apresentaram protótipos de robótica, projetos de reciclagem e soluções digitais para o cotidiano.\n\nO evento contou com a presença de professores, familiares e avaliadores convidados, que premiaram os projetos mais inovadores. A direção regional de ensino ressaltou a importância da feira para estimular o pensamento crítico, a ciência e a tecnologia entre os jovens da periferia.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718663044_images__44_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T05:23:29Z"
+                     },
+                     {
+                         "editoria":  "cultura",
+                         "titulo":  "Bairro do Limão ganha nova horta comunitária em terreno revitalizado",
+                         "resumo":  "Um espaço urbano que antes acumulação lixo e entulho no bairro do Limão foi transformado em uma horta comunitária por moradores locais. A iniciativa contou com apoio técnico de agrônomos voluntários e doações de mudas de hortaliças e ervas medicinais.",
+                         "texto":  "Um espaço urbano que antes acumulação lixo e entulho no bairro do Limão foi transformado em uma horta comunitária por moradores locais. A iniciativa contou com apoio técnico de agrônomos voluntários e doações de mudas de hortaliças e ervas medicinais.\n\nO projeto tem como objetivo incentivar o cultivo sustentável, criar um ponto de convivência comunitária e abastecer famílias da região com alimentos frescos. Os idealizadores planejam agora promover oficinas de horta comunitária para crianças de escolas do entorno.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718479753_images__43_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T06:23:29Z"
+                     },
+                     {
+                         "editoria":  "cultura",
+                         "titulo":  "Linha de ônibus tem itinerário alterado para atender a Rosas de Ouro",
+                         "resumo":  "Manchete 02/11/26: Linha de ônibus tem itinerário alterado para atender a Rosas de Ouro",
+                         "texto":  "A partir deste fim de semana, os passageiros da linha 220P/10 (Term. Parada Inglesa – CTN) contarão com uma mudança importante em seu trajeto na Zona Norte. A SPTrans alterou o itinerário do coletivo para incluir uma parada em frente à quadra da escola de samba Rosas de Ouro, localizada na Freguesia do Ó, facilitando o acesso direto da população ao espaço cultural.\n\nA iniciativa faz parte do projeto \"Circuito Samba do Paulistar\" e tem como objetivo incentivar a cultura local e a mobilidade urbana durante os preparativos para o Carnaval. A alteração visa garantir o transporte gratuito e facilitado para moradores e turistas que desejam acompanhar os ensaios e eventos promovidos pela agremiação.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608307975_images__40_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T07:23:29Z"
+                     },
+                     {
+                         "editoria":  "politica",
+                         "titulo":  "Defesa Civil Reforça Acolhimento Aos Moradores de Rua Com Queda de Temperatura",
+                         "resumo":  "Queda Brusca de Temperatura Aciona Rede de Acolhimento na Zona Norte: A chegada de uma massa de ar frio provocou chuva fraca, nevoeiro na Serra da Cantareira e fez os termômetros despencarem para 12°C nos bairros do Jaçanã, Tremembé e Santana, mobilizando a Defesa Civil municipal e equipes de assistência social para intensificar as abordagens noturnas e a distribuição de cobertores e refeições quentes aos moradores em situação de vulnerabilidade.",
+                         "texto":  "Uma massa de ar frio vinda do Sul provocou chuva fraca, denso nevoeiro nas encostas da Serra da Cantareira e fez os termômetros despencarem para 12°C na Zona Norte. A variação drástica do tempo impactou diretamente a rotina dos moradores dos bairros do Jaçanã, Tremembé e Santana.\n\nDiante do frio atípico, a Defesa Civil municipal e as equipes de assistência social intensificaram o acolhimento noturno, com distribuição de cobertores e refeições quentes. As abordagens foram concentradas nas proximidades dos Centros de Acolhida da região, priorizando populações em situação de vulnerabilidade expostas ao frio.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209362822_images__35_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T08:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Operação de Verão e Estado de Atenção pela Defesa Civil",
+                         "resumo":  "Manchete 23/10/26: Devido às pancadas de chuva típicas desta época do ano, a Defesa Civil estadual mantém o monitoramento preventivo e reforça as ações de manutenção nos córregos e galerias pluviométricas da Zona Norte (com atenção aos pontos baixos perto do Carandiru, Santana e Várzea da Barra Funda) para conter riscos de alagamento durante o fim de tarde.",
+                         "texto":  "A rotina nas alamedas e avenidas da Zona Norte ganha um contorno renovado de tranquilidade com a intensificação das ações preventivas de drenagem e monitoramento por parte da Defesa Civil e da Prefeitura. A atenção contínua voltada para a limpeza e o desassoreamento de córregos regionais — com foco especial nas galerias do Carandiru e nos pontos baixos das bacias locais — visa garantir a vazão rápida das águas pluviométricas. Essa presença constante das equipes de manutenção transmite um aconchego seguro, acalmando o coração de quem reside ou trabalha na região.\n\nSaber que a infraestrutura urbana está sendo zelada com rigor traz uma sensação profunda de alívio e bem-estar ao encarar o ritmo das tardes paulistanas. A visão das calçadas limpas, dos canais desimpedidos e dos agentes a postos nas vias de maior fluxo permite que a população transite com leveza e serenidade. O receio de transtornos dá lugar à confiança na proteção do próprio lar, permitindo que famílias e motoristas aproveitem o seu tempo com a mente leve e o espírito em paz.\n\nEssa harmonia entre a gestão técnica e a tranquilidade das pessoas cria uma atmosfera verdadeiramente aconchegante em bairros como Santana, Tucuruvi e Vila Maria. Chegar em casa sem percalços, deslizar pelas vias com a certeza do cuidado público e sentir a comunidade protegida despertam aquele prazer gostoso de pertencimento. É a demonstração diária de que, quando a prevenção e o carinho pelo espaço urbano andam juntos, a rotina na Zona Norte se transforma em uma experiência muito mais acolhedora e prazerosa.\n\nEdição - Julio Cesar Ferreira Silva.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792758938800_WhatsApp-Image-2025-12-01-at-15.40.56-800x435.webp",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T09:23:29Z"
+                     },
+                     {
+                         "editoria":  "cultura",
+                         "titulo":  "Tucuruvi Celebra 123 Anos com Resgate Histórico e Foco no Comércio Local",
+                         "resumo":  "O distrito do Tucuruvi completa 123 anos de fundação com uma série de eventos culturais que homenageiam sua trajetória desde a época das chácaras e do Tramway da Cantareira. A data mobiliza comerciantes e associações de bairro, que aproveitam as celebrações para reforçar a identidade comunitária e impulsionar as vendas no comércio de rua ao longo da Avenida Mazzei e do entorno do terminal de metrô.",
+                         "texto":  "O Departamento de Homicídios e de Proteção à Pessoa (DHPP) assumiu as investigações sobre a morte do pai de santo Alexandre Amorim Coelho, de 55 anos, cujo corpo foi localizado em sua residência e terreiro de Candomblé na Brasilândia. O imóvel apresentava sinais claros de arrombamento e reviravolta, indicando que o local foi invadido e violentado antes do disparo que vitimou o líder religioso.\n\nO caso foi inicialmente registrado pelo 72º Distrito Policial (Vila Penteado) e transferido para a equipe especializada devido à gravidade do crime. Câmeras de segurança da vizinhança já foram apreendidas e registraram o momento exato em que um indivíduo pulou o muro da propriedade; a Polícia Civil trabalha agora na identificação do suspeito e no esclarecimento da motivação do homicídio.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120640075_images__33_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T10:23:29Z"
+                     },
+                     {
+                         "editoria":  "entretenimento",
+                         "titulo":  "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt",
+                         "resumo":  "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt: O circuito cultural da Zona Norte ganha destaque com a estreia do espetáculo Sarah Bernhardt em São Paulo no teatro do Sesc Santana, montagem que revisita a histórica turnê da célebre atriz francesa pela capital paulista no final do século XIX e consolida o espaço da Avenida Luiz Dumont Villares como um importante polo de difusão artística na região.",
+                         "texto":  "A agenda cultural da Zona Norte ganha destaque com a estreia da peça Sarah Bernhardt em São Paulo no teatro do Sesc Santana. A montagem revisita a emblemática turnê da célebre atriz francesa pela capital paulista no final do século XIX, trazendo um panorama das artes cênicas da época.\n\nA atração movimenta o circuito cultural local, atraindo público geral e estudantes para o espaço situado na Avenida Luiz Dumont Villares. A produção reforça o papel do Sesc Santana como um dos principais polos de formação e difusão artística acessível na região.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209510996_images__36_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T11:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual",
+                         "resumo":  "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual: O Centro Cultural da Juventude Ruth de Souza (CCJ), situado na Parada Inglesa, abriu inscrições para novas turmas de oficinas gratuitas voltadas à formação prática em audiovisual, fotografia e edição digital, oferecendo capacitação técnica para jovens da periferia que buscam ingressar no mercado de trabalho ou desenvolver projetos independentes.",
+                         "texto":  "O Centro Cultural da Juventude Ruth de Souza (CCJ), na Parada Inglesa, abriu inscrições para novas turmas de oficinas gratuitas de formação em audiovisual, fotografia e edição digital. As aulas práticas oferecem contato direto com equipamentos profissionais e métodos de produção independente.\n\nO projeto é voltado prioritariamente para jovens dos bairros da periferia da Zona Norte em busca de capacitação técnica para o mercado de trabalho. A iniciativa busca fortalecer a economia criativa e incentivar produções culturais autônomas na comunidade.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209521627_images__37_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T12:23:29Z"
+                     },
+                     {
+                         "editoria":  "politica",
+                         "titulo":  "Cenário Político e Oportunidades para empresas na Zona Norte: Infraestrutura, Crédito e Posicionamento Estratégico",
+                         "resumo":  "Manchete 11hr jornal da zona norte 26/10/26: A consolidação do poder estadual sob a gestão de Tarcísio de Freitas e o direcionamento de investimentos da União criam um cenário de forte previsibilidade para os negócios na Zona Norte de São Paulo, onde pequenas e médias empresas podem se beneficiar da aceleração de obras de infraestrutura — como a Linha 19-Celeste do Metrô e o saneamento da Sabesp —, devendo se posicionar estrategicamente em eixos de alta circulação e recorrer a linhas de crédito acessíveis pelos canais da Desenvolve SP (desenvolvesp.com.br) e do Banco do Povo Paulista (bancodopovo.sp.gov.br) para expandir operações e capturar o aumento do consumo local.",
+                         "texto":  "O advento simultâneo da manutenção do poder no âmbito do Estado e do alinhamento às forças da União estabelece um raro período de estabilidade administrativa, no qual a prosperidade dependerá da rápida compreensão das intenções de quem governa. Enquanto as diretrizes federais garantem a injeção contínua de recursos e a sustentação do consumo básico nas periferias, a gestão estadual consolida seu empenho em atrair a iniciativa privada para erguer grandes estruturas. O homem de negócios perspicaz não perde tempo em julgamentos morais sobre as alianças firmadas, mas examina friamente onde os orçamentos serão aplicados, adaptando sua conduta para extrair o máximo proveito das conjunturas que se desenham.Para suprir as exigências de capital e expandir as operações neste novo ciclo, o crédito subsidiado encontra-se acessível por meio dos portais oficiais da Desenvolve SP (desenvolvesp.com.br), agência de fomento dedicada ao financiamento de projetos e capital de giro para empresas paulistas, bem como na plataforma do Banco do Povo Paulista (bancodopovo.sp.gov.br), voltada ao microcrédito com taxas reduzidas. Tais canais governamentais constituem os instrumentos adequados para fortalecer o caixa e assegurar os ativos necessários antes que a concorrência perceba a movimentação dos ventos.   Quanto ao posicionamento ideal, a sabedoria exige que o comerciante se coloque exatamente nos pontos de convergência entre as grandes obras estaduais e o fluxo de consumo impulsionado pela União. Estabelecer-se no entorno dos eixos viários e de mobilidade em expansão na Zona Norte — como o corredor da futura Linha 19-Celeste e as áreas de modernização do saneamento — garante a preferência no atendimento às demandas que dali surgirão. Aquele que souber aliar a elegância no servir à leitura atenta dos movimentos do Estado conquistará não apenas a simpatia da clientela local, mas a perenidade de sua fortuna.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031999266_images__31_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T13:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Queda Brusca de Temperatura Aciona Rede de Acolhimento na Zona Norte",
+                         "resumo":  "A chegada de uma massa de ar frio vinda do sul trouxe chuva fraca, nevoeiro na Serra da Cantareira e fez os termômetros despencarem para 12°C nos bairros do Jaçanã, Tremembé e Santana. Em resposta às baixas temperaturas, a Defesa Civil municipal e as equipes de assistência social intensificaram as abordagens noturnas e a distribuição de cobertores e refeições quentes nas Centros de Acolhida da região, priorizando pessoas em situação de vulnerabilidade.",
+                         "texto":  "A chegada de uma massa de ar frio provocou uma mudança brusca no tempo em São Paulo, trazendo chuva fraca, nevoeiro na Serra da Cantareira e fazendo os termômetros despencarem para 12°C. A variação drástica de temperatura afetou diretamente a rotina dos moradores dos bairros do Jaçanã, Tremembé e Santana, com máximas que não ultrapassaram os 21°C ao longo do dia.\n\nEm resposta ao tempo gelado, a Defesa Civil municipal e as equipes de assistência social intensificaram as abordagens noturnas e a distribuição de cobertores, agasalhos e refeições quentes. As ações foram concentradas nas imediações dos Centros de Acolhida da região, priorizando o atendimento emergencial a pessoas em situação de rua e vulnerabilidade social expostas ao frio intenso.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120629427_images__32_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T14:23:29Z"
+                     },
+                     {
+                         "editoria":  "negocios",
+                         "titulo":  "SPTrans Realiza Adequações Operacionais nas Plataformas do Terminal Santana",
+                         "resumo":  "A SPTrans e a Subprefeitura Santana/Tucuruvi iniciaram intervenções de manutenção no piso e nas estruturas de embarque do Terminal Santana. Agentes de trânsito e orientação estão posicionados nas plataformas e nos acessos à Estação Santana do Metrô para organizar o fluxo de passageiros e garantir a fluidez das linhas de ônibus municipais durante a realização dos reparos.",
+                         "texto":  "A SPTrans e a Subprefeitura Santana/Tucuruvi iniciaram intervenções técnicas de reparo e manutenção no piso e nas estruturas de embarque do Terminal Santana. As obras buscam corrigir desgastes no pavimento provocados pelo tráfego intenso de veículos pesados e melhorar as condições de acessibilidade para milhares de passageiros diários.\n\nPara minimizar os impactos na rotina dos usuários, agentes de orientação e fiscais de trânsito foram posicionados nas plataformas e nas alças de acesso à Estação Santana do Metrô. A operação organiza a fila dos ônibus, orienta sobre o remanejamento temporário de algumas linhas e garante a segurança do fluxo de pedestres durante a execução dos serviços.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120648077_images__34_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T15:23:29Z"
+                     },
+                     {
+                         "editoria":  "politica",
+                         "titulo":  "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo",
+                         "resumo":  "Manchete 11hr jornal da zona norte 26/10/26: A vitória de Tarcísio de Freitas no governo de São Paulo acelera a execução de grandes obras de infraestrutura na Zona Norte através do modelo de concessões e parcerias público-privadas, garantindo prioridade ao avanço da Linha 19-Celeste do Metrô e direcionando novos investimentos da Sabesp privatizada para o saneamento e desassoreamento de córregos críticos como o Carandiru, ao mesmo tempo em que a ampliação do monitoramento tecnológico e do policiamento ostensivo busca reforçar a segurança e a fluidez nos principais corredores viários do Tremembé, Jaçanã e Santana.",
+                         "texto":  "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo, priorizando parcerias público-privadas e leilões de infraestrutura. A manutenção dessa diretriz estadual coloca em posição central o avanço da Linha 19-Celeste do Metrô, com foco na aceleração dos processos de desapropriação e no detalhamento de engenharia para conectar bairros periféricos diretamente ao centro da capital.\n\nNo campo dos serviços essenciais, a privatização da Sabesp sob a gestão estadual direciona novos aportes financeiros para o cumprimento das metas de saneamento básico na região. Moradores de bairros como Jaçanã e Tremembé acompanham a expectativa de intensificação nas obras de desassoreamento, canalização e limpeza do Córrego Carandiru e de outros leitos d\u0027água, prevenindo alagamentos históricos em períodos de chuvas intensas.\n\nParalelamente, o plano estadual focado na ampliação do monitoramento tecnológico e no reforço do policiamento ostensivo busca diminuir os índices de criminalidade nos grandes corredores viários da Zona Norte. O impacto dessas medidas visa aumentar a segurança em locais de alta circulação, como a Avenida Cruzeiro do Sul e o Terminal Santana, influenciando diretamente a mobilidade diária e a percepção de tranquilidade da comunidade local.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793031878579_images__29_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T16:23:29Z"
+                     },
+                     {
+                         "editoria":  "politica",
+                         "titulo":  "Acessibilidade Eleitoral no Tremembé",
+                         "resumo":  "Manchete 11hr jornal da zona norte 25/10/26: Acessibilidade Eleitoral no Tremembé: Mais de 4,6 mil eleitores ganharam novos locais de votação com infraestrutura modernizada e vias sinalizadas, oferecendo mais conforto e acolhimento para a cidadania local.",
+                         "texto":  "Remanejamento Eleitoral Mobiliza Mais de 4,6 Mil Eleitores no Tremembé   A Justiça Eleitoral confirmou a alteração no local de votação de mais de 4,6 mil eleitores do distrito do Tremembé neste domingo (25). A mudança visa proporcionar instalações mais acessíveis, confortáveis e modernas para a comunidade local exercer seu papel cidadão. A reorganização dos fluxos nas vias do entorno conta com o apoio de agentes de trânsito e voluntários, garantindo que o trajeto até as novas urnas seja feito de maneira calma, sinalizada e sem sobressaltos.   Caminhar pelas alamedas arborizadas do Tremembé sabendo que a infraestrutura comunitária foi pensada para acolher melhor a todos traz um sentimento muito quentinho de pertencimento. Ver o envolvimento da vizinhança e o ambiente harmonioso nos locais de atendimento enche o peito de orgulho social. Essa atenção especial com o bem-estar dos moradores transforma a rotina do bairro em uma celebração viva de cidadania e apoio mútuo.A experiência de ser recebido em espaços mais bem equipados devolve ao cidadão a leveza de cumprir seus compromissos com total serenidade. A satisfação de ver o Tremembé evoluir e oferecer condições cada vez mais dignas aos seus idosos e famílias desperta uma alegria genuína. É a força do espírito comunitário da Zona Norte se manifestando na prática e gerando conforto para toda a região.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792947038928_images__26_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T17:23:29Z"
+                     },
+                     {
+                         "editoria":  "cultura",
+                         "titulo":  "Padarias da ZN Finalistas no Padocaria SP",
+                         "resumo":  "Manchete 11hr jornal da zona norte 25/10/26: Padarias da ZN Finalistas no Padocaria SP: Cinco estabelecimentos de Santana, Freguesia do Ó e Parada Inglesa brilham na fase final do prêmio, celebrando a tradição artesanal, o aconchego e a rica gastronomia da região.",
+                         "texto":  "Finalistas da Zona Norte Brilham no Concurso Padocaria SP 2026\nCinco tradicionais padarias da Zona Norte garantiram presença na fase final do concurso Padocaria SP 2026, celebrando a excelência gastronômica e o carinho artesanal que marcam as manhãs da região. Bairros como Santana, Freguesia do Ó e Parada Inglesa mostram a força do seu comércio local com balcões repletos de pães quentinhos, vitrines apetitosas e aquele café passado na hora. A premiação movimenta os estabelecimentos do entorno, atraindo moradores e visitantes em busca de sabores inesquecíveis.\n\nSentir o aroma envolvente do pão recém-saído do forno e ser acolhido com o sorriso generoso dos padeiros e atendentes desperta um prazer acolhedor e profundo. Parar em uma dessas padarias premiadas é viver um ritual delicioso que alimenta a alma e aproxima vizinhos em torno da mesma mesa. Essa tradição afetuosa reflete a essência do estilo de vida da Zona Norte, onde o comer bem anda de mãos dadas com o calor humano.\n\nA presença marcante das padarias locais no topo do ranking paulistano enche a comunidade de orgulho e satisfação. Celebrar os estabelecimentos que fazem parte da história das nossas famílias é valorizar o empenho e a dedicação diária da nossa gente. É a deliciosa certeza de que, na Zona Norte, o cuidado artesanal transforma o cotidiano em momentos inesquecíveis de puro bem-estar e prazer.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792947125197_images__27_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T18:23:29Z"
+                     },
+                     {
+                         "editoria":  "turismo",
+                         "titulo":  "Exposição Histórica sobre o Metrô e a Gastronomia de Santana Cativa Passageiros",
+                         "resumo":  "Manchete 11hr jornal da zona norte 23/10/26:\nExposição Histórica A mostra cultural \"Santana: História, Metrô, Gastronomia e Cultura\", em cartaz no movimentado Terminal Santana, transforma a rotina de quem circula pela região em uma experiência imersiva cheia de afeto e nostalgia. O acervo reúne painéis fotográficos e registros marcantes que resgatam o desenvolvimento do bairro, celebrando desde a chegada da Linha 1-Azul até a rica tradição gastronômica da região. Parar por alguns minutos para contemplar as imagens antigas desperta um sentimento quentinho no peito, permitindo que moradores e trabalhadores se reconectem com as origens da Zona Norte e sintam um orgulho genuíno da terra onde vivem e constroem suas histórias.",
+                         "texto":  "Exposição Histórica sobre o Metrô e a Gastronomia de Santana Cativa Passageiros\nA mostra cultural \"Santana: História, Metrô, Gastronomia e Cultura\", em cartaz no movimentado Terminal Santana, transforma a rotina de quem circula pela região em uma experiência imersiva cheia de afeto e nostalgia. O acervo reúne painéis fotográficos e registros marcantes que resgatam o desenvolvimento do bairro, celebrando desde a chegada da Linha 1-Azul até a rica tradição gastronômica da região. Parar por alguns minutos para contemplar as imagens antigas desperta um sentimento quentinho no peito, permitindo que moradores e trabalhadores se reconectem com as origens da Zona Norte e sintam um orgulho genuíno da terra onde vivem e constroem suas histórias.\n\nCaminhar entre os painéis enquanto a cidade se movimenta ao redor cria uma pausa apetitosa no ritmo acelerado do cotidiano paulistano. A visão dos antigos bondes, das primeiras fachadas comerciais e dos bares tradicionais que atravessaram gerações traz um alívio gostoso, lembrando a todos do valor da nossa memória coletiva. Essa atmosfera acolhedora envolve quem passa pelo terminal, transformando uma simples caminhada até o transporte em um momento leve de descoberta e conexão com o coração de Santana.\n\nEssa celebração da identidade local fortalece o sentimento de pertença e enche o peito de quem ama a Zona Norte. Observar a evolução de Santana ao longo das décadas desperta a certeza de estar em um lugar vivo, pulsante e cheio de cuidado comunitário. É o prazer sutil de ver o passado e o presente se abraçarem no meio do terminal, inspirando cada visitante a olhar para o seu próprio bairro com mais carinho, respeito e admiração.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792789522780_images__22_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T19:23:29Z"
+                     },
+                     {
+                         "editoria":  "politica",
+                         "titulo":  "Chegada da Linha 19-Celeste do Metrô",
+                         "resumo":  "Manchete 23/10/26: Novos detalhes divulgados pelo portal Via Trolebus reforçam o planejamento para a construção da Linha 19-Celeste. O projeto prevê a criação de pelo menos 5 estações na Zona Norte — beneficiando diretamente bairros como Vila Maria, Vila Sabrina e Jardim Julieta —, além de preparar a logística para as escavações dos \"tatuzões\" que ligarão a região central até Guarulhos.",
+                         "texto":  "A mobilidade urbana na Zona Norte de São Paulo está prestes a vivenciar uma das maiores transformações de sua história recente com os novos avanços do projeto da Linha 19-Celeste do Metrô. A futura linha promete conectar o centro da capital, a partir do Anhangabaú, até o município de Guarulhos, cortando diretamente bairros populosos da Zona Norte que historicamente carecem de acesso direto à rede sobre trilhos. O impacto na qualidade de vida dos moradores promete ser imediato, reduzindo drasticamente o tempo de deslocamento até o centro financeiro e comercial da metrópole.\n\nDentre as novidades que mais entusiasmam a comunidade local está a confirmação de pelo menos cinco estações estratégicas na região. Bairros como Vila Maria, Vila Sabrina e Jardim Julieta finalmente ganharão o seu espaço no mapa metroviário, encurtando distâncias e valorizando todo o entorno residencial e comercial. Sentir a promessa de trilhos modernos chegando mais perto de casa traz aquele alívio gostoso no peito de quem enfrenta o trânsito diário, desenhando um horizonte de deslocamentos fluidos, viagens confortáveis e muito mais tempo livre para aproveitar com a família.\n\nA complexidade da engenharia envolvida também impressiona e reforça o orgulho de ver o desenvolvimento pulsar na Zona Norte. A operação contará com o trabalho de grandiosas escavadoras tuneladoras, conhecidas carinhosamente como \"tatuzões\", equipadas com tecnologias de ponta e inéditas no país para perfurar o solo sem interromper a vida na superfície. É o cuidado com a infraestrutura traduzido em bem-estar e modernidade, devolvendo aos bairros da região o frescor revigorante do progresso e o prazer de viver em uma comunidade cada vez mais conectada.\n\nEdição - Julio Cesar Ferreira Silva.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792758928863_images__20_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T20:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  " Ação nas Chuvas no Jaçanã",
+                         "resumo":  "Manchete 11hr jornal da zona norte 25/10/26: Alerta e Ação nas Chuvas no Jaçanã: Monitoramento intensivo da Defesa Civil garante rápida drenagem e vias desimpedidas após altos volumes de chuva no Jaçanã, trazendo segurança e alívio para os moradores.",
+                         "texto":  "1. Chuvas Fortes Mobilizam Defesa Civil e Registram Alto Volume no Jaçanã\nAs chuvas intensas que atingiram a capital entre a madrugada e a manhã deste domingo (25) colocaram a Zona Norte sob monitoramento constante da Defesa Civil e do CGE. O distrito do Jaçanã registrou um dos maiores índices pluviométricos da cidade (38,8 mm na estação do CEU Jaçanã), ativando o estado de atenção ao longo da Marginal Tietê e dos córregos locais. A sensação de alívio vem com a resposta rápida das equipes de manutenção e limpeza, que atuam para manter as vias desimpedidas e garantir que a população transite com paz de espírito.\n\nSentir que a cidade está protegida por ações preventivas contínuas traz um aconchego reconfortante para o lar durante o fim de semana. A visão dos canais de drenagem respondendo bem ao fluxo de água afasta receios e renova aquele bem-estar gostoso de estar seguro em casa. É a tranquilidade de ver a comunidade amparada pelo cuidado público, permitindo que cada morador aproveite o dia com a mente leve e o coração acolhido.\n\nA chegada da massa de ar frio promete declínio de temperatura nas próximas horas, convidando a uma pausa relaxante antes do início de mais uma semana. Desfrutar do aconchego da Zona Norte sob um clima fresco e calmo desperta aquele prazer sutil de desacelerar. O cuidado técnico aliado ao afeto com a rotina do bairro transforma o domingo num momento de puro conforto e acolhimento para as famílias da região.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792946565087_images__25_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T21:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Avenida Nova",
+                         "resumo":  "A Avenida Luiz Dumont Villares, carinhosamente conhecida como Avenida Nova, destaca-se como uma das artérias mais vibrantes e dinâmicas da Zona Norte de São Paulo.",
+                         "texto":  "Estendendo-se entre bairros emblemáticos como Santana, Parada Inglesa e Tucuruvi, a via combina modernidade e praticidade urbana ao abrigar uma excelente infraestrutura de transportes, ciclofaixas e áreas verdes que convidam ao convívio comunitário diário.\n\nDurante o dia, a avenida exibe uma intensa vocação comercial e de serviços, atraindo moradores e visitantes que buscam desde opções de gastronomia diversificada até conveniências variadas. Com as suas calçadas amplas e o seu fluxo constante de pessoas, o local transformou-se num ponto de referência incontornável para quem valoriza a conveniência e o dinamismo do ecossistema urbano paulistano.\n\nQuando a noite cai, a Avenida Nova revela a sua faceta mais célebre, convertendo-se num dos principais polos de entretenimento e vida boémia da região. Repleta de bares, restaurantes e espaços de lazer aclamados, a via transforma-se num verdadeiro ponto de encontro para descontração, onde conversas animadas, música ao vivo e uma atmosfera acolhedora ditam o ritmo de momentos inesquecíveis.\n\nEdição - Julio Cesar Ferreira Silva",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792430781823_barguile-baressp-1-min.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T22:23:29Z"
+                     },
+                     {
+                         "editoria":  "dinheiro",
+                         "titulo":  "Feira do Jaçanã",
+                         "resumo":  "As feiras livres do Jaçanã continuam a se consolidar como o verdadeiro coração comunitário da Zona Norte de São Paulo, reunindo semanalmente centenas de moradores em busca de produtos frescos e convivência.",
+                         "texto":  "Pelas calçadas do bairro, barracas coloridas e organizadas exibem o melhor da hortifrúti diretamente de produtores locais, oferecendo uma variedade que combina qualidade, preço acessível e sustentabilidade para a mesa das famílias regionais.\n\nAlém do abastecimento essencial, esses espaços promovem uma forte redescoberta da identidade cultural e da tradição boêmia do Jaçanã. Entre conversas descontraídas, encontros entre vizinhos e o irrecusável aroma dos tradicionais pastéis com caldo de cana, as feiras livres transformam a rotina matinal em um evento festivo que fortalece os laços sociais do bairro.\n\nOs investimentos em infraestrutura e limpeza urbana têm garantido a organização e o conforto tanto dos feirantes quanto dos frequentadores durante os dias de evento. Com isso, o Jaçanã reforça sua vocação de acolhimento e vitalidade, provando que a tradição das feiras de rua permanece essencial para a economia local e o bem-estar da população.\n\nEdição - Julio Cesar Ferreira Silva",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431735179_images__5_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-02T23:23:29Z"
+                     },
+                     {
+                         "editoria":  "negocios",
+                         "titulo":  "Expo Center Norte",
+                         "resumo":  "Manchete 23/10/26: \nO Expo Center Norte, localizado no bairro da Vila Guilherme, mobiliza o fluxo da região ao sediar os dias finais da Fenasan (Feira Nacional de Saneamento e Meio Ambiente) e a imersão de negócios do evento Ponto Fora da Curva. A movimentação dos pavilhões reflete no aumento do tráfego nos acessos pela Marginal Tietê e pela Avenida Otto Baumgart.",
+                         "texto":  "Grandes Feiras no Expo Center Norte Movimentam a Vila GuilhermeO Expo Center Norte, cravado no coração da Vila Guilherme, vibra como o epicentro dos grandes negócios e eventos da capital paulista. O pavilhão sedia encontros de alcance nacional e internacional, reunindo milhares de congressistas, empresários e especialistas que transformam o ritmo da região. Esse movimento intenso injeta uma energia contagiante pelas vias do entorno, acendendo o dinamismo da Zona Norte e consolidando a região como um polo indispensável para o turismo de negócios.   Cruzar o complexo da Avenida Otto Baumgart durante esses dias é ser envolvido por uma atmosfera efervescente de oportunidades e trocas de conhecimento. A presença massiva de visitantes reflete-se imediatamente no aquecimento dos hotéis, nas mesas fartas dos restaurantes de Santana e no movimento constante dos serviços locais. Ver o comércio do bairro pulsar com tanta força desperta uma satisfação calorosa, trazendo aquela sensação de orgulho comunitário ao presenciar a Zona Norte acolhendo grandes líderes e impulsionando a economia do estado.Além da relevância financeira, a estrutura do centro de convenções alia inovação técnica a um cuidado crescente com o conforto e a acessibilidade de quem por ali circula. A experiência de vivenciar um espaço amplo, moderno e bem organizado proporciona momentos de fluidez e encontros enriquecedores. É o prazer sutil de ver a tradição acolhedora dos bairros do entorno se misturar com o que há de mais avançado em infraestrutura urbana, garantindo leveza e satisfação tanto para os moradores quanto para quem visita a região.\n\nEdição - Julio Cesar Ferreira Silva.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792758934767_images__21_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T00:23:29Z"
+                     },
+                     {
+                         "editoria":  "cultura",
+                         "titulo":  "A Força da Comunidade no Jaçanã e Tremembé",
+                         "resumo":  "Nesta sexta-feira, 23 de outubro de 2026, a Zona Norte de São Paulo combina o otimismo do progresso urbano com a vibração da sua vida comunitária: enquanto os avanços da futura Linha 19-Celeste do Metrô e as obras de drenagem no Córrego Carandiru garantem mais mobilidade e tranquilidade contra alagamentos, o encerramento dos grandes eventos no Expo Center Norte aquece o comércio local; paralelamente, a energia acolhedora dos bairros se manifesta do happy hour na Avenida Nova às batidas da Batalha da Norte e aos ensaios na Mocidade Alegre, reafirmando o Jaçanã, o Tremembé e toda a região como polos pulsantes de cultura, negócios e bem-estar.",
+                         "texto":  "A Força da Comunidade no Jaçanã e Tremembé: Entre a Tradição e o Pertencimento\n\nEntre as encostas da Serra da Cantareira e as vias tradicionais do extremo Norte, o cotidiano do Jaçanã e do Tremembé ganha vida em lugares icônicos como o Jardim Jaçanã, a Vila Albertina e o Filhos da Terra. Onde a poesia do samba imortalizada no rádio se conecta ao ritmo diário das feiras de rua e das praças movimentadas, revela-se um ecossistema vibrante marcado pela solidariedade de quem cuida do próprio território. Caminhar pelas calçadas dessa região é sentir a textura da história paulistana se entrelaçar ao calor humano, criando uma atmosfera apetitosa de convivência urbana.\n\nNas alamedas do Jardim Jaçanã, na efervescência da Vila Albertina e nos becos cheios de arte do Filhos da Terra, o sentimento de pertença se traduz em ações coletivas que aquecem o peito e fortalecem os laços sociais. O movimento constante das associações de bairro, os projetos culturais para os jovens e o comércio local de proximidade transformam as esquinas em verdadeiros pontos de encontro e celebração. A sensação gostosa de ver a vida pulsar com tanta autenticidade traz aquele alívio no peito, permitindo que cada morador desfrute da leveza e do acolhimento característicos da Zona Norte.\n\nA harmonia entre a natureza exuberante do entorno da Cantareira e a energia contagiante da gente local confere a essas periferias uma identidade única na capital. O prazer de trocar um cumprimento caloroso na padaria do bairro, ver as crianças brincando nas praças e sentir a comunidade unida em prol de melhorias contínuas renova o espírito e desperta um bem-estar genuíno. É a certeza de que a maior riqueza dessas quebradas reside na força humana e no afeto que pulsa, sem pausa, no coração da região.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792788071936_jardim-filhos-da-terra-zona-norte-v0-f8u96phb03nd1.webp",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T01:23:29Z"
+                     },
+                     {
+                         "editoria":  "esportes",
+                         "titulo":  "Final do campeonato de várzea do Jaçanã reúne torcida no domingo",
+                         "resumo":  "Os dois finalistas chegam invictos. Entrada gratuita.",
+                         "texto":  "Dentre as agremiações mais tradicionais que marcam o ecossistema esportivo da região, destacam-se o A.A. Anhanguera, o G.D.R. 7 de Setembro da Água Fria e o S.C. Americano das Imbiras, clubes varzeanos emblemáticos que moldaram a cultura futebolística local nas divisões de várzea e torneios comunitários.\n\nFundada na primeira metade do século XX em Santana, a Associação Atlética Anhanguera destaca-se como um dos polos poliesportivos e sociais mais antigos da Zona Norte, promovendo torneios amadores de campo e salão que movimentam atletas de diferentes faixas etárias. Da mesma forma, o Grêmio Esportivo e Recreativo 7 de Setembro, situado no bairro da Água Fria, carrega décadas de tradição em campeonatos de futebol de várzea da capital paulista, servindo como um ponto de encontro comunitário para os moradores locais.\n\nCompletando essa rica trajetória esportiva na região, o Sport Club Americano das Imbiras mantém viva a essência do futebol de bairro, onde os campos e sedes sociais funcionam como centros de lazer, integração e identidade cultural. Esses clubes continuam a desempenhar um papel fundamental na formação de novos talentos e na preservação da paixão pelo futebol popular na Zona Norte.\n\nEdição - Julio Cesar Ferreira Silva",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792437995323_images__10_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T02:23:29Z"
+                     },
+                     {
+                         "editoria":  "politica",
+                         "titulo":  "Frota de Ônibus Elétricos Traz Ar Mais Puro para as Avenidas da Zona Norte",
+                         "resumo":  "Manchete 11hr jornal da zona norte 23/10/26: a expansão da frota de ônibus elétricos na capital paulista reflete-se de forma direta no cotidiano da Zona Norte, que conta com novos veículos silenciosos e de emissão zero em circulação. A substituição gradual dos motores a diesel garante viagens muito mais suaves, reduzindo significativamente a poluição sonora e atmosférica ao longo das grandes vias como a Marginal Tietê e a Avenida Cruzeiro do Sul. Embarcar em um transporte moderno e climatizado proporciona uma agradável sensação de conforto e cuidado urbano, permitindo que a população desfrute de um deslocamento limpo, silencioso e revigorante pela cidade.",
+                         "texto":  "Frota de Ônibus Elétricos Traz Ar Mais Puro para as Avenidas da Zona Norte\nA expansão da frota de ônibus elétricos na capital paulista reflete-se de forma direta no cotidiano da Zona Norte, que conta com novos veículos silenciosos e de emissão zero em circulação. A substituição gradual dos motores a diesel garante viagens muito mais suaves, reduzindo significativamente a poluição sonora e atmosférica ao longo das grandes vias como a Marginal Tietê e a Avenida Cruzeiro do Sul. Embarcar em um transporte moderno e climatizado proporciona uma agradável sensação de conforto e cuidado urbano, permitindo que a população desfrute de um deslocamento limpo, silencioso e revigorante pela cidade.\n\nA sensação de deslizar pelas avenidas sem o ruído ensurdecedor ou o cheiro do combustível antigo renova o prazer de transitar pela metrópole. Ver a tecnologia trabalhar em favor do bem-estar diário traz um alívio profundo no peito, garantindo que trabalhadores e estudantes cheguem aos seus destinos com a mente descansada e o corpo relaxado. A leveza dentro dos veículos contagia os passageiros, transformando o trajeto do transporte público em um momento agradável de pausa e conforto.\n\nAlém do ganho imediato no trajeto, a presença desses veículos limpos espalha uma onda de frescor por todos os bairros cortados pelas linhas. Respirar um ar mais puro nas calçadas e sentir o barulho do tráfego diminuir traz uma satisfação genuína e reforça o orgulho de ver a Zona Norte na vanguarda da sustentabilidade. É o cuidado com o meio ambiente traduzido em saúde, leveza e qualidade de vida no dia a dia da comunidade.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792790082272_images__24_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T03:23:29Z"
+                     },
+                     {
+                         "editoria":  "entretenimento",
+                         "titulo":  "Paquera e o Afeto Espontâneo",
+                         "resumo":  "A energia do Carnaval de rua na Zona Norte de São Paulo transcende a simples celebração da folia, convertendo as artérias dos bairros tradicionais num autêntico cenário de conquista, descontração e beijos de rua.",
+                         "texto":  "Quando os blocos e fanfarras ocupam as vias públicas, a atmosfera festiva contagia foliões de todas as idades, transformando a paquera e o afeto espontâneo na grande atração das tardes de festa.\n\nBairros como Santana, Freguesia do Ó e Tucuruvi abrigam blocos de rua que atraem multidões dispostas a desarmar o estresse do quotidiano e vivenciar encontros e paixões passageiras. Sob o ritmo das marchinhas, do samba e dos ritmos baianos, os corredores de folia tornam-se o refúgio perfeito para quem busca flertes ligeiros, troca de olhares marcantes e abraços calorosos em pleno espaço público.\n\nAlém da liberdade expressa nos festejos, o movimento carnavalesco fortalece o comércio boémio e a integração da comunidade local, transformando esquinas e calçadas em pontos de reencontro. Entre confetes, serpentinas e bebidas bem geladas, a tradição dos beijos de rua na Zona Norte renova o espírito festivo da região e celebra a diversidade e o afeto urbano.\n\nEdição - Julio Cesar Ferreira Silva",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792438803527_JALPB6NZ5VPALGDRP3GN2WL5VI.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T04:23:29Z"
+                     },
+                     {
+                         "editoria":  "turismo",
+                         "titulo":  "Roteiro de um dia pela Zona Norte: parque, mirante.",
+                         "resumo":  "Do verde da Cantareira aos bares tradicionais de Santana.",
+                         "texto":  "Com uma vasta área de vegetação nativa da Mata Atlântica, o local oferece aos visitantes belíssimos lagos, trilhas para caminhada e um contato íntimo com a natureza, sendo o ponto de encontro ideal para famílias e praticantes de esportes que buscam tranquilidade no cotidiano urbano.\n\nLogo ao lado, a Serra da Cantareira abriga o imponente Núcleo Pedra Grande, um dos pontos mais fascinantes para o ecoturismo na capital paulista. Ao final de uma caminhada em meio à floresta preservada, os visitantes chegam a um mirante natural situado a mais de mil metros de altitude, de onde é possível contemplar uma vista panorâmica verdadeiramente espetacular de toda a metrópole.\n\nCompletando o roteiro de atrações regionais, a icônica Avenida Luiz Dumont Villares — a conhecida Avenida Nova — consolida-se como o grande polo gastronômico e de entretenimento noturno da Zona Norte. Reunindo uma ampla variedade de bares, restaurantes e opções culturais, a via é o destino perfeito para quem quer aproveitar a vida boêmia local, degustar a culinária paulistana e vivenciar a calorosa hospitalidade do ecossistema dos bairros do entorno.\n\nEdição - Julio Cesar Ferreira Silva",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792443059735_images__12_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T05:23:29Z"
+                     },
+                     {
+                         "editoria":  "cultura",
+                         "titulo":  "Batalhão Tobias de Aguiar — a ROTA",
+                         "resumo":  "Para contextualizar historicamente as origens da tensão entre o estado paulista e o Governo Federal, a Revolução Constitucionalista de 1932 foi o maior conflito armado ocorrido no estado de São Paulo, marcando decisivamente a memória da capital paulista e de instituições históricas sediadas na região.",
+                         "texto":  "Cronologia da Revolução Constitucionalista de 1932\n23 de Maio de 1932: Durante um protesto no centro da capital contra o Governo Provisório de Getúlio Vargas, quatro estudantes (Martins, Miragaia, Dráusio e Camargo) são mortos por forças getulistas. Surge a sigla e o movimento M.M.D.C., que mobilizou a sociedade paulista e voluntários para a causa constitucionalista.\n\n9 de Julho de 1932: É deflagrada oficialmente a Revolução Constitucionalista de 1932. Tropas da Força Pública de São Paulo (atual Polícia Militar, incluindo o histórico Batalhão Tobias de Aguiar — a ROTA) e voluntários civis pegam em armas exigindo a restauração da ordem democrática e a promulgação de uma nova Constituição.\n\n10 de Julho a Setembro de 1932: Ocorrem intensos combates ao longo das fronteiras do estado de São Paulo (Setores Norte, Leste e Sul), onde voluntários e batalhões de choque paulistas enfrentam as forças do Governo Federal. Na capital, locais de instrução e alojamentos na Zona Norte e região central serviram como pontos estratégicos de apoio e mobilização das tropas voluntárias.\n\n2 de Outubro de 1932: Após quase três meses de cerco econômico e militar pelas tropas federais, o comando militar paulista assina a rendição e o cessar-fogo oficial na cidade de Cruzeiro (SP), encerrando o conflito armado.\n\n16 de Julho de 1934: Apesar da derrota militar no campo de batalha, o movimento alcançou seu objetivo político com a promulgação da Constituição Brasileira de 1934, garantindo o retorno da ordem constitucional no país.\n\nEdição - Julio Cesar Ferreira Silva",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792444563336_images__15_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T06:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Drenagem no Córrego Carandiru",
+                         "resumo":  "Manchete 22/10/26: A Prefeitura reforçou nesta semana as ações de limpeza e desassoreamento ao longo do Córrego Carandiru e de galerias de águas pluviais entre Santana e a Vila Guilherme. A medida preventiva visa aumentar a capacidade de escoamento e reduzir o risco de alagamentos nos pontos críticos da região durante a temporada de fortes chuvas de primavera.",
+                         "texto":  "A fiscalização e as obras de drenagem no Córrego Carandiru avançam com um ritmo envolvente que renova o alívio de quem vive entre Santana e a Vila Guilherme. O cuidado minucioso com a limpeza das galerias transforma o cenário urbano, desenhando um horizonte de proteção e aconchego para a comunidade. Sentir as calçadas livres do receio das enchentes traz um frescor revigorante, convidando cada morador a caminhar pela região com a mente tranquila e o peito leve.\n\nEssa presença constante do poder público e o movimento das equipes na rua geram um sentimento delicioso de acolhimento e pertença. Saber que a infraestrutura está sendo moldada para proteger o nosso espaço desperta um conforto profundo, como o abraço caloroso de quem cuida do próprio lar. É a segurança de ver a água fluir suavemente, devolvendo à rotina da Zona Norte aquela sensação gostosa de bem-estar e paz.\n\nAo caminhar pelas alamedas arborizadas do entorno, a percepção de transformação é acompanhada por um toque de satisfação genuína. A harmonia entre as intervenções técnicas e a tranquilidade das famílias cria uma atmosfera vibrante e apetitosa para se viver. Morar onde o cuidado se faz presente é vivenciar diariamente o prazer de estar em casa, cercado de proteção e do carinho de uma comunidade que se fortalece a cada melhoria.\n\nEdição - Julio Cesar Ferreira Silva.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686555047_images__17_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T07:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Reinauguração e Ações Culturais no Centro Cultural da Juventude",
+                         "resumo":  "Manchete 22/10/26: Localizado na Vila Nova Cachoeirinha, o Centro Cultural da Juventude (CCJ Ruth de Souza) apresenta uma programação especial com oficinas gratuitas de tecnologia, dança e batalhas de rima. O espaço se consolida como um dos maiores polos de fomento à cultura urbana e inclusão social para os jovens da periferia da Zona Norte.",
+                         "texto":  "Localizado na Vila Nova Cachoeirinha, o Centro Cultural da Juventude (CCJ Ruth de Souza) apresenta uma programação especial com oficinas gratuitas de tecnologia, dança e batalhas de rima. O espaço se consolida como um dos maiores polos de fomento à cultura urbana e inclusão social para os jovens da periferia da Zona Norte.\n\nEdição - Julio Cesar Ferreira Silva.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686734023_images__18_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T08:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Clima Ameno e Tarde sem Chuva Acalmam a Sexta-Feira na Freguesia do Ó",
+                         "resumo":  "Manchete 11hr jornal da zona norte 23/10/26: A Freguesia do Ó registrou uma tarde amena com termômetros na casa dos 23°C e céu encoberto nesta sexta-feira, garantindo uma trégua bem-vinda para o trânsito regional após o período de instabilidades. Sem o risco imediato de pancadas de chuva forte no final de tarde, o fluxo de veículos e pedestres pelas ladeiras históricas e principais avenidas transcorre de forma serena e altamente fluida. Esse clima fresco e agradável traz um alívio imediato no corpo, convidando cada morador a desacelerar o ritmo, respirar fundo o ar leve da região e preparar o espírito para aproveitar o descanso do fim de semana com total tranquilidade.",
+                         "texto":  "Clima Ameno e Tarde sem Chuva Acalmam a Sexta-Feira na Freguesia do Ó\nA Freguesia do Ó registrou uma tarde amena com termômetros na casa dos 23°C e céu encoberto nesta sexta-feira, garantindo uma trégua bem-vinda para o trânsito regional após o período de instabilidades. Sem o risco imediato de pancadas de chuva forte no final de tarde, o fluxo de veículos e pedestres pelas ladeiras históricas e principais avenidas transcorre de forma serena e altamente fluida. Esse clima fresco e agradável traz um alívio imediato no corpo, convidando cada morador a desacelerar o ritmo, respirar fundo o ar leve da região e preparar o espírito para aproveitar o descanso do fim de semana com total tranquilidade.\n\nDeslizar pelas vias da Freguesia sabendo que o caminho para casa está livre de alagamentos e sobreatos proporciona uma sensação deliciosa de paz e conforto ao volante. A brisa suave que desce da Serra da Cantareira refresca a rotina e transforma o trajeto do trabalho em uma viagem tranquila e prazerosa. As calçadas secas e o tráfego sem sobressaltos devolvem às pessoas aquele bem-estar precioso de quem recupera o controle do próprio tempo para vivenciar a cidade com leveza.\n\nA atmosfera serena da tarde reflete-se no humor dos moradores, que já começam a lotar os quiosques e mesas ao ar livre perto do Largo da Matriz. O clima ameno convida ao encontro espontâneo, às conversas sem pressa e ao prazer simples de ver a noite chegar em um dos bairros mais acolhedores de São Paulo. É a certeza de que, quando o tempo colabora, a rotina na Zona Norte ganha contornos de pura harmonia, descanso e aconchego.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792790094016_images__23_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T09:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Operação de Monitoramento de Trânsito na Marginal Tietê",
+                         "resumo":  "Manchete 22/10/26: A Companhia de Engenharia de Tráfego (CET) intensificou a fiscalização e o monitoramento nos acessos às pontes da Zona Norte — como as pontes do Limão, Vila Maria e Cruzeiro do Sul —, devido ao aumento do fluxo de veículos pesados e às intervenções pontuais de manutenção no piso asfáltico ao longo da Marginal Tietê.",
+                         "texto":  "A operação especial de monitoramento promovida pela Companhia de Engenharia de Tráfego traz um sopro de fluidez e tranquilidade aos acessos da Marginal Tietê. Ver a coordenação atenta dos agentes perto das pontes do Limão, Vila Maria e Cruzeiro do Sul acalma os ânimos e transforma a rotina do trânsito num percurso muito mais sereno. O ritmo acelerado da metrópole ganha contornos de suavidade quando a organização nos permite rodar sem sobressaltos.\n\nDeslizar pelas vias da Zona Norte sabendo que as intervenções no asfalto garantem uma viagem segura proporciona uma sensação deliciosa de alívio e conforto ao volante. O estresse das grandes avenidas cede lugar à satisfação de um trajeto eficiente, permitindo que motoristas e passageiros relaxem e aproveitem a paisagem urbana. Cada melhoria concluída é um carinho no cotidiano de quem precisa se deslocar com agilidade e paz de espírito.\n\nO impacto positivo dessa fiscalização cuidadosa reflete-se no humor de toda a região, espalhando uma onda de leveza pelos motoristas e trabalhadores. Retomar o controle do próprio tempo e chegar ao destino sem percalços desperta um prazer sutil, mas profundamente satisfatório, ao longo do dia. A Zona Norte mostra que, com cuidado e planejamento, até mesmo o trânsito da capital pode se tornar uma experiência de bem-estar e harmonia.\n\nEdição - Julio Cesar Ferreira Silva.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686842415_images__19_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T10:23:29Z"
+                     },
+                     {
+                         "editoria":  "negocios",
+                         "titulo":  "Fábrica da Panco",
+                         "resumo":  "A fábrica da Panco na Zona Norte permanece como um dos marcos industriais mais emblemáticos da região, simbolizando a tradição e o vigor econômico que impulsionam o cotidiano dos moradores locais.",
+                         "texto":  "Estrategicamente posicionada para abastecer milhares de pontos de venda, a unidade combina processos modernos de panificação a uma logística eficiente, garantindo que pães, bolos e biscoitos frescos saiam diariamente das linhas de produção diretamente para as mesas paulistas.\n\nAlém de sua relevância no setor alimentício, o complexo industrial desempenha um papel fundamental no ecossistema socioeconômico do seu entorno. A operação gera centenas de empregos diretos e indiretos, movimentando o comércio local e fortalecendo a renda de inúmeras famílias da Zona Norte. O fluxo constante de colaboradores e fornecedores transforma a dinâmica do bairro, consolidando o local como um polo produtivo de grande importância para São Paulo.\n\nCom décadas de história e forte vínculo comunitário, a presença da Panco reforça a identidade industrial da Zona Norte sem perder o carinho do público que cresceu consumindo seus produtos. A fábrica não representa apenas um centro de produção de em larga escala, mas também um ponto de referência cultural e afetivo, mantendo viva a tradição de qualidade e inovação no setor de panificação.\n\nEdição - Julio Cesar Ferreira Silva.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792432211312_images__7_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T11:23:29Z"
+                     },
+                     {
+                         "editoria":  "politica",
+                         "titulo":  "Política Zona Norte ",
+                         "resumo":  "A política e a gestão pública exercem um impacto direto e profundo na dinâmica diária, no desenvolvimento urbano e na qualidade de vida dos moradores da Zona Norte de São Paulo. Por ser uma região vasta, diversa e historicamente marcada por contrastes socioeconômicos, as decisões políticas moldam desde a mobilidade urbana até o acesso a serviços essenciais.",
+                         "texto":  "1. Mobilidade Urbana e Infraestrutura\nA presença e a expansão de grandes obras de transporte são frutos diretos de escolhas de políticas públicas. A chegada de novas linhas de metrô, o gerenciamento do transporte sobre pneus e a manutenção de corredores de ônibus determinam o tempo que o morador da Zona Norte gasta para se deslocar diariamente até o centro e outras regiões de trabalho. Além disso, obras de drenagem e canalização de córregos dependem diretamente de investimentos do orçamento público para combater enchentes históricas em bairros mais suscetíveis.\n\n2. Preservação Ambiental e Lazer\nA Zona Norte abriga importantes áreas de preservação ambiental, como o Parque Estadual Alberto Löfgren (Horto Florestal) e o Parque Estadual da Cantareira. A gestão pública e a formulação de leis ambientais definem as políticas de concessão, a manutenção da biodiversidade e os investimentos em lazer e turismo ecológico. Decisões políticas adequadas garantem que essas áreas verdes permaneçam acessíveis à população e protegidas contra a especulação imobiliária irregular.\n\n3. Serviços Públicos e Desenvolvimento Social\nA distribuição e a qualidade dos equipamentos de saúde (como UBSs e hospitais regionais), das escolas públicas e das creches refletem prioridades orçamentárias estabelecidas pelos governos municipal e estadual. Além disso, políticas voltadas para a segurança pública e o fomento ao comércio e à vida boêmia local — como a regulamentação do uso do solo e o apoio a eventos culturais — influenciam diretamente o dinamismo econômico e a sensação de segurança de bairros emblemáticos como Santana, Tucuruvi e Vila Guilherme.\n\nComo você gostaria de aprofundar esse tema? Podemos focar em um setor específico (como transporte ou meio ambiente) ou em algum bairro da Zona Norte.\n\nEdição - Julio Cesar Ferreira Silva",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431235319_images__4_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T12:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Mutirão da Subprefeitura Promove Poda de Árvores e Zeladoria na Av. Nova Cantareira",
+                         "resumo":  "Mutirão da Subprefeitura Promove Poda de Árvores e Zeladoria na Av. Nova Cantareira: Equipes de zeladoria da Subprefeitura Jaçanã/Tremembé atuam ao longo de toda a extensão da Avenida Nova Cantareira com serviços de poda preventiva em galhos de grande porte, recolhimento de entulho e limpeza das galerias pluviais para evitar quedas sobre a rede elétrica e preparar a via para as chuvas de verão.",
+                         "texto":  "Lideranças comunitárias e comerciantes da Vila Maria protocolaram um pedido formal junto à Subprefeitura Vila Maria/Vila Guilherme cobrando celeridade na vistoria e poda das árvores antigas que margeiam a Avenida Guilherme Cotching. A preocupação do bairro voltou a crescer devido à aproximação da temporada de tempestades, quando rajadas de vento e chuvas intensas aumentam significativamente os riscos de acidentes na via.\n\nO objetivo do abaixo-assinado e dos protocolos abertos é prevenir a queda de galhos de grande porte sobre fiações elétricas, veículos em trânsito e calçadas de grande circulação de pedestres. Além de evitar danos materiais aos estabelecimentos comerciais do corredor, os moradores enfatizam que o manejo arbóreo preventivo garante a segurança de quem circula diariamente pelo principal eixo do bairro.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793297795745_images__38_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T13:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Feira de Empreendedorismo Feminino Movimenta a Praça Escolar no Mandaqui",
+                         "resumo":  "Feira de Empreendedorismo Feminino Movimenta a Praça Escolar no Mandaqui: Dezenas de artesãs, produtoras locais e donas de PMEs participaram da Feira de Empreendedorismo Feminino na Praça Escolar, promovendo a venda direta de produtos, gastronomia e artesanato regional, além de oferecer palestras gratuitas de capacitação financeira para mulheres\n do bairro.",
+                         "texto":  "A Praça Escolar, no Mandaqui, transformou-se no epicentro da economia criativa local ao sediar a Feira de Empreendedorismo Feminino da Zona Norte. O evento reuniu dezenas de expositoras, incluindo artesãs, produtoras autônomas e donas de pequenas e médias empresas, que apresentaram ao público uma grande diversidade de artigos autorais, gastronomia regional e produtos artesanais.\n\nAlém da comercialização direta que impulsionou a renda das participantes, o encontro ofereceu uma grade de palestras gratuitas focadas em capacitação financeira, gestão de micronegócios e marketing digital. A iniciativa fortaleceu a rede de apoio entre as mulheres da comunidade, incentivando a autonomia econômica e o consumo de proximidade no bairro.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302192834_images__39_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T14:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Moradores da Vila Maria Solicitam Reforço no Manejo de Árvores na Av. Guilherme",
+                         "resumo":  "Moradores da Vila Maria Solicitam Reforço no Manejo de Árvores na Av. Guilherme Cotching: Lideranças comunitárias da Vila Maria protocolaram um pedido junto à subprefeitura local para acelerar a vistoria e poda de árvores antigas na Avenida Guilherme Cotching, prevenindo o risco de queda de galhos sobre fiação e veículos durante tempestades com ventos fortes.",
+                         "texto":  "Equipes de zeladoria da Subprefeitura Jaçanã/Tremembé colocaram em prática um mutirão intensivo ao longo de toda a extensão da Avenida Nova Cantareira. Os trabalhos concentram-se no corte preventivo de galhos que apresentam risco de contato com a rede de alta tensão, na raspagem do leito viário e no recolhimento imediato de entulhos e descartes irregulares acumulados nos passeios públicos.\n\nA força-tarefa abrange também a limpeza mecânica e o desassoreamento de bocas de lobo e galerias pluviais espalhadas pelo trecho. A intervenção busca assegurar a fluidez do tráfego em um dos principais corredores de ligação da Zona Norte, preparando a infraestrutura do bairro para suportar o volume de água e evitar alagamentos durante as tempestades de verão.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302150072_43938772.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T15:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Fiscalização encerra creche clandestina após denúncias de maus-tratos",
+                         "resumo":  "Manchete 02/11/26:  Uma operação conjunta envolvendo a Polícia Civil e fiscalizadores municipais interditou uma creche que funcionava de forma clandestina na Zona Norte. A ação ocorreu após denúncias de pais e vizinhos que registraram imagens de maus-tratos contra crianças no local.   ",
+                         "texto":  "Uma operação conjunta envolvendo a Polícia Civil e fiscalizadores municipais interditou uma creche que funcionava de forma clandestina na Zona Norte. A ação ocorreu após denúncias de pais e vizinhos que registraram imagens de maus-tratos contra crianças no local.   O espaço foi lacrado por falta de alvará de funcionamento e segurança inadequada. Os responsáveis pelo estabelecimento foram encaminhados à delegacia para prestar depoimento, enquanto as famílias afetadas estão sendo assistidas pelos serviços de proteção à infância do município.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608314689_images__41_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T16:23:29Z"
+                     },
+                     {
+                         "editoria":  "locais",
+                         "titulo":  "Operação conjunta apreende veículos adulterados na Marginal Tietê",
+                         "resumo":  "Manchete 02/11/26: Uma fiscalização promovida pela Polícia Militar em conjunto com agentes do Detran resultou na apreensão de diversos veículos e motocicletas na região da Ponte da Vila Maria. A operação tinha como foco coibir rachas noturnos e fiscalizar escapamentos com ruído acima do permitido por lei.",
+                         "texto":  "Uma fiscalização promovida pela Polícia Militar em conjunto com agentes do Detran resultou na apreensão de diversos veículos e motocicletas na região da Ponte da Vila Maria. A operação tinha como foco coibir rachas noturnos e fiscalizar escapamentos com ruído acima do permitido por lei.\n\nDurante a ação, dezenas de motoristas foram autuados por irregularidades mecânicas ou documentação vencida. As autoridades destacaram que essas blitzes serão intensificadas na Marginal Tietê e avenidas de acesso para garantir a segurança viária e o sossego público.",
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608319252_images__42_.jpg",
+                         "autor":  "Redação 11hr",
+                         "hora":  "Hoje, 10h",
+                         "link":  "",
+                         "createdAt":  "2026-11-03T17:23:29Z"
+                     }
+                 ],
+    "anuncios":  [
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792374146577_images.jpg",
+                         "link":  "",
+                         "alvo":  "A noite na Zona Norte"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792430910104_images__3_.jpg",
+                         "link":  "",
+                         "alvo":  "Avenida Nova"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792685813850_anuncie-11hr.png",
+                         "link":  "",
+                         "alvo":  "Política Zona Norte "
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792431793306_images__6_.jpg",
+                         "link":  "",
+                         "alvo":  "Feira do Jaçanã"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792432284907_images__8_.jpg",
+                         "link":  "",
+                         "alvo":  "Fábrica da Panco"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792438007695_images__9_.jpg",
+                         "link":  "",
+                         "alvo":  "Final do campeonato de várzea do Jaçanã reúne torcida no domingo"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792440578036_images__11_.jpg",
+                         "link":  "",
+                         "alvo":  "Paquera e o Afeto Espontâneo"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792685879448_anuncie-11hr.png",
+                         "link":  "",
+                         "alvo":  "A noite na Zona Norte"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792444760164_images__16_.jpg",
+                         "link":  "",
+                         "alvo":  "Batalhão Tobias de Aguiar — a ROTA"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686577973_anuncie-11hr.png",
+                         "link":  "",
+                         "alvo":  "Drenagem no Córrego Carandiru"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686881126_images.jpg",
+                         "link":  "",
+                         "alvo":  "Reinauguração e Ações Culturais no Centro Cultural da Juventude"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792686924534_anuncie-11hr.png",
+                         "link":  "",
+                         "alvo":  "Operação de Monitoramento de Trânsito na Marginal Tietê"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792758978541_anuncie-11hr.png",
+                         "link":  "",
+                         "alvo":  "Chegada da Linha 19-Celeste do Metrô"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792759819019_Frente_2x__2_.png",
+                         "link":  "",
+                         "alvo":  "Expo Center Norte"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792759840409_anuncie-11hr.png",
+                         "link":  "",
+                         "alvo":  "Operação de Verão e Estado de Atenção pela Defesa Civil"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792788215071_images.jpg",
+                         "link":  "",
+                         "alvo":  "A Força da Comunidade no Jaçanã e Tremembé"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792791216638_anuncie-11hr.png",
+                         "link":  "",
+                         "alvo":  "Paquera e o Afeto Espontâneo"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792791223432_anuncie-11hr.png",
+                         "link":  "",
+                         "alvo":  "Frota de Ônibus Elétricos Traz Ar Mais Puro para as Avenidas da Zona Norte"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792791232300_Frente_empilhado.png",
+                         "link":  "",
+                         "alvo":  "Expo Center Norte"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792950024341_anuncie-11hr-R56.png",
+                         "link":  "",
+                         "alvo":  "Paquera e o Afeto Espontâneo"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792950031382_anuncie-11hr-R56.png",
+                         "link":  "",
+                         "alvo":  " Ação nas Chuvas no Jaçanã"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1792951477117_anuncie-11hr-R56.png",
+                         "link":  "",
+                         "alvo":  "Padarias da ZN Finalistas no Padocaria SP"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032105499_anuncie-11hr-R56.png",
+                         "link":  "",
+                         "alvo":  "A vitória do governo Lula no âmbito federal impulsiona a Zona Norte de São Paulo"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032100357_anuncie-11hr-R56.png",
+                         "link":  "",
+                         "alvo":  "A vitória do governo Tarcísio de Freitas no estado impulsiona projetos de grande porte na Zona Norte de São Paulo"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793032087348_images__13_.jpg",
+                         "link":  "",
+                         "alvo":  "Cenário Político e Oportunidades para empresas na Zona Norte: Infraestrutura, Crédito e Posicionamento Estratégico"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120716908_Frente_empilhado.png",
+                         "link":  "",
+                         "alvo":  "Queda Brusca de Temperatura Aciona Rede de Acolhimento na Zona Norte"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120728820_anuncie-11hr-R56.png",
+                         "link":  "",
+                         "alvo":  "Paquera e o Afeto Espontâneo"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793120745997_anuncie-11hr-R56.png",
+                         "link":  "",
+                         "alvo":  "SPTrans Realiza Adequações Operacionais nas Plataformas do Terminal Santana"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209659661_anuncie-11hr-R67.png",
+                         "link":  "",
+                         "alvo":  "Defesa Civil Reforça Acolhimento Aos Moradores de Rua Com Queda de Temperatura"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209678307_anuncie-11hr-R67.png",
+                         "link":  "",
+                         "alvo":  "Sesc Santana Estreia Espetáculo Teatral sobre Sarah Bernhardt"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793209693973_Frente_empilhado.png",
+                         "link":  "",
+                         "alvo":  "CCJ Parada Inglesa Abre Inscrições para Oficinas Gratuitas de Audiovisual"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302737912_anuncie-11hr-R67.png",
+                         "link":  "",
+                         "alvo":  "todas"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302744408_anuncie-11hr-R67.png",
+                         "link":  "",
+                         "alvo":  "todas"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793302768004_images.jpg",
+                         "link":  "",
+                         "alvo":  "todas"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608414606_images.jpg",
+                         "link":  "",
+                         "alvo":  "Linha de ônibus tem itinerário alterado para atender a Rosas de Ouro"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608472696_anuncie-11hr-R67.png",
+                         "link":  "",
+                         "alvo":  "Fiscalização encerra creche clandestina após denúncias de maus-tratos"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793608488195_images__8_.jpg",
+                         "link":  "",
+                         "alvo":  "Operação conjunta apreende veículos adulterados na Marginal Tietê"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718854311_anuncie-11hr-R67.png",
+                         "link":  "",
+                         "alvo":  "Bairro do Limão ganha nova horta comunitária em terreno revitalizado"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718859815_anuncie-11hr-R67.png",
+                         "link":  "",
+                         "alvo":  "Escolas estaduais de Tucuruvi realizam mostra de projetos de tecnologia"
+                     },
+                     {
+                         "foto":  "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793718865714_images__45_.jpg",
+                         "link":  "",
+                         "alvo":  "Comércio da Rua Voluntários da Pátria inicia preparativos para o fim de ano"
+                     }
+                 ]
 }
