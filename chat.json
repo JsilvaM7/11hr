@@ -111,6 +111,22 @@
       "texto": "Cadastrado",
       "at": "2026-11-03T17:29:37.367Z",
       "isAdmin": false
+    },
+    {
+      "id": "1793726992991_ioyn8",
+      "autor": "Beto",
+      "bairro": "Santana",
+      "texto": "Cadastrado",
+      "at": "2026-11-03T17:29:52.991Z",
+      "isAdmin": false
+    },
+    {
+      "id": "1793727033452_ks935",
+      "autor": "Buon",
+      "bairro": "Vila Maria",
+      "texto": "cadastrado amigos",
+      "at": "2026-11-03T17:30:33.452Z",
+      "isAdmin": false
     }
   ],
   "usuarios": {
@@ -143,9 +159,9 @@
       "bairro": "Santana",
       "at": "2026-11-03T15:00:23.137Z"
     },
-    "BEt": {
-      "bairro": "Santana",
-      "at": "2026-11-03T17:29:37.367Z"
+    "Buon": {
+      "bairro": "Vila Maria",
+      "at": "2026-11-03T17:30:33.452Z"
     }
   },
   "config": {
