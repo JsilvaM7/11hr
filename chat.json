@@ -71,6 +71,14 @@
       "texto": "Bom dia Zona norte",
       "at": "2026-11-02T08:08:33.289Z",
       "isAdmin": true
+    },
+    {
+      "id": "1793718023137_67mwo",
+      "autor": "Ca",
+      "bairro": "Santana",
+      "texto": "Bom dia",
+      "at": "2026-11-03T15:00:23.137Z",
+      "isAdmin": false
     }
   ],
   "usuarios": {
@@ -98,6 +106,10 @@
     "Casal tranquilo": {
       "bairro": "Tucuruvi",
       "at": "2026-10-31T21:54:41.671Z"
+    },
+    "Ca": {
+      "bairro": "Santana",
+      "at": "2026-11-03T15:00:23.137Z"
     }
   },
   "config": {
