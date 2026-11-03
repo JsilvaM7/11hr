@@ -104,6 +104,8 @@ img.ph{width:100%;object-fit:cover;display:block;padding:0}
 #ad-content.collapsed{max-height:0;opacity:0;}
 #ad-img{width:170px;display:block;cursor:pointer;object-fit:cover;border-radius:0 0 12px 12px;}
 
+.art-num{display:inline-block;background:var(--accent);color:#000;font:700 10px var(--head);padding:1px 6px;border-radius:4px;margin-right:6px;vertical-align:middle;letter-spacing:.03em;}
+
 /* Frase do cabeçalho */
 .mast-tagline{font:600 11px var(--head);opacity:.75;text-align:right;white-space:nowrap;letter-spacing:.02em}
 
@@ -188,11 +190,13 @@ function shareUrl(idx){return location.protocol+'//'+location.host+location.path
 
 function lead(r,i,tag){
   var href=okUrl(r.l)?'href="'+esc(r.l)+'" target="_blank" rel="noopener"':'href="#/n/'+i+'"';
-  return '<a class="lead" '+href+'>'+pic(r)+'<h3>'+esc(r.t)+'</h3><span class="meta">'+(tag?'<span class="tag">'+tag+'</span> · ':'')+esc(edName(r.ed))+'</span><p>'+esc(r.r)+'</p><span class="meta">'+esc(r.a)+' · '+esc(r.h)+'</span></a>'
+  var nb=r.num?'<span class="art-num">#'+r.num+'</span>':'';
+  return '<a class="lead" '+href+'>'+pic(r)+'<h3>'+nb+esc(r.t)+'</h3><span class="meta">'+(tag?'<span class="tag">'+tag+'</span> · ':'')+esc(edName(r.ed))+'</span><p>'+esc(r.r)+'</p><span class="meta">'+esc(r.a)+' · '+esc(r.h)+'</span></a>'
 }
 function item(r,i,sec){
   var href=okUrl(r.l)?'href="'+esc(r.l)+'" target="_blank" rel="noopener"':'href="#/n/'+i+'"';
-  return '<li><a class="item" '+href+'><div class="tx">'+(sec?'<span class="sec">'+esc(edName(r.ed))+'</span>':'')+'<h4>'+esc(r.t)+'</h4>'+(sec?'':'<p>'+esc(r.r)+'</p>')+'<span class="meta">'+esc(r.h)+'</span></div>'+pic(r,"th")+'</a></li>'
+  var nb2=r.num?'<span class="art-num">#'+r.num+'</span>':'';
+  return '<li><a class="item" '+href+'><div class="tx">'+(sec?'<span class="sec">'+esc(edName(r.ed))+'</span>':'')+nb2+'<h4>'+esc(r.t)+'</h4>'+(sec?'':'<p>'+esc(r.r)+'</p>')+'<span class="meta">'+esc(r.h)+'</span></div>'+pic(r,"th")+'</a></li>'
 }
 
 function route(){
@@ -344,7 +348,7 @@ view.innerHTML='<div class="loading"><div class="spinner"></div><span>Carregando
 fetch("data.json?v="+Date.now())
   .then(function(r){return r.ok?r.json():Promise.reject("Erro "+r.status)})
   .then(function(data){
-    rows=(data.noticias||[]).map(function(n,i){return{ed:n.editoria||"locais",t:n.titulo||"",r:n.resumo||"",x:n.texto||"",f:n.foto||"",a:n.autor||"Redação 11hr",h:n.hora||"",l:n.link||"",ts:n.createdAt||"",idx:i}}).sort(function(a,b){if(a.ts&&b.ts)return b.ts.localeCompare(a.ts);if(a.ts)return -1;if(b.ts)return 1;return b.idx-a.idx;});
+    rows=(data.noticias||[]).map(function(n,i){return{ed:n.editoria||"locais",t:n.titulo||"",r:n.resumo||"",x:n.texto||"",f:n.foto||"",a:n.autor||"Redação 11hr",h:n.hora||"",l:n.link||"",num:i+1}});
     ads=(data.anuncios||[]).map(function(a){return{foto:a.foto||"",link:a.link||"",alvo:a.alvo||"todas"}});
     route();
   })
