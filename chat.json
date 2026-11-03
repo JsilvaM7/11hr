@@ -135,6 +135,14 @@
       "texto": "Marmoraria",
       "at": "2026-11-03T17:31:02.890Z",
       "isAdmin": false
+    },
+    {
+      "id": "1793727083428_812nx",
+      "autor": "Exclusivo",
+      "bairro": "Vila Maria",
+      "texto": "jogos",
+      "at": "2026-11-03T17:31:23.428Z",
+      "isAdmin": false
     }
   ],
   "usuarios": {
@@ -167,9 +175,9 @@
       "bairro": "Santana",
       "at": "2026-11-03T15:00:23.137Z"
     },
-    "Cza": {
+    "Exclusivo": {
       "bairro": "Vila Maria",
-      "at": "2026-11-03T17:31:02.890Z"
+      "at": "2026-11-03T17:31:23.428Z"
     }
   },
   "config": {
