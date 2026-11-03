@@ -151,6 +151,14 @@
       "texto": "jogos",
       "at": "2026-11-03T17:31:41.298Z",
       "isAdmin": false
+    },
+    {
+      "id": "1793727157836_8mjzs",
+      "autor": "Fend",
+      "bairro": "Santana",
+      "texto": "cadaastrado",
+      "at": "2026-11-03T17:32:37.836Z",
+      "isAdmin": false
     }
   ],
   "usuarios": {
@@ -186,6 +194,10 @@
     "Exclusivo": {
       "bairro": "Vila Maria",
       "at": "2026-11-03T17:31:23.428Z"
+    },
+    "Fend": {
+      "bairro": "Santana",
+      "at": "2026-11-03T17:32:37.836Z"
     }
   },
   "config": {
