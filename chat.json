@@ -79,6 +79,14 @@
       "texto": "Bom dia",
       "at": "2026-11-03T15:00:23.137Z",
       "isAdmin": false
+    },
+    {
+      "id": "1793726851785_s6015",
+      "autor": "Marcenaria monte cristo",
+      "bairro": "Santana",
+      "texto": "cadastrado",
+      "at": "2026-11-03T17:27:31.785Z",
+      "isAdmin": false
     }
   ],
   "usuarios": {
@@ -110,6 +118,10 @@
     "Ca": {
       "bairro": "Santana",
       "at": "2026-11-03T15:00:23.137Z"
+    },
+    "Marcenaria monte cristo": {
+      "bairro": "Santana",
+      "at": "2026-11-03T17:27:31.785Z"
     }
   },
   "config": {
