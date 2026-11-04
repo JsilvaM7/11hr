@@ -188,15 +188,30 @@ function getQS(name){var m=location.search.match(new RegExp('[?&]'+name+'=([^&]*
 /* URL limpa para compartilhamento (sem hash — WhatsApp reconhece como link) */
 function shareUrl(idx){return location.protocol+'//'+location.host+location.pathname+'?n='+idx;}
 
+/* Formata data de publicacao: "Segunda, 14h" */
+function fmtDate(r){
+  if(r.ts){
+    try{
+      var DIAS=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+      var d=new Date(r.ts);
+      var dia=DIAS[d.getDay()];
+      var h=d.getHours();
+      var hStr=h+'h'+(d.getMinutes()>0?(d.getMinutes()<10?'0':'')+d.getMinutes():'');
+      return dia+', '+hStr;
+    }catch(e){}
+  }
+  return r.h||'';
+}
+
 function lead(r,i,tag){
   var href=okUrl(r.l)?'href="'+esc(r.l)+'" target="_blank" rel="noopener"':'href="#/n/'+i+'"';
   var nb=r.num?'<span class="art-num">#'+r.num+'</span>':'';
-  return '<a class="lead" '+href+'>'+pic(r)+'<h3>'+nb+esc(r.t)+'</h3><span class="meta">'+(tag?'<span class="tag">'+tag+'</span> · ':'')+esc(edName(r.ed))+'</span><p>'+esc(r.r)+'</p><span class="meta">'+esc(r.a)+' · '+esc(r.h)+'</span></a>'
+  return '<a class="lead" '+href+'>'+pic(r)+'<h3>'+nb+esc(r.t)+'</h3><span class="meta">'+(tag?'<span class="tag">'+tag+'</span> · ':'')+esc(edName(r.ed))+'</span><p>'+esc(r.r)+'</p><span class="meta">'+esc(r.a)+' · '+esc(fmtDate(r))+'</span></a>'
 }
 function item(r,i,sec){
   var href=okUrl(r.l)?'href="'+esc(r.l)+'" target="_blank" rel="noopener"':'href="#/n/'+i+'"';
   var nb2=r.num?'<span class="art-num">#'+r.num+'</span>':'';
-  return '<li><a class="item" '+href+'><div class="tx">'+(sec?'<span class="sec">'+esc(edName(r.ed))+'</span>':'')+nb2+'<h4>'+esc(r.t)+'</h4>'+(sec?'':'<p>'+esc(r.r)+'</p>')+'<span class="meta">'+esc(r.h)+'</span></div>'+pic(r,"th")+'</a></li>'
+  return '<li><a class="item" '+href+'><div class="tx">'+(sec?'<span class="sec">'+esc(edName(r.ed))+'</span>':'')+nb2+'<h4>'+esc(r.t)+'</h4>'+(sec?'':'<p>'+esc(r.r)+'</p>')+'<span class="meta">'+esc(fmtDate(r))+'</span></div>'+pic(r,"th")+'</a></li>'
 }
 
 function route(){
