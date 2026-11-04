@@ -12,6 +12,17 @@
       "createdAt": "2026-11-02T02:39:25.866Z"
     },
     {
+      "editoria": "negocios",
+      "titulo": "Revista do gastronômico: Avenida Engenheiro Caetano Álvares Firma-se como o Corredor Gastronômico da ZN",
+      "resumo": "A Avenida Engenheiro Caetano Álvares, cortando bairros como Mandaqui e Santana, consolidou-se como o principal polo de entretenimento e gastronomia da Zona Norte de São Paulo. A via atrai um público diversificado em busca de bares de espetinhos, pizzarias, hamburguerias e restaurantes de gastronomia variada.",
+      "texto": "Instalar um restaurante nessa avenida garante visibilidade imediata para milhares de motoristas e pedestres que circulam diariamente pela região. A infraestrutura da via, com facilidade para serviço de vallet e calçadas amplas, favorece a criação de varandas e espaços abertos, bastante valorizados pelo público frequentador.\n\nEmbora os custos de locação sejam mais elevados, o alto volume de clientes nos períodos noturnos e nos fins de semana compensa o investimento para casas com propostas dinâmicas e de grande capacidade de atendimento.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793791516620_Bar_do_Luiz_Cervvejaria1-min.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": "",
+      "createdAt": "2026-11-04T10:57:35.326Z"
+    },
+    {
       "editoria": "dinheiro",
       "titulo": "Comércio da Rua Voluntários da Pátria inicia preparativos para o fim de ano",
       "resumo": "Os comerciantes da Rua Voluntários da Pátria, um dos maiores centros de comércio a céu aberto da cidade, começaram os preparativos operacionais para a temporada de vendas de fim de ano. As lojas já apresentam decorações temáticas e reforço nos estoques.",
@@ -21,6 +32,28 @@
       "hora": "Hoje, 10h",
       "link": "",
       "createdAt": "2026-11-02T04:39:25.866Z"
+    },
+    {
+      "editoria": "dinheiro",
+      "titulo": "Revista do Cabeleleiro: Lojas Especializadas no Abastecimento de Insumos",
+      "resumo": "Para o abastecimento diário de descartáveis, ferramentas (secadores, pranchas e escovas) e linhas de tratamento rápido, recorrer a grandes perfumarias profissionais da Zona Norte é a solução mais ágil. Estabelecimentos como a rede Mundo do Cabeleireiro e perfumarias regionais de grande porte em Santana possuem balcões de atendimento exclusivo para profissionais cadastrados.",
+      "texto": "Se cadastrar como profissional nesses estabelecimentos garante descontos diferenciados por atacado e acesso a prazos flexíveis de pagamento. Essa facilidade ajuda a manter o estoque equilibrado sem a necessidade de imobilizar grandes quantias de dinheiro de uma só vez.\n\nOutra vantagem é a oportunidade de testar equipamentos e conhecer lançamentos do mercado presencialmente antes de efetuar a compra, assegurando que o investimento trará ergonomia e eficiência ao trabalho diário.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793791523042_Bairro-Santana-em-Sao-Paulo-Portal-Sampa-1024x683.webp",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": "",
+      "createdAt": "2026-11-04T10:57:42.064Z"
+    },
+    {
+      "editoria": "dinheiro",
+      "titulo": " Revista do Cabeleleiro: Atrair Clientes Locais",
+      "resumo": "Estar bem localizado na Zona Norte exige também uma forte presença nos mapas interativos da internet, como o Google Maps. Atualmente, grande parte das clientes busca por \"cabeleireiro perto de mim\" ou \"melhor salão em Santana\" diretamente no celular antes de agendar um serviço.",
+      "texto": "Manter o perfil comercial atualizado com fotos reais dos trabalhos, lista de serviços com preços transparentes e o endereço correto facilita a atração de clientes locais de forma orgânica. Incentivar as clientes satisfeitas a deixarem avaliações positivas no perfil é a forma mais rápida de subir o posicionamento nos resultados de busca.\n\nA integração do mapa digital com o botão de agendamento no WhatsApp transforma a visualização online em um atendimento imediato na cadeira, garantindo um fluxo contínuo de novos clientes para o estabelecimento.",
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793791508720_images__46_.jpg",
+      "autor": "Redação 11hr",
+      "hora": "Hoje, 10h",
+      "link": "",
+      "createdAt": "2026-11-04T10:57:31.952Z"
     },
     {
       "editoria": "locais",
@@ -641,6 +674,21 @@
       "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793733510721_anuncie-11hr-R67.png",
       "link": "",
       "alvo": "Comércio da Rua Voluntários da Pátria inicia preparativos para o fim de ano"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793791804717_Frente_empilhado.png",
+      "link": "",
+      "alvo": "Revista do gastronômico: Avenida Engenheiro Caetano Álvares Firma-se como o Corredor Gastronômico da ZN"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793791812781_anuncie-11hr-R78.png",
+      "link": "",
+      "alvo": "Revista do Cabeleleiro: Lojas Especializadas no Abastecimento de Insumos"
+    },
+    {
+      "foto": "https://raw.githubusercontent.com/JsilvaM7/11hr/main/fotos/1793791818619_anuncie-11hr-R78.png",
+      "link": "",
+      "alvo": " Revista do Cabeleleiro: Atrai Clientes Locais"
     }
   ]
 }
